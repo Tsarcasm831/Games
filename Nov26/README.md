@@ -3,38 +3,6 @@
 ## Overview
 An immersive, feature-rich web application that brings Pokémon to life through interactive 3D visualization, detailed statistics, and engaging user experience.
 
-## Game Projects Overview
-
-### 1. Melody Market
-An interactive web-based game featuring:
-- Multiple stall types (blue, green, red, yellow)
-- Custom JavaScript modules
-- Music and wall media integration
-
-### 2. Pokémon Battle LT
-A comprehensive Pokémon-themed game project with multiple components:
-- Minecraft integration
-- Pokémon Battle subsystem
-- Additional game modules
-
-### 3. Advanced 3D Interactive Pokédex
-An immersive, feature-rich web application that brings Pokémon to life through interactive 3D visualization, detailed statistics, and engaging user experience.
-
-### 4. Nov26 Pokédex Nexus
-A sophisticated Pokémon information system featuring:
-- Advanced 3D rendering with Three.js
-- Interactive Pokémon search and display
-- Comprehensive Pokémon statistics
-- 3D model visualization
-- Audio integration for Pokémon cries
-- Responsive and modern UI design
-
-Key Technologies:
-- HTML5 & CSS3
-- JavaScript (ES6+)
-- Three.js for 3D rendering
-- PokeAPI for Pokémon data
-
 ## Key Features
 - 🔍 Advanced Pokémon Search
   - Search by name or number
