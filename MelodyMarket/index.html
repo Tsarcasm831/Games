@@ -7,6 +7,7 @@
     <!-- Include Three.js from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Include PointerLockControls directly -->
+    
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
     <!-- Include Howler.js for audio management -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
@@ -118,7 +119,9 @@
             );
 
             // Initialize renderer
-            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer = new THREE.WebGLRenderer({ 
+                antialias: true 
+            });
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
 
@@ -131,7 +134,7 @@
             scene.add(directionalLight);
 
             // Ground
-            const groundGeometry = new THREE.PlaneGeometry(1000, 1000);
+            const groundGeometry = new THREE.PlaneGeometry(1500, 1500);  // Increased from 1000 to match world size
             const grassTexture = generateGrassTexture();
             const groundMaterial = new THREE.MeshLambertMaterial({ 
                 map: grassTexture,
@@ -286,46 +289,37 @@
 
             if (controls.isLocked === true) {
                 const time = performance.now();
-                const delta = (time - prevTime) / 1000;
+                const delta = Math.min((time - prevTime) / 1000, 0.1); // Prevent large time jumps
 
-                // Movement dampening
-                velocity.x -= velocity.x * 10.0 * delta;
-                velocity.z -= velocity.z * 10.0 * delta;
-
-                velocity.y -= 9.8 * 10.0 * delta; // gravity
+                // Slightly optimize movement dampening
+                velocity.x *= 0.9; // Smoother deceleration
+                velocity.z *= 0.9;
+                velocity.y -= 9.8 * 10.0 * delta; // Consistent gravity
 
                 direction.z = Number(moveForward) - Number(moveBackward);
-                direction.x = Number(moveRight) - Number(moveLeft); // Adjusted for correct movement
+                direction.x = Number(moveRight) - Number(moveLeft);
+                direction.normalize();
 
-                direction.normalize(); // this ensures consistent movements in all directions
+                const speed = 200.0;
 
-                const speed = 200.0; // Reduced speed for slower movement
-
-                // Predicted player position
+                // Cached player position for multiple uses
                 const playerPosition = controls.getObject().position.clone();
-                playerPosition.y += 1.12; // Adjust player position for collision detection
+                playerPosition.y += 1.12;
 
-                // Calculate potential new position
+                // Simplified collision check
                 const potentialX = playerPosition.clone();
                 const potentialZ = playerPosition.clone();
                 potentialX.x += velocity.x * delta;
                 potentialZ.z += velocity.z * delta;
 
-                // Check collision at potential new positions
                 const collisionX = checkCollision(potentialX);
                 const collisionZ = checkCollision(potentialZ);
 
-                // Prevent movement in directions with collision
-                if (collisionX.collided) {
-                    velocity.x = 0;
-                    controls.getObject().position.add(collisionX.pushOutVector);
-                }
-                if (collisionZ.collided) {
-                    velocity.z = 0;
-                    controls.getObject().position.add(collisionZ.pushOutVector);
-                }
+                // Collision response
+                if (collisionX.collided) velocity.x = 0;
+                if (collisionZ.collided) velocity.z = 0;
 
-                // Movement velocity calculations
+                // Movement calculations
                 if (moveForward || moveBackward) velocity.z -= direction.z * speed * delta;
                 if (moveLeft || moveRight) velocity.x -= direction.x * speed * delta;
 
@@ -334,7 +328,7 @@
 
                 controls.getObject().position.y += velocity.y * delta;
 
-                // Prevent the player from falling through the ground
+                // Ground collision
                 if (controls.getObject().position.y < 1.12) {
                     velocity.y = 0;
                     controls.getObject().position.y = 1.12;
@@ -342,7 +336,7 @@
                 }
 
                 player.position.copy(controls.getObject().position);
-                player.position.y -= 1.12; // Adjust player mesh position
+                player.position.y -= 1.12;
 
                 updateAudio();
 
@@ -353,21 +347,21 @@
         }
 
         function updateAudio() {
-            // Commented out to prevent local file loading errors
-            // sounds = {
-            //     music2: new Howl({
-            //         src: ['music/music2.mp3'],
-            //         loop: true
-            //     }),
-            //     music3: new Howl({
-            //         src: ['music/music3.mp3'],
-            //         loop: true
-            //     }),
-            //     music4: new Howl({
-            //         src: ['music/music4.mp3'],
-            //         loop: true
-            //     })
-            // };
+            // Uncomment and update music sources
+            sounds = {
+                music2: new Howl({
+                    src: ['https://file.garden/Zy7B0LkdIVpGyzA1/music2.mp3'],
+                    loop: true
+                }),
+                music3: new Howl({
+                    src: ['https://file.garden/Zy7B0LkdIVpGyzA1/music3.mp3'],
+                    loop: true
+                }),
+                music4: new Howl({
+                    src: ['https://file.garden/Zy7B0LkdIVpGyzA1/music4.mp3'],
+                    loop: true
+                })
+            };
 
             const buildingMinX = -15;
             const buildingMaxX = 15;
@@ -483,19 +477,21 @@
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
-        // Commented out to prevent audio context issues
-        // function resumeAudioContext() {
-        //     if (Howler.ctx && Howler.ctx.state !== 'running') {
-        //         Howler.ctx.resume().then(() => {
-        //             console.log('Audio context resumed');
-        //         });
-        //     }
-        // }
+        // Audio context initialization
+        function initializeAudioContext() {
+            if (Howler.ctx && Howler.ctx.state !== 'running') {
+                Howler.ctx.resume().then(() => {
+                    console.log('Howler AudioContext resumed successfully');
+                }).catch((error) => {
+                    console.error('Failed to resume AudioContext:', error);
+                });
+            }
+        }
 
-        // Commented out event listeners for audio context
-        // Add event listeners to resume audio on user interaction
-        // document.addEventListener('click', resumeAudioContext);
-        // document.addEventListener('keydown', resumeAudioContext);
+        // Add event listeners to resume audio context on user interaction
+        document.addEventListener('click', initializeAudioContext);
+        document.addEventListener('keydown', initializeAudioContext);
+        document.addEventListener('touchstart', initializeAudioContext);
     </script>
 </body>
 </html>

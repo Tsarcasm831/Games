@@ -1,67 +1,75 @@
 // Tree Bark Texture Generator for Three.js
-function generateTreeBarkTexture(width = 256, height = 256) {
-    // Create a canvas to draw the texture
+// Optimized for performance and reduced complexity
+function generateTreeBarkTexture(width = 128, height = 128) {
+    // Reduce canvas size for faster rendering
     const canvas = document.createElement('canvas');
     canvas.width = width;
     canvas.height = height;
     const ctx = canvas.getContext('2d');
 
-    // Base bark color (brown tones)
+    // Simplified bark color palette
     const baseColors = [
-        'rgb(101, 67, 33)',   // Dark Brown
-        'rgb(139, 90, 43)',   // Medium Brown
-        'rgb(160, 82, 45)'    // Sienna Brown
+        'rgb(101, 67, 33)',    // Dark Brown
+        'rgb(139, 90, 43)',    // Medium Brown
+        'rgb(160, 82, 45)'     // Sienna Brown
     ];
-    ctx.fillStyle = baseColors[Math.floor(Math.random() * baseColors.length)];
+
+    // Simple gradient background
+    const gradient = ctx.createLinearGradient(0, 0, width, height);
+    gradient.addColorStop(0, 'rgb(180, 130, 100)');
+    gradient.addColorStop(1, 'rgb(160, 110, 80)');
+    ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
 
-    // Function to draw bark texture lines
+    // Simplified bark line drawing function
     function drawBarkLine(x, y, length, angle, lineWidth, color) {
-        ctx.beginPath();
-        
-        // Slight color variation
-        const colorVariation = Math.floor(Math.random() * 20);
-        const [r, g, b] = color.match(/\d+/g).map(Number);
-        ctx.strokeStyle = `rgb(${r + colorVariation}, ${g + colorVariation}, ${b + colorVariation})`;
-        
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(angle * Math.PI / 180);
+
+        ctx.strokeStyle = color;
         ctx.lineWidth = lineWidth;
-        ctx.moveTo(x, y);
+
+        // More simplified, less computationally expensive curve
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.quadraticCurveTo(length/2, 5, length, 0);
         
-        // Calculate end point based on angle and length
-        const endX = x + Math.cos(angle * Math.PI / 180) * length;
-        const endY = y + Math.sin(angle * Math.PI / 180) * length;
-        
-        ctx.lineTo(endX, endY);
+        ctx.globalAlpha = 0.6;
         ctx.stroke();
+        
+        ctx.restore();
     }
 
-    // Draw multiple bark texture lines
+    // Reduced number of bark lines
     for (let i = 0; i < 500; i++) {
         const x = Math.floor(Math.random() * width);
         const y = Math.floor(Math.random() * height);
-        const length = 10 + Math.floor(Math.random() * 30);  // Longer, more varied lines
-        const angle = 90 + Math.floor(Math.random() * 180);  // More vertical orientation
-        const lineWidth = 1 + Math.random() * 2;  // Variable line thickness
+        const length = 10 + Math.floor(Math.random() * 20);
+        const angle = 70 + Math.floor(Math.random() * 200);
+        const lineWidth = 0.5 + Math.random() * 2;
         
         const currentBaseColor = baseColors[Math.floor(Math.random() * baseColors.length)];
         drawBarkLine(x, y, length, angle, lineWidth, currentBaseColor);
     }
 
-    // Add some noise for texture roughness
-    for (let i = 0; i < 1000; i++) {
+    // Simplified noise addition
+    ctx.globalAlpha = 0.05;
+    for (let i = 0; i < 500; i++) {
         const x = Math.floor(Math.random() * width);
         const y = Math.floor(Math.random() * height);
         
-        // Small random dots to simulate bark roughness
-        ctx.fillStyle = `rgba(0, 0, 0, ${Math.random() * 0.1})`;
-        ctx.fillRect(x, y, 1, 1);
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(0,0,0,0.05)';
+        ctx.arc(x, y, 0.5 + Math.random() * 1, 0, Math.PI * 2);
+        ctx.fill();
     }
 
-    // Convert canvas to texture
+    // Convert canvas to texture with reduced complexity
     const texture = new THREE.CanvasTexture(canvas);
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(1000, 1000);  // Tile the texture 1000x1000 times
+    texture.repeat.set(5, 5);
     
     return texture;
 }
