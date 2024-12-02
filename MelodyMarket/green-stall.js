@@ -1,5 +1,5 @@
 function createGreenStall(scene, THREE) {
-    const stallInfo = { x: -10, z: -10, color: 0x00ff00, music: 'music/music2.mp3' };
+    const stallInfo = { x: -10, z: -10, color: 0x00ff00, music: 'https://file.garden/Zy7B0LkdIVpGyzA1/music2.mp3' };
 
     // Outer stall geometry (with proper vertex generation)
     const stallGeometry = new THREE.BufferGeometry();

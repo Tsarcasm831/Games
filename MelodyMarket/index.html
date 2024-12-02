@@ -260,23 +260,41 @@
 
         // Collision detection function
         function checkCollision(playerPosition) {
-            // Only check collision for music stage
-            const musicStageBox = new THREE.Box3().setFromObject(window.musicStage);
-            
+            // List of stalls to check for collision
+            const stallsToCheck = [
+                window.redStall, 
+                window.greenStall, 
+                window.blueStall, 
+                window.yellowStall
+            ];
+
             // Expand the bounding box slightly to create a more forgiving collision area
-            const expandAmount = 1; // Adjust this value to fine-tune collision sensitivity
+            const expandAmount = 0.5; // Adjust this value to fine-tune collision sensitivity
+
+            for (let stall of stallsToCheck) {
+                const stallBox = new THREE.Box3().setFromObject(stall);
+                stallBox.expandByScalar(expandAmount);
+                
+                // Check if player is inside stall's bounding box
+                if (stallBox.containsPoint(playerPosition)) {
+                    // Special handling for brown podium (if it exists)
+                    // You might want to add a specific check for the brown podium here
+                    // For now, we'll just return a collision for all stalls except brown
+                    return {
+                        collided: true,
+                        pushOutVector: playerPosition.clone().sub(stallBox.getCenter(new THREE.Vector3())).normalize().multiplyScalar(0.1)
+                    };
+                }
+            }
+            
+            // Check music stage separately
+            const musicStageBox = new THREE.Box3().setFromObject(window.musicStage);
             musicStageBox.expandByScalar(expandAmount);
             
-            // Check if player is inside music stage's bounding box
             if (musicStageBox.containsPoint(playerPosition)) {
-                // Calculate center of music stage
-                const stageCenter = musicStageBox.getCenter(new THREE.Vector3());
-                
-                // Calculate a small push-out vector
-                const pushOutVector = playerPosition.clone().sub(stageCenter).normalize().multiplyScalar(0.1);
                 return {
                     collided: true,
-                    pushOutVector: pushOutVector
+                    pushOutVector: playerPosition.clone().sub(musicStageBox.getCenter(new THREE.Vector3())).normalize().multiplyScalar(0.1)
                 };
             }
             

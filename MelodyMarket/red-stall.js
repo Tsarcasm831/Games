@@ -1,5 +1,5 @@
 function createRedStall(scene, THREE) {
-    const stallInfo = { x: 10, z: 10, color: 0xff0000, music: 'music/music1.mp3' };
+    const stallInfo = { x: 10, z: 10, color: 0xff0000 };
 
     // Outer stall geometry (with proper vertex generation)
     const stallGeometry = new THREE.BufferGeometry();
@@ -114,26 +114,6 @@ function createRedStall(scene, THREE) {
 
     // Add internal walls and counter to the group
     stallGroup.add(xWall1, xWall2, zWall1, zWall2, counter);
-
-    // Improved sound loading with AudioContext handling
-    const sound = new Howl({
-        src: [stallInfo.music],
-        loop: true,
-        volume: 0,
-        onloaderror: (id, err) => {
-            console.warn(`Failed to load music ${stallInfo.music}:`, err);
-        },
-        onload: () => {
-            console.log(`Music ${stallInfo.music} loaded successfully`);
-            // Defer playing until user interaction
-            sound.pause();
-        }
-    });
-
-    stallGroup.userData = {
-        music: stallInfo.music,
-        sound: sound
-    };
 
     scene.add(stallGroup);
     return stallGroup;

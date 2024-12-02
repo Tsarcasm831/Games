@@ -1,6 +1,6 @@
 // Leaves Texture Generator for Three.js
 // Optimized for performance and reduced complexity
-function generateLeavesTexture(width = 128, height = 128) {
+function generateLeavesTexture(width = 64, height = 64) {
     // Reduce canvas size for faster rendering
     const canvas = document.createElement('canvas');
     canvas.width = width;
@@ -31,21 +31,21 @@ function generateLeavesTexture(width = 128, height = 128) {
         
         ctx.beginPath();
         ctx.moveTo(0, 0);
-        ctx.quadraticCurveTo(size/2, -size/3, size, 0);
-        ctx.quadraticCurveTo(size/2, size/3, 0, 0);
+        ctx.quadraticCurveTo(size/2, -size/4, size, 0);
+        ctx.quadraticCurveTo(size/2, size/4, 0, 0);
         
         ctx.fillStyle = leafColor;
-        ctx.globalAlpha = 0.7;
+        ctx.globalAlpha = 0.6;
         ctx.fill();
         
         ctx.restore();
     }
 
-    // Reduced number of leaves and iterations
-    for (let i = 0; i < 500; i++) {
+    // Reduced number of leaves
+    for (let i = 0; i < 250; i++) {
         const x = Math.floor(Math.random() * width);
         const y = Math.floor(Math.random() * height);
-        const size = 5 + Math.floor(Math.random() * 10);
+        const size = 3 + Math.floor(Math.random() * 7);
         const angle = Math.floor(Math.random() * 360);
         
         drawLeaf(x, y, size, angle);
@@ -55,7 +55,7 @@ function generateLeavesTexture(width = 128, height = 128) {
     const texture = new THREE.CanvasTexture(canvas);
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(5, 5);
+    texture.repeat.set(3, 3);
     
     return texture;
 }

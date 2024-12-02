@@ -1,6 +1,6 @@
 // Tree Bark Texture Generator for Three.js
 // Optimized for performance and reduced complexity
-function generateTreeBarkTexture(width = 128, height = 128) {
+function generateTreeBarkTexture(width = 64, height = 64) {
     // Reduce canvas size for faster rendering
     const canvas = document.createElement('canvas');
     canvas.width = width;
@@ -33,35 +33,35 @@ function generateTreeBarkTexture(width = 128, height = 128) {
         // More simplified, less computationally expensive curve
         ctx.beginPath();
         ctx.moveTo(0, 0);
-        ctx.quadraticCurveTo(length/2, 5, length, 0);
+        ctx.quadraticCurveTo(length/2, 3, length, 0);
         
-        ctx.globalAlpha = 0.6;
+        ctx.globalAlpha = 0.5;
         ctx.stroke();
         
         ctx.restore();
     }
 
     // Reduced number of bark lines
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 250; i++) {
         const x = Math.floor(Math.random() * width);
         const y = Math.floor(Math.random() * height);
-        const length = 10 + Math.floor(Math.random() * 20);
+        const length = 7 + Math.floor(Math.random() * 15);
         const angle = 70 + Math.floor(Math.random() * 200);
-        const lineWidth = 0.5 + Math.random() * 2;
+        const lineWidth = 0.3 + Math.random() * 1.5;
         
         const currentBaseColor = baseColors[Math.floor(Math.random() * baseColors.length)];
         drawBarkLine(x, y, length, angle, lineWidth, currentBaseColor);
     }
 
-    // Simplified noise addition
-    ctx.globalAlpha = 0.05;
-    for (let i = 0; i < 500; i++) {
+    // Minimal noise addition
+    ctx.globalAlpha = 0.03;
+    for (let i = 0; i < 250; i++) {
         const x = Math.floor(Math.random() * width);
         const y = Math.floor(Math.random() * height);
         
         ctx.beginPath();
-        ctx.fillStyle = 'rgba(0,0,0,0.05)';
-        ctx.arc(x, y, 0.5 + Math.random() * 1, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0,0,0,0.03)';
+        ctx.arc(x, y, 0.3 + Math.random() * 0.7, 0, Math.PI * 2);
         ctx.fill();
     }
 
@@ -69,7 +69,7 @@ function generateTreeBarkTexture(width = 128, height = 128) {
     const texture = new THREE.CanvasTexture(canvas);
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(5, 5);
+    texture.repeat.set(3, 3);
     
     return texture;
 }

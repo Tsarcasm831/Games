@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="styles.css">
     
     <!-- Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r132/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r132/three.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js" defer></script>
 
     <script>
         // Ensure Three.js dependencies are loaded correctly
@@ -119,15 +119,15 @@
             <!-- Buttons Section -->
             <div class="buttons-container">
                 <!-- D-Pad -->
-                <div class="dpad" aria-label="Directional Pad">
-                    <div class="button up" aria-label="Up"></div>
-                    <div class="button left" aria-label="Left"></div>
-                    <div class="button down" aria-label="Down"></div>
-                    <div class="button right" aria-label="Right"></div>
+                <div class="dpad" aria-label="Directional Pad" role="group">
+                    <div class="button up" aria-label="Up" role="button"></div>
+                    <div class="button left" aria-label="Left" role="button"></div>
+                    <div class="button down" aria-label="Down" role="button"></div>
+                    <div class="button right" aria-label="Right" role="button"></div>
                 </div>
 
                 <!-- Action Buttons -->
-                <div class="action-buttons" aria-label="Action Buttons">
+                <div class="action-buttons" aria-label="Action Buttons" role="group">
                     <button id="search-btn" class="btn-primary" aria-label="Search Pokémon">Search</button>
                     <button id="random-btn" class="btn-secondary" aria-label="Random Pokémon">Random</button>
                 </div>
@@ -144,17 +144,22 @@
                 <div class="screen-header"></div>
                 <!-- Additional Pokémon info will go here -->
                 <section class="additional-info" aria-live="polite">
-                    <h2>Pokémon Description</h2>
-                    <p id="pokemon-description">Description goes here...</p>
+                    <div class="animated-sprite-container">
+                        <img id="animated-pokemon-sprite" class="animated-sprite" src="" alt="Animated Pokemon Sprite">
+                    </div>
+                
+                    <div class="pokemon-description">
+                        <h2>Pokémon Description</h2>
+                        <p id="pokemon-description">Discover the unique characteristics and fascinating world of this Pokémon.</p>
+                    </div>
                     
-                    <h2>Abilities</h2>
-                    <ul id="pokemon-abilities">
-                        <li>-</li>
-                    </ul>
+                    <div class="pokemon-abilities">
+                        <div id="ability-1" class="ability-chip">-</div>
+                        <div id="ability-2" class="ability-chip">-</div>
+                    </div>
                     
-                    <h2>Evolution</h2>
                     <div class="evolution-chain" id="evolution-chain">
-                        <!-- Evolution images and links -->
+                        <!-- Evolution images and links will be dynamically populated -->
                     </div>
                 </section>
             </div>
@@ -181,7 +186,7 @@
     <div class="background-particles" id="particle-container"></div>
 
     <!-- Scripts -->
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
 </body>
 </html>

@@ -12,6 +12,7 @@ class AdvancedPokedex {
             modelContainer: document.getElementById('3d-model-container'),
             pokemonName: document.getElementById('pokemon-name'),
             pokemonSprite: document.getElementById('pokemon-sprite'),
+            animatedPokemonSprite: document.getElementById('animated-pokemon-sprite'),
             pokemonType: document.getElementById('pokemon-type'),
             pokemonHeight: document.getElementById('pokemon-height'),
             pokemonWeight: document.getElementById('pokemon-weight'),
@@ -176,6 +177,7 @@ class AdvancedPokedex {
     clearPokemonInfo() {
         // Reset all UI elements
         this.elements.pokemonSprite.src = '';
+        this.elements.animatedPokemonSprite.src = '';
         this.elements.pokemonType.textContent = '-';
         this.elements.pokemonHeight.textContent = '-';
         this.elements.pokemonWeight.textContent = '-';
@@ -196,6 +198,10 @@ class AdvancedPokedex {
         // Update basic info
         this.elements.pokemonName.textContent = pokemon.name;
         this.elements.pokemonSprite.src = pokemon.sprites.front_default;
+        
+        // Update animated sprite with showdown GIF
+        const animatedSprite = this.elements.animatedPokemonSprite;
+        animatedSprite.src = `https://play.pokemonshowdown.com/sprites/xyani/${pokemon.name.toLowerCase()}.gif`;
         
         // Update type and physical attributes
         this.elements.pokemonType.textContent = `Type: ${pokemon.types.map(t => t.type.name).join(', ')}`;
