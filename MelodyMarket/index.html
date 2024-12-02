@@ -283,13 +283,26 @@
         }
 
         function updateAudio() {
-            stalls.forEach((stall) => {
-                const distance = player.position.distanceTo(stall.stall.position);
-                const maxDistance = 20;
-                const volume = Math.max(0, (maxDistance - distance) / maxDistance);
+            const buildingMinX = -15;
+            const buildingMaxX = 15;
+            const buildingMinZ = -15;
+            const buildingMaxZ = 15;
+            
+            const insideBuilding = 
+                player.position.x >= buildingMinX && 
+                player.position.x <= buildingMaxX && 
+                player.position.z >= buildingMinZ && 
+                player.position.z <= buildingMaxZ;
 
+            stalls.forEach((stall) => {
                 if (stall.stall.userData.sound) {
+                    const volume = insideBuilding ? 0.5 : 0;
                     stall.stall.userData.sound.volume(volume);
+                    
+                    // Ensure continuous playback
+                    if (!stall.stall.userData.sound.playing()) {
+                        stall.stall.userData.sound.play();
+                    }
                 }
             });
         }

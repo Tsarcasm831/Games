@@ -21,8 +21,65 @@ function createRedStall(scene, THREE) {
     videoTexture.minFilter = THREE.LinearFilter;
     videoTexture.magFilter = THREE.LinearFilter;
 
-    // Stall base geometry
-    const stallGeometry = new THREE.BoxGeometry(4, 3, 4);
+    // Stall base geometry with explicit vertex and index generation
+    const stallGeometry = new THREE.BufferGeometry();
+    
+    const positions = [
+        // Top face
+        -2, 1.5, -2,
+        -2, 1.5, 2,
+        2, 1.5, 2,
+        2, 1.5, -2,
+        // Bottom face
+        -2, -1.5, -2,
+        -2, -1.5, 2,
+        2, -1.5, 2,
+        2, -1.5, -2,
+        // Side faces
+        -2, -1.5, -2,
+        -2, 1.5, -2,
+        2, 1.5, -2,
+        2, -1.5, -2,
+
+        2, -1.5, -2,
+        2, 1.5, -2,
+        2, 1.5, 2,
+        2, -1.5, 2,
+
+        2, -1.5, 2,
+        2, 1.5, 2,
+        -2, 1.5, 2,
+        -2, -1.5, 2,
+
+        -2, -1.5, 2,
+        -2, 1.5, 2,
+        -2, 1.5, -2,
+        -2, -1.5, -2
+    ];
+
+    const indices = [
+        // Top face
+        0, 1, 2,
+        0, 2, 3,
+        // Bottom face
+        4, 6, 5,
+        4, 7, 6,
+        // Side faces
+        8, 9, 10,
+        8, 10, 11,
+        12, 13, 14,
+        12, 14, 15,
+        16, 17, 18,
+        16, 18, 19,
+        20, 21, 22,
+        20, 22, 23
+    ];
+
+    stallGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    stallGeometry.setIndex(indices);
+    
+    // Compute normals for proper lighting
+    stallGeometry.computeVertexNormals();
 
     // External wall material with minion image
     const externalWallMaterial = new THREE.MeshStandardMaterial({ 

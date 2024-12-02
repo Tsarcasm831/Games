@@ -1,15 +1,20 @@
 function createGreenStall(scene, THREE) {
     const stallInfo = { x: -10, z: -10, color: 0x00ff00, music: 'music/music2.mp3' };
 
-    // Outer stall geometry (without bottom)
-    const stallGeometry = new THREE.BoxGeometry(4, 3, 4);
-    stallGeometry.deleteAttribute('position');
+    // Outer stall geometry (with proper vertex generation)
+    const stallGeometry = new THREE.BufferGeometry();
+    
     const positions = [
         // Top face
         -2, 1.5, -2,
         -2, 1.5, 2,
         2, 1.5, 2,
         2, 1.5, -2,
+        // Bottom face
+        -2, -1.5, -2,
+        -2, -1.5, 2,
+        2, -1.5, 2,
+        2, -1.5, -2,
         // Side faces
         -2, -1.5, -2,
         -2, 1.5, -2,
@@ -31,8 +36,31 @@ function createGreenStall(scene, THREE) {
         -2, 1.5, -2,
         -2, -1.5, -2
     ];
+
+    const indices = [
+        // Top face
+        0, 1, 2,
+        0, 2, 3,
+        // Bottom face
+        4, 6, 5,
+        4, 7, 6,
+        // Side faces
+        8, 9, 10,
+        8, 10, 11,
+        12, 13, 14,
+        12, 14, 15,
+        16, 17, 18,
+        16, 18, 19,
+        20, 21, 22,
+        20, 22, 23
+    ];
+
     stallGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    stallGeometry.setIndex(indices);
     
+    // Compute normals for proper lighting
+    stallGeometry.computeVertexNormals();
+
     // Create a group for the stall to add multiple meshes
     const stallGroup = new THREE.Group();
 
