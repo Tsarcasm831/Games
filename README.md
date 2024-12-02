@@ -15,7 +15,7 @@ Welcome to the epic game development realm where **Tsarcasm Games** and **Trusty
 - **Core Mechanics**: Blend of melodic challenges and economic strategy
 
 ### 2. 🐉 PokemonBattleLT
-![Project Status](https://img.shields.io/badge/Status-Active-blue)
+![Project Status](https://img.shields.io/badge/Status-Experimental-orange)
 - **Concept**: A revolutionary take on Pokemon battle dynamics
 - **Depth**: 26 files of strategic monster combat
 - **Unique Twist**: Innovative battle mechanics and character progression
@@ -27,7 +27,7 @@ Welcome to the epic game development realm where **Tsarcasm Games** and **Trusty
 - **Focus**: Pushing boundaries of interactive storytelling
 
 ### 4. 🆕 New Frontier
-![Project Status](https://img.shields.io/badge/Status-Concept-yellow)
+![Project Status](https://img.shields.io/badge/Status-Experimental-orange)
 - **Vision**: Emerging game concept with limitless potential
 - **Current State**: 3 foundational files
 - **Promise**: The next big breakthrough in gaming
