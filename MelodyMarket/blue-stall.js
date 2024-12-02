@@ -6,53 +6,45 @@ function createBlueStall(scene, THREE) {
     
     const positions = [
         // Top face
-        -2, 1.5, -2,
-        -2, 1.5, 2,
-        2, 1.5, 2,
-        2, 1.5, -2,
-        // Bottom face
-        -2, -1.5, -2,
-        -2, -1.5, 2,
-        2, -1.5, 2,
-        2, -1.5, -2,
-        // Side faces
-        -2, -1.5, -2,
-        -2, 1.5, -2,
-        2, 1.5, -2,
-        2, -1.5, -2,
-
-        2, -1.5, -2,
-        2, 1.5, -2,
-        2, 1.5, 2,
-        2, -1.5, 2,
-
-        2, -1.5, 2,
-        2, 1.5, 2,
-        -2, 1.5, 2,
-        -2, -1.5, 2,
-
-        -2, -1.5, 2,
-        -2, 1.5, 2,
-        -2, 1.5, -2,
-        -2, -1.5, -2
+        -3, 2.25, -3,
+        -3, 2.25, 3,
+        3, 2.25, 3,
+        3, 2.25, -3,
+        // Side faces (front)
+        -3, -2.25, -3,
+        -3, 2.25, -3,
+        3, 2.25, -3,
+        3, -2.25, -3,
+        // Side faces (right)
+        3, -2.25, -3,
+        3, 2.25, -3,
+        3, 2.25, 3,
+        3, -2.25, 3,
+        // Side faces (back)
+        3, -2.25, 3,
+        3, 2.25, 3,
+        -3, 2.25, 3,
+        -3, -2.25, 3,
+        // Side faces (left)
+        -3, -2.25, 3,
+        -3, 2.25, 3,
+        -3, 2.25, -3,
+        -3, -2.25, -3
     ];
 
     const indices = [
         // Top face
         0, 1, 2,
         0, 2, 3,
-        // Bottom face
-        4, 6, 5,
-        4, 7, 6,
         // Side faces
+        4, 5, 6,
+        4, 6, 7,
         8, 9, 10,
         8, 10, 11,
         12, 13, 14,
         12, 14, 15,
         16, 17, 18,
-        16, 18, 19,
-        20, 21, 22,
-        20, 22, 23
+        16, 18, 19
     ];
 
     stallGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
@@ -77,7 +69,7 @@ function createBlueStall(scene, THREE) {
 
     // Create the main stall mesh
     const stall = new THREE.Mesh(stallGeometry, stallMaterial);
-    stall.position.set(stallInfo.x, 1.5, stallInfo.z);
+    stall.position.set(stallInfo.x, 2.25, stallInfo.z);
     stallGroup.add(stall);
 
     // Add internal walls
@@ -97,18 +89,18 @@ function createBlueStall(scene, THREE) {
     ];
 
     // Internal wall along x-axis
-    const xWallGeometry = new THREE.BoxGeometry(4, wallHeight, wallThickness);
+    const xWallGeometry = new THREE.BoxGeometry(6, wallHeight, wallThickness);
     const xWall1 = new THREE.Mesh(xWallGeometry, internalWallMaterials[0]);
-    xWall1.position.set(stallInfo.x, 1.5, stallInfo.z + 2);
+    xWall1.position.set(stallInfo.x, 2.25, stallInfo.z + 3);
     const xWall2 = new THREE.Mesh(xWallGeometry, internalWallMaterials[1]);
-    xWall2.position.set(stallInfo.x, 1.5, stallInfo.z - 2);
+    xWall2.position.set(stallInfo.x, 2.25, stallInfo.z - 3);
 
     // Internal wall along z-axis
-    const zWallGeometry = new THREE.BoxGeometry(wallThickness, wallHeight, 4);
+    const zWallGeometry = new THREE.BoxGeometry(wallThickness, wallHeight, 6);
     const zWall1 = new THREE.Mesh(zWallGeometry, internalWallMaterials[0]);
-    zWall1.position.set(stallInfo.x + 2, 1.5, stallInfo.z);
+    zWall1.position.set(stallInfo.x + 3, 2.25, stallInfo.z);
     const zWall2 = new THREE.Mesh(zWallGeometry, internalWallMaterials[1]);
-    zWall2.position.set(stallInfo.x - 2, 1.5, stallInfo.z);
+    zWall2.position.set(stallInfo.x - 3, 2.25, stallInfo.z);
 
     // Create a counter
     const counterGeometry = new THREE.BoxGeometry(3, 1, 0.5);

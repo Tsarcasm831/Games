@@ -1,78 +1,50 @@
 function createRedStall(scene, THREE) {
-    const stallInfo = { x: 10, z: 10 };
+    const stallInfo = { x: 10, z: 10, color: 0xff0000, music: 'music/music1.mp3' };
 
-    // Create a group for the stall
-    const stallGroup = new THREE.Group();
-
-    // External texture (minion image)
-    const externalTextureLoader = new THREE.TextureLoader();
-    const externalTexture = externalTextureLoader.load('https://file.garden/Zy7B0LkdIVpGyzA1/minion%20(1).png');
-
-    // Create video element for internal view
-    const videoElement = document.createElement('video');
-    videoElement.src = 'https://file.garden/Zy7B0LkdIVpGyzA1/flamewick.mp4';
-    videoElement.crossOrigin = 'anonymous';
-    videoElement.loop = true;
-    videoElement.muted = true;
-    videoElement.autoplay = true;
-
-    // Create video texture
-    const videoTexture = new THREE.VideoTexture(videoElement);
-    videoTexture.minFilter = THREE.LinearFilter;
-    videoTexture.magFilter = THREE.LinearFilter;
-
-    // Stall base geometry with explicit vertex and index generation
+    // Outer stall geometry (with proper vertex generation)
     const stallGeometry = new THREE.BufferGeometry();
     
     const positions = [
         // Top face
-        -2, 1.5, -2,
-        -2, 1.5, 2,
-        2, 1.5, 2,
-        2, 1.5, -2,
-        // Bottom face
-        -2, -1.5, -2,
-        -2, -1.5, 2,
-        2, -1.5, 2,
-        2, -1.5, -2,
-        // Side faces
-        -2, -1.5, -2,
-        -2, 1.5, -2,
-        2, 1.5, -2,
-        2, -1.5, -2,
-
-        2, -1.5, -2,
-        2, 1.5, -2,
-        2, 1.5, 2,
-        2, -1.5, 2,
-
-        2, -1.5, 2,
-        2, 1.5, 2,
-        -2, 1.5, 2,
-        -2, -1.5, 2,
-
-        -2, -1.5, 2,
-        -2, 1.5, 2,
-        -2, 1.5, -2,
-        -2, -1.5, -2
+        -3, 2.25, -3,
+        -3, 2.25, 3,
+        3, 2.25, 3,
+        3, 2.25, -3,
+        // Side faces (front)
+        -3, -2.25, -3,
+        -3, 2.25, -3,
+        3, 2.25, -3,
+        3, -2.25, -3,
+        // Side faces (right)
+        3, -2.25, -3,
+        3, 2.25, -3,
+        3, 2.25, 3,
+        3, -2.25, 3,
+        // Side faces (back)
+        3, -2.25, 3,
+        3, 2.25, 3,
+        -3, 2.25, 3,
+        -3, -2.25, 3,
+        // Side faces (left)
+        -3, -2.25, 3,
+        -3, 2.25, 3,
+        -3, 2.25, -3,
+        -3, -2.25, -3
     ];
 
     const indices = [
         // Top face
         0, 1, 2,
         0, 2, 3,
-        // Bottom face
-        4, 6, 5,
-        4, 7, 6,
         // Side faces
+        4, 5, 6,
+        4, 6, 7,
         8, 9, 10,
         8, 10, 11,
         12, 13, 14,
         12, 14, 15,
         16, 17, 18,
-        16, 18, 19,
-        20, 21, 22,
-        20, 22, 23
+        16, 18, 19
     ];
 
     stallGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
@@ -81,71 +53,87 @@ function createRedStall(scene, THREE) {
     // Compute normals for proper lighting
     stallGeometry.computeVertexNormals();
 
-    // External wall material with minion image
-    const externalWallMaterial = new THREE.MeshStandardMaterial({ 
-        map: externalTexture,
-        side: THREE.FrontSide
-    });
+    // Create a group for the stall to add multiple meshes
+    const stallGroup = new THREE.Group();
 
-    // Internal wall material with video
-    const internalWallMaterial = new THREE.MeshStandardMaterial({ 
-        map: videoTexture,
-        side: THREE.BackSide
-    });
+    // External texture for walls
+    const wallTexture = new THREE.TextureLoader().load('https://file.garden/Zy7B0LkdIVpGyzA1/minion%20(1).png');
 
-    // Black roof material
-    const roofMaterial = new THREE.MeshStandardMaterial({ 
-        color: 0x000000,  // Black color
-        side: THREE.FrontSide 
+    // Outer stall material with texture
+    const stallMaterial = new THREE.MeshStandardMaterial({ 
+        map: wallTexture,
+        side: THREE.DoubleSide,  // Render both sides of the material
+        transparent: true,
+        opacity: 0.8  // Slightly transparent to see internal structure
     });
 
     // Create the main stall mesh
-    const stall = new THREE.Mesh(stallGeometry, externalWallMaterial);
-    stall.position.set(stallInfo.x, 1.5, stallInfo.z);
+    const stall = new THREE.Mesh(stallGeometry, stallMaterial);
+    stall.position.set(stallInfo.x, 2.25, stallInfo.z);
     stallGroup.add(stall);
 
-    // Create three walls
+    // Add internal walls
     const wallThickness = 0.1;
-    const wallHeight = 3;
+    const wallHeight = 2.5;
     
-    const wallGeometries = [
-        new THREE.BoxGeometry(4, wallHeight, wallThickness),  // Front wall
-        new THREE.BoxGeometry(wallThickness, wallHeight, 4),  // Side wall
-        new THREE.BoxGeometry(4, wallHeight, wallThickness)   // Back wall
+    // Create internal wall materials with the same texture
+    const internalWallMaterials = [
+        new THREE.MeshStandardMaterial({ 
+            map: wallTexture,
+            side: THREE.DoubleSide 
+        }),
+        new THREE.MeshStandardMaterial({ 
+            map: wallTexture,
+            side: THREE.DoubleSide 
+        })
     ];
 
-    const wallPositions = [
-        { x: stallInfo.x, y: 1.5, z: stallInfo.z + 2 },        // Front wall
-        { x: stallInfo.x + 2, y: 1.5, z: stallInfo.z },        // Side wall
-        { x: stallInfo.x, y: 1.5, z: stallInfo.z - 2 }         // Back wall
-    ];
+    // Internal wall along x-axis
+    const xWallGeometry = new THREE.BoxGeometry(6, wallHeight, wallThickness);
+    const xWall1 = new THREE.Mesh(xWallGeometry, internalWallMaterials[0]);
+    xWall1.position.set(stallInfo.x, 2.25, stallInfo.z + 3);
+    const xWall2 = new THREE.Mesh(xWallGeometry, internalWallMaterials[1]);
+    xWall2.position.set(stallInfo.x, 2.25, stallInfo.z - 3);
 
-    // Create and position walls
-    wallGeometries.forEach((geometry, index) => {
-        const wall = new THREE.Mesh(geometry, index === 0 ? externalWallMaterial : internalWallMaterial);
-        wall.position.set(
-            wallPositions[index].x, 
-            wallPositions[index].y, 
-            wallPositions[index].z
-        );
-        stallGroup.add(wall);
+    // Internal wall along z-axis
+    const zWallGeometry = new THREE.BoxGeometry(wallThickness, wallHeight, 6);
+    const zWall1 = new THREE.Mesh(zWallGeometry, internalWallMaterials[0]);
+    zWall1.position.set(stallInfo.x + 3, 2.25, stallInfo.z);
+    const zWall2 = new THREE.Mesh(zWallGeometry, internalWallMaterials[1]);
+    zWall2.position.set(stallInfo.x - 3, 2.25, stallInfo.z);
+
+    // Create a counter
+    const counterGeometry = new THREE.BoxGeometry(3, 1, 0.5);
+    const counterMaterial = new THREE.MeshStandardMaterial({ 
+        color: 0x8B4513,  // Wooden brown color
+        side: THREE.DoubleSide 
+    });
+    const counter = new THREE.Mesh(counterGeometry, counterMaterial);
+    counter.position.set(stallInfo.x, 0.5, stallInfo.z);
+    counter.rotation.y = Math.PI / 4;  // Rotate slightly for visual interest
+
+    // Add internal walls and counter to the group
+    stallGroup.add(xWall1, xWall2, zWall1, zWall2, counter);
+
+    // Improved sound loading with AudioContext handling
+    const sound = new Howl({
+        src: [stallInfo.music],
+        loop: true,
+        volume: 0,
+        onloaderror: (id, err) => {
+            console.warn(`Failed to load music ${stallInfo.music}:`, err);
+        },
+        onload: () => {
+            console.log(`Music ${stallInfo.music} loaded successfully`);
+            // Defer playing until user interaction
+            sound.pause();
+        }
     });
 
-    // Create black roof
-    const roofGeometry = new THREE.BoxGeometry(4, 0.5, 4);
-    const roof = new THREE.Mesh(roofGeometry, roofMaterial);
-    roof.position.set(stallInfo.x, 3, stallInfo.z);
-    stallGroup.add(roof);
-
-    // Video and texture loading error handling
-    videoElement.addEventListener('loadedmetadata', () => {
-        console.log('Video metadata loaded');
-        videoElement.play();
-    });
-
-    videoElement.addEventListener('error', (e) => {
-        console.error('Video loading error:', e);
-    });
+    stallGroup.userData = {
+        music: stallInfo.music,
+        sound: sound
+    };
 
     scene.add(stallGroup);
     return stallGroup;
