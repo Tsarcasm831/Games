@@ -1,0 +1,440 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Keymaster!</title>
+        <link rel="stylesheet" href="scripts/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+        <!-- Include TWEEN.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    </head>
+
+    <body>
+        <div id="loading-screen">
+            <div id="loading-text">Loading...</div>
+        </div>
+
+        <div id="title-screen">
+            <div id="title">Keymaster!</div>
+            <div id="caption">
+                <span>Find the keys...</span><span></span><span>and bring them back...</span><span></span><span>to the keymaster.</span> <span></span>
+            </div>
+            <div id="caption" style="margin-top: 20px;">
+                <span>Edited/Expanded by Lord Tsarcasm</span><span></span><span></span><br>
+                <span>Inspired by GreenSkull AI</span> <span>Remixed from websim.ai</span>
+            </div>
+        </div>
+
+        <div id="instructions">
+            Movement Controls:<br>
+            • WASD: Walk around<br>
+            • Arrow Keys: Look around<br>
+            • Space: Jump<br><br>
+            Item Controls:<br>
+            • E: Use selected item<br>
+            • I: Open inventory<br>
+            • Numbers 1-5: Select item slot<br><br>
+            Game Tips:<br>
+            • Walk into doors to explore new rooms<br>
+            • Collect golden keys to buy items<br>
+            • Return to room (0,0) to visit the Key Master
+            <div id="instructions-toggle">/\</div>
+        </div>
+
+        <div id="room-position"></div>
+
+        <div id="key-display">Keys: 0</div>
+        <button id="map-button">Map</button>
+        <button id="settings-button">Settings</button>
+        <button id="key-master-button" style="display: none;">Open Key Master Menu</button>
+
+        <div id="inventory">
+            <div class="inventory-slot" data-slot="0"></div>
+            <div class="inventory-slot" data-slot="1"></div>
+            <div class="inventory-slot" data-slot="2"></div>
+            <div class="inventory-slot" data-slot="3"></div>
+            <div class="inventory-slot" data-slot="4"></div>
+        </div>
+
+        <div id="settings-modal">
+            <h2>Settings</h2>
+            <div class="settings-item">
+                <label for="ui-scale">UI Scale:</label>
+                <input type="range" id="ui-scale" min="50" max="150" value="100">
+            </div>
+            <div class="settings-item">
+                <label for="play-sfx">Play SFX:</label>
+                <input type="checkbox" id="play-sfx" checked>
+            </div>
+            <div class="settings-item">
+                <label for="show-instructions">Show Instructions:</label>
+                <input type="checkbox" id="show-instructions" checked>
+            </div>
+            <div class="settings-item">
+                <label for="fov">FOV:</label>
+                <input type="range" id="fov" min="60" max="120" value="75">
+            </div>
+            <div class="settings-item">
+                <label for="pointer-lock">Pointer Lock:</label>
+                <input type="checkbox" id="pointer-lock">
+            </div>
+            <div class="settings-item">
+                <label for="fullscreen">Fullscreen:</label>
+                <button id="fullscreen-button">Toggle Fullscreen</button>
+            </div>
+            <button onclick="closeSettings()">Close</button>
+        </div>
+
+        <div id="shop-modal">
+            <h2>Shop</h2>
+            <div id="shop-tabs">
+                <button class="shop-tab" onclick="showShopTab('items')">Items</button>
+                <button class="shop-tab" onclick="showShopTab('upgrades')">Upgrades</button>
+            </div>
+            <div id="shop-content">
+                <div id="shop-items" class="active">
+                    <!-- Existing items -->
+                    <div class="shop-item">
+                        <span>Key Magnet (10 keys)</span>
+                        <button onclick="buyItem('keyMagnet', 10)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Travel Stone (25 keys)</span>
+                        <button onclick="buyItem('travelStone', 25)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Speed Boost (15 keys)</span>
+                        <button onclick="buyItem('speedBoost', 15)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Shield (20 keys)</span>
+                        <button onclick="buyItem('shield', 20)">Buy</button>
+                    </div>
+                    <!-- New items -->
+                    <div class="shop-item">
+                        <span>Health Potion (5 keys)</span>
+                        <button onclick="buyItem('healthPotion', 5)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Mana Potion (5 keys)</span>
+                        <button onclick="buyItem('manaPotion', 5)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Strength Elixir (10 keys)</span>
+                        <button onclick="buyItem('strengthElixir', 10)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Invisibility Cloak (30 keys)</span>
+                        <button onclick="buyItem('invisibilityCloak', 30)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Fireball Scroll (15 keys)</span>
+                        <button onclick="buyItem('fireballScroll', 15)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Ice Wand (20 keys)</span>
+                        <button onclick="buyItem('iceWand', 20)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Thunderbolt Scroll (15 keys)</span>
+                        <button onclick="buyItem('thunderboltScroll', 15)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Healing Herb (5 keys)</span>
+                        <button onclick="buyItem('healingHerb', 5)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Poison Dagger (25 keys)</span>
+                        <button onclick="buyItem('poisonDagger', 25)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Magic Map (20 keys)</span>
+                        <button onclick="buyItem('magicMap', 20)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Golden Compass (25 keys)</span>
+                        <button onclick="buyItem('goldenCompass', 25)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Lantern (5 keys)</span>
+                        <button onclick="buyItem('lantern', 5)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Lockpick Set (10 keys)</span>
+                        <button onclick="buyItem('lockpickSet', 10)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Teleport Scroll (30 keys)</span>
+                        <button onclick="buyItem('teleportScroll', 30)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Resurrection Stone (50 keys)</span>
+                        <button onclick="buyItem('resurrectionStone', 50)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Time Stop Watch (40 keys)</span>
+                        <button onclick="buyItem('timeStopWatch', 40)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Magic Armor (35 keys)</span>
+                        <button onclick="buyItem('magicArmor', 35)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Magic Sword (35 keys)</span>
+                        <button onclick="buyItem('magicSword', 35)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Boots of Speed (15 keys)</span>
+                        <button onclick="buyItem('bootsOfSpeed', 15)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Ring of Protection (25 keys)</span>
+                        <button onclick="buyItem('ringOfProtection', 25)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Necklace of Wisdom (20 keys)</span>
+                        <button onclick="buyItem('necklaceOfWisdom', 20)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Cloak of Shadows (30 keys)</span>
+                        <button onclick="buyItem('cloakOfShadows', 30)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Dragon Scale (40 keys)</span>
+                        <button onclick="buyItem('dragonScale', 40)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Phoenix Feather (50 keys)</span>
+                        <button onclick="buyItem('phoenixFeather', 50)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Elixir of Life (50 keys)</span>
+                        <button onclick="buyItem('elixirOfLife', 50)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Gem of Seeing (20 keys)</span>
+                        <button onclick="buyItem('gemOfSeeing', 20)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Book of Spells (30 keys)</span>
+                        <button onclick="buyItem('bookOfSpells', 30)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Orb of Light (20 keys)</span>
+                        <button onclick="buyItem('orbOfLight', 20)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Bag of Holding (25 keys)</span>
+                        <button onclick="buyItem('bagOfHolding', 25)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Staff of Power (35 keys)</span>
+                        <button onclick="buyItem('staffOfPower', 35)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Scroll of Identify (10 keys)</span>
+                        <button onclick="buyItem('scrollOfIdentify', 10)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Potion of Flight (20 keys)</span>
+                        <button onclick="buyItem('potionOfFlight', 20)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Scroll of Summoning (30 keys)</span>
+                        <button onclick="buyItem('scrollOfSummoning', 30)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Helmet of Insight (25 keys)</span>
+                        <button onclick="buyItem('helmetOfInsight', 25)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Gloves of Thievery (15 keys)</span>
+                        <button onclick="buyItem('glovesOfThievery', 15)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Belt of Giant Strength (35 keys)</span>
+                        <button onclick="buyItem('beltOfGiantStrength', 35)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Ring of Invisibility (40 keys)</span>
+                        <button onclick="buyItem('ringOfInvisibility', 40)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Mirror of Truth (25 keys)</span>
+                        <button onclick="buyItem('mirrorOfTruth', 25)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Crystal Ball (30 keys)</span>
+                        <button onclick="buyItem('crystalBall', 30)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Horn of Blasting (20 keys)</span>
+                        <button onclick="buyItem('hornOfBlasting', 20)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Boots of Elvenkind (15 keys)</span>
+                        <button onclick="buyItem('bootsOfElvenkind', 15)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Cloak of Displacement (35 keys)</span>
+                        <button onclick="buyItem('cloakOfDisplacement', 35)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Stone of Good Luck (20 keys)</span>
+                        <button onclick="buyItem('stoneOfGoodLuck', 20)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Amulet of Health (25 keys)</span>
+                        <button onclick="buyItem('amuletOfHealth', 25)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Talisman of Pure Good (50 keys)</span>
+                        <button onclick="buyItem('talismanOfPureGood', 50)">Buy</button>
+                    </div>
+                    <div class="shop-item">
+                        <span>Deck of Many Things (100 keys)</span>
+                        <button onclick="buyItem('deckOfManyThings', 100)">Buy</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="key-master-modal" style="display: none;">
+            <h2>Key Master</h2>
+            <p>You can donate keys to the Key Master.</p>
+            <div>
+                <label for="donation-amount">Amount of keys to donate:</label>
+                <input type="number" id="donation-amount" min="1">
+            </div>
+            <button onclick="donateKeys()">Donate</button>
+            <button onclick="closeKeyMaster()">Close</button>
+            <p id="key-master-status"></p>
+        </div>
+
+        <div id="travel-menu">
+            <h2>Travel Menu</h2>
+            <div>
+                <label for="travel-x">X coordinate:</label>
+                <input type="number" id="travel-x">
+            </div>
+            <div>
+                <label for="travel-y">Y coordinate:</label>
+                <input type="number" id="travel-y">
+            </div>
+            <button onclick="executeTravel()">Travel</button>
+            <button onclick="closeTravelMenu()">Cancel</button>
+            <button onclick="setToSaveRoom()">Set to Save Room</button>
+        </div>
+
+        <div id="map-ui">
+            <div id="map-container">
+                <!-- Map grid will be generated here -->
+            </div>
+            <button id="close-map-button">Close Map</button>
+        </div>
+
+        <div id="status-message"></div>
+
+        <div id="death-screen">
+            <h1>You Died</h1>
+            <button id="respawn-button">Respawn</button>
+        </div>
+
+        <div id="movement-joystick" class="joystick-container">
+            <div class="joystick-knob"></div>
+        </div>
+
+        <div id="camera-joystick" class="joystick-container">
+            <div class="joystick-knob"></div>
+        </div>
+
+        <div id="inventory-modal" style="display: none;">
+            <div id="inventory-header">Inventory</div>
+            <div id="equipment-section">
+                <div class="equipment-slot" id="helmet-slot">Helmet</div>
+                <div class="equipment-slot" id="chest-slot">Armor</div>
+                <div class="equipment-slot" id="gloves-slot">Gloves</div>
+                <div class="equipment-slot" id="boots-slot">Boots</div>
+                <div class="equipment-slot" id="main-hand-slot">Main Hand</div>
+                <div class="equipment-slot" id="off-hand-slot">Off Hand</div>
+            </div>
+            <div id="consumable-section">
+                <div class="consumable-slot" id="potion-1">Potion 1</div>
+                <div class="consumable-slot" id="potion-2">Potion 2</div>
+                <div class="consumable-slot" id="potion-3">Potion 3</div>
+                <div class="consumable-slot" id="potion-4">Potion 4</div>
+                <div class="consumable-slot" id="potion-5">Potion 5</div>
+            </div>
+            <div id="grid-section">
+                <!-- 60-slot grid for items -->
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <div class="grid-slot"></div>
+                <!-- Repeat the slot div 60 times, or use JS to generate dynamically -->
+            </div>
+            <div id="character-stats">
+                <div>Level: <span id="level">1</span></div>
+                <div>Health: <span id="health">100</span></div>
+                <div>Experience: <span id="experience">0</span></div>
+            </div>
+            <button onclick="closeInventory()">Close Inventory</button>
+        </div>
+        
+        <button id="mobile-jump-button">JUMP</button>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
