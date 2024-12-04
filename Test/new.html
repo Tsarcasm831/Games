@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href=".">
+    <title>Colorful Forest World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/noise-generator@1.0.2/dist/noise.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="currency-display">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+        </svg>
+        <span>0</span>
+    </div>
+    <div id="inventory-button">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm11 15H4V8h16v11z"/>
+        </svg>
+    </div>
+    <div id="pause-button">
+        <svg viewBox="0 0 24 24">
+            <rect x="6" y="4" width="4" height="16"/>
+            <rect x="14" y="4" width="4" height="16"/>
+        </svg>
+    </div>
+    <div id="inventory-panel">
+        <div class="inventory-grid">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+    <div id="joystick-area">
+        <div id="joystick">
+            <div id="joystick-knob"></div>
+        </div>
+    </div>
+    <div id="forward-button">▲</div>
+    <div id="push-button">👊</div>
+    <div id="pause-menu">
+        <h2>Game Paused</h2>
+        <button class="pause-button" id="resume-button">Resume</button>
+        <button class="pause-button" id="settings-button">Settings</button>
+        <button class="pause-button" id="quit-button">Quit Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

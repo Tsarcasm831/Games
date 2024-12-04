@@ -1,0 +1,269 @@
+body { margin: 0; overflow: hidden; touch-action: none; }
+canvas { width: 100%; height: 100%; }
+#inventory-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #654321;
+    border-radius: 15px;
+    padding: 20px;
+    display: none;
+    z-index: 2000;
+}
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    height: 100%;
+}
+.inventory-slot {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #654321;
+    border-radius: 8px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.speech-bubble {
+    position: fixed;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    padding: 15px;
+    display: none;
+    max-width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 16px;
+    z-index: 1000;
+    border: 2px solid #333;
+    transform: translateX(-50%);
+    animation: popIn 0.3s ease-out;
+}
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f0f0f0;
+}
+@keyframes popIn {
+    0% { transform: translateX(-50%) scale(0); opacity: 0; }
+    100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+.tap-marker {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s infinite;
+    z-index: 1000;
+}
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+#joystick-area {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    z-index: 1000;
+}
+#joystick {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: none;
+}
+#joystick-knob {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+#forward-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    user-select: none;
+    touch-action: none;
+}
+#forward-button:active {
+    background: rgba(255, 255, 255, 0.5);
+}
+#push-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 0, 0, 0.3);
+    border: 2px solid rgba(255, 0, 0, 0.6);
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    user-select: none;
+    touch-action: none;
+}
+#push-button:active {
+    background: rgba(255, 0, 0, 0.5);
+}
+#inventory-button {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgba(139, 69, 19, 0.8);
+    border: 2px solid #654321;
+    border-radius: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#inventory-button svg {
+    width: 40px;
+    height: 40px;
+    fill: #ffffff;
+}
+#currency-display {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: gold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#currency-display svg {
+    width: 20px;
+    height: 20px;
+    fill: gold;
+}
+#pause-button {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#pause-button svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+#pause-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    z-index: 2000;
+    display: none;
+}
+.pause-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 200px;
+}
+.pause-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+.interaction-menu {
+    position: fixed;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    padding: 10px;
+    display: none;
+    z-index: 1001;
+    border: 2px solid #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.interaction-option {
+    display: block;
+    width: 150px;
+    padding: 8px 15px;
+    margin: 5px 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.interaction-option:hover {
+    background: #f0f0f0;
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+    20% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+}
