@@ -1,58 +1,59 @@
 // Leaves Texture Generator for Three.js
-// Optimized with Web Worker for performance
-function generateLeavesTexture(width = 64, height = 64) {
-    return new Promise((resolve, reject) => {
-        // Create a Web Worker
-        const worker = new Worker('tree-textures/leaves-texture-worker.js');
+// Optimized for performance and reduced complexity
+function generateLeavesTexture(width = 32, height = 32) {  
+    // Reduce canvas size for faster rendering
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+
+    // Simplified leaf colors with fewer variations
+    const leafColors = [
+        'rgb(34, 139, 34)',   
+        'rgb(0, 128, 0)'      
+    ];
+
+    // Simplified gradient background
+    ctx.fillStyle = 'rgb(200, 240, 200)';
+    ctx.fillRect(0, 0, width, height);
+
+    // Simplified leaf drawing function with fewer details
+    function drawLeaf(x, y, size, angle) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(angle * Math.PI / 180);
+
+        const leafColor = leafColors[Math.floor(Math.random() * leafColors.length)];
         
-        // Handle worker response
-        worker.onmessage = function(event) {
-            const { width, height, data } = event.data;
-            
-            // Create a canvas to reconstruct the texture
-            const canvas = document.createElement('canvas');
-            canvas.width = width;
-            canvas.height = height;
-            const ctx = canvas.getContext('2d');
-            
-            // Reconstruct image data
-            const imageData = new ImageData(new Uint8ClampedArray(data), width, height);
-            ctx.putImageData(imageData, 0, 0);
-
-            // Create Three.js texture
-            const texture = new THREE.CanvasTexture(canvas);
-            texture.wrapS = THREE.RepeatWrapping;
-            texture.wrapT = THREE.RepeatWrapping;
-            texture.repeat.set(3, 3);
-            
-            resolve(texture);
-        };
-
-        // Handle worker errors
-        worker.onerror = function(error) {
-            console.error('Leaves Texture Worker Error:', error);
-            reject(error);
-        };
-
-        // Send generation parameters to worker
-        worker.postMessage({ width, height });
-    });
-}
-
-// Async wrapper for compatibility with existing code
-async function createLeavesTexture(width, height) {
-    try {
-        return await generateLeavesTexture(width, height);
-    } catch (error) {
-        console.error('Failed to generate leaves texture:', error);
-        // Fallback to original synchronous method if worker fails
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        const texture = new THREE.CanvasTexture(canvas);
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
-        texture.repeat.set(3, 3);
-        return texture;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(size, 0);  
+        
+        ctx.strokeStyle = leafColor;
+        ctx.lineWidth = size / 3;
+        ctx.globalAlpha = 0.6;
+        ctx.stroke();
+        
+        ctx.restore();
     }
+
+    // Reduced number of leaves
+    for (let i = 0; i < 100; i++) {  
+        const x = Math.floor(Math.random() * width);
+        const y = Math.floor(Math.random() * height);
+        const size = 2 + Math.floor(Math.random() * 5);  
+        const angle = Math.floor(Math.random() * 360);
+        
+        drawLeaf(x, y, size, angle);
+    }
+
+    // Convert canvas to texture with reduced complexity
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set(2, 2);  
+    texture.magFilter = THREE.LinearFilter;  
+    texture.minFilter = THREE.LinearMipMapLinearFilter;  
+    
+    return texture;
 }
