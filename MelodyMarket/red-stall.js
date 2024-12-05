@@ -115,6 +115,26 @@ function createRedStall(scene, THREE) {
     // Add internal walls and counter to the group
     stallGroup.add(xWall1, xWall2, zWall1, zWall2, counter);
 
+    // Improved sound loading with AudioContext handling
+    const sound = new Howl({
+        src: ['https://file.garden/Zy7B0LkdIVpGyzA1/redMinion.wav'],
+        loop: true,
+        volume: 0,
+        onloaderror: (id, err) => {
+            console.warn(`Failed to load music:`, err);
+        },
+        onload: () => {
+            console.log(`Music loaded successfully`);
+            // Defer playing until user interaction
+            sound.pause();
+        }
+    });
+
+    stallGroup.userData = {
+        music: 'https://file.garden/Zy7B0LkdIVpGyzA1/music1.mp3',
+        sound: sound
+    };
+
     scene.add(stallGroup);
     return stallGroup;
 }

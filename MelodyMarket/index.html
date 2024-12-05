@@ -1,4 +1,4 @@
-<html><base href="">
+<html lang="en"><base href="">
 <head>
     <title>Melody Market</title>
     <link rel="icon" href="https://file.garden/Zy7B0LkdIVpGyzA1/mm.png" type="image/png">
@@ -7,20 +7,241 @@
     <!-- Include Three.js from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Include PointerLockControls directly -->
-    
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
     <!-- Include Howler.js for audio management -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-    <script src="red-stall.js"></script>
-    <script src="green-stall.js"></script>
-    <script src="blue-stall.js"></script>
-    <script src="yellow-stall.js"></script>
-    <script src="grass-texture.js"></script>
-    <script src="humanoid.js"></script>
-    <script src="musicstage.js"></script>
-    <script src="tree-textures/tree-bark-texture.js"></script>
-    <script src="tree-textures/leaves-texture.js"></script>
-    <script src="tree-population.js"></script>
+
+    <script>
+    // Ensure THREE is available globally
+    window.THREE = THREE;
+
+    // Advanced Script Loading Management
+    window.ScriptLoader = {
+        loadedScripts: {},
+        pendingScripts: [
+            'red-stall.js',
+            'green-stall.js',
+            'blue-stall.js',
+            'yellow-stall.js',
+            'humanoid.js',
+            'musicstage.js',
+            'tree-textures/tree-bark-texture.js',
+            'tree-textures/leaves-texture.js',
+            'tree-population.js'
+        ],
+        
+        // Timeout for script loading (increased from 10 seconds)
+        SCRIPT_LOAD_TIMEOUT: 15000,
+        
+        loadScript: function(src) {
+            return new Promise((resolve, reject) => {
+                // Create script element
+                const script = document.createElement('script');
+                script.src = src;
+                script.async = false;  // Ensure order of execution
+                script.defer = true;
+
+                // Track loading state
+                const loadTimer = setTimeout(() => {
+                    console.warn(`Script loading timed out: ${src}`);
+                    reject(new Error(`Script load timeout: ${src}`));
+                }, this.SCRIPT_LOAD_TIMEOUT);
+
+                script.onload = () => {
+                    clearTimeout(loadTimer);
+                    this.loadedScripts[src] = true;
+                    console.log(`Loaded successfully: ${src}`);
+                    resolve(src);
+                };
+
+                script.onerror = (error) => {
+                    clearTimeout(loadTimer);
+                    console.error(`Failed to load script: ${src}`, error);
+                    
+                    // Attempt to load from alternative CDN or fallback
+                    const fallbackSrc = this.getFallbackSource(src);
+                    if (fallbackSrc) {
+                        console.log(`Attempting fallback for: ${src}`);
+                        this.loadScript(fallbackSrc)
+                            .then(resolve)
+                            .catch(reject);
+                    } else {
+                        reject(error);
+                    }
+                };
+
+                // Add to document
+                document.head.appendChild(script);
+            });
+        },
+
+        // Fallback source mapping
+        getFallbackSource: function(originalSrc) {
+            const fallbackMap = {
+                'tree-textures/tree-bark-texture.js': 'https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/js/textures/bark-texture.js',
+                'tree-textures/leaves-texture.js': 'https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/js/textures/leaves-texture.js'
+                // Add more fallback mappings as needed
+            };
+            return fallbackMap[originalSrc];
+        },
+        
+        loadAll: async function() {
+            const startTime = performance.now();
+            const loadingText = document.getElementById('loading-text');
+            const loadingOverlay = document.getElementById('loading-overlay');
+
+            try {
+                // Parallel script loading with controlled concurrency
+                const loadPromises = this.pendingScripts.map((src, index) => 
+                    this.loadScript(src).catch(error => {
+                        // Individual script failure handling
+                        if (loadingText) {
+                            loadingText.textContent = `Loading error: ${src}`;
+                            loadingText.style.color = 'orange';
+                        }
+                        return null;  // Continue loading other scripts
+                    })
+                );
+
+                // Wait for all scripts to load or fail
+                await Promise.allSettled(loadPromises);
+
+                const totalLoadTime = performance.now() - startTime;
+                console.log(`Total Script Loading Time: ${totalLoadTime.toFixed(2)}ms`);
+
+                // Hide loading overlay
+                if (loadingOverlay) {
+                    loadingOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingOverlay.style.display = 'none';
+                    }, 500);
+                }
+
+                // Initialize game after all scripts are loaded
+                if (typeof init === 'function') {
+                    init();
+                    animate();
+                }
+            } catch (error) {
+                console.error('Critical script loading failure:', error);
+                if (loadingText) {
+                    loadingText.textContent = 'Loading failed. Please refresh.';
+                    loadingText.style.color = 'red';
+                }
+            }
+        }
+    };
+
+    // Start loading scripts when DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+        window.ScriptLoader.loadAll();
+    });
+    </script>
+
+    <script>
+    // Advanced Audio Management
+    window.AudioManager = {
+        audioContext: null,
+        audioSources: {
+            backgroundMusic: 'https://file.garden/Zy7B0LkdIVpGyzA1/music3.mp3',
+            stageMusic: 'https://file.garden/Zy7B0LkdIVpGyzA1/music3.mp3',
+            // Add other audio sources here
+        },
+        loadedSounds: {},
+        
+        // Initialize audio context with user interaction
+        initializeAudioContext: function() {
+            if (this.audioContext) return;
+
+            try {
+                // Modern audio context initialization
+                this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                
+                // Create a master gain node for volume control
+                this.masterGain = this.audioContext.createGain();
+                this.masterGain.connect(this.audioContext.destination);
+                this.masterGain.gain.setValueAtTime(0.5, this.audioContext.currentTime);
+            } catch (error) {
+                console.error('Web Audio API not supported:', error);
+            }
+        },
+        
+        // Lazy load audio with efficient caching
+        loadSound: function(key, options = {}) {
+            return new Promise((resolve, reject) => {
+                // Check if sound is already loaded
+                if (this.loadedSounds[key]) {
+                    resolve(this.loadedSounds[key]);
+                    return;
+                }
+
+                // Default options
+                const defaultOptions = {
+                    src: this.audioSources[key],
+                    preload: false,
+                    html5: true,
+                    volume: 0.5,
+                    onload: () => {
+                        this.loadedSounds[key] = sound;
+                        resolve(sound);
+                    },
+                    onloaderror: (id, err) => {
+                        console.error(`Error loading sound ${key}:`, err);
+                        reject(err);
+                    }
+                };
+
+                // Merge default and user options
+                const soundOptions = { ...defaultOptions, ...options };
+                
+                // Create Howler sound
+                const sound = new Howl(soundOptions);
+            });
+        },
+        
+        // Centralized sound management
+        playSound: function(key, options = {}) {
+            if (!this.loadedSounds[key]) {
+                this.loadSound(key).then(sound => sound.play());
+                return;
+            }
+            
+            const sound = this.loadedSounds[key];
+            sound.play();
+        },
+        
+        // Unload unused sounds to free memory
+        unloadSound: function(key) {
+            if (this.loadedSounds[key]) {
+                this.loadedSounds[key].unload();
+                delete this.loadedSounds[key];
+            }
+        },
+        
+        // Global volume control
+        setMasterVolume: function(volume) {
+            if (this.audioContext) {
+                this.masterGain.gain.setValueAtTime(
+                    Math.max(0, Math.min(1, volume)), 
+                    this.audioContext.currentTime
+                );
+            }
+        }
+    };
+
+    // Initialize audio on first user interaction
+    ['click', 'touchstart', 'keydown'].forEach(eventType => {
+        document.addEventListener(eventType, function initAudio() {
+            window.AudioManager.initializeAudioContext();
+            // Remove listener after first interaction
+            document.removeEventListener(eventType, initAudio);
+        }, { once: true });
+    });
+    </script>
+
+    <meta name="description" content="Melody Market - An immersive 3D music marketplace game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#87ceeb">
     <style>
         body { margin: 0; overflow: hidden; }
         #chat-container {
@@ -45,13 +266,70 @@
             font-size: 14px;
             box-sizing: border-box;
         }
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: white;
+            transition: opacity 0.5s ease;
+        }
+        #loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #loading-text {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #webgl-warning {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ff4500;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            z-index: 1100;
+        }
+        @media (max-width: 600px) {
+            #chat-container {
+                position: fixed;
+                bottom: 20px;
+                left: 10px;
+                right: 10px;
+                width: calc(100% - 20px);
+            }
+        }
     </style>
 </head>
 <body>
+    <div id="webgl-warning" style="display:none;">WebGL is required to play this game</div>
+    <div id="loading-overlay">
+        <div id="loading-spinner"></div>
+        <div id="loading-text">Loading Melody Market...</div>
+    </div>
     <div id="chat-container">
         <div id="chat-messages"></div>
         <input type="text" id="chat-input" placeholder="Press Enter to chat">
     </div>
+
     <script>
         function isWebGLAvailable() {
             try {
@@ -64,20 +342,9 @@
             }
         }
 
+        // Enhanced WebGL check with user-friendly warning
         if (!isWebGLAvailable()) {
-            var warning = document.createElement('div');
-            warning.style.position = 'absolute';
-            warning.style.top = '50%';
-            warning.style.left = '50%';
-            warning.style.transform = 'translate(-50%, -50%)';
-            warning.style.fontSize = '24px';
-            warning.style.color = '#fff';
-            warning.style.background = '#000';
-            warning.style.padding = '20px';
-            warning.style.borderRadius = '10px';
-            warning.style.textAlign = 'center';
-            warning.innerHTML = 'Your browser does not support WebGL.';
-            document.body.appendChild(warning);
+            document.getElementById('webgl-warning').style.display = 'block';
             throw new Error('WebGL not supported');
         }
 
@@ -98,12 +365,6 @@
         let moveRight = false;
         let canJump = false;
         let prevTime = performance.now();
-
-        // Ensure THREE is available
-        window.THREE = THREE;
-
-        init();
-        animate();
 
         function init() {
             // Initialize scene
@@ -365,44 +626,8 @@
         }
 
         function updateAudio() {
-            // Uncomment and update music sources
-            sounds = {
-                music2: new Howl({
-                    src: ['https://file.garden/Zy7B0LkdIVpGyzA1/music2.mp3'],
-                    loop: true
-                }),
-                music3: new Howl({
-                    src: ['https://file.garden/Zy7B0LkdIVpGyzA1/music3.mp3'],
-                    loop: true
-                }),
-                music4: new Howl({
-                    src: ['https://file.garden/Zy7B0LkdIVpGyzA1/music4.mp3'],
-                    loop: true
-                })
-            };
-
-            const buildingMinX = -15;
-            const buildingMaxX = 15;
-            const buildingMinZ = -15;
-            const buildingMaxZ = 15;
-            
-            const insideBuilding = 
-                player.position.x >= buildingMinX && 
-                player.position.x <= buildingMaxX && 
-                player.position.z >= buildingMinZ && 
-                player.position.z <= buildingMaxZ;
-
-            stalls.forEach((stall) => {
-                if (stall.stall.userData.sound) {
-                    const volume = insideBuilding ? 0.5 : 0;
-                    stall.stall.userData.sound.volume(volume);
-                    
-                    // Ensure continuous playback
-                    if (!stall.stall.userData.sound.playing()) {
-                        stall.stall.userData.sound.play();
-                    }
-                }
-            });
+            // Use the new AudioManager
+            window.AudioManager.playSound('backgroundMusic');
         }
 
         function onWindowResize() {
@@ -510,6 +735,32 @@
         document.addEventListener('click', initializeAudioContext);
         document.addEventListener('keydown', initializeAudioContext);
         document.addEventListener('touchstart', initializeAudioContext);
+
+        // Add performance monitoring
+        window.addEventListener('load', () => {
+            const loadTime = performance.now();
+            console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialization now handled by loading-screen.js
+        });
+
+        // Optional: Add a method to play stall music
+        function playStallMusic(stall) {
+            if (stall.userData && stall.userData.sound) {
+                stall.userData.sound.play();
+            }
+        }
+
+        // Optional: Add a method to stop stall music
+        function stopStallMusic(stall) {
+            if (stall.userData && stall.userData.sound) {
+                stall.userData.sound.pause();
+            }
+        }
     </script>
+    <script src="grass-texture.js"></script>
+    <script src="loading-screen.js"></script>
 </body>
 </html>

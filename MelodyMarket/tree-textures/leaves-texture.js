@@ -1,27 +1,23 @@
 // Leaves Texture Generator for Three.js
 // Optimized for performance and reduced complexity
-function generateLeavesTexture(width = 64, height = 64) {
+function generateLeavesTexture(width = 32, height = 32) {  
     // Reduce canvas size for faster rendering
     const canvas = document.createElement('canvas');
     canvas.width = width;
     canvas.height = height;
     const ctx = canvas.getContext('2d');
 
-    // Simplified leaf colors
+    // Simplified leaf colors with fewer variations
     const leafColors = [
-        'rgb(34, 139, 34)',   // Forest Green
-        'rgb(50, 205, 50)',   // Lime Green
-        'rgb(0, 128, 0)'      // Green
+        'rgb(34, 139, 34)',   
+        'rgb(0, 128, 0)'      
     ];
 
-    // Simple gradient background
-    const gradient = ctx.createLinearGradient(0, 0, width, height);
-    gradient.addColorStop(0, 'rgb(200, 240, 200)');
-    gradient.addColorStop(1, 'rgb(144, 238, 144)');
-    ctx.fillStyle = gradient;
+    // Simplified gradient background
+    ctx.fillStyle = 'rgb(200, 240, 200)';
     ctx.fillRect(0, 0, width, height);
 
-    // Simplified leaf drawing function
+    // Simplified leaf drawing function with fewer details
     function drawLeaf(x, y, size, angle) {
         ctx.save();
         ctx.translate(x, y);
@@ -31,21 +27,21 @@ function generateLeavesTexture(width = 64, height = 64) {
         
         ctx.beginPath();
         ctx.moveTo(0, 0);
-        ctx.quadraticCurveTo(size/2, -size/4, size, 0);
-        ctx.quadraticCurveTo(size/2, size/4, 0, 0);
+        ctx.lineTo(size, 0);  
         
-        ctx.fillStyle = leafColor;
+        ctx.strokeStyle = leafColor;
+        ctx.lineWidth = size / 3;
         ctx.globalAlpha = 0.6;
-        ctx.fill();
+        ctx.stroke();
         
         ctx.restore();
     }
 
     // Reduced number of leaves
-    for (let i = 0; i < 250; i++) {
+    for (let i = 0; i < 100; i++) {  
         const x = Math.floor(Math.random() * width);
         const y = Math.floor(Math.random() * height);
-        const size = 3 + Math.floor(Math.random() * 7);
+        const size = 2 + Math.floor(Math.random() * 5);  
         const angle = Math.floor(Math.random() * 360);
         
         drawLeaf(x, y, size, angle);
@@ -55,7 +51,9 @@ function generateLeavesTexture(width = 64, height = 64) {
     const texture = new THREE.CanvasTexture(canvas);
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(3, 3);
+    texture.repeat.set(2, 2);  
+    texture.magFilter = THREE.LinearFilter;  
+    texture.minFilter = THREE.LinearMipMapLinearFilter;  
     
     return texture;
 }
