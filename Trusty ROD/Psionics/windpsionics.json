@@ -1,0 +1,283 @@
+[
+    {
+      "Tier": 1,
+      "Power": "Breeze",
+      "Description": "Create a gentle breeze to move lightweight objects.",
+      "Duration": "3 rounds",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 1,
+      "Power": "Whisper Wind",
+      "Description": "Send a whispered message carried by the wind.",
+      "Duration": "Instant",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 2,
+      "Power": "Wind Push",
+      "Description": "Push a target with a gust of wind.",
+      "Duration": "Instant",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 2,
+      "Power": "Wind Whistle",
+      "Description": "Generate a high-pitched whistle to distract or annoy.",
+      "Duration": "2 rounds",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 3,
+      "Power": "Wind Dagger",
+      "Description": "Form a small, sharp blade of wind for a quick attack.",
+      "Duration": "Instant",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 3,
+      "Power": "Air Cushion",
+      "Description": "Create a cushion of air to soften a fall.",
+      "Duration": "1 round",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 4,
+      "Power": "Gust",
+      "Description": "Release a stronger gust of wind to knock back targets.",
+      "Duration": "Instant",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 4,
+      "Power": "Wind Barrier",
+      "Description": "Create a shield of swirling air around yourself.",
+      "Duration": "3 rounds",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 5,
+      "Power": "Wind Step",
+      "Description": "Move silently with the aid of the wind.",
+      "Duration": "2 rounds",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 5,
+      "Power": "Air Slice",
+      "Description": "Launch a cutting blade of compressed air at a target.",
+      "Duration": "Instant",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 6,
+      "Power": "Wind Walk",
+      "Description": "Walk across the surface of water or other liquids.",
+      "Duration": "3 rounds",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 6,
+      "Power": "Whirlwind",
+      "Description": "Create a small whirlwind to capture or disorient enemies.",
+      "Duration": "1 round",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 7,
+      "Power": "Wind Blast",
+      "Description": "Emit a blast of air strong enough to shatter objects.",
+      "Duration": "Instant",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 7,
+      "Power": "Vacuum Sphere",
+      "Description": "Create a sphere of vacuum to trap and suffocate a target.",
+      "Duration": "1 round",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 8,
+      "Power": "Aerial Blades",
+      "Description": "Summon multiple blades of air to strike simultaneously.",
+      "Duration": "Instant",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 8,
+      "Power": "Wind Cloak",
+      "Description": "Envelop yourself in swirling winds, increasing evasion.",
+      "Duration": "3 rounds",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 9,
+      "Power": "Tornado Grip",
+      "Description": "Lift and throw targets with a tornado-like force.",
+      "Duration": "Instant",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 9,
+      "Power": "Wind Scythe",
+      "Description": "Form a large scythe of wind for powerful slashing attacks.",
+      "Duration": "Instant",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 10,
+      "Power": "Cyclone",
+      "Description": "Summon a cyclone that moves in a directed path.",
+      "Duration": "3 rounds",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 10,
+      "Power": "Wind Shear",
+      "Description": "Create a razor-thin gust of air to cut through armor.",
+      "Duration": "Instant",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 11,
+      "Power": "Gale Force",
+      "Description": "Generate powerful winds to blow away enemies and obstacles.",
+      "Duration": "2 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Wind Armor",
+      "Description": "Surround yourself with protective wind currents.",
+      "Duration": "3 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Airborne",
+      "Description": "Levitate and maneuver in the air for a limited time.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Hurricane Wall",
+      "Description": "Create a wall of hurricane-force winds.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Wind Spear",
+      "Description": "Form a long spear of air for piercing attacks.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Tornado Burst",
+      "Description": "Release a burst of tornadoes in multiple directions.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Wind Prison",
+      "Description": "Trap an enemy in a swirling vortex of air.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Vacuum Blade",
+      "Description": "Cut through objects by creating a vacuum along a blade.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Wind Funnel",
+      "Description": "Create a funnel of wind to draw in and trap targets.",
+      "Duration": "2 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Aerial Assault",
+      "Description": "Summon blades of wind from the sky to strike down.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Whirlwind Strike",
+      "Description": "Perform a spinning attack surrounded by cutting winds.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Storm Surge",
+      "Description": "Call forth a storm of wind and lightning in a large area.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Wind Dragon",
+      "Description": "Summon a dragon made of wind to attack your enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Typhoon",
+      "Description": "Summon a massive typhoon to sweep across the battlefield.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Wind God’s Wrath",
+      "Description": "Release a devastating blast of wind in all directions.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Gale Armor",
+      "Description": "Create an impenetrable armor of wind currents.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Vacuum Domain",
+      "Description": "Create a large area of vacuum, cutting off air supply.",
+      "Duration": "2 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Heavenly Wind",
+      "Description": "Call down divine winds that purify and cleanse.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Tempest Rage",
+      "Description": "Summon a tempest of wind and lightning to decimate foes.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Stormbringer",
+      "Description": "Become one with the storm, gaining full control over wind.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    }
+  ]
+  

@@ -1,0 +1,18 @@
+{
+  "archetype": "CASTER_PSION",
+  "description": "The CASTER/PSION is a mental/shamanic adept who uses mental abilities to attack and confound enemies on the battlefield. He/She may also use his/her abilities to heal allies or himself/herself. The scion is usually found at the back of the group or under cover preferring to use powers over weapons and brains over brawn to achieve victory. The CASTER/PSION class breaks down into three sub-categories; The MISUNDERSTOOD ADEPT, The RELUCTANT HERO, and THE WILD MAGE.",
+  "sub_archetypes": [
+    {
+      "name": "MISUNDERSTOOD ADEPT",
+      "description": "The misunderstood adept is a powerful mentalist who struggles with their abilities and often feels isolated from others."
+    },
+    {
+      "name": "RELUCTANT HERO",
+      "description": "The reluctant hero is a psion who possesses great power but is hesitant to use it for fear of the consequences."
+    },
+    {
+      "name": "WILD MAGE",
+      "description": "The wild mage is a free-spirited spellcaster whose powers are unpredictable and often chaotic."
+    }
+  ]
+}

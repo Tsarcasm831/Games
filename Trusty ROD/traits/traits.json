@@ -1,0 +1,525 @@
+[
+    {
+      "Trait": "Strong",
+      "Category": "Physical",
+      "Effect": "+10 to Strength attribute",
+      "New": false
+    },
+    {
+      "Trait": "Agile",
+      "Category": "Physical",
+      "Effect": "+10 to Dexterity attribute",
+      "New": false
+    },
+    {
+      "Trait": "Charismatic",
+      "Category": "Social",
+      "Effect": "+10 to Charisma attribute",
+      "New": false
+    },
+    {
+      "Trait": "Intelligent",
+      "Category": "Mental",
+      "Effect": "+10 to Intelligence attribute",
+      "New": false
+    },
+    {
+      "Trait": "Resilient",
+      "Category": "Physical",
+      "Effect": "+10 to Vitality attribute",
+      "New": false
+    },
+    {
+      "Trait": "Lucky",
+      "Category": "Cosmic",
+      "Effect": "+5 to all Luck-based rolls",
+      "New": false
+    },
+    {
+      "Trait": "Empathic",
+      "Category": "Mental",
+      "Effect": "+5 to Psy attribute, improved insight on emotions",
+      "New": false
+    },
+    {
+      "Trait": "Brave",
+      "Category": "Mental",
+      "Effect": "+5 to Fear Resistance",
+      "New": false
+    },
+    {
+      "Trait": "Cunning",
+      "Category": "Mental",
+      "Effect": "+5 to Deception and Stealth-related skills",
+      "New": false
+    },
+    {
+      "Trait": "Perceptive",
+      "Category": "Sensory",
+      "Effect": "+5 to Perception attribute",
+      "New": false
+    },
+    {
+      "Trait": "Fast Reflexes",
+      "Category": "Physical",
+      "Effect": "+5 to Initiative rolls",
+      "New": false
+    },
+    {
+      "Trait": "Natural Leader",
+      "Category": "Social",
+      "Effect": "+5 to Leadership skills, +2 to group morale",
+      "New": false
+    },
+    {
+      "Trait": "Tough",
+      "Category": "Physical",
+      "Effect": "+5 to Armor Soak value",
+      "New": false
+    },
+    {
+      "Trait": "Stealthy",
+      "Category": "Physical",
+      "Effect": "+5 to Stealth-related skills",
+      "New": false
+    },
+    {
+      "Trait": "Honorable",
+      "Category": "Moral",
+      "Effect": "+10 to Reputation, code of ethics",
+      "New": false
+    },
+    {
+      "Trait": "Silver Tongue",
+      "Category": "Social",
+      "Effect": "+5 to Persuasion and Barter skills",
+      "New": false
+    },
+    {
+      "Trait": "Cold-Hearted",
+      "Category": "Mental",
+      "Effect": "+10 to Intimidation, -5 to Empathy-based rolls",
+      "New": false
+    },
+    {
+      "Trait": "Night Vision",
+      "Category": "Sensory",
+      "Effect": "Can see in low light conditions",
+      "New": false
+    },
+    {
+      "Trait": "Psychic Shield",
+      "Category": "Mental",
+      "Effect": "+5 to resist psychic attacks",
+      "New": false
+    },
+    {
+      "Trait": "Light Sleeper",
+      "Category": "Physical",
+      "Effect": "Wakes easily, less likely to be ambushed",
+      "New": false
+    },
+    {
+      "Trait": "Heavy Hitter",
+      "Category": "Physical",
+      "Effect": "+5 to melee damage",
+      "New": false
+    },
+    {
+      "Trait": "Magic Affinity",
+      "Category": "Supernatural",
+      "Effect": "+5 to casting magic or psionics",
+      "New": false
+    },
+    {
+      "Trait": "Animal Friend",
+      "Category": "Sensory",
+      "Effect": "+5 to handling animals, animals are friendly",
+      "New": false
+    },
+    {
+      "Trait": "Jack-of-All-Trades",
+      "Category": "General",
+      "Effect": "+2 to all skills, not specialized",
+      "New": false
+    },
+    {
+      "Trait": "Shadow Walker",
+      "Category": "Stealth",
+      "Effect": "+5 to Stealth and Evasion",
+      "New": false
+    },
+    {
+      "Trait": "Gadgeteer",
+      "Category": "Technical",
+      "Effect": "+5 to crafting and using gadgets",
+      "New": false
+    },
+    {
+      "Trait": "Quick Learner",
+      "Category": "Mental",
+      "Effect": "Learns new skills 10% faster",
+      "New": false
+    },
+    {
+      "Trait": "Quick Healer",
+      "Category": "Physical",
+      "Effect": "Regenerates HP faster",
+      "New": false
+    },
+    {
+      "Trait": "Code of Honor",
+      "Category": "Moral",
+      "Effect": "+10 to Reputation when acting honorably",
+      "New": false
+    },
+    {
+      "Trait": "Glib",
+      "Category": "Social",
+      "Effect": "+5 to Fast-Talk and Con skills",
+      "New": false
+    },
+    {
+      "Trait": "Ancestral Knowledge",
+      "Category": "Mystic",
+      "Effect": "+5 to Lore and History-related skills",
+      "New": false
+    },
+    {
+      "Trait": "Natural Armor",
+      "Category": "Physical",
+      "Effect": "+2 to base Armor Class",
+      "New": false
+    },
+    {
+      "Trait": "Mechanical Aptitude",
+      "Category": "Technical",
+      "Effect": "+5 to repairing and using machinery",
+      "New": false
+    },
+    {
+      "Trait": "Altruistic",
+      "Category": "Moral",
+      "Effect": "+5 to Charisma when helping others",
+      "New": false
+    },
+    {
+      "Trait": "Survivor",
+      "Category": "Survival",
+      "Effect": "+5 to Survival skills",
+      "New": false
+    },
+    {
+      "Trait": "Trained Fighter",
+      "Category": "Combat",
+      "Effect": "+5 to Attack rolls",
+      "New": false
+    },
+    {
+      "Trait": "War Mage",
+      "Category": "Supernatural",
+      "Effect": "+5 to damage when casting combat spells",
+      "New": false
+    },
+    {
+      "Trait": "Necromancer",
+      "Category": "Supernatural",
+      "Effect": "Can communicate with and control undead",
+      "New": false
+    },
+    {
+      "Trait": "Elemental Affinity",
+      "Category": "Supernatural",
+      "Effect": "+5 to controlling elemental forces",
+      "New": false
+    },
+    {
+      "Trait": "Battle Hardened",
+      "Category": "Combat",
+      "Effect": "+5 to resist fear and morale checks",
+      "New": false
+    },
+    {
+      "Trait": "Berserker",
+      "Category": "Combat",
+      "Effect": "+10 to melee damage when enraged",
+      "New": false
+    },
+    {
+      "Trait": "Iron Will",
+      "Category": "Mental",
+      "Effect": "+5 to resist mental influence and domination",
+      "New": false
+    },
+    {
+      "Trait": "Nimble",
+      "Category": "Physical",
+      "Effect": "+5 to evasion and acrobatics",
+      "New": false
+    },
+    {
+      "Trait": "Eagle Eye",
+      "Category": "Sensory",
+      "Effect": "+5 to ranged attack accuracy",
+      "New": false
+    },
+    {
+      "Trait": "Linguist",
+      "Category": "Mental",
+      "Effect": "Knows multiple languages",
+      "New": false
+    },
+    {
+      "Trait": "Tactician",
+      "Category": "Mental",
+      "Effect": "+5 to strategic planning and tactics",
+      "New": false
+    },
+    {
+      "Trait": "Zen Master",
+      "Category": "Mental",
+      "Effect": "+10 to Psy when meditating",
+      "New": false
+    },
+    {
+      "Trait": "Tinkerer",
+      "Category": "Technical",
+      "Effect": "+5 to crafting and modifying equipment",
+      "New": false
+    },
+    {
+      "Trait": "Pilot",
+      "Category": "Technical",
+      "Effect": "+5 to piloting vehicles",
+      "New": false
+    },
+    {
+      "Trait": "Cybernetically Enhanced",
+      "Category": "Physical",
+      "Effect": "+5 to strength and agility due to cybernetics",
+      "New": true
+    },
+    {
+      "Trait": "Technomancer",
+      "Category": "Supernatural",
+      "Effect": "Can manipulate technology with magic",
+      "New": true
+    },
+    {
+      "Trait": "Biohacker",
+      "Category": "Technical",
+      "Effect": "+5 to medical and genetic modification skills",
+      "New": true
+    },
+    {
+      "Trait": "Drone Operator",
+      "Category": "Technical",
+      "Effect": "+5 to controlling and using drones",
+      "New": true
+    },
+    {
+      "Trait": "Quantum Thinker",
+      "Category": "Mental",
+      "Effect": "+5 to solving complex, abstract problems",
+      "New": true
+    },
+    {
+      "Trait": "Aura Reader",
+      "Category": "Sensory",
+      "Effect": "Can sense emotions and intentions of others",
+      "New": true
+    },
+    {
+      "Trait": "Time Manipulator",
+      "Category": "Supernatural",
+      "Effect": "Can slightly alter the perception of time",
+      "New": true
+    },
+    {
+      "Trait": "Firewall Expert",
+      "Category": "Technical",
+      "Effect": "+10 to resisting hacking attempts",
+      "New": true
+    },
+    {
+      "Trait": "Energy Vampire",
+      "Category": "Supernatural",
+      "Effect": "Absorbs energy from nearby sources",
+      "New": true
+    },
+    {
+      "Trait": "Digital Ghost",
+      "Category": "Stealth",
+      "Effect": "+5 to remain undetected in digital networks",
+      "New": true
+    },
+    {
+      "Trait": "Void Walker",
+      "Category": "Supernatural",
+      "Effect": "Can travel short distances through shadows",
+      "New": true
+    },
+    {
+      "Trait": "Mind Architect",
+      "Category": "Mental",
+      "Effect": "+5 to memory manipulation and psychic construction",
+      "New": true
+    },
+    {
+      "Trait": "Genetic Legacy",
+      "Category": "Mystic",
+      "Effect": "Inherited traits from ancient lineages",
+      "New": true
+    },
+    {
+      "Trait": "Mutant",
+      "Category": "Physical",
+      "Effect": "Gains a random beneficial mutation",
+      "New": true
+    },
+    {
+      "Trait": "Arcane Hacker",
+      "Category": "Supernatural",
+      "Effect": "Can cast spells on digital systems",
+      "New": true
+    },
+    {
+      "Trait": "Holographic Artist",
+      "Category": "Technical",
+      "Effect": "+5 to creating and using holograms",
+      "New": true
+    },
+    {
+      "Trait": "Hyper-Focused",
+      "Category": "Mental",
+      "Effect": "Can focus intensely on a task, ignoring distractions",
+      "New": true
+    },
+    {
+      "Trait": "Synthetic Symbiosis",
+      "Category": "Physical",
+      "Effect": "Enhanced with synthetic augmentations",
+      "New": true
+    },
+    {
+      "Trait": "Nano-Healer",
+      "Category": "Technical",
+      "Effect": "Uses nanotechnology to heal wounds",
+      "New": true
+    },
+    {
+      "Trait": "Gravity Shifter",
+      "Category": "Supernatural",
+      "Effect": "Can manipulate gravity in a small area",
+      "New": true
+    },
+    {
+      "Trait": "Battle Medic",
+      "Category": "Medical",
+      "Effect": "+10 to healing during combat",
+      "New": true
+    },
+    {
+      "Trait": "Adaptive Camouflage",
+      "Category": "Stealth",
+      "Effect": "Can blend into surroundings for short periods",
+      "New": true
+    },
+    {
+      "Trait": "Cyber-Jockey",
+      "Category": "Technical",
+      "Effect": "+5 to interfacing with and controlling vehicles",
+      "New": true
+    },
+    {
+      "Trait": "Psionic Blade",
+      "Category": "Supernatural",
+      "Effect": "Can manifest blades of psychic energy",
+      "New": true
+    },
+    {
+      "Trait": "Reality Weaver",
+      "Category": "Supernatural",
+      "Effect": "Can manipulate small aspects of reality",
+      "New": true
+    },
+    {
+      "Trait": "Bio-Engineer",
+      "Category": "Technical",
+      "Effect": "+5 to creating and modifying biological entities",
+      "New": true
+    },
+    {
+      "Trait": "Urban Nomad",
+      "Category": "Survival",
+      "Effect": "+5 to survival skills in urban environments",
+      "New": true
+    },
+    {
+      "Trait": "Etheric Navigator",
+      "Category": "Supernatural",
+      "Effect": "Can sense and navigate the fabric of spacetime",
+      "New": true
+    },
+    {
+      "Trait": "Aether Walker",
+      "Category": "Supernatural",
+      "Effect": "Can briefly phase out of physical reality",
+      "New": true
+    },
+    {
+      "Trait": "Temporal Sage",
+      "Category": "Mystic",
+      "Effect": "+5 to divination and foreseeing possible futures",
+      "New": true
+    },
+    {
+      "Trait": "Void Seer",
+      "Category": "Mystic",
+      "Effect": "Can sense anomalies and disturbances in space-time",
+      "New": true
+    },
+    {
+      "Trait": "Shadow Broker",
+      "Category": "Social",
+      "Effect": "+5 to gathering and trading in secret information",
+      "New": true
+    },
+    {
+      "Trait": "Data Whisperer",
+      "Category": "Technical",
+      "Effect": "Can extract and interpret hidden digital information",
+      "New": true
+    },
+    {
+      "Trait": "Interstellar Trader",
+      "Category": "Social",
+      "Effect": "+10 to trade and barter in off-world goods",
+      "New": true
+    },
+    {
+      "Trait": "Holo-Shield Expert",
+      "Category": "Technical",
+      "Effect": "+5 to using and creating holographic shields",
+      "New": true
+    },
+    {
+      "Trait": "Bio-Resistant",
+      "Category": "Physical",
+      "Effect": "+10 to resisting biological hazards and toxins",
+      "New": true
+    },
+    {
+      "Trait": "Arcane Engineer",
+      "Category": "Supernatural",
+      "Effect": "+5 to combining magic with technology",
+      "New": true
+    },
+    {
+      "Trait": "Seismic Sense",
+      "Category": "Sensory",
+      "Effect": "Can sense vibrations and movements in the ground",
+      "New": true
+    }
+  ]
+  

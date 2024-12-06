@@ -1,0 +1,283 @@
+[
+    {
+      "Tier": 1,
+      "Power": "Ignite",
+      "Description": "Create a small flame that can light candles or torches.",
+      "Duration": "1 round",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 1,
+      "Power": "Warmth",
+      "Description": "Emit a mild heat to warm a small area.",
+      "Duration": "3 rounds",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 2,
+      "Power": "Flame Flicker",
+      "Description": "Create small, flickering flames to distract or illuminate.",
+      "Duration": "1 round",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 2,
+      "Power": "Cinder Touch",
+      "Description": "Heat the surface of an object with a touch.",
+      "Duration": "2 rounds",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 3,
+      "Power": "Firebolt",
+      "Description": "Launch a small bolt of fire at a target.",
+      "Duration": "Instant",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 3,
+      "Power": "Flame Whip",
+      "Description": "Create a short whip of fire for melee combat.",
+      "Duration": "1 round",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 4,
+      "Power": "Ember Burst",
+      "Description": "Release a burst of embers to disorient enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 4,
+      "Power": "Fire Breath",
+      "Description": "Exhale a short-range cone of fire.",
+      "Duration": "1 round",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 5,
+      "Power": "Flame Wall",
+      "Description": "Erect a barrier of fire to block or deter enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 5,
+      "Power": "Heatwave",
+      "Description": "Generate a wave of intense heat in a small area.",
+      "Duration": "Instant",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 6,
+      "Power": "Burning Hands",
+      "Description": "Envelop your hands in flames for melee attacks.",
+      "Duration": "3 rounds",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 6,
+      "Power": "Incinerate",
+      "Description": "Concentrate heat to burn a small object to ashes.",
+      "Duration": "Instant",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 7,
+      "Power": "Flame Step",
+      "Description": "Move swiftly by transforming into a burst of flames.",
+      "Duration": "Instant",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 7,
+      "Power": "Fireball",
+      "Description": "Create a medium-sized ball of fire and launch it at a target.",
+      "Duration": "Instant",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 8,
+      "Power": "Blazing Shield",
+      "Description": "Form a shield of fire around yourself or an ally.",
+      "Duration": "3 rounds",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 8,
+      "Power": "Scorching Ray",
+      "Description": "Emit a focused beam of fire for precision damage.",
+      "Duration": "Instant",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 9,
+      "Power": "Molten Touch",
+      "Description": "Melt through metal or stone with a touch.",
+      "Duration": "Instant",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 9,
+      "Power": "Inferno Wave",
+      "Description": "Release a wave of fire in a 180-degree arc.",
+      "Duration": "Instant",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 10,
+      "Power": "Flame Cloak",
+      "Description": "Envelop yourself in flames, causing damage to melee attackers.",
+      "Duration": "3 rounds",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 10,
+      "Power": "Heat Mirage",
+      "Description": "Create a heat distortion that makes illusions appear real.",
+      "Duration": "1 round",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 11,
+      "Power": "Blaze Path",
+      "Description": "Leave a trail of fire in your wake that burns enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Fire Vortex",
+      "Description": "Create a swirling vortex of flames in a small area.",
+      "Duration": "2 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Lava Burst",
+      "Description": "Summon a burst of molten lava from the ground.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Hellfire Spear",
+      "Description": "Form a spear made of intense fire for ranged combat.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Eruption",
+      "Description": "Cause the ground to erupt with flames beneath your enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Meteor Shower",
+      "Description": "Summon small meteors of fire to rain down on an area.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Burning Aura",
+      "Description": "Surround yourself with an aura of fire, enhancing fire abilities.",
+      "Duration": "5 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Pyroclasm",
+      "Description": "Cause a fiery explosion centered on a target.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Fiery Chains",
+      "Description": "Bind an enemy with chains of fire that burn on contact.",
+      "Duration": "3 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Flame Dragon",
+      "Description": "Summon a dragon-shaped flame to attack enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Supernova",
+      "Description": "Create a massive explosion of fire, damaging all nearby.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Heat Seeker",
+      "Description": "Launch a fire projectile that homes in on a target.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Emberstorm",
+      "Description": "Summon a storm of embers to rain down in a wide area.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Phoenix Flight",
+      "Description": "Transform into a phoenix made of fire for a short flight.",
+      "Duration": "2 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Solar Flare",
+      "Description": "Emit a blinding burst of intense light and heat.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Volcanic Wrath",
+      "Description": "Summon a volcanic eruption in a targeted area.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Infernal Flame",
+      "Description": "Summon black flames that burn anything they touch.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Hellfire Rain",
+      "Description": "Call down a rain of hellfire over a wide area.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "World Blaze",
+      "Description": "Set the surrounding terrain ablaze in an immense firestorm.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Phoenix Rebirth",
+      "Description": "Sacrifice your current form to become reborn in a burst of fire, fully healed.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

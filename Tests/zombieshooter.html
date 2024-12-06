@@ -1,0 +1,654 @@
+<html><head><base href="https://red-zombie-apocalypse-v11.example.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Zombie Apocalypse V11: Lives and Medkits</title>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'Courier New', monospace;
+        background-color: #1a0000;
+        cursor: crosshair;
+      }
+      #game-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: radial-gradient(circle, #400 0%, #200 50%, #100 100%);
+      }
+      #player {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #player-body {
+        width: 100%;
+        height: 100%;
+        background-color: #8b0000;
+        border-radius: 30px;
+        box-shadow: 0 0 20px #ff0000;
+        position: relative;
+        overflow: hidden;
+      }
+      #player-body::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: linear-gradient(135deg, #ff3333, #8b0000);
+        border-radius: 20px;
+      }
+      #player-body::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 20px;
+        height: 10px;
+        background-color: #000;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ff0000;
+      }
+      #gun {
+        width: 50px;
+        height: 10px;
+        background-color: #4d0000;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform-origin: left center;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #ff0000;
+      }
+      .zombie {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border-radius: 25px;
+        box-shadow: 0 0 15px #ff0000;
+        overflow: hidden;
+      }
+      .zombie::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 20px;
+      }
+      .zombie::after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 10px;
+        height: 10px;
+        background-color: #ff0000;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #ff0000, 15px 0 5px #ff0000;
+      }
+      .zombie-normal {
+        background: radial-gradient(circle, #8b0000 0%, #4d0000 100%);
+      }
+      .zombie-normal::before {
+        background: linear-gradient(45deg, #a52a2a, #8b0000);
+      }
+      .zombie-fast {
+        background: radial-gradient(circle, #ff4500 0%, #8b0000 100%);
+      }
+      .zombie-fast::before {
+        background: linear-gradient(45deg, #ff6347, #ff4500);
+      }
+      .zombie-tank {
+        background: radial-gradient(circle, #8b4513 0%, #4b0082 100%);
+      }
+      .zombie-tank::before {
+        background: linear-gradient(45deg, #cd853f, #8b4513);
+      }
+      .bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #ffcc00;
+        position: absolute;
+        border-radius: 6px;
+        box-shadow: 0 0 8px #ffcc00;
+      }
+      #score, #wave, #lives {
+        position: absolute;
+        color: #ff6666;
+        font-size: 32px;
+        text-shadow: 2px 2px 4px #000000;
+      }
+      #score { top: 20px; left: 20px; }
+      #wave { top: 20px; right: 20px; }
+      #lives { top: 60px; left: 20px; }
+      #game-over, #victory {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ff0000;
+        font-size: 72px;
+        text-shadow: 4px 4px 8px #000000;
+        display: none;
+      }
+      .blood-splatter {
+        position: absolute;
+        pointer-events: none;
+      }
+      #restart-button, #next-wave-button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 24px;
+        background-color: #ff3333;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+        font-family: 'Courier New', monospace;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+      }
+      #restart-button:hover, #next-wave-button:hover {
+        background-color: #ff6666;
+        box-shadow: 0 0 15px #ff0000;
+      }
+      #upgrades {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .upgrade-button {
+        margin: 5px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #ff3333;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Courier New', monospace;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+      .upgrade-button:hover {
+        background-color: #ff6666;
+        box-shadow: 0 0 15px #ff0000;
+      }
+      .upgrade-button:disabled {
+        background-color: #662222;
+        cursor: not-allowed;
+      }
+      #instructions {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: #ff6666;
+        font-size: 18px;
+        text-shadow: 1px 1px 2px #000000;
+      }
+    </style>
+    </head>
+    <body>
+    <div id="game-container">
+      <div id="player">
+        <div id="player-body"></div>
+        <div id="gun"></div>
+      </div>
+      <div id="score">Score: <span id="score-value">0</span></div>
+      <div id="wave">Wave: <span id="wave-value">1</span></div>
+      <div id="lives">Lives: <span id="lives-value">3</span></div>
+      <div id="game-over">GAME OVER</div>
+      <div id="victory">VICTORY!</div>
+      <button id="restart-button">Restart</button>
+      <button id="next-wave-button">Next Wave</button>
+      <div id="upgrades">
+        <button class="upgrade-button" id="fire-rate-upgrade">Fire Rate (100)</button>
+        <button class="upgrade-button" id="multi-shot-upgrade">Multi Shot (250)</button>
+        <button class="upgrade-button" id="bullet-speed-upgrade">Bullet Speed (150)</button>
+        <button class="upgrade-button" id="medkit-upgrade">Medkit (200)</button>
+      </div>
+      <div id="instructions">Use your mouse to aim. Click to shoot. Survive 100 waves of red zombies!</div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+      const gameContainer = document.getElementById('game-container');
+      const player = document.getElementById('player');
+      const gun = document.getElementById('gun');
+      const scoreValue = document.getElementById('score-value');
+      const waveValue = document.getElementById('wave-value');
+      const livesValue = document.getElementById('lives-value');
+      const gameOver = document.getElementById('game-over');
+      const victory = document.getElementById('victory');
+      const restartButton = document.getElementById('restart-button');
+      const nextWaveButton = document.getElementById('next-wave-button');
+      const fireRateUpgrade = document.getElementById('fire-rate-upgrade');
+      const multiShotUpgrade = document.getElementById('multi-shot-upgrade');
+      const bulletSpeedUpgrade = document.getElementById('bullet-speed-upgrade');
+      const medkitUpgrade = document.getElementById('medkit-upgrade');
+      let score = 0;
+      let wave = 1;
+      let lives = 3;
+      let rotation = 0;
+      let gameActive = true;
+      let zombies = [];
+      let bullets = [];
+      let fireRate = 500;
+      let multiShot = 1;
+      let bulletSpeed = 10;
+      let lastShot = 0;
+      let deathCount = 0;
+    
+      function createZombie() {
+        if (!gameActive) return;
+        const zombie = document.createElement('div');
+        zombie.className = 'zombie';
+        const angle = Math.random() * Math.PI * 2;
+        const radius = Math.max(gameContainer.offsetWidth, gameContainer.offsetHeight) / 2;
+        const x = Math.cos(angle) * radius + gameContainer.offsetWidth / 2;
+        const y = Math.sin(angle) * radius + gameContainer.offsetHeight / 2;
+        zombie.style.left = x + 'px';
+        zombie.style.top = y + 'px';
+    
+        let zombieType, health, speed;
+        const random = Math.random();
+        if (wave < 25) {
+          zombieType = 'normal';
+          health = 1;
+          speed = 1;
+        } else if (wave < 50) {
+          if (random < 0.7) {
+            zombieType = 'normal';
+            health = 1;
+            speed = 1;
+          } else {
+            zombieType = 'fast';
+            health = 1;
+            speed = 2;
+          }
+        } else if (wave < 75) {
+          if (random < 0.5) {
+            zombieType = 'normal';
+            health = 1;
+            speed = 1;
+          } else if (random < 0.8) {
+            zombieType = 'fast';
+            health = 1;
+            speed = 2;
+          } else {
+            zombieType = 'tank';
+            health = 3;
+            speed = 0.5;
+          }
+        } else {
+          if (random < 0.3) {
+            zombieType = 'normal';
+            health = 1;
+            speed = 1;
+          } else if (random < 0.7) {
+            zombieType = 'fast';
+            health = 1;
+            speed = 2;
+          } else {
+            zombieType = 'tank';
+            health = 3;
+            speed = 0.5;
+          }
+        }
+    
+        zombie.classList.add(`zombie-${zombieType}`);
+        zombie.dataset.health = health;
+        zombie.dataset.speed = speed;
+    
+        gameContainer.appendChild(zombie);
+        zombies.push(zombie);
+      }
+    
+      function moveZombies() {
+        const playerRect = player.getBoundingClientRect();
+        zombies.forEach(zombie => {
+          const zombieRect = zombie.getBoundingClientRect();
+          const angle = Math.atan2(
+            playerRect.top + playerRect.height / 2 - (zombieRect.top + zombieRect.height / 2),
+            playerRect.left + playerRect.width / 2 - (zombieRect.left + zombieRect.width / 2)
+          );
+          
+          const speed = parseFloat(zombie.dataset.speed);
+          const vx = Math.cos(angle) * speed;
+          const vy = Math.sin(angle) * speed;
+    
+          zombie.style.left = (zombieRect.left + vx) + 'px';
+          zombie.style.top = (zombieRect.top + vy) + 'px';
+    
+          checkPlayerCollision(zombie);
+        });
+      }
+    
+      function shoot() {
+        if (!gameActive || Date.now() - lastShot < fireRate) return;
+        lastShot = Date.now();
+    
+        for (let i = 0; i < multiShot; i++) {
+          const bullet = document.createElement('div');
+          bullet.className = 'bullet';
+          bullet.style.left = gameContainer.offsetWidth / 2 - 6 + 'px';
+          bullet.style.top = gameContainer.offsetHeight / 2 - 6 + 'px';
+          gameContainer.appendChild(bullet);
+    
+          const spreadAngle = (i - (multiShot - 1) / 2) * 5;
+          const angle = (rotation + spreadAngle) * Math.PI / 180;
+          bullets.push({element: bullet, angle: angle});
+        }
+    
+        createFloatingText('Bang!', gameContainer.offsetWidth / 2, gameContainer.offsetHeight / 2);
+      }
+    
+      function moveBullets() {
+        bullets.forEach((bullet, index) => {
+          const bulletRect = bullet.element.getBoundingClientRect();
+          const vx = Math.cos(bullet.angle) * bulletSpeed;
+          const vy = Math.sin(bullet.angle) * bulletSpeed;
+    
+          bullet.element.style.left = (bulletRect.left + vx) + 'px';
+          bullet.element.style.top = (bulletRect.top + vy) + 'px';
+    
+          if (bulletRect.left < 0 || bulletRect.right > gameContainer.offsetWidth ||
+              bulletRect.top < 0 || bulletRect.bottom > gameContainer.offsetHeight) {
+            gameContainer.removeChild(bullet.element);
+            bullets.splice(index, 1);
+          } else {
+            checkZombieCollision(bullet.element);
+          }
+        });
+      }
+    
+      function checkZombieCollision(bullet) {
+        zombies.forEach((zombie, index) => {
+          if (isColliding(bullet, zombie)) {
+            createBloodSplatter(zombie);
+            let health = parseInt(zombie.dataset.health) - 1;
+            if (health <= 0) {
+              gameContainer.removeChild(zombie);
+              zombies.splice(index, 1);
+              score += 5;
+              scoreValue.textContent = score;
+              updateUpgradeButtons();
+            } else {
+              zombie.dataset.health = health;
+            }
+            gameContainer.removeChild(bullet);
+            bullets = bullets.filter(b => b.element !== bullet);
+          }
+        });
+      }
+    
+      function createBloodSplatter(zombie) {
+        const splatter = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        splatter.setAttribute("class", "blood-splatter");
+        splatter.setAttribute("width", "100");
+        splatter.setAttribute("height", "100");
+        splatter.style.left = zombie.offsetLeft - 25 + 'px';
+        splatter.style.top = zombie.offsetTop - 25 + 'px';
+    
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", "50");
+        circle.setAttribute("cy", "50");
+        circle.setAttribute("r", "40");
+        circle.setAttribute("fill", "#880000");
+    
+        splatter.appendChild(circle);
+        gameContainer.appendChild(splatter);
+    
+        gsap.to(splatter, {
+          opacity: 0,
+          scale: 2,
+          duration: 1.5,
+          ease: "power2.out",
+          onComplete: () => {
+            gameContainer.removeChild(splatter);
+          }
+        });
+      }
+    
+      function checkPlayerCollision(zombie) {
+        if (isColliding(player, zombie)) {
+          playerHit();
+        }
+      }
+    
+      function playerHit() {
+        lives--;
+        livesValue.textContent = lives;
+        if (lives <= 0) {
+          endGame();
+        } else {
+          createFloatingText('Ouch!', player.offsetLeft, player.offsetTop);
+          player.style.opacity = '0.5';
+          setTimeout(() => {
+            player.style.opacity = '1';
+          }, 1000);
+        }
+      }
+    
+      function isColliding(a, b) {
+        const aRect = a.getBoundingClientRect();
+        const bRect = b.getBoundingClientRect();
+        return !(
+          aRect.top + aRect.height < bRect.top ||
+          aRect.top > bRect.top + bRect.height ||
+          aRect.left + aRect.width < bRect.left ||
+          aRect.left > bRect.left + bRect.width
+        );
+      }
+    
+      gameContainer.addEventListener('mousemove', (e) => {
+        if (!gameActive) return;
+        const rect = gameContainer.getBoundingClientRect();
+        const x = e.clientX - rect.left - gameContainer.offsetWidth / 2;
+        const y = e.clientY - rect.top - gameContainer.offsetHeight / 2;
+        rotation = Math.atan2(y, x) * 180 / Math.PI;
+        gun.style.transform = `rotate(${rotation}deg)`;
+      });
+    
+      gameContainer.addEventListener('click', shoot);
+    
+      function startGame() {
+        gameActive = true;
+        wave = 1;
+        waveValue.textContent = wave;
+        lives = 3;
+        livesValue.textContent = lives;
+        rotation = 0;
+        gun.style.transform = `rotate(0deg)`;
+        gameOver.style.display = 'none';
+        victory.style.display = 'none';
+        restartButton.style.display = 'none';
+        nextWaveButton.style.display = 'none';
+        
+        zombies.forEach(zombie => gameContainer.removeChild(zombie));
+        bullets.forEach(bullet => gameContainer.removeChild(bullet.element));
+        zombies = [];
+        bullets = [];
+    
+        const splatters = document.getElementsByClassName('blood-splatter');
+        while(splatters.length > 0) {
+          splatters[0].parentNode.removeChild(splatters[0]);
+        }
+    
+        if (deathCount >= 3) {
+          score = 0;
+          scoreValue.textContent = score;
+          deathCount = 0;
+        }
+    
+        updateUpgradeButtons();
+        startWave();
+      }
+    
+      function startWave() {
+        for (let i = 0; i < wave * 5; i++) {
+          setTimeout(createZombie, i * 1000);
+        }
+      }
+    
+      function endGame() {
+        gameActive = false;
+        gameOver.style.display = 'block';
+        restartButton.style.display = 'block';
+        deathCount++;
+      }
+    
+      function checkWaveComplete() {
+        if (zombies.length === 0) {
+          if (wave === 100) {
+            victory.style.display = 'block';
+            restartButton.style.display = 'block';
+          } else {
+            wave++;
+            waveValue.textContent = wave;
+            nextWaveButton.style.display = 'block';
+          }
+        }
+      }
+    
+      restartButton.addEventListener('click', startGame);
+      nextWaveButton.addEventListener('click', () => {
+        nextWaveButton.style.display = 'none';
+        startWave();
+      });
+    
+      gsap.to('#player-body', {
+        scale: 1.1,
+        duration: 0.75,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      });
+    
+      function createFloatingText(text, x, y) {
+        const floatingText = document.createElement('div');
+        floatingText.textContent = text;
+        floatingText.style.position = 'absolute';
+        floatingText.style.left = x + 'px';
+        floatingText.style.top = y + 'px';
+        floatingText.style.color = '#ff9999';
+        floatingText.style.fontSize = '24px';
+        floatingText.style.pointerEvents = 'none';
+        gameContainer.appendChild(floatingText);
+    
+        gsap.to(floatingText, {
+          y: '-=50',
+          opacity: 0,
+          duration: 1,
+          ease: 'power1.out',
+          onComplete: () => {
+            gameContainer.removeChild(floatingText);
+          }
+        });
+      }
+    
+      function createParticle() {
+        const particle = document.createElement('div');
+        particle.style.position = 'absolute';
+        particle.style.width = '2px';
+        particle.style.height = '2px';
+        particle.style.backgroundColor = '#ff6666';
+        particle.style.borderRadius = '50%';
+        particle.style.pointerEvents = 'none';
+        
+        const x = Math.random() * gameContainer.offsetWidth;
+        const y = Math.random() * gameContainer.offsetHeight;
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        
+        gameContainer.appendChild(particle);
+        
+        gsap.to(particle, {
+          opacity: 0,
+          duration: 2,
+          ease: 'power1.out',
+          onComplete: () => {
+            gameContainer.removeChild(particle);
+            createParticle();
+          }
+        });
+      }
+    
+      for (let i = 0; i < 50; i++) {
+        createParticle();
+      }
+    
+      function updateUpgradeButtons() {
+        fireRateUpgrade.disabled = score < 100;
+        multiShotUpgrade.disabled = score < 250;
+        bulletSpeedUpgrade.disabled = score < 150;
+        medkitUpgrade.disabled = score < 200 || lives >= 3;
+      }
+    
+      fireRateUpgrade.addEventListener('click', () => {
+        if (score >= 100) {
+          score -= 100;
+          scoreValue.textContent = score;
+          fireRate = Math.max(100, fireRate - 50);
+          updateUpgradeButtons();
+        }
+      });
+    
+      multiShotUpgrade.addEventListener('click', () => {
+        if (score >= 250) {
+          score -= 250;
+          scoreValue.textContent = score;
+          multiShot++;
+          updateUpgradeButtons();
+        }
+      });
+    
+      bulletSpeedUpgrade.addEventListener('click', () => {
+        if (score >= 150) {
+          score -= 150;
+          scoreValue.textContent = score;
+          bulletSpeed += 2;
+          updateUpgradeButtons();
+        }
+      });
+    
+      medkitUpgrade.addEventListener('click', () => {
+        if (score >= 200 && lives < 3) {
+          score -= 200;
+          scoreValue.textContent = score;
+          lives++;
+          livesValue.textContent = lives;
+          createFloatingText('Health +1', player.offsetLeft, player.offsetTop);
+          updateUpgradeButtons();
+        }
+      });
+    
+      function gameLoop() {
+        if (gameActive) {
+          moveZombies();
+          moveBullets();
+          checkWaveComplete();
+        }
+        requestAnimationFrame(gameLoop);
+      }
+    
+      startGame();
+      gameLoop();
+    </script>
+    </body></html>

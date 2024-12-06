@@ -1,0 +1,18 @@
+{
+  "archetype": "WARRIOR",
+  "description": "The warrior class is the backbone of any adventuring party or group. The warrior is usually at the front of the group, leading his or her comrades into battle with a giant gleaming sword or a myriad of guns and grenades attached to every available space on his or her battle-scarred armor. The warrior class breaks down into three sub-categories; the Juggernaut, the Gun-Runner and the Paladin. Each archetype has merits and flaws and its own specialty and will add to an adventuring party in a variety of ways.",
+  "sub_archetypes": [
+    {
+      "name": "JUGGERNAUT",
+      "description": "The juggernaut is a heavily armed and armored warrior who prefers to attack toe-to-toe and up close and personal usually favoring swords, knives or large blunt weapons to deal damage and draw enemy attacks away from the other party members."
+    },
+    {
+      "name": "GUN-RUNNER",
+      "description": "The gun-runner is a ranged specialist who uses firearms to deal damage from a distance, often employing tactics to outmaneuver enemies."
+    },
+    {
+      "name": "PALADIN",
+      "description": "The paladin is a holy warrior who combines martial prowess with divine magic to protect allies and smite foes."
+    }
+  ]
+}

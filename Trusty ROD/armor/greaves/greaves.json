@@ -1,0 +1,185 @@
+[
+    {
+      "Greaves": "Cloth Leggings",
+      "Durability": "Cloth",
+      "Weight (lbs)": 2,
+      "Protection Level": "Low",
+      "Description": "Basic leggings made from cloth, offering minimal protection and maximum flexibility. Ideal for light movement."
+    },
+    {
+      "Greaves": "Leather Greaves",
+      "Durability": "Leather",
+      "Weight (lbs)": 4,
+      "Protection Level": "Low-Medium",
+      "Description": "Greaves made from hardened leather, providing basic defense against cuts and minor impacts while maintaining mobility."
+    },
+    {
+      "Greaves": "Reinforced Leather Greaves",
+      "Durability": "Reinforced Leather",
+      "Weight (lbs)": 6,
+      "Protection Level": "Medium",
+      "Description": "Leather greaves reinforced with metal studs or plates, offering enhanced protection against melee strikes."
+    },
+    {
+      "Greaves": "Padded Leg Guards",
+      "Durability": "Padded Armor",
+      "Weight (lbs)": 8,
+      "Protection Level": "Medium",
+      "Description": "Thickly padded leg guards that absorb impact, providing moderate protection while allowing for comfortable movement."
+    },
+    {
+      "Greaves": "Kevlar Greaves",
+      "Durability": "Kevlar",
+      "Weight (lbs)": 10,
+      "Protection Level": "Medium-High",
+      "Description": "Modern Kevlar greaves designed to protect against shrapnel and small-caliber bullets without significantly hindering movement."
+    },
+    {
+      "Greaves": "Kevlar Reinforced Greaves",
+      "Durability": "Kevlar Reinforced",
+      "Weight (lbs)": 12,
+      "Protection Level": "High",
+      "Description": "Advanced Kevlar greaves with additional plating for enhanced defense against ballistic and piercing attacks."
+    },
+    {
+      "Greaves": "Composite Armor Greaves",
+      "Durability": "Composite Armor",
+      "Weight (lbs)": 15,
+      "Protection Level": "High",
+      "Description": "Greaves made of composite materials, offering a balance of protection and flexibility against various threats."
+    },
+    {
+      "Greaves": "Titanium Alloy Greaves",
+      "Durability": "Titanium Alloy",
+      "Weight (lbs)": 18,
+      "Protection Level": "High",
+      "Description": "Greaves forged from titanium alloy, providing excellent defense against physical attacks while being lightweight enough for agile movement."
+    },
+    {
+      "Greaves": "Titanium Weave Greaves",
+      "Durability": "Titanium Weave",
+      "Weight (lbs)": 12,
+      "Protection Level": "High",
+      "Description": "Lightweight greaves woven with titanium fibers, offering high durability and mobility with minimal weight."
+    },
+    {
+      "Greaves": "Ceramic Plated Greaves",
+      "Durability": "Ceramic Plating",
+      "Weight (lbs)": 20,
+      "Protection Level": "Very High",
+      "Description": "Greaves embedded with ceramic inserts, providing superior protection against energy and ballistic weapons."
+    },
+    {
+      "Greaves": "Plasteel Greaves",
+      "Durability": "Plasteel",
+      "Weight (lbs)": 16,
+      "Protection Level": "Very High",
+      "Description": "Advanced plasteel greaves, offering high resistance to energy and kinetic attacks while being relatively lightweight."
+    },
+    {
+      "Greaves": "Plasma-Treated Greaves",
+      "Durability": "Plasma-Treated Armor",
+      "Weight (lbs)": 20,
+      "Protection Level": "Very High",
+      "Description": "Plasma-treated greaves that offer exceptional resistance to energy and thermal attacks, maintaining flexibility."
+    },
+    {
+      "Greaves": "Nano-Fiber Mesh Greaves",
+      "Durability": "Nano-Fiber Mesh",
+      "Weight (lbs)": 10,
+      "Protection Level": "Very High",
+      "Description": "Flexible greaves made from nano-fiber mesh, providing high resistance to physical and energy attacks without limiting mobility."
+    },
+    {
+      "Greaves": "Energy-Diffusing Greaves",
+      "Durability": "Energy-Diffusing Armor",
+      "Weight (lbs)": 22,
+      "Protection Level": "Very High",
+      "Description": "Greaves embedded with energy-diffusing tech, reducing damage from energy weapons and deflecting projectiles."
+    },
+    {
+      "Greaves": "Quantum Fiber Greaves",
+      "Durability": "Quantum Fiber",
+      "Weight (lbs)": 8,
+      "Protection Level": "Extremely High",
+      "Description": "Ultra-light greaves made from quantum fibers, offering exceptional defense while allowing for maximum agility."
+    },
+    {
+      "Greaves": "Graviton-Plated Greaves",
+      "Durability": "Graviton-Plated",
+      "Weight (lbs)": 25,
+      "Protection Level": "Extremely High",
+      "Description": "Greaves enhanced with graviton technology, capable of deflecting projectiles and dispersing impact force."
+    },
+    {
+      "Greaves": "Voidweave Greaves",
+      "Durability": "Voidweave",
+      "Weight (lbs)": 8,
+      "Protection Level": "Extremely High",
+      "Description": "Greaves interwoven with void energy, providing high protection against physical and psionic attacks."
+    },
+    {
+      "Greaves": "Neutronium Greaves",
+      "Durability": "Neutronium Lattice",
+      "Weight (lbs)": 30,
+      "Protection Level": "Extremely High",
+      "Description": "Nearly indestructible greaves providing unmatched protection, though their significant weight requires great strength to maneuver effectively."
+    },
+    {
+      "Greaves": "Temporal Greaves",
+      "Durability": "Temporal Armor",
+      "Weight (lbs)": 12,
+      "Protection Level": "Extremely High",
+      "Description": "Greaves incorporating temporal distortions, allowing the wearer to phase through time and avoid damage to the legs."
+    },
+    {
+      "Greaves": "Dark Matter Greaves",
+      "Durability": "Dark Matter Composite",
+      "Weight (lbs)": 25,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Greaves infused with dark matter, capable of absorbing kinetic and energy attacks, reducing overall damage taken."
+    },
+    {
+      "Greaves": "Etherium Greaves",
+      "Durability": "Etherium Plating",
+      "Weight (lbs)": 28,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Greaves made from rare Etherium metal, offering high resistance to physical, energy, and psionic attacks."
+    },
+    {
+      "Greaves": "Psion-Weave Greaves",
+      "Durability": "Psion-Weave",
+      "Weight (lbs)": 12,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Psionically enhanced greaves that adapt to the wearer’s mental commands, offering dynamic protection and agility."
+    },
+    {
+      "Greaves": "Hyper-Alloy Greaves",
+      "Durability": "Hyper-Alloy",
+      "Weight (lbs)": 20,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Greaves made from hyper-alloy, providing near-impenetrable defense while retaining a manageable weight for high mobility."
+    },
+    {
+      "Greaves": "Nanite-Infused Greaves",
+      "Durability": "Nanite-Infused",
+      "Weight (lbs)": 18,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Greaves embedded with self-repairing nanites, ensuring continuous durability and protection during extended combat."
+    },
+    {
+      "Greaves": "Quantum Shield Greaves",
+      "Durability": "Quantum Shielding",
+      "Weight (lbs)": 15,
+      "Protection Level": "Invulnerable",
+      "Description": "Greaves with embedded quantum fields, creating a protective barrier that deflects a wide range of attacks."
+    },
+    {
+      "Greaves": "Hypersteel Greaves",
+      "Durability": "Hypersteel",
+      "Weight (lbs)": 35,
+      "Protection Level": "Invulnerable",
+      "Description": "The ultimate greaves made from hypersteel, providing unmatched resistance to all forms of damage while maintaining surprising maneuverability for their size."
+    }
+  ]
+  

@@ -1,0 +1,38 @@
+[
+    {
+      "Tier": 17,
+      "Power": "Thunderous Eruption",
+      "Description": "Cause the ground to erupt with molten rock, fire, and lightning, carried by a powerful gust of wind.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Voltaic Rockstorm",
+      "Description": "Summon a storm of electrified rocks, fire, and wind that batters and burns everything in its path.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Magma Gale",
+      "Description": "Create a gale carrying molten rock, fire, and electric currents that incinerate and shock all within.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Elemental Thunderquake",
+      "Description": "Cause a massive earthquake filled with lightning, fire, and wind, cracking the earth and electrocuting enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Earth's Lightning Inferno",
+      "Description": "Unleash a cataclysmic eruption of earth, fire, wind, and lightning that reshapes the battlefield.",
+      "Duration": "3 rounds",
+      "Mana Cost": 100
+    }
+  ]
+  

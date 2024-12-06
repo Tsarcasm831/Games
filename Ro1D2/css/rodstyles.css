@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#gameCanvas {
+    display: block;
+}
+
+/* Example UI Styles */
+#inventory, #stats, #hotbar, #minimapContainer, #npcPopup, #skillTree, #helpWindow, #bestiary, #questLog, #adminConsole, #fullscreenMap {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    border: 2px solid #aaa;
+    display: none;
+    padding: 20px;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+#inventory {
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+/* Add more specific styling for each UI element as needed */

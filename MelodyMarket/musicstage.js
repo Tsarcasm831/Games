@@ -26,6 +26,52 @@ function createMusicStage(scene, THREE) {
     platform.position.set(stageInfo.x, 1, stageInfo.z);
     stageGroup.add(platform);
 
+    // Add collision detection using bounding box
+    const platformBoundingBox = new THREE.Box3().setFromObject(platform);
+    platform.userData.boundingBox = platformBoundingBox;
+
+    // Function to check collision with another object
+    platform.checkCollision = function(otherObject) {
+        const otherBoundingBox = new THREE.Box3().setFromObject(otherObject);
+        return platformBoundingBox.intersectsBox(otherBoundingBox);
+    };
+
+    // Update bounding box on position change
+    platform.updateCollision = function() {
+        platformBoundingBox.setFromObject(platform);
+    };
+
+    // Improved collision handling for the platform
+    platform.handlePlayerCollision = function(player) {
+        const playerBoundingBox = new THREE.Box3().setFromObject(player);
+        if (platformBoundingBox.intersectsBox(playerBoundingBox)) {
+            // Check if the player is above the platform
+            if (player.position.y > platform.position.y) {
+                // Place the player on top of the platform
+                player.position.y = platform.position.y + platformGeometry.parameters.height / 2 + playerBoundingBox.getSize(new THREE.Vector3()).y / 2;
+            } else {
+                // Block the player from moving through the platform
+                const playerDirection = new THREE.Vector3();
+                player.getWorldDirection(playerDirection);
+                if (Math.abs(playerDirection.z) > Math.abs(playerDirection.x)) {
+                    // Block movement in the z direction
+                    if (player.position.z > platform.position.z) {
+                        player.position.z = platformBoundingBox.max.z + playerBoundingBox.getSize(new THREE.Vector3()).z / 2;
+                    } else {
+                        player.position.z = platformBoundingBox.min.z - playerBoundingBox.getSize(new THREE.Vector3()).z / 2;
+                    }
+                } else {
+                    // Block movement in the x direction
+                    if (player.position.x > platform.position.x) {
+                        player.position.x = platformBoundingBox.max.x + playerBoundingBox.getSize(new THREE.Vector3()).x / 2;
+                    } else {
+                        player.position.x = platformBoundingBox.min.x - playerBoundingBox.getSize(new THREE.Vector3()).x / 2;
+                    }
+                }
+            }
+        }
+    };
+
     // 3 Static Monitors (avoiding CSS3D complications)
     const monitorGeometry = new THREE.PlaneGeometry(16, 9);
     const monitorMaterial = new THREE.MeshStandardMaterial({ 

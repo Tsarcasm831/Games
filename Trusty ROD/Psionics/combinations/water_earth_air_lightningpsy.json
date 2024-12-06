@@ -1,0 +1,38 @@
+[
+    {
+      "Tier": 17,
+      "Power": "Electrified Mudstorm",
+      "Description": "Create a storm of electrified mud, wind, and water that traps and shocks enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Galequake Tsunami",
+      "Description": "Summon a tsunami driven by wind and lightning, crashing down with the force of an earthquake.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Storm of the Deep",
+      "Description": "Call forth a storm from the depths, combining the power of water, earth, air, and lightning to devastate foes.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Electric Quicksand",
+      "Description": "Turn the ground into electrified quicksand, trapping and shocking all caught within.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Elemental Cataclysm",
+      "Description": "Unleash the ultimate force of water, earth, air, and lightning to completely annihilate the battlefield.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

@@ -1,0 +1,1592 @@
+[
+    {
+      "Skill": "Hand-to-Hand: Wrestling",
+      "Category": "Combat",
+      "Primary Attribute": "Strength",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Hand-to-Hand: Brawling",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Hand-to-Hand: Boxing",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Hand-to-Hand: Martial Arts",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Hand-to-Hand: MMA",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity/Strength",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Martial Weapons: Blunt",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Martial Weapons: Spear/Lance",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Martial Weapons: Blades",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Ranged Weapons: Thrown",
+      "Category": "Combat",
+      "Primary Attribute": "Agility",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Ranged Weapons: Firearms",
+      "Category": "Combat",
+      "Primary Attribute": "Agility",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Ranged Attack Magic",
+      "Category": "Combat/Magic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Ranged Attack Psionics",
+      "Category": "Combat/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Dodge Melee",
+      "Category": "Combat",
+      "Primary Attribute": "Agility",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Dodge Projectile",
+      "Category": "Combat",
+      "Primary Attribute": "Agility",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Weapon Parry",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Empty Hand Parry",
+      "Category": "Combat",
+      "Primary Attribute": "Dexterity",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Soak Damage",
+      "Category": "Combat",
+      "Primary Attribute": "Vitality",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Shield Block",
+      "Category": "Combat",
+      "Primary Attribute": "Strength",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Firearm Maintenance",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Ammunition Reloading",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Firearm Bluing/Engraving",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Blade Maintenance",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Blacksmithing",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Energy Crystal Focus",
+      "Category": "Technical/Mystic",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Resonance Chamber Tuning",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Plasma Induction Mechanics",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Electro-Magnetic Mechanics",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Create Meta-Gel",
+      "Category": "Technical/Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Use Meta-Tool",
+      "Category": "Technical/Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Fire Building",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Shelter Construction",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Water Purification",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Woodland Harvest",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Hunting",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Tracking",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Set Trap/Snare",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Cooking",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Land Navigation",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Animal Training",
+      "Category": "Animal Handling",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Horsemanship",
+      "Category": "Animal Handling",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Taxidermy",
+      "Category": "Animal Handling",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Animal Affinity",
+      "Category": "Animal Handling",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Singing",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Etiquette",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Public Speaking",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Barter",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Con",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Fast-Talk",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Intimidate",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Expert Liar",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Politics",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Computer Basics",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Computer Advanced",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Computer Hacking",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Computer Repair",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Computer Programming",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Software Engineer",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Cybersecurity",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "AI Development",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Engineering",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Biology",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Sociology",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Zoology",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Chemistry",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Archaeology",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Computer Science",
+      "Category": "Science/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "First Aid",
+      "Category": "Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Surgical Repair",
+      "Category": "Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Pathology",
+      "Category": "Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Pharmacology",
+      "Category": "Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Xeno-Medicine",
+      "Category": "Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Telekinesis",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Telepathy",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Pyrokinesis",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Healing Light",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Mind Shield",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Clairvoyance",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Divination",
+      "Category": "Psionics/Mystic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Empathy",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Elemental Control",
+      "Category": "Magic/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Robotics",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Piloting (Ground)",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Piloting (Air)",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Salvage Operation",
+      "Category": "Technical/Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Urban Exploration",
+      "Category": "Survival",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Genetics",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Interstellar Navigation",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": false
+    },
+    {
+      "Skill": "Quantum Computing",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Drone Operations",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Neural Interface Programming",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Nanotech Engineering",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Cybernetic Augmentations",
+      "Category": "Medical/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Holographic Design",
+      "Category": "Technical/Artistic",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Biomechanics",
+      "Category": "Medical/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Advanced Robotics",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Genetic Engineering",
+      "Category": "Science/Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psionic Weaponry",
+      "Category": "Psionics/Combat",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psionic Healing",
+      "Category": "Psionics/Medical",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Spatial Awareness",
+      "Category": "Psionics/Sensory",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Spatial Manipulation",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Reality Bending",
+      "Category": "Psionics/Magic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Temporal Mechanics",
+      "Category": "Science/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Stellar Cartography",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Xenobiology",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Terraforming",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Artificial Intelligence Ethics",
+      "Category": "Social/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Machine Learning",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Virtual Reality Design",
+      "Category": "Technical/Artistic",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Dark Web Navigation",
+      "Category": "Technical/Stealth",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Advanced Encryption",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Mind Hacking",
+      "Category": "Psionics/Technical",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psi-Crafting",
+      "Category": "Psionics/Artistic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Digital Forensics",
+      "Category": "Technical/Investigative",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Subspace Communication",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Gravity Manipulation",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Plasma Weaponry",
+      "Category": "Combat/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Interstellar Diplomacy",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Mind Sculpting",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psi-Armor",
+      "Category": "Psionics/Combat",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Neural Augmentation",
+      "Category": "Medical/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Combat Drone Deployment",
+      "Category": "Combat/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Mech Piloting",
+      "Category": "Combat/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Enhanced Perception",
+      "Category": "Psionics/Sensory",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Void Navigation",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Anti-Matter Physics",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Cosmic Awareness",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Astro-Engineering",
+      "Category": "Science/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Chronomancy",
+      "Category": "Psionics/Magic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Dimensional Engineering",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Mental Fortress",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Arcane Hacking",
+      "Category": "Magic/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Advanced Weapon Systems",
+      "Category": "Combat/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Augmented Reality Design",
+      "Category": "Technical/Artistic",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Bio-Mysticism",
+      "Category": "Science/Mystic",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Quantum Physics",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Electromagnetic Field Control",
+      "Category": "Psionics/Science",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Force Field Generation",
+      "Category": "Technical/Psionics",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psionic Engineering",
+      "Category": "Psionics/Technical",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Crystal Resonance",
+      "Category": "Mystic/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Holodeck Programming",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Anti-Grav Mechanics",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Exobiology",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Multi-Dimensional Awareness",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psi-Biotics",
+      "Category": "Medical/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Advanced Linguistics",
+      "Category": "Social",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Universal Translator Use",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Alien Archaeology",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Teleportation",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Bio-Mechanical Engineering",
+      "Category": "Science/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psionic Communication",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Quantum Entanglement",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Alien Culture Study",
+      "Category": "Social/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Advanced Holography",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Cosmic Meditation",
+      "Category": "Mystic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Tactical Espionage",
+      "Category": "Combat/Stealth",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Neural Networking",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Galactic Cartography",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Force Manipulation",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Etheric Projection",
+      "Category": "Mystic/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Advanced Genetics",
+      "Category": "Science/Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Void Travel",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Telekinetic Combat",
+      "Category": "Psionics/Combat",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Nano-Crafting",
+      "Category": "Technical/Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Bio-Holography",
+      "Category": "Technical/Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Nano-Medicine",
+      "Category": "Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Hyperspace Mechanics",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Chrono-Surgery",
+      "Category": "Medical/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Interdimensional Trade",
+      "Category": "Social",
+      "Primary Attribute": "Charisma",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psi-Operative",
+      "Category": "Psionics/Combat",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Mind Over Matter",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Electro-Pyrokinesis",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Spatial Distortion",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Interstellar Strategy",
+      "Category": "Combat/Social",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Subconscious Mapping",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Sensory Augmentation",
+      "Category": "Medical/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Virtual Hacking",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Dimensional Rift Control",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Void Engineering",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Gravitational Theory",
+      "Category": "Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Chrono-Kinetics",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Hyper-Advanced Robotics",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Omni-Crafting",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Mind Meld",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Advanced Biotechnology",
+      "Category": "Science/Medical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Trans-Dimensional Mechanics",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Temporal Healing",
+      "Category": "Psionics/Medical",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Ether Manipulation",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Multi-Spectral Vision",
+      "Category": "Psionics/Sensory",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Advanced Nanotechnology",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Quantum Healing",
+      "Category": "Medical/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Etheric Mechanics",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Cosmic Energy Manipulation",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Neural Hacking",
+      "Category": "Psionics/Technical",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Exo-Suit Piloting",
+      "Category": "Combat/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Multi-Tool Crafting",
+      "Category": "Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psionic Medicine",
+      "Category": "Medical/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Stellar Engineering",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Reality Engineering",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Cosmic Consciousness",
+      "Category": "Psionics/Mystic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Temporal Weapons",
+      "Category": "Combat/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psi-Synthesis",
+      "Category": "Psionics/Technical",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Void Crafting",
+      "Category": "Technical/Mystic",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Hyper-Dimensional Awareness",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Quantum Manipulation",
+      "Category": "Psionics/Science",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Nano-Weaponry",
+      "Category": "Combat/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Hyperdimensional Navigation",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Space-Time Manipulation",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Molecular Reconstruction",
+      "Category": "Psionics/Science",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Neuro-Architecture",
+      "Category": "Technical/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Synthetic Symbiosis",
+      "Category": "Medical/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Dimensional Harmonization",
+      "Category": "Psionics/Mystic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Quantum Awareness",
+      "Category": "Psionics/Science",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Stellar Cartography",
+      "Category": "Science/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Warp Field Generation",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Astral Projection",
+      "Category": "Mystic/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psionic Infusion",
+      "Category": "Psionics/Mystic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Holo-Combat",
+      "Category": "Combat/Technical",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Psi-Medic",
+      "Category": "Medical/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Etheric Navigation",
+      "Category": "Mystic/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Hyper-Spatial Awareness",
+      "Category": "Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Reality Synchronization",
+      "Category": "Psionics/Technical",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Nano-Psionics",
+      "Category": "Medical/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Universal Harmony",
+      "Category": "Mystic",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Astro-Medical",
+      "Category": "Medical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Space-Time Engineering",
+      "Category": "Technical/Science",
+      "Primary Attribute": "Intelligence",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Nano-Field Control",
+      "Category": "Psionics/Technical",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    },
+    {
+      "Skill": "Etheric Medicine",
+      "Category": "Medical/Psionics",
+      "Primary Attribute": "Psy",
+      "Skill Base": "20%",
+      "New": true
+    }
+  ]
+  

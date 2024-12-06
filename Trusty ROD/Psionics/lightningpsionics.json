@@ -1,0 +1,283 @@
+[
+    {
+      "Tier": 1,
+      "Power": "Static Spark",
+      "Description": "Generate a small static charge to shock lightly.",
+      "Duration": "Instant",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 1,
+      "Power": "Charge Touch",
+      "Description": "Electrify a surface with a touch.",
+      "Duration": "2 rounds",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 2,
+      "Power": "Lightning Arc",
+      "Description": "Create a short arc of lightning to strike a target.",
+      "Duration": "Instant",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 2,
+      "Power": "Shocking Grasp",
+      "Description": "Deliver a jolt of electricity with your hand.",
+      "Duration": "Instant",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 3,
+      "Power": "Static Field",
+      "Description": "Generate a field of static electricity around yourself.",
+      "Duration": "2 rounds",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 3,
+      "Power": "Spark Step",
+      "Description": "Move in a burst of static energy, leaving behind a shock.",
+      "Duration": "Instant",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 4,
+      "Power": "Lightning Bolt",
+      "Description": "Launch a bolt of lightning at a target.",
+      "Duration": "Instant",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 4,
+      "Power": "Electrify",
+      "Description": "Charge an object with electricity, turning it into a weapon.",
+      "Duration": "3 rounds",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 5,
+      "Power": "Thunder Clap",
+      "Description": "Create a loud clap of thunder to disorient enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 5,
+      "Power": "Electro Net",
+      "Description": "Form a net of electricity to trap and shock targets.",
+      "Duration": "2 rounds",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 6,
+      "Power": "Lightning Strike",
+      "Description": "Call down a lightning bolt from above.",
+      "Duration": "Instant",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 6,
+      "Power": "Thunder Wave",
+      "Description": "Release a wave of concussive electrical energy.",
+      "Duration": "Instant",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 7,
+      "Power": "Magnetize",
+      "Description": "Magnetize metallic objects to manipulate them.",
+      "Duration": "2 rounds",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 7,
+      "Power": "Volt Whip",
+      "Description": "Create a whip of pure electricity for melee combat.",
+      "Duration": "Instant",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 8,
+      "Power": "Electric Armor",
+      "Description": "Surround yourself in a field of crackling electricity.",
+      "Duration": "3 rounds",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 8,
+      "Power": "Lightning Rod",
+      "Description": "Draw lightning strikes to a single point.",
+      "Duration": "3 rounds",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 9,
+      "Power": "Chain Lightning",
+      "Description": "Launch a bolt of lightning that arcs to multiple targets.",
+      "Duration": "Instant",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 9,
+      "Power": "Tesla Barrier",
+      "Description": "Create a barrier of electricity that shocks attackers.",
+      "Duration": "3 rounds",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 10,
+      "Power": "Flash Step",
+      "Description": "Move instantaneously in a flash of lightning.",
+      "Duration": "Instant",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 10,
+      "Power": "Thunderous Roar",
+      "Description": "Release a deafening roar of thunder to stun enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 11,
+      "Power": "Overload",
+      "Description": "Overload an electronic device or machinery to make it explode.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Electrocute",
+      "Description": "Send a surge of electricity to paralyze a target.",
+      "Duration": "2 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Lightning Speed",
+      "Description": "Move with the speed of lightning for a short duration.",
+      "Duration": "2 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Electric Burst",
+      "Description": "Release a burst of electrical energy in all directions.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Storm Calling",
+      "Description": "Summon an electrical storm to strike an area repeatedly.",
+      "Duration": "3 rounds",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Magnetic Shield",
+      "Description": "Create a magnetic field to deflect metal projectiles.",
+      "Duration": "3 rounds",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Plasma Bolt",
+      "Description": "Launch a concentrated bolt of plasma electricity.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Electrical Field",
+      "Description": "Create a field of electricity that damages all within it.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Thunder Strike",
+      "Description": "Call forth a powerful thunder strike to knock back enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Lightning Dragon",
+      "Description": "Summon a dragon made of lightning to attack your foes.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Storm Surge",
+      "Description": "Unleash a surge of storm energy, causing widespread damage.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Magneto Crush",
+      "Description": "Crush metallic objects with intense magnetic force.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Lightning Cage",
+      "Description": "Trap an enemy in a cage of electricity.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Supercharge",
+      "Description": "Overcharge your body with electricity to enhance abilities.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Thunder God's Wrath",
+      "Description": "Summon the wrath of the storm, striking all enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Lightning Flash",
+      "Description": "Emit a blinding flash of lightning to disorient opponents.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Plasma Storm",
+      "Description": "Create a storm of plasma bolts in a targeted area.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Electromagnetic Pulse",
+      "Description": "Emit an EMP to disable electronics in the area.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Stormbreaker",
+      "Description": "Summon a massive storm that devastates the battlefield.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Thunder God's Descent",
+      "Description": "Become the embodiment of lightning, wielding ultimate electrical power.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    }
+  ]
+  

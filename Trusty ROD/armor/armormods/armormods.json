@@ -1,0 +1,419 @@
+[
+    {
+      "Modification": "Kevlar Lining",
+      "Effect": "+10% resistance to ballistic damage",
+      "Weight Increase (lbs)": 2,
+      "Cost": 500,
+      "Availability": "Common (C)",
+      "Description": "Adds a layer of Kevlar to armor to increase protection against bullets."
+    },
+    {
+      "Modification": "Ceramic Plating",
+      "Effect": "+15% resistance to energy weapons",
+      "Weight Increase (lbs)": 3,
+      "Cost": 700,
+      "Availability": "Common (C)",
+      "Description": "Ceramic inserts deflect and disperse energy weapon impacts."
+    },
+    {
+      "Modification": "Composite Reinforcement",
+      "Effect": "+10% overall damage resistance",
+      "Weight Increase (lbs)": 4,
+      "Cost": 800,
+      "Availability": "Rare (R)",
+      "Description": "Enhances armor with composite materials for balanced protection."
+    },
+    {
+      "Modification": "Energy Diffuser",
+      "Effect": "+20% resistance to energy damage",
+      "Weight Increase (lbs)": 5,
+      "Cost": 1200,
+      "Availability": "Rare (R)",
+      "Description": "Diffuses energy impacts across the armor surface, reducing damage."
+    },
+    {
+      "Modification": "Thermal Insulation",
+      "Effect": "+15% resistance to fire damage",
+      "Weight Increase (lbs)": 2,
+      "Cost": 600,
+      "Availability": "Common (C)",
+      "Description": "Insulates the armor to protect against extreme heat and flames."
+    },
+    {
+      "Modification": "Anti-Shock Padding",
+      "Effect": "+20% resistance to electrical attacks",
+      "Weight Increase (lbs)": 2,
+      "Cost": 700,
+      "Availability": "Common (C)",
+      "Description": "Reduces damage from shock and electrical sources."
+    },
+    {
+      "Modification": "Reinforced Joints",
+      "Effect": "+10% mobility",
+      "Weight Increase (lbs)": 3,
+      "Cost": 400,
+      "Availability": "Common (C)",
+      "Description": "Adds extra protection to joints without hindering movement."
+    },
+    {
+      "Modification": "Enhanced Optics Visor",
+      "Effect": "+15% accuracy with ranged weapons",
+      "Weight Increase (lbs)": 1,
+      "Cost": 500,
+      "Availability": "Common (C)",
+      "Description": "Integrated HUD with enhanced targeting optics."
+    },
+    {
+      "Modification": "Chameleon Skin",
+      "Effect": "+20% stealth",
+      "Weight Increase (lbs)": 2,
+      "Cost": 1200,
+      "Availability": "Rare (R)",
+      "Description": "Changes armor's appearance to blend with surroundings."
+    },
+    {
+      "Modification": "Advanced Respirator",
+      "Effect": "Immune to airborne toxins",
+      "Weight Increase (lbs)": 1,
+      "Cost": 300,
+      "Availability": "Common (C)",
+      "Description": "Built-in respirator filters toxins and smoke."
+    },
+    {
+      "Modification": "Magnetic Holsters",
+      "Effect": "+10% faster weapon draw",
+      "Weight Increase (lbs)": 1,
+      "Cost": 300,
+      "Availability": "Common (C)",
+      "Description": "Allows for quick access to weapons via magnetic attachments."
+    },
+    {
+      "Modification": "Thermal Dampening",
+      "Effect": "+15% resistance to thermal sensors",
+      "Weight Increase (lbs)": 1,
+      "Cost": 800,
+      "Availability": "Rare (R)",
+      "Description": "Reduces heat signature to avoid thermal detection."
+    },
+    {
+      "Modification": "Hydraulic Bracing",
+      "Effect": "+10% melee damage",
+      "Weight Increase (lbs)": 4,
+      "Cost": 600,
+      "Availability": "Common (C)",
+      "Description": "Enhances melee strikes with hydraulically assisted limbs."
+    },
+    {
+      "Modification": "Nano-Reinforced Fibers",
+      "Effect": "+10% armor durability",
+      "Weight Increase (lbs)": 1,
+      "Cost": 1000,
+      "Availability": "Very Rare (VR)",
+      "Description": "Strengthens armor with self-repairing nano-fibers."
+    },
+    {
+      "Modification": "Graviton Boots",
+      "Effect": "Negates fall damage",
+      "Weight Increase (lbs)": 3,
+      "Cost": 1500,
+      "Availability": "Rare (R)",
+      "Description": "Uses graviton technology to reduce impact from falls."
+    },
+    {
+      "Modification": "Sonic Dampeners",
+      "Effect": "+20% resistance to sonic attacks",
+      "Weight Increase (lbs)": 2,
+      "Cost": 900,
+      "Availability": "Rare (R)",
+      "Description": "Reduces the effects of sonic weapons on the wearer."
+    },
+    {
+      "Modification": "Impact Gel",
+      "Effect": "+20% resistance to blunt force",
+      "Weight Increase (lbs)": 2,
+      "Cost": 400,
+      "Availability": "Common (C)",
+      "Description": "Absorbs impact energy, reducing damage from blunt force."
+    },
+    {
+      "Modification": "Reactive Plating",
+      "Effect": "Reflects 10% melee damage",
+      "Weight Increase (lbs)": 4,
+      "Cost": 1400,
+      "Availability": "Very Rare (VR)",
+      "Description": "Reacts to impact by deflecting part of the incoming force back."
+    },
+    {
+      "Modification": "Adrenaline Booster",
+      "Effect": "+10% speed when health is below 50%",
+      "Weight Increase (lbs)": 1,
+      "Cost": 500,
+      "Availability": "Common (C)",
+      "Description": "Injects adrenaline during critical health states for increased speed."
+    },
+    {
+      "Modification": "Smart Armor",
+      "Effect": "+10% auto-dodge chance",
+      "Weight Increase (lbs)": 3,
+      "Cost": 2000,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "AI-driven systems that detect and react to incoming threats."
+    },
+    {
+      "Modification": "Psionic Barrier Emitter",
+      "Effect": "+15% resistance to psionic attacks",
+      "Weight Increase (lbs)": 2,
+      "Cost": 1500,
+      "Availability": "Very Rare (VR)",
+      "Description": "Projects a psionic shield to deflect mental assaults."
+    },
+    {
+      "Modification": "Null-Field Generator",
+      "Effect": "+10% resistance to all damage types",
+      "Weight Increase (lbs)": 5,
+      "Cost": 2500,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "Generates a field that disrupts incoming attacks."
+    },
+    {
+      "Modification": "Lightwave Cloak",
+      "Effect": "+30% stealth during movement",
+      "Weight Increase (lbs)": 1,
+      "Cost": 1800,
+      "Availability": "Very Rare (VR)",
+      "Description": "Bends light around the wearer to become nearly invisible while moving."
+    },
+    {
+      "Modification": "Reactive Camouflage",
+      "Effect": "+20% stealth",
+      "Weight Increase (lbs)": 2,
+      "Cost": 1000,
+      "Availability": "Rare (R)",
+      "Description": "Changes armor's color to match the surroundings dynamically."
+    },
+    {
+      "Modification": "Sonic Blasters",
+      "Effect": "Stuns melee attackers for 1 second",
+      "Weight Increase (lbs)": 1,
+      "Cost": 1200,
+      "Availability": "Rare (R)",
+      "Description": "Emits a sonic blast when struck, stunning melee attackers."
+    },
+    {
+      "Modification": "Quantum Stabilizer",
+      "Effect": "-10% recoil with ranged weapons",
+      "Weight Increase (lbs)": 2,
+      "Cost": 800,
+      "Availability": "Rare (R)",
+      "Description": "Uses quantum fields to stabilize ranged weaponry."
+    },
+    {
+      "Modification": "Kinetic Energy Converter",
+      "Effect": "Converts 5% damage into stamina",
+      "Weight Increase (lbs)": 3,
+      "Cost": 1500,
+      "Availability": "Very Rare (VR)",
+      "Description": "Absorbs kinetic energy and converts it to the wearer's stamina."
+    },
+    {
+      "Modification": "Adaptive Cooling System",
+      "Effect": "Prevents overheating",
+      "Weight Increase (lbs)": 2,
+      "Cost": 500,
+      "Availability": "Common (C)",
+      "Description": "Regulates temperature to keep the wearer cool."
+    },
+    {
+      "Modification": "Elemental Shielding",
+      "Effect": "+10% resistance to elemental attacks",
+      "Weight Increase (lbs)": 2,
+      "Cost": 1200,
+      "Availability": "Rare (R)",
+      "Description": "Shields wearer from fire, ice, and lightning attacks."
+    },
+    {
+      "Modification": "Arcane Inscription",
+      "Effect": "+10% resistance to magical damage",
+      "Weight Increase (lbs)": 1,
+      "Cost": 1000,
+      "Availability": "Very Rare (VR)",
+      "Description": "Enhances armor with magical runes for added defense."
+    },
+    {
+      "Modification": "Temporal Displacer",
+      "Effect": "Teleports wearer 5 feet when hit",
+      "Weight Increase (lbs)": 4,
+      "Cost": 3000,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "Temporarily displaces wearer out of harm's way."
+    },
+    {
+      "Modification": "Anti-Gravity Plates",
+      "Effect": "Reduces fall damage by 50%",
+      "Weight Increase (lbs)": 2,
+      "Cost": 800,
+      "Availability": "Rare (R)",
+      "Description": "Uses anti-gravity technology to cushion falls."
+    },
+    {
+      "Modification": "Molecular Reinforcement",
+      "Effect": "+15% armor durability",
+      "Weight Increase (lbs)": 3,
+      "Cost": 2000,
+      "Availability": "Very Rare (VR)",
+      "Description": "Reinforces armor at the molecular level for enhanced durability."
+    },
+    {
+      "Modification": "Hyper-Stealth System",
+      "Effect": "+50% stealth while stationary",
+      "Weight Increase (lbs)": 1,
+      "Cost": 2500,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "Creates a cloaking field when the wearer is stationary."
+    },
+    {
+      "Modification": "Energy Redirection Matrix",
+      "Effect": "Redirects 10% of energy damage",
+      "Weight Increase (lbs)": 3,
+      "Cost": 1800,
+      "Availability": "Very Rare (VR)",
+      "Description": "Converts a portion of incoming energy damage into a harmless discharge."
+    },
+    {
+      "Modification": "Psionic Amplifier",
+      "Effect": "Increases psionic power",
+      "Weight Increase (lbs)": 2,
+      "Cost": 1500,
+      "Availability": "Rare (R)",
+      "Description": "Amplifies the wearer's psionic abilities."
+    },
+    {
+      "Modification": "Electromagnetic Shielding",
+      "Effect": "Immune to EMP attacks",
+      "Weight Increase (lbs)": 2,
+      "Cost": 1200,
+      "Availability": "Rare (R)",
+      "Description": "Protects electronics and cybernetic parts from EMPs."
+    },
+    {
+      "Modification": "Vibration Dampeners",
+      "Effect": "+20% resistance to seismic attacks",
+      "Weight Increase (lbs)": 2,
+      "Cost": 700,
+      "Availability": "Common (C)",
+      "Description": "Reduces damage from vibrations and shockwaves."
+    },
+    {
+      "Modification": "Field Medic Kit",
+      "Effect": "Auto-heals 10% health over time",
+      "Weight Increase (lbs)": 3,
+      "Cost": 1000,
+      "Availability": "Common (C)",
+      "Description": "An integrated auto-healing system for minor injuries."
+    },
+    {
+      "Modification": "Bio-Nano Filtration",
+      "Effect": "Immune to biological toxins",
+      "Weight Increase (lbs)": 1,
+      "Cost": 800,
+      "Availability": "Rare (R)",
+      "Description": "Filters out toxins and pathogens to protect the wearer."
+    },
+    {
+      "Modification": "Quantum Diffuser",
+      "Effect": "+15% resistance to quantum damage",
+      "Weight Increase (lbs)": 3,
+      "Cost": 2500,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "Diffuses quantum energy impacts to reduce damage."
+    },
+    {
+      "Modification": "Anti-Grav Jump Jets",
+      "Effect": "Allows for short bursts of flight",
+      "Weight Increase (lbs)": 4,
+      "Cost": 3000,
+      "Availability": "Very Rare (VR)",
+      "Description": "Uses anti-gravity to allow the wearer to make short jumps or hover."
+    },
+    {
+      "Modification": "Arcane Aegis",
+      "Effect": "+20% resistance to magical effects",
+      "Weight Increase (lbs)": 3,
+      "Cost": 2000,
+      "Availability": "Very Rare (VR)",
+      "Description": "Creates a protective magical field around the wearer."
+    },
+    {
+      "Modification": "Psionic Refractor",
+      "Effect": "Reflects 5% psionic attacks",
+      "Weight Increase (lbs)": 2,
+      "Cost": 2200,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "Reflects a small portion of psionic energy back to the attacker."
+    },
+    {
+      "Modification": "Omni-Sensor Suite",
+      "Effect": "Detects hidden traps and enemies",
+      "Weight Increase (lbs)": 2,
+      "Cost": 1500,
+      "Availability": "Rare (R)",
+      "Description": "Advanced sensors alert the wearer to nearby dangers."
+    },
+    {
+      "Modification": "Regenerative Matrix",
+      "Effect": "Slowly repairs armor over time",
+      "Weight Increase (lbs)": 3,
+      "Cost": 1800,
+      "Availability": "Rare (R)",
+      "Description": "Nanites continuously repair the armor's structural integrity."
+    },
+    {
+      "Modification": "Kinetic Absorber",
+      "Effect": "Reduces 10% damage from all impacts",
+      "Weight Increase (lbs)": 4,
+      "Cost": 2000,
+      "Availability": "Very Rare (VR)",
+      "Description": "Absorbs kinetic force to protect the wearer from impact injuries."
+    },
+    {
+      "Modification": "Grav-Wave Emitter",
+      "Effect": "Disrupts enemy movement within 5 feet",
+      "Weight Increase (lbs)": 3,
+      "Cost": 2500,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "Creates a gravitational disturbance that impedes nearby enemies."
+    },
+    {
+      "Modification": "Hyper-Reactive Plating",
+      "Effect": "+10% movement speed when in combat",
+      "Weight Increase (lbs)": 2,
+      "Cost": 1200,
+      "Availability": "Rare (R)",
+      "Description": "Lightens armor weight during combat, allowing for faster movement."
+    },
+    {
+      "Modification": "EMP Pulse Generator",
+      "Effect": "Disables electronic devices nearby",
+      "Weight Increase (lbs)": 3,
+      "Cost": 2200,
+      "Availability": "Very Rare (VR)",
+      "Description": "Emits an EMP pulse to disable enemy electronics within a radius."
+    },
+    {
+      "Modification": "Psionic Nullifier Field",
+      "Effect": "-10% effectiveness of psionic attacks",
+      "Weight Increase (lbs)": 2,
+      "Cost": 2000,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "Weakens the power of incoming psionic attacks."
+    },
+    {
+      "Modification": "Omni-Camouflage",
+      "Effect": "+25% stealth in all environments",
+      "Weight Increase (lbs)": 3,
+      "Cost": 3000,
+      "Availability": "Extremely Rare (XR)",
+      "Description": "Adapts to all environments for maximum concealment."
+    }
+  ]
+  

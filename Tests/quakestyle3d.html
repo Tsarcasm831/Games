@@ -1,0 +1,319 @@
+<html><head><base href="." /><title>Quake-Style 3D</title><style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    #game {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .hud {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ff0000;
+        font-family: monospace;
+        font-size: 24px;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    }
+    #crosshair {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: red;
+        font-size: 20px;
+        pointer-events: none;
+    }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    </head>
+    <body>
+    <canvas id="game"></canvas>
+    <div id="crosshair">+</div>
+    <div class="hud">HP: 100</div>
+    
+    <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({
+        canvas: document.getElementById('game'),
+        antialias: true
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x333333);
+    
+    // Load texture
+    const textureLoader = new THREE.TextureLoader();
+    const woodTexture = textureLoader.load('https://file.garden/ZqkuevlCAw7JEPDh/redwood.jpg');
+    woodTexture.wrapS = THREE.RepeatWrapping;
+    woodTexture.wrapT = THREE.RepeatWrapping;
+    woodTexture.repeat.set(1, 1);
+    
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0x404040);
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight.position.set(1, 1, 1);
+    scene.add(directionalLight);
+    
+    // Create gun model (keeping existing gun code)
+    const gunGroup = new THREE.Group();
+    const barrelGeometry = new THREE.BoxGeometry(0.1, 0.1, 1);
+    const gunMaterial = new THREE.MeshPhongMaterial({ color: 0x444444 });
+    const barrel = new THREE.Mesh(barrelGeometry, gunMaterial);
+    barrel.position.set(0, -0.1, 0);
+    gunGroup.add(barrel);
+    
+    const handleGeometry = new THREE.BoxGeometry(0.1, 0.3, 0.1);
+    const handle = new THREE.Mesh(handleGeometry, gunMaterial);
+    handle.position.set(0, -0.25, 0.2);
+    gunGroup.add(handle);
+    
+    const bodyGeometry = new THREE.BoxGeometry(0.2, 0.2, 0.3);
+    const body = new THREE.Mesh(bodyGeometry, gunMaterial);
+    body.position.set(0, -0.1, 0.2);
+    gunGroup.add(body);
+    
+    gunGroup.position.set(0.3, -0.2, -0.5);
+    camera.add(gunGroup);
+    scene.add(camera);
+    
+    // Create floor
+    const floorGeometry = new THREE.PlaneGeometry(50, 50);
+    const floorMaterial = new THREE.MeshPhongMaterial({
+        color: 0x666666,
+        side: THREE.DoubleSide,
+        wireframe: false
+    });
+    const floor = new THREE.Mesh(floorGeometry, floorMaterial);
+    floor.rotation.x = Math.PI / 2;
+    scene.add(floor);
+    
+    const collidableObjects = [floor];
+    
+    // Modified wall creation function to use texture
+    function createWall(x, y, z, width, height, depth) {
+        const geometry = new THREE.BoxGeometry(width, height, depth);
+        const material = new THREE.MeshPhongMaterial({
+            map: woodTexture,
+            wireframe: false
+        });
+        const wall = new THREE.Mesh(geometry, material);
+        wall.position.set(x, y, z);
+        scene.add(wall);
+        collidableObjects.push(wall);
+        return wall;
+    }
+    
+    // Add walls
+    createWall(-25, 5, 0, 1, 10, 50);
+    createWall(25, 5, 0, 1, 10, 50);
+    createWall(0, 5, -25, 50, 10, 1);
+    createWall(0, 5, 25, 50, 10, 1);
+    
+    // Add columns
+    for(let i = -20; i <= 20; i += 10) {
+        for(let j = -20; j <= 20; j += 10) {
+            if(Math.random() > 0.5) {
+                createWall(i, 5, j, 2, 10, 2);
+            }
+        }
+    }
+    
+    // Keeping existing shooting mechanics
+    function createBullet() {
+        const bulletGeometry = new THREE.SphereGeometry(0.1);
+        const bulletMaterial = new THREE.MeshPhongMaterial({ color: 0xffff00 });
+        const bullet = new THREE.Mesh(bulletGeometry, bulletMaterial);
+        bullet.position.copy(camera.position);
+        const direction = new THREE.Vector3(0, 0, -1);
+        direction.applyQuaternion(camera.quaternion);
+        bullet.velocity = direction.multiplyScalar(2);
+        scene.add(bullet);
+        return bullet;
+    }
+    
+    function createSmoke(position) {
+        const smokeParticles = new THREE.Group();
+        const particleCount = 10;
+        for(let i = 0; i < particleCount; i++) {
+            const particle = new THREE.Mesh(
+                new THREE.SphereGeometry(0.1),
+                new THREE.MeshBasicMaterial({ 
+                    color: 0x888888,
+                    transparent: true,
+                    opacity: 0.5
+                })
+            );
+            particle.position.copy(position);
+            particle.position.x += (Math.random() - 0.5) * 0.5;
+            particle.position.y += (Math.random() - 0.5) * 0.5;
+            particle.position.z += (Math.random() - 0.5) * 0.5;
+            smokeParticles.add(particle);
+        }
+        scene.add(smokeParticles);
+        setTimeout(() => {
+            scene.remove(smokeParticles);
+        }, 500);
+    }
+    
+    const bullets = [];
+    
+    // Movement code
+    camera.position.set(0, 2, 20);
+    
+    const moveSpeed = 0.2;
+    const playerRadius = 1;
+    const keys = {};
+    let isJumping = false;
+    let jumpVelocity = 0;
+    const jumpForce = 0.5;
+    const gravity = 0.02;
+    
+    let mouseRotation = new THREE.Euler(0, 0, 0, 'YXZ');
+    let bobAngle = 0;
+    const bobSpeed = 0.1;
+    const bobAmount = 0.02;
+    
+    // Event listeners
+    window.addEventListener('keydown', (e) => keys[e.key.toLowerCase()] = true);
+    window.addEventListener('keyup', (e) => keys[e.key.toLowerCase()] = false);
+    window.addEventListener('mousedown', (e) => {
+        if(e.button === 0 && document.pointerLockElement === document.getElementById('game')) {
+            bullets.push(createBullet());
+        }
+    });
+    
+    document.addEventListener('click', () => {
+        document.getElementById('game').requestPointerLock();
+    });
+    
+    document.addEventListener('mousemove', (e) => {
+        if(document.pointerLockElement === document.getElementById('game')) {
+            mouseRotation.y -= e.movementX * 0.002;
+            mouseRotation.x -= e.movementY * 0.002;
+            mouseRotation.x = Math.max(-Math.PI/2, Math.min(Math.PI/2, mouseRotation.x));
+            camera.quaternion.setFromEuler(mouseRotation);
+        }
+    });
+    
+    function checkCollision(newPosition) {
+        for(let obj of collidableObjects) {
+            if(obj === floor && newPosition.y >= 1) continue;
+            const box = new THREE.Box3().setFromObject(obj);
+            const sphere = new THREE.Sphere(newPosition, playerRadius);
+            if(box.intersectsSphere(sphere)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    function checkBulletCollision(bullet) {
+        const bulletPosition = bullet.position.clone();
+        const raycaster = new THREE.Raycaster(bulletPosition, bullet.velocity.clone().normalize());
+        const intersects = raycaster.intersectObjects(collidableObjects);
+        if(intersects.length > 0 && intersects[0].distance < bullet.velocity.length()) {
+            createSmoke(intersects[0].point);
+            return true;
+        }
+        return false;
+    }
+    
+    function moveCamera() {
+        const forward = new THREE.Vector3(0, 0, -1);
+        const right = new THREE.Vector3(1, 0, 0);
+        
+        forward.applyQuaternion(camera.quaternion);
+        right.applyQuaternion(camera.quaternion);
+        
+        forward.y = 0;
+        right.y = 0;
+        
+        forward.normalize();
+        right.normalize();
+        
+        const moveDirection = new THREE.Vector3(0, 0, 0);
+        let isMoving = false;
+    
+        if(keys['w']) { moveDirection.add(forward); isMoving = true; }
+        if(keys['s']) { moveDirection.sub(forward); isMoving = true; }
+        if(keys['a']) { moveDirection.sub(right); isMoving = true; }
+        if(keys['d']) { moveDirection.add(right); isMoving = true; }
+    
+        if(moveDirection.length() > 0) {
+            moveDirection.normalize();
+            const newPosition = camera.position.clone();
+            moveDirection.multiplyScalar(moveSpeed);
+            newPosition.add(moveDirection);
+            
+            if(!checkCollision(newPosition)) {
+                camera.position.copy(newPosition);
+            }
+        }
+        
+        if(isMoving) {
+            bobAngle += bobSpeed;
+            gunGroup.position.y = -0.2 + Math.sin(bobAngle) * bobAmount;
+            gunGroup.position.x = 0.3 + Math.cos(bobAngle * 2) * bobAmount * 0.5;
+        } else {
+            gunGroup.position.y += (-0.2 - gunGroup.position.y) * 0.1;
+            gunGroup.position.x += (0.3 - gunGroup.position.x) * 0.1;
+        }
+        
+        if(keys[' '] && !isJumping) {
+            isJumping = true;
+            jumpVelocity = jumpForce;
+        }
+        
+        if(isJumping) {
+            const jumpPosition = camera.position.clone();
+            jumpPosition.y += jumpVelocity;
+            
+            if(!checkCollision(jumpPosition)) {
+                camera.position.y += jumpVelocity;
+            }
+            
+            jumpVelocity -= gravity;
+            
+            if(camera.position.y <= 2) {
+                camera.position.y = 2;
+                isJumping = false;
+                jumpVelocity = 0;
+            }
+        }
+    }
+    
+    function updateBullets() {
+        for(let i = bullets.length - 1; i >= 0; i--) {
+            const bullet = bullets[i];
+            bullet.position.add(bullet.velocity);
+            if(checkBulletCollision(bullet)) {
+                scene.remove(bullet);
+                bullets.splice(i, 1);
+            }
+        }
+    }
+    
+    function animate() {
+        requestAnimationFrame(animate);
+        moveCamera();
+        updateBullets();
+        renderer.render(scene, camera);
+    }
+    
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+    
+    animate();
+    </script>
+    </body></html>

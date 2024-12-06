@@ -1,0 +1,184 @@
+[
+  {
+    "Cuirass": "Cloth Vest",
+    "Durability": "Cloth",
+    "Weight (lbs)": 3,
+    "Protection Level": "Low",
+    "Description": "A lightweight vest made from cloth, offering minimal protection against cuts and scrapes. Ideal for hot climates and agility."
+  },
+  {
+    "Cuirass": "Leather Cuirass",
+    "Durability": "Leather",
+    "Weight (lbs)": 6,
+    "Protection Level": "Low-Medium",
+    "Description": "A hardened leather cuirass that provides basic defense against slashing and blunt force while remaining flexible."
+  },
+  {
+    "Cuirass": "Reinforced Leather Cuirass",
+    "Durability": "Reinforced Leather",
+    "Weight (lbs)": 9,
+    "Protection Level": "Medium",
+    "Description": "A leather cuirass reinforced with metal studs or plates, enhancing protection against melee attacks."
+  },
+  {
+    "Cuirass": "Padded Cuirass",
+    "Durability": "Padded Armor",
+    "Weight (lbs)": 12,
+    "Protection Level": "Medium",
+    "Description": "A thickly padded cuirass designed to absorb impact, providing moderate protection while maintaining some flexibility."
+  },
+  {
+    "Cuirass": "Kevlar Cuirass",
+    "Durability": "Kevlar",
+    "Weight (lbs)": 15,
+    "Protection Level": "Medium-High",
+    "Description": "A modern Kevlar vest that offers protection against small-caliber bullets and shrapnel without being overly cumbersome."
+  },
+  {
+    "Cuirass": "Kevlar Reinforced Cuirass",
+    "Durability": "Kevlar Reinforced",
+    "Weight (lbs)": 18,
+    "Protection Level": "High",
+    "Description": "An advanced Kevlar cuirass with additional plating, providing superior protection against ballistic threats while allowing decent mobility."
+  },
+  {
+    "Cuirass": "Composite Armor Cuirass",
+    "Durability": "Composite Armor",
+    "Weight (lbs)": 22,
+    "Protection Level": "High",
+    "Description": "A chest piece made of composite materials, offering a balanced mix of protection and mobility against a variety of attacks."
+  },
+  {
+    "Cuirass": "Titanium Alloy Cuirass",
+    "Durability": "Titanium Alloy",
+    "Weight (lbs)": 30,
+    "Protection Level": "High",
+    "Description": "Heavy titanium plating covering the torso, providing exceptional defense against physical and projectile attacks."
+  },
+  {
+    "Cuirass": "Titanium Weave Cuirass",
+    "Durability": "Titanium Weave",
+    "Weight (lbs)": 20,
+    "Protection Level": "High",
+    "Description": "A lighter alternative using titanium fibers woven into a flexible suit, allowing high durability with minimal weight."
+  },
+  {
+    "Cuirass": "Ceramic Plate Cuirass",
+    "Durability": "Ceramic Plating",
+    "Weight (lbs)": 35,
+    "Protection Level": "Very High",
+    "Description": "A heavy ceramic-plated cuirass designed to stop high-caliber projectiles and energy weapons with excellent durability."
+  },
+  {
+    "Cuirass": "Plasteel Cuirass",
+    "Durability": "Plasteel",
+    "Weight (lbs)": 28,
+    "Protection Level": "Very High",
+    "Description": "An advanced plasteel cuirass that is both lightweight and highly resistant to a range of weaponry, including energy and ballistic attacks."
+  },
+  {
+    "Cuirass": "Plasma-Treated Cuirass",
+    "Durability": "Plasma-Treated Armor",
+    "Weight (lbs)": 32,
+    "Protection Level": "Very High",
+    "Description": "A cuirass treated with plasma-hardening processes, making it exceptionally resistant to both energy and heat-based attacks."
+  },
+  {
+    "Cuirass": "Nano-Fiber Mesh Cuirass",
+    "Durability": "Nano-Fiber Mesh",
+    "Weight (lbs)": 20,
+    "Protection Level": "Very High",
+    "Description": "A flexible cuirass constructed from nano-fiber mesh, offering superior protection against both physical and energy-based attacks."
+  },
+  {
+    "Cuirass": "Energy-Diffusing Cuirass",
+    "Durability": "Energy-Diffusing Armor",
+    "Weight (lbs)": 38,
+    "Protection Level": "Very High",
+    "Description": "A cuirass embedded with energy-diffusing technology, significantly reducing damage from energy weapons and projectiles."
+  },
+  {
+    "Cuirass": "Quantum Fiber Cuirass",
+    "Durability": "Quantum Fiber",
+    "Weight (lbs)": 15,
+    "Protection Level": "Extremely High",
+    "Description": "An ultra-light cuirass made of quantum fibers, providing exceptional defense while ensuring maximum mobility."
+  },
+  {
+    "Cuirass": "Graviton-Plated Cuirass",
+    "Durability": "Graviton-Plated",
+    "Weight (lbs)": 40,
+    "Protection Level": "Extremely High",
+    "Description": "A cuirass enhanced with graviton technology, capable of deflecting both melee and projectile attacks with ease."
+  },
+  {
+    "Cuirass": "Voidweave Cuirass",
+    "Durability": "Voidweave",
+    "Weight (lbs)": 12,
+    "Protection Level": "Extremely High",
+    "Description": "A cuirass interwoven with void energy, offering high protection against physical, psionic, and energy attacks."
+  },
+  {
+    "Cuirass": "Neutronium Chestplate",
+    "Durability": "Neutronium Lattice",
+    "Weight (lbs)": 50,
+    "Protection Level": "Extremely High",
+    "Description": "An almost indestructible cuirass providing unparalleled defense against all forms of damage, though its significant weight limits mobility."
+  },
+  {
+    "Cuirass": "Temporal Cuirass",
+    "Durability": "Temporal Armor",
+    "Weight (lbs)": 25,
+    "Protection Level": "Extremely High",
+    "Description": "A cuirass that partially phases through time, allowing the wearer to avoid a portion of incoming damage by shifting through temporal distortions."
+  },
+  {
+    "Cuirass": "Dark Matter Cuirass",
+    "Durability": "Dark Matter Composite",
+    "Weight (lbs)": 40,
+    "Protection Level": "Near-Invulnerable",
+    "Description": "A cuirass infused with dark matter, capable of absorbing kinetic, energy, and psionic attacks into an extradimensional space."
+  },
+  {
+    "Cuirass": "Etherium Cuirass",
+    "Durability": "Etherium Plating",
+    "Weight (lbs)": 45,
+    "Protection Level": "Near-Invulnerable",
+    "Description": "A cuirass forged from the rare Etherium metal, providing high resistance to physical, energy, and psionic attacks while maintaining a sleek design."
+  },
+  {
+    "Cuirass": "Psion-Weave Cuirass",
+    "Durability": "Psion-Weave",
+    "Weight (lbs)": 22,
+    "Protection Level": "Near-Invulnerable",
+    "Description": "A psionically enhanced cuirass that adapts to the wearer’s mental commands, offering dynamic protection against varied threats."
+  },
+  {
+    "Cuirass": "Hyper-Alloy Cuirass",
+    "Durability": "Hyper-Alloy",
+    "Weight (lbs)": 38,
+    "Protection Level": "Near-Invulnerable",
+    "Description": "An armor piece made from hyper-alloy, offering near-impenetrable defense without excessively hindering the wearer’s agility."
+  },
+  {
+    "Cuirass": "Nanite-Infused Cuirass",
+    "Durability": "Nanite-Infused",
+    "Weight (lbs)": 30,
+    "Protection Level": "Near-Invulnerable",
+    "Description": "A cuirass embedded with self-repairing nanites, automatically healing damage to maintain high durability during prolonged combat."
+  },
+  {
+    "Cuirass": "Quantum Shield Cuirass",
+    "Durability": "Quantum Shielding",
+    "Weight (lbs)": 25,
+    "Protection Level": "Invulnerable",
+    "Description": "A cuirass with embedded quantum shielding fields, creating a protective barrier that deflects a wide range of attacks."
+  },
+  {
+    "Cuirass": "Hypersteel Cuirass",
+    "Durability": "Hypersteel",
+    "Weight (lbs)": 60,
+    "Protection Level": "Invulnerable",
+    "Description": "The ultimate cuirass, made from near-indestructible hypersteel alloy, providing unmatched resistance to all forms of damage while retaining a relatively manageable weight for its class."
+  }
+]

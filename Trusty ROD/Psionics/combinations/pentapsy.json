@@ -1,0 +1,123 @@
+[
+    {
+      "Tier": 21,
+      "Power": "Elemental Convergence",
+      "Description": "Focus all five elements into a single point, creating a devastating explosion that obliterates everything within a large radius.",
+      "Duration": "Instant",
+      "Mana Cost": 110
+    },
+    {
+      "Tier": 22,
+      "Power": "Chaos Storm",
+      "Description": "Summon a chaotic storm combining fire, water, wind, earth, and lightning, ravaging the battlefield with unpredictable destruction.",
+      "Duration": "4 rounds",
+      "Mana Cost": 115
+    },
+    {
+      "Tier": 23,
+      "Power": "Primal Fury",
+      "Description": "Unleash the primal forces of nature, calling forth a wave of molten rock, lightning, wind, water, and fire to decimate enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 120
+    },
+    {
+      "Tier": 24,
+      "Power": "Genesis Wave",
+      "Description": "Summon a wave of creation and destruction, shaping the battlefield with fire, water, air, earth, and lightning in a massive surge.",
+      "Duration": "Instant",
+      "Mana Cost": 125
+    },
+    {
+      "Tier": 25,
+      "Power": "Tempest of Oblivion",
+      "Description": "Call forth a tempest that combines the fury of all five elements, leaving nothing but desolation in its wake.",
+      "Duration": "5 rounds",
+      "Mana Cost": 130
+    },
+    {
+      "Tier": 26,
+      "Power": "Elemental Maelstrom",
+      "Description": "Create a maelstrom where fire, water, air, earth, and lightning swirl together, sucking in and annihilating all within.",
+      "Duration": "3 rounds",
+      "Mana Cost": 135
+    },
+    {
+      "Tier": 27,
+      "Power": "Apocalypse",
+      "Description": "Unleash the apocalypse, a cataclysmic event where all elements converge to bring about the total devastation of the battlefield.",
+      "Duration": "Instant",
+      "Mana Cost": 140
+    },
+    {
+      "Tier": 28,
+      "Power": "Etheric Annihilation",
+      "Description": "Harness the elements to tear open the fabric of reality, releasing an onslaught of fire, water, wind, earth, and lightning energy.",
+      "Duration": "Instant",
+      "Mana Cost": 145
+    },
+    {
+      "Tier": 29,
+      "Power": "Wrath of the Elements",
+      "Description": "Invoke the wrath of the elemental gods, creating a field where fire, water, air, earth, and lightning continuously clash and explode.",
+      "Duration": "5 rounds",
+      "Mana Cost": 150
+    },
+    {
+      "Tier": 30,
+      "Power": "Elemental Cataclysm",
+      "Description": "Trigger a cataclysm that redefines the terrain, burning, flooding, shaking, electrifying, and tearing apart the land and sky.",
+      "Duration": "Instant",
+      "Mana Cost": 155
+    },
+    {
+      "Tier": 31,
+      "Power": "Infinity Storm",
+      "Description": "Summon an infinite storm where all elements rage eternally, reducing everything to ashes, vapor, dust, and cinders.",
+      "Duration": "4 rounds",
+      "Mana Cost": 160
+    },
+    {
+      "Tier": 32,
+      "Power": "Primeval Chaos",
+      "Description": "Channel the original chaos from which all elements were born, unleashing a force that returns everything to its elemental state.",
+      "Duration": "Instant",
+      "Mana Cost": 165
+    },
+    {
+      "Tier": 33,
+      "Power": "Elemental Singularity",
+      "Description": "Compress all five elements into a singularity, creating a devastating implosion followed by an explosion that reshapes reality.",
+      "Duration": "Instant",
+      "Mana Cost": 170
+    },
+    {
+      "Tier": 34,
+      "Power": "Armageddon",
+      "Description": "Call forth the end of all things, where fire rains, oceans boil, winds tear, earth shatters, and lightning scorches the heavens.",
+      "Duration": "Instant",
+      "Mana Cost": 175
+    },
+    {
+      "Tier": 35,
+      "Power": "World Breaker",
+      "Description": "Unleash a force that breaks the very world, combining the power of fire, water, air, earth, and lightning in an unstoppable surge.",
+      "Duration": "Instant",
+      "Mana Cost": 180
+    },
+    {
+      "Tier": 36,
+      "Power": "Elemental Dominion",
+      "Description": "Take control of the elemental forces, bending fire, water, air, earth, and lightning to your will, dominating the battlefield completely.",
+      "Duration": "5 rounds",
+      "Mana Cost": 185
+    },
+    {
+      "Tier": 37,
+      "Power": "Creation's End",
+      "Description": "Invoke the final act of creation, where the elements merge to end all things and begin anew in a blaze of elemental fury.",
+      "Duration": "Instant",
+      "Mana Cost": 200
+    }
+    
+  ]
+  

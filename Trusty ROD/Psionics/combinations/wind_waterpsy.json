@@ -1,0 +1,143 @@
+[
+    {
+      "Tier": 11,
+      "Power": "Mist Whirl",
+      "Description": "Create a whirlwind of mist to obscure vision and disorient enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Aqua Breeze",
+      "Description": "Summon a breeze that carries water, dousing flames and cooling the area.",
+      "Duration": "3 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Water Spout",
+      "Description": "Summon a spout of water carried by the wind to drench enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Freezing Gust",
+      "Description": "Release a gust of wind carrying freezing water to chill enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Frost Vortex",
+      "Description": "Create a vortex of wind and ice that freezes everything it touches.",
+      "Duration": "3 rounds",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Watery Cyclone",
+      "Description": "Summon a cyclone of water that engulfs and drowns enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Icy Gale",
+      "Description": "Release a gale of wind carrying shards of ice to slice enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Water Dragon Vortex",
+      "Description": "Summon a vortex shaped like a dragon made of wind and water.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Monsoon Strike",
+      "Description": "Call down a monsoon carried by the wind to drench and batter enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Hurricane Splash",
+      "Description": "Create a hurricane that carries water, flooding and drowning the area.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Ice Storm",
+      "Description": "Summon a storm of wind and ice that freezes the battlefield.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Tidal Surge",
+      "Description": "Create a tidal wave carried by the wind, sweeping away enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Frost Dragon",
+      "Description": "Summon a dragon made of wind and frost to attack your enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Water Twister",
+      "Description": "Summon a twister filled with water to trap and drown foes.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Glacial Tempest",
+      "Description": "Create a tempest filled with ice and wind that chills and slices through enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Cyclonic Tide",
+      "Description": "Summon a cyclonic tide that sweeps through the battlefield, drenching and chilling all in its path.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Arctic Gale",
+      "Description": "Release a gale of wind so cold it freezes everything in its path.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Tsunami Wind",
+      "Description": "Create a tsunami carried by the wind to devastate the battlefield.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Ice God's Wrath",
+      "Description": "Unleash the wrath of wind and ice, freezing the battlefield entirely.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Ocean's Breath",
+      "Description": "Summon the breath of the ocean and sky to bring forth the ultimate storm.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

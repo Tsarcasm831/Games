@@ -1,0 +1,143 @@
+[
+    {
+      "Tier": 11,
+      "Power": "Sandstorm",
+      "Description": "Combine wind and earth to create a blinding sandstorm.",
+      "Duration": "3 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Dust Devil",
+      "Description": "Summon a small whirlwind filled with dirt and debris.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Stone Cyclone",
+      "Description": "Create a cyclone filled with rocks and debris to batter enemies.",
+      "Duration": "2 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Quicksand Vortex",
+      "Description": "Create a vortex that turns the ground into quicksand.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Earthen Wind Shield",
+      "Description": "Create a protective shield of swirling wind and stone.",
+      "Duration": "3 rounds",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Rock Twister",
+      "Description": "Summon a twister that carries rocks and stones to strike enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Gale Shard Strike",
+      "Description": "Launch shards of stone carried by the wind at high speed.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Dust Surge",
+      "Description": "Release a surge of wind and dust to blind and choke enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Stone Whirlwind",
+      "Description": "Create a whirlwind filled with large stones to crush enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Rocky Gale",
+      "Description": "Summon a wind carrying sharp rocks to cut and bruise enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Earthstorm",
+      "Description": "Create a storm of wind and earth that tears up the battlefield.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Sand Spire",
+      "Description": "Summon spires of sand and stone carried by the wind to impale foes.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Gale Crag",
+      "Description": "Summon a craggy terrain with gale-force winds to deter enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Tornado Rocks",
+      "Description": "Create a tornado that carries large boulders, causing massive damage.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Stone Tempest",
+      "Description": "Summon a tempest filled with rocks and stones that ravages the battlefield.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Mountain's Wind",
+      "Description": "Call upon the winds of the mountains to strike with stone-laden gales.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Sand Dragon",
+      "Description": "Summon a dragon made of wind and sand to attack enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Windquake",
+      "Description": "Cause a quake carried by the wind, disrupting all terrain in the area.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Earth's Wrath Gale",
+      "Description": "Summon the wrath of the earth and wind, causing widespread devastation.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Stone God's Tempest",
+      "Description": "Unleash the ultimate storm of wind and stone, reshaping the battlefield.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

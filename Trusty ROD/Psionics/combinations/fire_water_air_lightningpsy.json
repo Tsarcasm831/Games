@@ -1,0 +1,38 @@
+[
+    {
+      "Tier": 17,
+      "Power": "Thunderous Steam Blast",
+      "Description": "Emit a blast of electrified steam, fire, and wind that shocks, burns, and pushes back all enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Scalding Thunderstorm",
+      "Description": "Summon a storm of boiling rain, fire, and lightning, driven by fierce winds to devastate the area.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Plasma Tempest",
+      "Description": "Create a tempest of plasma, fire, wind, and boiling water that incinerates and electrocutes all it touches.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Lightning Fire Typhoon",
+      "Description": "Summon a typhoon charged with fire, water, and lightning, tearing through the battlefield with chaotic fury.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Storm God's Wrath",
+      "Description": "Unleash the combined fury of fire, water, air, earth, and lightning, creating an elemental storm that obliterates everything.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

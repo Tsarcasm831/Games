@@ -1,0 +1,381 @@
+<html><head><base href="https://websim.ai" />
+    <title>Interactive TV Room with Live Channels</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+      body { margin: 0; overflow: hidden; background-color: #000; font-family: Arial, sans-serif; }
+      canvas { width: 100%; height: 100% }
+      #videoElement { display: none; }
+      #controls { position: absolute; bottom: 10px; left: 10px; color: white; }
+      #channelSwitcher { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; max-height: 80vh; overflow-y: auto; }
+      .channel-button { display: block; margin: 5px 0; padding: 5px 10px; background: #444; color: white; border: none; cursor: pointer; width: 100%; text-align: left; font-size: 14px; }
+      .channel-button:hover { background: #666; }
+      #currentChannel { color: white; margin-bottom: 10px; font-size: 16px; font-weight: bold; }
+      #fullscreenButton { position: absolute; bottom: 10px; right: 10px; padding: 5px 10px; background: #444; color: white; border: none; cursor: pointer; }
+    </style>
+    </head>
+    <body>
+    <video id="videoElement" crossorigin="anonymous" playsinline></video>
+    <div id="controls">
+      <button id="muteButton">Mute/Unmute</button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    <div id="channelSwitcher">
+      <div id="currentChannel">Current: ZDF</div>
+      <button class="channel-button" data-url="https://zdf-hls-15.akamaized.net/hls/live/2016498/de/high/master.m3u8">ZDF (Germany)</button>
+      <button class="channel-button" data-url="https://mcdn.daserste.de/daserste/de/master.m3u8">Das Erste (Germany)</button>
+      <button class="channel-button" data-url="https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8">NHK World (Japan)</button>
+      <button class="channel-button" data-url="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8">France 24 (English)</button>
+      <button class="channel-button" data-url="https://cdnapi.kaltura.com/p/2503451/sp/250345100/playManifest/entryId/1_gb6tjmle/protocol/https/format/applehttp/a.m3u8">TRT World (Turkey)</button>
+      <button class="channel-button" data-url="https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8">CBS News (USA)</button>
+    </div>
+    <button id="fullscreenButton">Fullscreen</button>
+    <script>
+      // Set up the scene, camera, and renderer
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setClearColor(0x000000);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      document.body.appendChild(renderer.domElement);
+    
+      // Add OrbitControls
+      const controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.target.set(0, 1, 0);
+      controls.update();
+    
+      // Create room
+      const roomGeometry = new THREE.BoxGeometry(10, 8, 10);
+      const roomMaterial = new THREE.MeshStandardMaterial({
+        color: 0xf0f0f0,
+        side: THREE.BackSide,
+        roughness: 0.8,
+        metalness: 0.2
+      });
+      const room = new THREE.Mesh(roomGeometry, roomMaterial);
+      room.receiveShadow = true;
+      scene.add(room);
+    
+      // Create hanging lamp with lightbulb
+      function createHangingLamp() {
+        const lampGroup = new THREE.Group();
+    
+        // Lamp cord
+        const cordGeometry = new THREE.CylinderGeometry(0.01, 0.01, 2, 8);
+        const cordMaterial = new THREE.MeshStandardMaterial({ color: 0x000000, roughness: 0.8 });
+        const cord = new THREE.Mesh(cordGeometry, cordMaterial);
+        cord.position.y = 1;
+        cord.castShadow = true;
+        lampGroup.add(cord);
+    
+        // Lamp shade
+        const shadeGeometry = new THREE.ConeGeometry(0.4, 0.6, 32, 1, true);
+        const shadeMaterial = new THREE.MeshStandardMaterial({ 
+          color: 0xffffcc, 
+          side: THREE.DoubleSide, 
+          transparent: true, 
+          opacity: 0.8,
+          emissive: 0xffffcc,
+          emissiveIntensity: 0.5
+        });
+        const shade = new THREE.Mesh(shadeGeometry, shadeMaterial);
+        shade.position.y = -0.1;
+        shade.rotation.x = Math.PI;
+        shade.castShadow = false;
+        lampGroup.add(shade);
+    
+        // Lightbulb
+        const bulbGeometry = new THREE.SphereGeometry(0.1, 32, 32);
+        const bulbMaterial = new THREE.MeshStandardMaterial({
+          color: 0xffffcc,
+          emissive: 0xffffcc,
+          emissiveIntensity: 1,
+          transparent: true,
+          opacity: 0.9
+        });
+        const lightbulb = new THREE.Mesh(bulbGeometry, bulbMaterial);
+        lightbulb.position.y = 0.1;
+        lampGroup.add(lightbulb);
+    
+        // Light source
+        const bulbLight = new THREE.PointLight(0xffffcc, 1, 10);
+        bulbLight.position.set(0, 0.1, 0);
+        bulbLight.castShadow = true;
+        bulbLight.shadow.mapSize.width = 1024;
+        bulbLight.shadow.mapSize.height = 1024;
+        lampGroup.add(bulbLight);
+    
+        // Ceiling attachment
+        const attachmentGeometry = new THREE.CylinderGeometry(0.1, 0.1, 0.05, 32);
+        const attachmentMaterial = new THREE.MeshStandardMaterial({ color: 0x808080, metalness: 0.7, roughness: 0.3 });
+        const attachment = new THREE.Mesh(attachmentGeometry, attachmentMaterial);
+        attachment.position.y = 2;
+        attachment.castShadow = true;
+        lampGroup.add(attachment);
+    
+        lampGroup.position.set(0, 2, 0);
+        return lampGroup;
+      }
+    
+      const lamp = createHangingLamp();
+      scene.add(lamp);
+    
+      // Create TV with live stream
+      let tvScreen;
+      let tv;
+      function createTVWithStream() {
+        const tvGroup = new THREE.Group();
+    
+        // TV frame
+        const frameGeometry = new THREE.BoxGeometry(2.6, 1.6, 0.15);
+        const frameMaterial = new THREE.MeshStandardMaterial({ color: 0x303030, roughness: 0.8 });
+        const frame = new THREE.Mesh(frameGeometry, frameMaterial);
+        tvGroup.add(frame);
+    
+        // TV screen
+        const video = document.getElementById('videoElement');
+        
+        const screenGeometry = new THREE.PlaneGeometry(2.5, 1.5);
+        const screenTexture = new THREE.VideoTexture(video);
+        const screenMaterial = new THREE.MeshBasicMaterial({ map: screenTexture });
+        tvScreen = new THREE.Mesh(screenGeometry, screenMaterial);
+        tvScreen.position.z = 0.08;
+        tvGroup.add(tvScreen);
+    
+        // TV stand
+        const standGeometry = new THREE.BoxGeometry(0.6, 0.1, 0.4);
+        const standMaterial = new THREE.MeshStandardMaterial({ color: 0x303030, roughness: 0.8 });
+        const stand = new THREE.Mesh(standGeometry, standMaterial);
+        stand.position.y = -0.8;
+        stand.position.z = 0.15;
+        tvGroup.add(stand);
+    
+        // TV neck
+        const neckGeometry = new THREE.BoxGeometry(0.1, 0.3, 0.1);
+        const neck = new THREE.Mesh(neckGeometry, standMaterial);
+        neck.position.y = -0.65;
+        neck.position.z = 0.05;
+        tvGroup.add(neck);
+    
+        tvGroup.position.set(0, 0.5, -4.85);
+        return tvGroup;
+      }
+    
+      tv = createTVWithStream();
+      scene.add(tv);
+    
+      // Add ambient lighting
+      const ambientLight = new THREE.AmbientLight(0x404040);
+      scene.add(ambientLight);
+    
+      // Position camera
+      camera.position.set(5, 3, 5);
+    
+      // Animation loop
+      let loadingAngle = 0;
+      function animate() {
+        requestAnimationFrame(animate);
+        
+        // Add a gentle swaying motion to the lamp
+        const time = Date.now() * 0.001;
+        lamp.rotation.x = Math.sin(time) * 0.05;
+        lamp.rotation.z = Math.cos(time * 0.8) * 0.05;
+        
+        // Animate loading screen
+        if (tvScreen.material.userData.isLoading) {
+          loadingAngle += 0.1;
+          updateLoadingScreen();
+        }
+        
+        controls.update();
+        renderer.render(scene, camera);
+      }
+      animate();
+    
+      // Handle window resizing
+      window.addEventListener('resize', function() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        if (isFullscreen) {
+          adjustTVForFullscreen();
+        }
+      }, false);
+    
+      // Audio controls
+      const video = document.getElementById('videoElement');
+      const muteButton = document.getElementById('muteButton');
+      const volumeSlider = document.getElementById('volumeSlider');
+    
+      muteButton.addEventListener('click', function() {
+        video.muted = !video.muted;
+        muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
+      });
+    
+      volumeSlider.addEventListener('input', function() {
+        video.volume = volumeSlider.value;
+      });
+    
+      // Channel switching
+      const channelButtons = document.querySelectorAll('.channel-button');
+      const currentChannelDisplay = document.getElementById('currentChannel');
+      
+      function loadChannel(url, channelName) {
+        showLoadingScreen();
+        if (Hls.isSupported()) {
+          const hls = new Hls();
+          hls.loadSource(url);
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            video.play();
+          });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = url;
+          video.addEventListener('loadedmetadata', function() {
+            video.play();
+          });
+        }
+        currentChannelDisplay.textContent = `Current: ${channelName}`;
+        
+        video.addEventListener('canplay', function onCanPlay() {
+          hideLoadingScreen();
+          video.removeEventListener('canplay', onCanPlay);
+        });
+      }
+    
+      channelButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          loadChannel(this.dataset.url, this.textContent);
+        });
+      });
+    
+      // Loading screen functions
+      function showLoadingScreen() {
+        const loadingTexture = createLoadingTexture();
+        tvScreen.material.map = loadingTexture;
+        tvScreen.material.userData.isLoading = true;
+        tvScreen.material.needsUpdate = true;
+      }
+    
+      function hideLoadingScreen() {
+        tvScreen.material.map = new THREE.VideoTexture(video);
+        tvScreen.material.userData.isLoading = false;
+        tvScreen.material.needsUpdate = true;
+      }
+    
+      function createLoadingTexture() {
+        const canvas = document.createElement('canvas');
+        canvas.width = 512;
+        canvas.height = 512;
+        const ctx = canvas.getContext('2d');
+        
+        // Fill background
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, 512, 512);
+        
+        // Draw loading text
+        ctx.font = '48px Arial';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.fillText('Loading...', 256, 256);
+        
+        return new THREE.CanvasTexture(canvas);
+      }
+    
+      function updateLoadingScreen() {
+        const canvas = tvScreen.material.map.image;
+        const ctx = canvas.getContext('2d');
+        
+        // Clear canvas
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, 512, 512);
+        
+        // Draw loading text
+        ctx.font = '48px Arial';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.fillText('Loading...', 256, 256);
+        
+        // Draw spinning loading indicator
+        ctx.beginPath();
+        ctx.arc(256, 350, 30, loadingAngle, loadingAngle + Math.PI / 2);
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 6;
+        ctx.stroke();
+        
+        tvScreen.material.map.needsUpdate = true;
+      }
+    
+      // Fullscreen button
+      const fullscreenButton = document.getElementById('fullscreenButton');
+      let isFullscreen = false;
+      let originalCameraPosition = new THREE.Vector3();
+      let originalControlsTarget = new THREE.Vector3();
+    
+      function toggleFullscreen() {
+        if (!isFullscreen) {
+          enterFullscreen();
+        } else {
+          exitFullscreen();
+        }
+      }
+    
+      function enterFullscreen() {
+        isFullscreen = true;
+        originalCameraPosition.copy(camera.position);
+        originalControlsTarget.copy(controls.target);
+        
+        // Move camera to face the TV directly
+        camera.position.set(0, 0.5, -2.5);
+        controls.target.set(0, 0.5, -4.85);
+        controls.update();
+        
+        adjust
+    
+    TVForFullscreen();
+        
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen();
+        }
+      }
+    
+      function exitFullscreen() {
+        isFullscreen = false;
+        camera.position.copy(originalCameraPosition);
+        controls.target.copy(originalControlsTarget);
+        controls.update();
+        
+        resetTVPosition();
+        
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    
+      function adjustTVForFullscreen() {
+        const aspect = window.innerWidth / window.innerHeight;
+        const scale = Math.min(window.innerWidth / 2.5, window.innerHeight / 1.5);
+        tv.scale.set(scale / 250, scale / 250, scale / 250);
+        tv.position.set(0, 0, -4.85 + 0.075 * (scale / 250));
+      }
+    
+      function resetTVPosition() {
+        tv.scale.set(1, 1, 1);
+        tv.position.set(0, 0.5, -4.85);
+      }
+    
+      fullscreenButton.addEventListener('click', toggleFullscreen);
+    
+      document.addEventListener('fullscreenchange', function() {
+        if (!document.fullscreenElement) {
+          exitFullscreen();
+        }
+      });
+    
+      // Load initial channel (ZDF)
+      loadChannel(channelButtons[0].dataset.url, 'ZDF (Germany)');
+    </script>
+    </body></html>

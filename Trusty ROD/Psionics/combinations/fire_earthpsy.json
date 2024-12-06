@@ -1,0 +1,143 @@
+[
+    {
+      "Tier": 11,
+      "Power": "Magma Fist",
+      "Description": "Encase your hand in molten rock, striking with burning force.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Lava Spire",
+      "Description": "Cause a spire of molten lava to erupt from the ground.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Pyroclastic Shield",
+      "Description": "Create a shield of molten rock that absorbs damage and burns attackers.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Fiery Quake",
+      "Description": "Cause an earthquake that cracks open the ground, releasing bursts of fire.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Flame Rock Armor",
+      "Description": "Cover yourself in an armor of rock and flames, providing high defense and burning attackers.",
+      "Duration": "3 rounds",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Molten Pillars",
+      "Description": "Summon pillars of lava to rise and burn anything they touch.",
+      "Duration": "3 rounds",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Lava Flow",
+      "Description": "Cause a stream of lava to flow in a directed path, burning everything in its wake.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Volcanic Eruption",
+      "Description": "Summon a small-scale volcanic eruption in a targeted area.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Molten Fortress",
+      "Description": "Create a fortress of molten rock that traps and burns enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Scorched Earth",
+      "Description": "Turn the ground into a burning field of lava and fire.",
+      "Duration": "5 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Lava Golem",
+      "Description": "Summon a golem made of lava and rock to fight for you.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Ember Shards",
+      "Description": "Cause the ground to shatter, launching hot rock shards at enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Pyroclastic Tide",
+      "Description": "Release a wave of molten rock and ash that engulfs enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Flame Quake Armor",
+      "Description": "Cover yourself in armor that radiates heat and emits flames during combat.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Infernal Crater",
+      "Description": "Create a crater filled with lava, trapping and burning enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Fire Mountain",
+      "Description": "Cause a mountain of fire and rock to rise from the earth, burning everything around it.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Volcanic Rupture",
+      "Description": "Summon a massive rupture in the earth, spewing lava and fire.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Magma Wave",
+      "Description": "Call forth a wave of magma to sweep across the battlefield.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Earth's Core Flame",
+      "Description": "Harness the flames of the earth's core to incinerate everything in an immense radius.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Inferno Titan",
+      "Description": "Summon a titan made of molten rock and fire to wreak havoc.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    }
+  ]
+  

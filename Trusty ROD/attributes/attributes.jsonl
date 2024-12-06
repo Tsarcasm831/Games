@@ -1,0 +1,188 @@
+{"attribute": "STRENGTH", "range": "01-05", "mods": -20, "melee_damage": 0, "carry_weight_before_encumbrance": 0, "max_lift": 2}
+{"attribute": "STRENGTH", "range": "06-10", "mods": -18, "melee_damage": 0, "carry_weight_before_encumbrance": 0, "max_lift": 5}
+{"attribute": "STRENGTH", "range": "11-15", "mods": -16, "melee_damage": 0, "carry_weight_before_encumbrance": 0, "max_lift": 10}
+{"attribute": "STRENGTH", "range": "16-20", "mods": -14, "melee_damage": 0, "carry_weight_before_encumbrance": 0, "max_lift": 20}
+{"attribute": "STRENGTH", "range": "21-25", "mods": -12, "melee_damage": 0, "carry_weight_before_encumbrance": 0, "max_lift": 40}
+{"attribute": "STRENGTH", "range": "26-30", "mods": -10, "melee_damage": 0, "carry_weight_before_encumbrance": 0, "max_lift": 60}
+{"attribute": "STRENGTH", "range": "31-35", "mods": -8, "melee_damage": 0, "carry_weight_before_encumbrance": 0, "max_lift": 80}
+{"attribute": "STRENGTH", "range": "36-40", "mods": -6, "melee_damage": 5, "carry_weight_before_encumbrance": 0, "max_lift": 100}
+{"attribute": "STRENGTH", "range": "41-50", "mods": -4, "melee_damage": 10, "carry_weight_before_encumbrance": 0, "max_lift": 110}
+{"attribute": "STRENGTH", "range": "51-55", "mods": -3, "melee_damage": 20, "carry_weight_before_encumbrance": 0, "max_lift": 120}
+{"attribute": "STRENGTH", "range": "56-60", "mods": "E", "melee_damage": 30, "carry_weight_before_encumbrance": 0, "max_lift": 140}
+{"attribute": "STRENGTH", "range": "61-65", "mods": +2, "melee_damage": 40, "carry_weight_before_encumbrance": 0, "max_lift": 165}
+{"attribute": "STRENGTH", "range": "66-70", "mods": +4, "melee_damage": 50, "carry_weight_before_encumbrance": 0, "max_lift": 175}
+{"attribute": "STRENGTH", "range": "71-75", "mods": +6, "melee_damage": 60, "carry_weight_before_encumbrance": 0, "max_lift": 200}
+{"attribute": "STRENGTH", "range": "76-80", "mods": +8, "melee_damage": 70, "carry_weight_before_encumbrance": 0, "max_lift": 220}
+{"attribute": "STRENGTH", "range": "81-85", "mods": +10, "melee_damage": 80, "carry_weight_before_encumbrance": 0, "max_lift": 235}
+{"attribute": "STRENGTH", "range": "86-90", "mods": +12, "melee_damage": 90, "carry_weight_before_encumbrance": 0, "max_lift": 250}
+{"attribute": "STRENGTH", "range": "91-95", "mods": +14, "melee_damage": 100, "carry_weight_before_encumbrance": 0, "max_lift": 265}
+{"attribute": "STRENGTH", "range": "96-99", "mods": +16, "melee_damage": 110, "carry_weight_before_encumbrance": 0, "max_lift": 280}
+{"attribute": "STRENGTH", "range": "100", "mods": +20, "melee_damage": 125, "carry_weight_before_encumbrance": 0, "max_lift": 325}
+
+{"attribute": "DEXTERITY", "range": "01-05", "mods": -20, "melee_hit": -10, "draw_speed": 0, "catch_smp": 2}
+{"attribute": "DEXTERITY", "range": "06-10", "mods": -18, "melee_hit": -9, "draw_speed": 0, "catch_smp": 5}
+{"attribute": "DEXTERITY", "range": "11-15", "mods": -16, "melee_hit": -8, "draw_speed": 0, "catch_smp": 10}
+{"attribute": "DEXTERITY", "range": "16-20", "mods": -14, "melee_hit": -7, "draw_speed": 0, "catch_smp": 20}
+{"attribute": "DEXTERITY", "range": "21-25", "mods": -12, "melee_hit": -6, "draw_speed": 0, "catch_smp": 40}
+{"attribute": "DEXTERITY", "range": "26-30", "mods": -10, "melee_hit": -5, "draw_speed": 0, "catch_smp": 60}
+{"attribute": "DEXTERITY", "range": "31-35", "mods": -8, "melee_hit": -4, "draw_speed": 0, "catch_smp": 80}
+{"attribute": "DEXTERITY", "range": "36-40", "mods": -6, "melee_hit": -3, "draw_speed": 0, "catch_smp": 100}
+{"attribute": "DEXTERITY", "range": "41-50", "mods": -4, "melee_hit": -2, "draw_speed": 0, "catch_smp": 110}
+{"attribute": "DEXTERITY", "range": "51-55", "mods": -3, "melee_hit": -1, "draw_speed": 0, "catch_smp": 120}
+{"attribute": "DEXTERITY", "range": "56-60", "mods": "E", "melee_hit": "E", "draw_speed": "E", "catch_smp": "E"}
+{"attribute": "DEXTERITY", "range": "61-65", "mods": +2, "melee_hit": +1, "draw_speed": +1, "catch_smp": 0}
+{"attribute": "DEXTERITY", "range": "66-70", "mods": +4, "melee_hit": +2, "draw_speed": +3, "catch_smp": 0}
+{"attribute": "DEXTERITY", "range": "71-75", "mods": +6, "melee_hit": +3, "draw_speed": +5, "catch_smp": 0}
+{"attribute": "DEXTERITY", "range": "76-80", "mods": +8, "melee_hit": +4, "draw_speed": +7, "catch_smp": 0}
+{"attribute": "DEXTERITY", "range": "81-85", "mods": +10, "melee_hit": +5, "draw_speed": +10, "catch_smp": 0}
+{"attribute": "DEXTERITY", "range": "86-90", "mods": +12, "melee_hit": +6, "draw_speed": +12, "catch_smp": 0}
+{"attribute": "DEXTERITY", "range": "91-95", "mods": +14, "melee_hit": +7, "draw_speed": +15, "catch_smp": 0}
+{"attribute": "DEXTERITY", "range": "96-99", "mods": +16, "melee_hit": +8, "draw_speed": +18, "catch_smp": 0}
+{"attribute": "DEXTERITY", "range": "100", "mods": +20, "melee_hit": +10, "draw_speed": +20, "catch_smp": 0}
+
+{"attribute": "AGILITY", "range": "01-05", "mods": -20, "range_hit": -25, "defense_mod": -20, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "06-10", "mods": -18, "range_hit": -18, "defense_mod": -18, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "11-15", "mods": -16, "range_hit": -16, "defense_mod": -16, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "16-20", "mods": -14, "range_hit": -14, "defense_mod": -14, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "21-25", "mods": -12, "range_hit": -12, "defense_mod": -12, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "26-30", "mods": -10, "range_hit": -10, "defense_mod": -10, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "31-35", "mods": -8, "range_hit": -8, "defense_mod": -8, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "36-40", "mods": -6, "range_hit": -6, "defense_mod": -6, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "41-50", "mods": -4, "range_hit": -4, "defense_mod": -4, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "51-55", "mods": -3, "range_hit": -2, "defense_mod": -3, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "56-60", "mods": "E", "range_hit": "E", "defense_mod": "E", "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "61-65", "mods": +2, "range_hit": +1, "defense_mod": +2, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "66-70", "mods": +4, "range_hit": +2, "defense_mod": +4, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "71-75", "mods": +6, "range_hit": +4, "defense_mod": +6, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "76-80", "mods": +8, "range_hit": +8, "defense_mod": +8, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "81-85", "mods": +10, "range_hit": +12, "defense_mod": +10, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "86-90", "mods": +12, "range_hit": +14, "defense_mod": +12, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "91-95", "mods": +14, "range_hit": +18, "defense_mod": +14, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "96-99", "mods": +16, "range_hit": +20, "defense_mod": +16, "firearms_hit": 0}
+{"attribute": "AGILITY", "range": "100", "mods": +20, "range_hit": +25, "defense_mod": +20, "firearms_hit": 0}
+
+{"attribute": "VITALITY", "range": "01-05", "mods": -20, "hp_bonus": "1/12", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "06-10", "mods": -18, "hp_bonus": "1/10", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "11-15", "mods": -16, "hp_bonus": "1/8", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "16-20", "mods": -14, "hp_bonus": "1/6", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "21-25", "mods": -12, "hp_bonus": "1/5", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "26-30", "mods": -10, "hp_bonus": "1/4", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "31-35", "mods": -8, "hp_bonus": "1/3", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "36-40", "mods": -6, "hp_bonus": "1/2", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "41-50", "mods": -4, "hp_bonus": "1/1", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "51-55", "mods": -3, "hp_bonus": "2/1", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "56-60", "mods": "E", "hp_bonus": "3/1", "stamina_rest_period": 0, "soak": 0}
+{"attribute": "VITALITY", "range": "61-65", "mods": +2, "hp_bonus": "4/1", "stamina_rest_period": 2, "soak": 0}
+{"attribute": "VITALITY", "range": "66-70", "mods": +4, "hp_bonus": "5/1", "stamina_rest_period": 4, "soak": 0}
+{"attribute": "VITALITY", "range": "71-75", "mods": +6, "hp_bonus": "6/1", "stamina_rest_period": 6, "soak": 0}
+{"attribute": "VITALITY", "range": "76-80", "mods": +8, "hp_bonus": "8/1", "stamina_rest_period": 8, "soak": 0}
+{"attribute": "VITALITY", "range": "81-85", "mods": +10, "hp_bonus": "9/1", "stamina_rest_period": 10, "soak": 0}
+{"attribute": "VITALITY", "range": "86-90", "mods": +12, "hp_bonus": "10/1", "stamina_rest_period": 12, "soak": 0}
+{"attribute": "VITALITY", "range": "91-95", "mods": +14, "hp_bonus": "12/1", "stamina_rest_period": 14, "soak": 0}
+{"attribute": "VITALITY", "range": "96-99", "mods": +16, "hp_bonus": "14/1", "stamina_rest_period": 16, "soak": 0}
+{"attribute": "VITALITY", "range": "100", "mods": +20, "hp_bonus": "N/A", "stamina_rest_period": 20, "soak": 0}
+
+{"attribute": "COMLINESS", "range": "01-05", "mods": -20, "dazzle": -25, "presence": "+20%"}
+{"attribute": "COMLINESS", "range": "06-10", "mods": -18, "dazzle": -18, "presence": "+18%"}
+{"attribute": "COMLINESS", "range": "11-15", "mods": -16, "dazzle": -16, "presence": "+16%"}
+{"attribute": "COMLINESS", "range": "16-20", "mods": -14, "dazzle": -14, "presence": "+14%"}
+{"attribute": "COMLINESS", "range": "21-25", "mods": -12, "dazzle": -12, "presence": "+12%"}
+{"attribute": "COMLINESS", "range": "26-30", "mods": -10, "dazzle": -10, "presence": "+10%"}
+{"attribute": "COMLINESS", "range": "31-35", "mods": -8, "dazzle": -8, "presence": "+8%"}
+{"attribute": "COMLINESS", "range": "36-40", "mods": -6, "dazzle": -6, "presence": "+6%"}
+{"attribute": "COMLINESS", "range": "41-50", "mods": -4, "dazzle": -4, "presence": "+4%"}
+{"attribute": "COMLINESS", "range": "51-55", "mods": -3, "dazzle": +2, "presence": "-3"}
+{"attribute": "COMLINESS", "range": "56-60", "mods": "E", "dazzle": "E", "presence": "E"}
+{"attribute": "COMLINESS", "range": "61-65", "mods": +2, "dazzle": +1, "presence": "+2"}
+{"attribute": "COMLINESS", "range": "66-70", "mods": +4, "dazzle": +2, "presence": "+4"}
+{"attribute": "COMLINESS", "range": "71-75", "mods": +6, "dazzle": +4, "presence": "+6"}
+{"attribute": "COMLINESS", "range": "76-80", "mods": +8, "dazzle": +8, "presence": "+8"}
+{"attribute": "COMLINESS", "range": "81-85", "mods": +10, "dazzle": +12, "presence": "+10"}
+{"attribute": "COMLINESS", "range": "86-90", "mods": +12, "dazzle": +14, "presence": "+12"}
+{"attribute": "COMLINESS", "range": "91-95", "mods": +14, "dazzle": +18, "presence": "+14"}
+{"attribute": "COMLINESS", "range": "96-99", "mods": +16, "dazzle": +20, "presence": "+16"}
+{"attribute": "COMLINESS", "range": "100", "mods": +20, "dazzle": +25, "presence": "+20"}
+
+{"attribute": "INTELLIGENCE", "range": "01-05", "firearms_dmg": 1, "number_of_skills": 1, "hacking_mod": -20, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "06-10", "firearms_dmg": 1, "number_of_skills": 1, "hacking_mod": -18, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "11-15", "firearms_dmg": 1, "number_of_skills": 1, "hacking_mod": -16, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "16-20", "firearms_dmg": 1, "number_of_skills": 1, "hacking_mod": -14, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "21-25", "firearms_dmg": 1, "number_of_skills": 1, "hacking_mod": -12, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "26-30", "firearms_dmg": 1, "number_of_skills": 1, "hacking_mod": -10, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "31-35", "firearms_dmg": 1, "number_of_skills": 1, "hacking_mod": -8, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "36-40", "firearms_dmg": 1, "number_of_skills": 2, "hacking_mod": -6, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "41-50", "firearms_dmg": 2, "number_of_skills": 2, "hacking_mod": -4, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "51-55", "firearms_dmg": 2, "number_of_skills": 3, "hacking_mod": -3, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "56-60", "firearms_dmg": 2, "number_of_skills": 3, "hacking_mod": "E", "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "61-65", "firearms_dmg": 3, "number_of_skills": 3, "hacking_mod": +2, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "66-70", "firearms_dmg": 3, "number_of_skills": 4, "hacking_mod": +4, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "71-75", "firearms_dmg": 3, "number_of_skills": 5, "hacking_mod": +6, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "76-80", "firearms_dmg": 4, "number_of_skills": 6, "hacking_mod": +8, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "81-85", "firearms_dmg": 4, "number_of_skills": 7, "hacking_mod": +10, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "86-90", "firearms_dmg": 4, "number_of_skills": 8, "hacking_mod": +12, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "91-95", "firearms_dmg": 5, "number_of_skills": 9, "hacking_mod": +14, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "96-99", "firearms_dmg": 6, "number_of_skills": 10, "hacking_mod": +16, "powers": 0, "mana_bonus": 0, "power_level": 0}
+{"attribute": "INTELLIGENCE", "range": "100", "firearms_dmg": 8, "number_of_skills": 12, "hacking_mod": +20, "powers": 0, "mana_bonus": 0, "power_level": 0}
+
+{"attribute": "PERCEPTION", "range": "01-05", "firearms_crit": 100, "initiative_bonus": -25, "detective": -20}
+{"attribute": "PERCEPTION", "range": "06-10", "firearms_crit": 100, "initiative_bonus": -18, "detective": -18}
+{"attribute": "PERCEPTION", "range": "11-15", "firearms_crit": 100, "initiative_bonus": -16, "detective": -16}
+{"attribute": "PERCEPTION", "range": "16-20", "firearms_crit": 100, "initiative_bonus": -14, "detective": -14}
+{"attribute": "PERCEPTION", "range": "21-25", "firearms_crit": 100, "initiative_bonus": -12, "detective": -12}
+{"attribute": "PERCEPTION", "range": "26-30", "firearms_crit": 100, "initiative_bonus": -10, "detective": -10}
+{"attribute": "PERCEPTION", "range": "31-35", "firearms_crit": 100, "initiative_bonus": -8, "detective": -8}
+{"attribute": "PERCEPTION", "range": "36-40", "firearms_crit": 100, "initiative_bonus": -6, "detective": -6}
+{"attribute": "PERCEPTION", "range": "41-50", "firearms_crit": 100, "initiative_bonus": -4, "detective": -4}
+{"attribute": "PERCEPTION", "range": "51-55", "firearms_crit": 100, "initiative_bonus": -2, "detective": -3}
+{"attribute": "PERCEPTION", "range": "56-60", "firearms_crit": 100, "initiative_bonus": "E", "detective": "E"}
+{"attribute": "PERCEPTION", "range": "61-65", "firearms_crit": 100, "initiative_bonus": +2, "detective": +2}
+{"attribute": "PERCEPTION", "range": "66-70", "firearms_crit": 100, "initiative_bonus": +4, "detective": +4}
+{"attribute": "PERCEPTION", "range": "71-75", "firearms_crit": 99-100, "initiative_bonus": +6, "detective": +6}
+{"attribute": "PERCEPTION", "range": "76-80", "firearms_crit": 98-100, "initiative_bonus": +8, "detective": +8}
+{"attribute": "PERCEPTION", "range": "81-85", "firearms_crit": 97-100, "initiative_bonus": +10, "detective": +10}
+{"attribute": "PERCEPTION", "range": "86-90", "firearms_crit": 96-100, "initiative_bonus": +12, "detective": +12}
+{"attribute": "PERCEPTION", "range": "91-95", "firearms_crit": 95-100, "initiative_bonus": +14, "detective": +14}
+{"attribute": "PERCEPTION", "range": "96-99", "firearms_crit": 94-100, "initiative_bonus": +16, "detective": +16}
+{"attribute": "PERCEPTION", "range": "100", "firearms_crit": 90-100, "initiative_bonus": +20, "detective": +20}
+
+{"attribute": "CHARISMA", "range": "01-05", "charm": -20, "persuade": -25, "karma": 0}
+{"attribute": "CHARISMA", "range": "06-10", "charm": -18, "persuade": -18, "karma": 0}
+{"attribute": "CHARISMA", "range": "11-15", "charm": -16, "persuade": -16, "karma": 0}
+{"attribute": "CHARISMA", "range": "16-20", "charm": -14, "persuade": -14, "karma": 0}
+{"attribute": "CHARISMA", "range": "21-25", "charm": -12, "persuade": -12, "karma": 0}
+{"attribute": "CHARISMA", "range": "26-30", "charm": -10, "persuade": -10, "karma": 0}
+{"attribute": "CHARISMA", "range": "31-35", "charm": -8, "persuade": -8, "karma": 0}
+{"attribute": "CHARISMA", "range": "36-40", "charm": -6, "persuade": -6, "karma": 0}
+{"attribute": "CHARISMA", "range": "41-50", "charm": -4, "persuade": -4, "karma": 0}
+{"attribute": "CHARISMA", "range": "51-55", "charm": -3, "persuade": -2, "karma": 0}
+{"attribute": "CHARISMA", "range": "56-60", "charm": "E", "persuade": "E", "karma": 0}
+{"attribute": "CHARISMA", "range": "61-65", "charm": +2, "persuade": +1, "karma": +1}
+{"attribute": "CHARISMA", "range": "66-70", "charm": +4, "persuade": +2, "karma": +2}
+{"attribute": "CHARISMA", "range": "71-75", "charm": +6, "persuade": +4, "karma": +3}
+{"attribute": "CHARISMA", "range": "76-80", "charm": +8, "persuade": +8, "karma": +4}
+{"attribute": "CHARISMA", "range": "81-85", "charm": +10, "persuade": +12, "karma": +5}
+{"attribute": "CHARISMA", "range": "86-90", "charm": +12, "persuade": +14, "karma": +6}
+{"attribute": "CHARISMA", "range": "91-95", "charm": +14, "persuade": +18, "karma": +8}
+{"attribute": "CHARISMA", "range": "96-99", "charm": +16, "persuade": +20, "karma": +10}
+{"attribute": "CHARISMA", "range": "100", "charm": +20, "persuade": +25, "karma": +12}
+
+{"attribute": "PSY", "range": "01-05", "number_of_powers": 1, "mana_bonus": -25, "power_level": 1}
+{"attribute": "PSY", "range": "06-10", "number_of_powers": 1, "mana_bonus": -18, "power_level": 1}
+{"attribute": "PSY", "range": "11-15", "number_of_powers": 1, "mana_bonus": -16, "power_level": 1}
+{"attribute": "PSY", "range": "16-20", "number_of_powers": 1, "mana_bonus": -14, "power_level": 1}
+{"attribute": "PSY", "range": "21-25", "number_of_powers": 1, "mana_bonus": -12, "power_level": 1}
+{"attribute": "PSY", "range": "26-30", "number_of_powers": 1, "mana_bonus": -10, "power_level": 1}
+{"attribute": "PSY", "range": "31-35", "number_of_powers": 1, "mana_bonus": -8, "power_level": 1}
+{"attribute": "PSY", "range": "36-40", "number_of_powers": 1, "mana_bonus": -6, "power_level": 2}
+{"attribute": "PSY", "range": "41-50", "number_of_powers": 2, "mana_bonus": -4, "power_level": 2}
+{"attribute": "PSY", "range": "51-55", "number_of_powers": 2, "mana_bonus": -2, "power_level": 2}
+{"attribute": "PSY", "range": "56-60", "number_of_powers": 2, "mana_bonus": "E", "power_level": 3}
+{"attribute": "PSY", "range": "61-65", "number_of_powers": 3, "mana_bonus": +1, "power_level": 3}
+{"attribute": "PSY", "range": "66-70", "number_of_powers": 3, "mana_bonus": +2, "power_level": 3}
+{"attribute": "PSY", "range": "71-75", "number_of_powers": 3, "mana_bonus": +4, "power_level": 4}
+{"attribute": "PSY", "range": "76-80", "number_of_powers": 4, "mana_bonus": +8, "power_level": 4}
+{"attribute": "PSY", "range": "81-85", "number_of_powers": 4, "mana_bonus": +12, "power_level": 4}
+{"attribute": "PSY", "range": "86-90", "number_of_powers": 4, "mana_bonus": +14, "power_level": 5}
+{"attribute": "PSY", "range": "91-95", "number_of_powers": 5, "mana_bonus": +18, "power_level": 5}
+{"attribute": "PSY", "range": "96-99", "number_of_powers": 6, "mana_bonus": +20, "power_level": 6}
+{"attribute": "PSY", "range": "100", "number_of_powers": 8, "mana_bonus": +25, "power_level": 8}

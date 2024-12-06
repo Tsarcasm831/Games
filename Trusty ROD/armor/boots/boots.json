@@ -1,0 +1,185 @@
+[
+    {
+      "Boots": "Cloth Shoes",
+      "Durability": "Cloth",
+      "Weight (lbs)": 1,
+      "Protection Level": "Low",
+      "Description": "Basic cloth shoes providing minimal protection. Ideal for light travel but offer little defense against hazards."
+    },
+    {
+      "Boots": "Leather Boots",
+      "Durability": "Leather",
+      "Weight (lbs)": 3,
+      "Protection Level": "Low-Medium",
+      "Description": "Durable leather boots that offer basic protection against environmental hazards while maintaining flexibility for movement."
+    },
+    {
+      "Boots": "Reinforced Leather Boots",
+      "Durability": "Reinforced Leather",
+      "Weight (lbs)": 5,
+      "Protection Level": "Medium",
+      "Description": "Leather boots with metal reinforcements, providing enhanced defense against cuts, bites, and rough terrain."
+    },
+    {
+      "Boots": "Padded Boots",
+      "Durability": "Padded Armor",
+      "Weight (lbs)": 7,
+      "Protection Level": "Medium",
+      "Description": "Thickly padded boots designed to absorb impact and provide moderate protection, while remaining comfortable for extended wear."
+    },
+    {
+      "Boots": "Kevlar Boots",
+      "Durability": "Kevlar",
+      "Weight (lbs)": 8,
+      "Protection Level": "Medium-High",
+      "Description": "Kevlar-lined boots capable of resisting punctures, small-caliber bullets, and offering good traction on various surfaces."
+    },
+    {
+      "Boots": "Kevlar Reinforced Boots",
+      "Durability": "Kevlar Reinforced",
+      "Weight (lbs)": 10,
+      "Protection Level": "High",
+      "Description": "Advanced Kevlar boots with reinforced plating, providing superior protection against ballistic threats while preserving mobility."
+    },
+    {
+      "Boots": "Composite Armor Boots",
+      "Durability": "Composite Armor",
+      "Weight (lbs)": 12,
+      "Protection Level": "High",
+      "Description": "Boots made of composite materials, offering balanced protection against impacts and environmental hazards without compromising movement."
+    },
+    {
+      "Boots": "Titanium Alloy Boots",
+      "Durability": "Titanium Alloy",
+      "Weight (lbs)": 15,
+      "Protection Level": "High",
+      "Description": "Titanium-plated boots offering exceptional defense against physical attacks while being relatively lightweight for enhanced mobility."
+    },
+    {
+      "Boots": "Titanium Weave Boots",
+      "Durability": "Titanium Weave",
+      "Weight (lbs)": 9,
+      "Protection Level": "High",
+      "Description": "Lightweight boots woven with titanium fibers, providing high durability and protection against harsh terrain and impacts."
+    },
+    {
+      "Boots": "Ceramic Plated Boots",
+      "Durability": "Ceramic Plating",
+      "Weight (lbs)": 18,
+      "Protection Level": "Very High",
+      "Description": "Boots embedded with ceramic plates, providing superior defense against energy weapons and offering solid footing in combat situations."
+    },
+    {
+      "Boots": "Plasteel Boots",
+      "Durability": "Plasteel",
+      "Weight (lbs)": 14,
+      "Protection Level": "Very High",
+      "Description": "Advanced plasteel boots that offer high resistance to energy and kinetic attacks while remaining light enough for agile movement."
+    },
+    {
+      "Boots": "Plasma-Treated Boots",
+      "Durability": "Plasma-Treated Armor",
+      "Weight (lbs)": 16,
+      "Protection Level": "Very High",
+      "Description": "Boots treated with plasma-hardening processes, offering exceptional resistance to thermal and energy attacks, with enhanced durability."
+    },
+    {
+      "Boots": "Nano-Fiber Mesh Boots",
+      "Durability": "Nano-Fiber Mesh",
+      "Weight (lbs)": 8,
+      "Protection Level": "Very High",
+      "Description": "Flexible boots made from nano-fiber mesh, providing high protection against physical and energy threats while allowing for quick movement."
+    },
+    {
+      "Boots": "Energy-Diffusing Boots",
+      "Durability": "Energy-Diffusing Armor",
+      "Weight (lbs)": 20,
+      "Protection Level": "Very High",
+      "Description": "Boots embedded with energy-diffusing technology to reduce damage from energy-based attacks and to absorb impact shocks."
+    },
+    {
+      "Boots": "Quantum Fiber Boots",
+      "Durability": "Quantum Fiber",
+      "Weight (lbs)": 7,
+      "Protection Level": "Extremely High",
+      "Description": "Ultra-light boots made from quantum fibers, offering superior protection and maximum agility across varied terrain."
+    },
+    {
+      "Boots": "Graviton-Plated Boots",
+      "Durability": "Graviton-Plated",
+      "Weight (lbs)": 22,
+      "Protection Level": "Extremely High",
+      "Description": "Boots enhanced with graviton technology, deflecting projectiles and providing stability on unstable surfaces."
+    },
+    {
+      "Boots": "Voidweave Boots",
+      "Durability": "Voidweave",
+      "Weight (lbs)": 6,
+      "Protection Level": "Extremely High",
+      "Description": "Boots interwoven with void energy, offering high protection against physical, psionic, and energy attacks while granting stealthy movement."
+    },
+    {
+      "Boots": "Neutronium Boots",
+      "Durability": "Neutronium Lattice",
+      "Weight (lbs)": 25,
+      "Protection Level": "Extremely High",
+      "Description": "Nearly indestructible boots offering unmatched protection, though their significant weight demands great strength for maneuverability."
+    },
+    {
+      "Boots": "Temporal Boots",
+      "Durability": "Temporal Armor",
+      "Weight (lbs)": 10,
+      "Protection Level": "Extremely High",
+      "Description": "Boots that incorporate temporal distortions, allowing the wearer to phase through time to avoid damage and move with near-instant speed."
+    },
+    {
+      "Boots": "Dark Matter Boots",
+      "Durability": "Dark Matter Composite",
+      "Weight (lbs)": 18,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Boots infused with dark matter, absorbing kinetic and energy attacks while reducing damage to the lower extremities."
+    },
+    {
+      "Boots": "Etherium Boots",
+      "Durability": "Etherium Plating",
+      "Weight (lbs)": 20,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Boots made from rare Etherium metal, providing high resistance to physical, energy, and psionic attacks while enhancing agility."
+    },
+    {
+      "Boots": "Psion-Weave Boots",
+      "Durability": "Psion-Weave",
+      "Weight (lbs)": 9,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Psionically enhanced boots that adapt to the wearer’s mental commands, offering dynamic protection and enhanced movement capabilities."
+    },
+    {
+      "Boots": "Hyper-Alloy Boots",
+      "Durability": "Hyper-Alloy",
+      "Weight (lbs)": 16,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Boots made from hyper-alloy, offering near-impenetrable defense while retaining a reasonable weight for efficient mobility."
+    },
+    {
+      "Boots": "Nanite-Infused Boots",
+      "Durability": "Nanite-Infused",
+      "Weight (lbs)": 14,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Boots embedded with self-repairing nanites, ensuring continuous durability and protection during long treks or combat scenarios."
+    },
+    {
+      "Boots": "Quantum Shield Boots",
+      "Durability": "Quantum Shielding",
+      "Weight (lbs)": 10,
+      "Protection Level": "Invulnerable",
+      "Description": "Boots with embedded quantum fields, creating a protective barrier that deflects a wide range of attacks while enhancing the wearer's balance."
+    },
+    {
+      "Boots": "Hypersteel Boots",
+      "Durability": "Hypersteel",
+      "Weight (lbs)": 28,
+      "Protection Level": "Invulnerable",
+      "Description": "The ultimate boots made from hypersteel, providing unmatched resistance to all forms of damage while offering enhanced mobility and traction for traversing any terrain."
+    }
+  ]
+  
