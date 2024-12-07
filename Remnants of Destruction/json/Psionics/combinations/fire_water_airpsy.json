@@ -1,0 +1,38 @@
+[
+    {
+      "Tier": 16,
+      "Power": "Boiling Cyclone",
+      "Description": "Summon a cyclone of scalding steam and flames, swirling violently and burning everything within.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Steamfire Tempest",
+      "Description": "Create a massive tempest of steam, fire, and wind that moves across the battlefield, incinerating all in its path.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Flaming Typhoon",
+      "Description": "Call forth a typhoon of fire and boiling water, carried by fierce winds to spread destruction over a wide area.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Scalding Firestorm",
+      "Description": "Summon a storm of scalding steam and fire, driven by gale-force winds, searing the battlefield.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Elemental Inferno",
+      "Description": "Unleash the ultimate combination of fire, water, and air, creating an inferno that engulfs and obliterates everything.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

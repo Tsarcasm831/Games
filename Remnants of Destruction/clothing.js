@@ -1,6 +1,6 @@
 // clothing.js
 
-export function createTShirt(humanoid) {
+function createTShirt(humanoid) {
     const shirtMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff }); // Blue T-shirt
 
     // Shirt Body
@@ -21,7 +21,7 @@ export function createTShirt(humanoid) {
     humanoid.rightArm.add(rightSleeve); // Attach directly to rightArm
 }
 
-export function createPants(humanoid) {
+function createPants(humanoid) {
     const pantsMaterial = new THREE.MeshLambertMaterial({ color: 0x8b4513 }); // Brown pants
 
     // Pants Body
@@ -41,7 +41,7 @@ export function createPants(humanoid) {
     humanoid.rightLeg.upperLegGroup.add(rightLegPants);
 }
 
-export function createHat(humanoid) {
+function createHat(humanoid) {
     const hatMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 }); // Red hat
 
     // Hat Geometry
@@ -57,8 +57,27 @@ export function createHat(humanoid) {
     humanoid.head.add(brim);
 }
 
-export function applyClothing(humanoid) {
+function applyClothing(humanoid) {
     createTShirt(humanoid);
     createPants(humanoid);
     createHat(humanoid);
 }
+
+// Create a basic humanoid structure if not already defined
+var humanoid = {
+    body: new THREE.Group(),
+    head: new THREE.Group(),
+    leftArm: new THREE.Group(),
+    rightArm: new THREE.Group(),
+    leftLeg: {
+        upperLegGroup: new THREE.Group(),
+        lowerLegGroup: new THREE.Group()
+    },
+    rightLeg: {
+        upperLegGroup: new THREE.Group(),
+        lowerLegGroup: new THREE.Group()
+    },
+    lowerBody: new THREE.Group()
+};
+
+applyClothing(humanoid);

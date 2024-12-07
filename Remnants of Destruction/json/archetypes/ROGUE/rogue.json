@@ -1,0 +1,18 @@
+{
+  "archetype": "ROGUE",
+  "description": "The rogue class is street-wise, stealthy and silent. They prefer to remain in the shadows and attack from behind or in many cases not attack at all, preferring instead to use the chaos of battle as a distraction while they acquire gear and money, or just eliminate enemies in a more civilized fashion. The ROGUE class breaks down into three primary ability groups consisting of the BURGLAR, the SURVIVOR, and the ASSASSIN.",
+  "sub_archetypes": [
+    {
+      "name": "BURGLAR",
+      "description": "The burglar is skilled in stealth and thievery, able to sneak past guards and unlock doors with ease."
+    },
+    {
+      "name": "SURVIVOR",
+      "description": "The survivor is adept at surviving in harsh conditions, using their wits and skills to stay alive."
+    },
+    {
+      "name": "ASSASSIN",
+      "description": "The assassin specializes in eliminating targets quickly and quietly, often using poisons or stealth attacks."
+    }
+  ]
+}

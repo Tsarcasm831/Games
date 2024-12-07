@@ -1,0 +1,185 @@
+[
+    {
+      "Gauntlets": "Cloth Gloves",
+      "Durability": "Cloth",
+      "Weight (lbs)": 1,
+      "Protection Level": "Low",
+      "Description": "Simple cloth gloves providing minimal protection. Ideal for tasks requiring full dexterity and little combat risk."
+    },
+    {
+      "Gauntlets": "Leather Gauntlets",
+      "Durability": "Leather",
+      "Weight (lbs)": 2,
+      "Protection Level": "Low-Medium",
+      "Description": "Basic leather gauntlets that offer some protection against abrasions and minor impacts while allowing for flexibility."
+    },
+    {
+      "Gauntlets": "Reinforced Leather Gauntlets",
+      "Durability": "Reinforced Leather",
+      "Weight (lbs)": 3,
+      "Protection Level": "Medium",
+      "Description": "Leather gauntlets with metal reinforcements, enhancing defense against cuts and blunt force without compromising grip."
+    },
+    {
+      "Gauntlets": "Padded Gloves",
+      "Durability": "Padded Armor",
+      "Weight (lbs)": 4,
+      "Protection Level": "Medium",
+      "Description": "Gloves with internal padding designed to absorb impact, offering moderate protection and cushioning against melee attacks."
+    },
+    {
+      "Gauntlets": "Kevlar Gloves",
+      "Durability": "Kevlar",
+      "Weight (lbs)": 5,
+      "Protection Level": "Medium-High",
+      "Description": "Kevlar-lined gloves capable of resisting cuts, punctures, and small-caliber bullets, maintaining good dexterity."
+    },
+    {
+      "Gauntlets": "Kevlar Reinforced Gauntlets",
+      "Durability": "Kevlar Reinforced",
+      "Weight (lbs)": 6,
+      "Protection Level": "High",
+      "Description": "Advanced Kevlar gauntlets with reinforced plates, providing enhanced protection against firearms while preserving some flexibility."
+    },
+    {
+      "Gauntlets": "Composite Armor Gauntlets",
+      "Durability": "Composite Armor",
+      "Weight (lbs)": 7,
+      "Protection Level": "High",
+      "Description": "Gauntlets made of composite materials, offering balanced protection against various attacks while ensuring some degree of mobility."
+    },
+    {
+      "Gauntlets": "Titanium Alloy Gauntlets",
+      "Durability": "Titanium Alloy",
+      "Weight (lbs)": 10,
+      "Protection Level": "High",
+      "Description": "Titanium-plated gauntlets providing strong defense against melee and ranged attacks without being overly cumbersome."
+    },
+    {
+      "Gauntlets": "Titanium Weave Gauntlets",
+      "Durability": "Titanium Weave",
+      "Weight (lbs)": 5,
+      "Protection Level": "High",
+      "Description": "Lightweight gauntlets woven with titanium fibers, offering high durability and protection with minimal impact on dexterity."
+    },
+    {
+      "Gauntlets": "Ceramic Plated Gauntlets",
+      "Durability": "Ceramic Plating",
+      "Weight (lbs)": 12,
+      "Protection Level": "Very High",
+      "Description": "Gauntlets embedded with ceramic plates, offering superior defense against ballistic and energy weapons."
+    },
+    {
+      "Gauntlets": "Plasteel Gauntlets",
+      "Durability": "Plasteel",
+      "Weight (lbs)": 8,
+      "Protection Level": "Very High",
+      "Description": "Advanced plasteel gauntlets, highly resistant to energy and kinetic attacks while being lightweight for combat use."
+    },
+    {
+      "Gauntlets": "Plasma-Treated Gauntlets",
+      "Durability": "Plasma-Treated Armor",
+      "Weight (lbs)": 10,
+      "Protection Level": "Very High",
+      "Description": "Gauntlets treated with plasma hardening, offering exceptional resistance to energy and thermal attacks."
+    },
+    {
+      "Gauntlets": "Nano-Fiber Mesh Gauntlets",
+      "Durability": "Nano-Fiber Mesh",
+      "Weight (lbs)": 4,
+      "Protection Level": "Very High",
+      "Description": "Flexible gauntlets made from nano-fiber mesh, providing high protection against physical and energy attacks while preserving full range of motion."
+    },
+    {
+      "Gauntlets": "Energy-Diffusing Gauntlets",
+      "Durability": "Energy-Diffusing Armor",
+      "Weight (lbs)": 12,
+      "Protection Level": "Very High",
+      "Description": "Gauntlets embedded with energy-diffusing tech, reducing damage from energy weapons and dissipating impact force."
+    },
+    {
+      "Gauntlets": "Quantum Fiber Gauntlets",
+      "Durability": "Quantum Fiber",
+      "Weight (lbs)": 3,
+      "Protection Level": "Extremely High",
+      "Description": "Ultra-light gauntlets made from quantum fibers, offering superior protection without hindering dexterity or mobility."
+    },
+    {
+      "Gauntlets": "Graviton-Plated Gauntlets",
+      "Durability": "Graviton-Plated",
+      "Weight (lbs)": 14,
+      "Protection Level": "Extremely High",
+      "Description": "Gauntlets enhanced with graviton technology, deflecting projectiles and dispersing impact to reduce injury."
+    },
+    {
+      "Gauntlets": "Voidweave Gauntlets",
+      "Durability": "Voidweave",
+      "Weight (lbs)": 3,
+      "Protection Level": "Extremely High",
+      "Description": "Gauntlets interwoven with void energy, providing high resistance against physical, psionic, and energy attacks."
+    },
+    {
+      "Gauntlets": "Neutronium Gauntlets",
+      "Durability": "Neutronium Lattice",
+      "Weight (lbs)": 16,
+      "Protection Level": "Extremely High",
+      "Description": "Nearly indestructible gauntlets offering unmatched protection, though their weight requires considerable strength to use effectively."
+    },
+    {
+      "Gauntlets": "Temporal Gauntlets",
+      "Durability": "Temporal Armor",
+      "Weight (lbs)": 6,
+      "Protection Level": "Extremely High",
+      "Description": "Gauntlets that phase through time, allowing the wearer to avoid incoming damage by shifting through temporal distortions."
+    },
+    {
+      "Gauntlets": "Dark Matter Gauntlets",
+      "Durability": "Dark Matter Composite",
+      "Weight (lbs)": 12,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Gauntlets infused with dark matter, capable of absorbing kinetic and energy attacks into an extradimensional space, reducing damage taken."
+    },
+    {
+      "Gauntlets": "Etherium Gauntlets",
+      "Durability": "Etherium Plating",
+      "Weight (lbs)": 14,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Gauntlets made from Etherium metal, providing high resistance to physical, energy, and psionic attacks while maintaining agility."
+    },
+    {
+      "Gauntlets": "Psion-Weave Gauntlets",
+      "Durability": "Psion-Weave",
+      "Weight (lbs)": 5,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Psionically enhanced gauntlets that adapt to the wearer’s mental commands, offering dynamic protection and enhancing grip strength."
+    },
+    {
+      "Gauntlets": "Hyper-Alloy Gauntlets",
+      "Durability": "Hyper-Alloy",
+      "Weight (lbs)": 12,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Gauntlets made from hyper-alloy, offering near-impenetrable defense while preserving a reasonable weight for combat efficiency."
+    },
+    {
+      "Gauntlets": "Nanite-Infused Gauntlets",
+      "Durability": "Nanite-Infused",
+      "Weight (lbs)": 9,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Gauntlets embedded with self-repairing nanites, ensuring continuous durability and protection in prolonged combat situations."
+    },
+    {
+      "Gauntlets": "Quantum Shield Gauntlets",
+      "Durability": "Quantum Shielding",
+      "Weight (lbs)": 6,
+      "Protection Level": "Invulnerable",
+      "Description": "Gauntlets with embedded quantum fields, creating a protective barrier that deflects a wide range of attacks while maintaining full dexterity."
+    },
+    {
+      "Gauntlets": "Hypersteel Gauntlets",
+      "Durability": "Hypersteel",
+      "Weight (lbs)": 20,
+      "Protection Level": "Invulnerable",
+      "Description": "The ultimate gauntlets forged from hypersteel, offering unmatched resistance to all forms of damage while surprisingly preserving finger flexibility for complex tasks."
+    }
+  ]
+  

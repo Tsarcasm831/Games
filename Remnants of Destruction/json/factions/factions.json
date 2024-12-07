@@ -1,0 +1,439 @@
+{
+  "Factions": [
+    {
+      "FactionName": "Human Intervention Victory Enclave (H.I.V.E.)",
+      "Description": "H.I.V.E. emerged from a split within the early 21st-century human survivors who returned to a post-apocalyptic Earth reclaimed by nature. They are characterized by their advanced military units and authoritarian structure aimed at restoring and purging humanity to create a more 'perfect' world.",
+      "Units": [
+        {
+          "UnitName": "Drone",
+          "Type": "Shock Trooper",
+          "Attributes": {
+            "STR": "70/100",
+            "DEX": "70/60",
+            "AGI": "60/80",
+            "VIT": 80,
+            "COM": "80-100",
+            "INT": 80,
+            "PER": "60/80",
+            "CHA": 60,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 70,
+            "Blades": 60,
+            "ArmorSoak": 60,
+            "Defense": 15
+          },
+          "Loadout": [
+            "High Velocity plasma carbine (non-persistent)",
+            "High Velocity plasma pistol (non-persistent)",
+            "2x Funbuzzer grenades",
+            "2x Smart frag grenades",
+            "H.I.V.E. Drone power armor"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 60,
+            "Cuirass": 100,
+            "Legs": 60,
+            "Arms": 60,
+            "HandsAndFeet": 60
+          },
+          "Personality": "Fiercely loyal to their commanders with no qualms about committing atrocities against perceived enemies. Arrogant and highly confident in their superiority."
+        },
+        {
+          "UnitName": "Elite Drone",
+          "Type": "Special Operations",
+          "Attributes": {
+            "STR": 70,
+            "DEX": 90,
+            "AGI": 90,
+            "VIT": 80,
+            "COM": "80-100",
+            "INT": 80,
+            "PER": 80,
+            "CHA": 60,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 70,
+            "Blades": 80,
+            "EHPARRY": 80,
+            "Defense": 20
+          },
+          "Loadout": [
+            "2x Vibro-blades",
+            "Suppressed High Velocity plasma pistol",
+            "Energy garotte",
+            "H.I.V.E. Light power armor with shadow effects and silenced footpads"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 40,
+            "Cuirass": 80,
+            "Legs": 30,
+            "Arms": 40,
+            "HandsAndFeet": 30
+          },
+          "Personality": "Elite officers from aristocratic backgrounds. They perceive themselves as superior and are driven by a sense of divine duty to cleanse the wasteland."
+        },
+        {
+          "UnitName": "Psi-Hunter",
+          "Type": "Psionic Assassin",
+          "Attributes": {
+            "STR": 70,
+            "DEX": 70,
+            "AGI": 60,
+            "VIT": 80,
+            "COM": "80-100",
+            "INT": 80,
+            "PER": 60,
+            "CHA": 60,
+            "PSY": 80
+          },
+          "Skills": {
+            "Firearms": 70,
+            "Blades": 60,
+            "ArmorSoak": 60,
+            "Defense": 15
+          },
+          "Loadout": [
+            "High Velocity plasma carbine (non-persistent)",
+            "High Velocity plasma pistol (non-persistent)",
+            "2x Funbuzzer grenades",
+            "2x Smart frag grenades",
+            "H.I.V.E. Drone power armor"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 60,
+            "Cuirass": 100,
+            "Legs": 60,
+            "Arms": 60,
+            "HandsAndFeet": 60
+          },
+          "Personality": "Quiet and hyper-focused individuals, dedicated to hunting and eliminating psionic threats. Many are conscripts brainwashed to adhere strictly to H.I.V.E. doctrine."
+        },
+        {
+          "UnitName": "Officer",
+          "Type": "Leadership",
+          "Attributes": {
+            "STR": 80,
+            "DEX": 70,
+            "AGI": 70,
+            "VIT": 80,
+            "COM": "80-100",
+            "INT": 90,
+            "PER": 70,
+            "CHA": 90,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 70,
+            "Blades": 60,
+            "ArmorSoak": 60,
+            "Command": 80,
+            "Defense": 15
+          },
+          "Loadout": [
+            "High Velocity plasma pistol (non-persistent)",
+            "Officer's Vibro-Sabre or dagger"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 60,
+            "Cuirass": 100,
+            "Legs": 60,
+            "Arms": 60,
+            "HandsAndFeet": 60
+          },
+          "Personality": "Arrogant and self-centered, officers view themselves as royalty within H.I.V.E. society. They prioritize high-status functions and public appearances."
+        },
+        {
+          "UnitName": "Hornet",
+          "Type": "Aerial Assault",
+          "Attributes": {
+            "STR": "70/100",
+            "DEX": "70/60",
+            "AGI": "60/80",
+            "VIT": 80,
+            "COM": 80,
+            "INT": 80,
+            "PER": "60/80",
+            "CHA": 60,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 80,
+            "Pilot: Hornet": 80,
+            "ArmorSoak": 60,
+            "Defense": 20
+          },
+          "Loadout": [
+            "30mm High Velocity plasma Repeating cannon (non-persistent)",
+            "High Velocity plasma pistol (non-persistent)",
+            "H.I.V.E. HORNET power armor"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 60,
+            "Cuirass": 100,
+            "Legs": 60,
+            "Arms": 60,
+            "HandsAndFeet": 60
+          },
+          "Personality": "Dedicated pilots who are often arrogant and intensely focused. Many harbor regrets for past actions and frequently engage in heavy drinking."
+        },
+        {
+          "UnitName": "Stinger",
+          "Type": "Remotely Operated Assault Drone",
+          "Attributes": {
+            "STR": 120,
+            "DEX": 60,
+            "AGI": 120,
+            "VIT": 0,
+            "COM": 0,
+            "INT": 100,
+            "PER": 100,
+            "CHA": 0,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 80,
+            "Pilot: Hornet": 80,
+            "ArmorSoak": 60,
+            "Defense": 20
+          },
+          "Loadout": [
+            "30mm High Velocity plasma Repeating cannon (non-persistent)"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 60,
+            "Cuirass": 100,
+            "Legs": 60,
+            "Arms": 60,
+            "HandsAndFeet": 60
+          },
+          "Personality": "None. As remotely operated drones, Stingers lack individual personalities."
+        },
+        {
+          "UnitName": "Hornet",
+          "Type": "Heavy Assault",
+          "Attributes": {
+            "STR": 70,
+            "DEX": 70,
+            "AGI": 60,
+            "VIT": 80,
+            "COM": 80,
+            "INT": 80,
+            "PER": 60,
+            "CHA": 60,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 80,
+            "Pilot: Hornet": 80,
+            "ArmorSoak": 60,
+            "Defense": 20
+          },
+          "Loadout": [
+            "30mm High Velocity plasma Repeating cannon (non-persistent)",
+            "High Velocity plasma pistol (non-persistent)",
+            "H.I.V.E. HORNET power armor"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 60,
+            "Cuirass": 100,
+            "Legs": 60,
+            "Arms": 60,
+            "HandsAndFeet": 60
+          },
+          "Personality": "Dedicated pilots who are often arrogant and intensely focused. Many harbor regrets for past actions and frequently engage in heavy drinking."
+        }
+      ]
+    },
+    {
+      "FactionName": "Federal Democratic Government (F.D.G.)",
+      "Description": "The F.D.G. emerged from the Human Intervention Victory Enclave's initial ideals to restore the glory of the United States. Governed by a democratic council, they focus on rebuilding civilization with a focus on democratic principles and order.",
+      "Units": [
+        {
+          "UnitName": "Trooper",
+          "Type": "Frontline Infantry",
+          "Attributes": {
+            "STR": 60,
+            "DEX": 60,
+            "AGI": 70,
+            "VIT": 70,
+            "COM": "60-80",
+            "INT": 60,
+            "PER": 60,
+            "CHA": 60,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 60,
+            "ArmorSoak": 70,
+            "Defense": 10
+          },
+          "Loadout": [
+            "FDG Rail carbine",
+            "FDG Rail pistol",
+            "FDG “SHOGUN” armor"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 60,
+            "Cuirass": 100,
+            "Legs": 60,
+            "Arms": 60,
+            "HandsAndFeet": 60
+          },
+          "Personality": "Proud and fearless warriors with an indomitable spirit. Despite being under-equipped and under-trained, their never-say-die attitude makes them formidable foes."
+        },
+        {
+          "UnitName": "Warhawk",
+          "Type": "Heavy Shock Trooper",
+          "Attributes": {
+            "STR": 70,
+            "DEX": 70,
+            "AGI": 60,
+            "VIT": 80,
+            "COM": "60-80",
+            "INT": 60,
+            "PER": 60,
+            "CHA": 70,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 60,
+            "ArmorSoak": 70,
+            "Defense": 12
+          },
+          "Loadout": [
+            "FDG Rail carbine",
+            "FDG Rail pistol",
+            "FDG “MANTIS IV” power armor"
+          ],
+          "MaxHP": {
+            "Head": 80,
+            "Shoulders": 60,
+            "Cuirass": 100,
+            "Legs": 60,
+            "Arms": 60,
+            "HandsAndFeet": 60
+          },
+          "Personality": "Tough, courageous, and often volunteers for highly dangerous missions. Known for their fearlessness and resilience."
+        },
+        {
+          "UnitName": "Valkyrie",
+          "Type": "Aerial Reconnaissance",
+          "Attributes": {
+            "STR": 60,
+            "DEX": 60,
+            "AGI": 70,
+            "VIT": 70,
+            "COM": "60-80",
+            "INT": 60,
+            "PER": 60,
+            "CHA": 60,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 70,
+            "ArmorSoak": 60,
+            "Defense": 15,
+            "Pilot: Valkyrie": 80
+          },
+          "Loadout": [
+            "FDG Rail carbine",
+            "FDG Rail pistol",
+            "FDG “Valkyrie” aerial power armor"
+          ],
+          "MaxHP": {
+            "Head": 60,
+            "Shoulders": 50,
+            "Cuirass": 80,
+            "Legs": 50,
+            "Arms": 50,
+            "HandsAndFeet": 50
+          },
+          "Personality": "Proud and tough, Valkyries take great pride in their roles as pilots and officers. They are highly respected within the F.D.G."
+        },
+        {
+          "UnitName": "Archangel Main Battle Armor",
+          "Type": "Heavy Battle Suit",
+          "Attributes": {
+            "STR": "60/300",
+            "DEX": "60/40",
+            "AGI": 70,
+            "VIT": 70,
+            "COM": "60-80",
+            "INT": 60,
+            "PER": "60/100",
+            "CHA": 60,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 60,
+            "ArmorSoak": 100,
+            "Defense": 20,
+            "Pilot: Archangel": 80
+          },
+          "Loadout": [
+            "FDG Heavy Rail Cannon (EXTERNAL)",
+            "FDG Rail pistol (PERSONAL)",
+            "FDG ARCHANGEL powered battle armor"
+          ],
+          "MaxHP": {
+            "Head": 100,
+            "Shoulders": 80,
+            "Cuirass": 250,
+            "Legs": 80,
+            "Arms": 80,
+            "HandsAndFeet": 80
+          },
+          "Personality": "Courageous and proud pilots who are natural leaders and heroes within the F.D.G. Highly admired by citizens."
+        },
+        {
+          "UnitName": "The Black Roses",
+          "Type": "Elite Female Operatives",
+          "Attributes": {
+            "STR": 60,
+            "DEX": 90,
+            "AGI": 90,
+            "VIT": 80,
+            "COM": "90-100",
+            "INT": 80,
+            "PER": 80,
+            "CHA": 100,
+            "PSY": 0
+          },
+          "Skills": {
+            "Firearms": 90,
+            "Blades": 80,
+            "Defense": 15,
+            "Interrogation": 90,
+            "ManEater": 100,
+            "Stealth": 90,
+            "Acrobatics": 80,
+            "Seduction": 100
+          },
+          "Loadout": [
+            "Concealable weapons (e.g., blade or small pistol)"
+          ],
+          "MaxHP": {
+            "Head": null,
+            "Shoulders": null,
+            "Cuirass": null,
+            "Legs": null,
+            "Arms": null,
+            "HandsAndFeet": null
+          },
+          "Personality": "Sexy, sultry, and deadly. Experts in deception and subversion, they are highly alluring and lethal."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+[
+    {
+      "Tier": 1,
+      "Power": "Dew Drop",
+      "Description": "Control droplets of water to move them around.",
+      "Duration": "Instant",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 1,
+      "Power": "Mist",
+      "Description": "Create a thin mist to obscure vision slightly.",
+      "Duration": "2 rounds",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 2,
+      "Power": "Water Whip",
+      "Description": "Form a short whip of water for light attacks.",
+      "Duration": "Instant",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 2,
+      "Power": "Purify Water",
+      "Description": "Cleanse impurities from a small amount of water.",
+      "Duration": "Instant",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 3,
+      "Power": "Condense",
+      "Description": "Gather ambient moisture into a small pool of water.",
+      "Duration": "2 rounds",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 3,
+      "Power": "Water Pulse",
+      "Description": "Emit a short burst of water to push objects.",
+      "Duration": "Instant",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 4,
+      "Power": "Ice Shard",
+      "Description": "Freeze water into a small shard of ice for a ranged attack.",
+      "Duration": "Instant",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 4,
+      "Power": "Bubble Shield",
+      "Description": "Create a bubble of water around yourself or an ally.",
+      "Duration": "3 rounds",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 5,
+      "Power": "Water Walk",
+      "Description": "Walk on the surface of water as if it were solid.",
+      "Duration": "3 rounds",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 5,
+      "Power": "Water Veil",
+      "Description": "Cloak yourself in a thin veil of water to reduce fire damage.",
+      "Duration": "3 rounds",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 6,
+      "Power": "Geyser",
+      "Description": "Summon a spout of water from the ground.",
+      "Duration": "Instant",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 6,
+      "Power": "Tidal Pull",
+      "Description": "Pull a target towards you with a current of water.",
+      "Duration": "Instant",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 7,
+      "Power": "Freeze Touch",
+      "Description": "Freeze small amounts of water with a touch.",
+      "Duration": "Instant",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 7,
+      "Power": "Water Blade",
+      "Description": "Form a sharp blade of water for melee combat.",
+      "Duration": "Instant",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 8,
+      "Power": "Ice Wall",
+      "Description": "Create a wall of ice for defense or obstruction.",
+      "Duration": "3 rounds",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 8,
+      "Power": "Aquatic Form",
+      "Description": "Temporarily transform your body to move effortlessly in water.",
+      "Duration": "3 rounds",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 9,
+      "Power": "Water Prison",
+      "Description": "Trap an enemy in a sphere of water.",
+      "Duration": "3 rounds",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 9,
+      "Power": "Hydro Crush",
+      "Description": "Use water pressure to crush a target.",
+      "Duration": "Instant",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 10,
+      "Power": "Water Clone",
+      "Description": "Create a clone of yourself made of water.",
+      "Duration": "3 rounds",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 10,
+      "Power": "Ice Spear",
+      "Description": "Form a long spear of ice for throwing or melee combat.",
+      "Duration": "Instant",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 11,
+      "Power": "Water Jet",
+      "Description": "Propel a high-pressure stream of water at a target.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Riptide",
+      "Description": "Create a powerful current that sweeps enemies off their feet.",
+      "Duration": "2 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Water Healing",
+      "Description": "Use water to heal minor wounds.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Ice Armor",
+      "Description": "Cover yourself in a layer of ice for protection.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Water Dragon",
+      "Description": "Summon a dragon made of water to attack enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Freeze Wave",
+      "Description": "Send a wave of freezing water to slow and damage enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Whirlpool",
+      "Description": "Create a whirlpool to trap and spin enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Ice Storm",
+      "Description": "Summon a storm of ice and hail to pelt an area.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Water Vortex",
+      "Description": "Create a vortex of water to trap and drown enemies.",
+      "Duration": "2 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Tidal Wave",
+      "Description": "Summon a massive wave to crash down on your foes.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Frozen Spikes",
+      "Description": "Create a field of ice spikes on the ground.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Hydroblade",
+      "Description": "Form dual blades of water for rapid slashing attacks.",
+      "Duration": "2 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Aquatic Healing",
+      "Description": "Use water to heal severe wounds.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Liquid Form",
+      "Description": "Transform your body into water to avoid damage.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Maelstrom",
+      "Description": "Summon a violent whirlpool that consumes everything in its center.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Glacial Prison",
+      "Description": "Encapsulate an enemy in a block of ice.",
+      "Duration": "2 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Floodgate",
+      "Description": "Unleash a flood of water from all directions.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Frozen Tsunami",
+      "Description": "Create a wave of ice that freezes everything it touches.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Ocean's Fury",
+      "Description": "Call upon the ocean's power to unleash a torrent of destruction.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Water God's Wrath",
+      "Description": "Control the water in all its forms, becoming an unstoppable force.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    }
+  ]
+  

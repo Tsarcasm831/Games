@@ -1,0 +1,143 @@
+[
+    {
+      "Tier": 11,
+      "Power": "Blazing Gale",
+      "Description": "Summon a gust of wind carrying embers to scorch and disorient enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Flame Cyclone",
+      "Description": "Create a spinning vortex of flames that moves through the battlefield.",
+      "Duration": "2 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Scorching Tempest",
+      "Description": "Call forth a powerful windstorm filled with searing heat.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Ember Winds",
+      "Description": "Surround an area with swirling winds of embers, igniting anything within.",
+      "Duration": "2 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Inferno Whirlwind",
+      "Description": "Unleash a large whirlwind of fire, incinerating everything in its path.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Fire Twister",
+      "Description": "Summon a tornado of fire that draws in and burns enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Flaming Sirocco",
+      "Description": "Create a hot desert wind that burns and exhausts all it touches.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Firestorm Blast",
+      "Description": "Release a blast of hot wind and flames, pushing back and burning enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Blaze Gale Armor",
+      "Description": "Envelop yourself in winds and fire, creating a fiery armor that burns melee attackers.",
+      "Duration": "5 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Pyroclastic Flow",
+      "Description": "Summon a rush of fiery wind that devastates all in its path.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Fire Serpent Vortex",
+      "Description": "Summon a swirling vortex of wind shaped like a serpent engulfed in flames.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Burning Zephyr",
+      "Description": "Create a wind that ignites anything it touches, spreading fire rapidly.",
+      "Duration": "2 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Scorched Winds",
+      "Description": "Call forth winds so hot they burn flesh and ignite surroundings.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Ember Gale Strike",
+      "Description": "Summon a strike of wind carrying embers, slicing and burning enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Solar Tempest",
+      "Description": "Call upon a storm of solar wind, filled with blinding heat and fire.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Tornadic Inferno",
+      "Description": "Create a massive tornado of fire that moves across the battlefield.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Hellfire Winds",
+      "Description": "Summon the winds of the underworld, burning and tearing apart everything in their path.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Flame Ascension",
+      "Description": "Use wind and fire to launch yourself skyward, leaving a burning trail.",
+      "Duration": "2 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Phoenix's Breath",
+      "Description": "Breathe out a wave of fire carried by the wind, incinerating everything in a wide arc.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Fire God's Vortex",
+      "Description": "Summon a massive vortex of divine flames and wind, scorching all within its reach.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    }
+  ]
+  

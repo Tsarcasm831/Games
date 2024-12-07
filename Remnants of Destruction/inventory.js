@@ -61,12 +61,15 @@ function populateInventoryGrid(gridElement, items) {
 
     const totalSlots = 56; // Number of slots per grid
 
+    // Filter out items that haven't been picked up
+    const pickedUpItems = items.filter(item => item.pickedUp);
+
     for (let i = 0; i < totalSlots; i++) {
         const slot = document.createElement('div');
         slot.classList.add('inventory-slot');
 
-        if (items[i]) {
-            const item = items[i];
+        if (pickedUpItems[i]) {
+            const item = pickedUpItems[i];
             slot.innerText = item.name;
             slot.setAttribute('data-name', item.name);
             slot.setAttribute('data-description', item.description || 'No description');

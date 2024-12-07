@@ -191,9 +191,8 @@ function init() {
     teleportPad.position.y = 0.15;
     teleportPad.name = 'teleportPad';
     shrineGroup.add(teleportPad);
-
-    shrineGroup.position.set(0, 0.1, 0);
     scene.add(shrineGroup);
+
     addSky();
 
     const structurePositions = [
@@ -269,4 +268,3 @@ function initMap() {
     directionalLight.position.set(0, 100, 0);
     mapScene.add(directionalLight);
 }
-

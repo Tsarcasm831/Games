@@ -1,0 +1,185 @@
+[
+    {
+      "Pauldrons": "Cloth Pauldrons",
+      "Durability": "Cloth",
+      "Weight (lbs)": 1,
+      "Protection Level": "Low",
+      "Description": "Simple cloth pads worn over the shoulders, offering minimal protection against abrasions while maximizing flexibility."
+    },
+    {
+      "Pauldrons": "Leather Pauldrons",
+      "Durability": "Leather",
+      "Weight (lbs)": 3,
+      "Protection Level": "Low-Medium",
+      "Description": "Leather pads designed to protect the shoulders from minor impacts and cuts, allowing for decent mobility."
+    },
+    {
+      "Pauldrons": "Reinforced Leather Pauldrons",
+      "Durability": "Reinforced Leather",
+      "Weight (lbs)": 5,
+      "Protection Level": "Medium",
+      "Description": "Leather pauldrons reinforced with metal studs, providing enhanced defense against slashing and blunt force attacks."
+    },
+    {
+      "Pauldrons": "Padded Pauldrons",
+      "Durability": "Padded Armor",
+      "Weight (lbs)": 6,
+      "Protection Level": "Medium",
+      "Description": "Thickly padded pauldrons that absorb impact, offering moderate protection without sacrificing much flexibility."
+    },
+    {
+      "Pauldrons": "Kevlar Pauldrons",
+      "Durability": "Kevlar",
+      "Weight (lbs)": 8,
+      "Protection Level": "Medium-High",
+      "Description": "Kevlar-lined pauldrons providing resistance to small-caliber bullets and shrapnel while remaining lightweight."
+    },
+    {
+      "Pauldrons": "Kevlar Reinforced Pauldrons",
+      "Durability": "Kevlar Reinforced",
+      "Weight (lbs)": 10,
+      "Protection Level": "High",
+      "Description": "Advanced Kevlar pauldrons with reinforced plates, offering superior protection against ballistic threats and maintaining shoulder mobility."
+    },
+    {
+      "Pauldrons": "Composite Armor Pauldrons",
+      "Durability": "Composite Armor",
+      "Weight (lbs)": 12,
+      "Protection Level": "High",
+      "Description": "Pauldrons made of composite materials, offering balanced protection against impacts and environmental hazards."
+    },
+    {
+      "Pauldrons": "Titanium Alloy Pauldrons",
+      "Durability": "Titanium Alloy",
+      "Weight (lbs)": 14,
+      "Protection Level": "High",
+      "Description": "Titanium-plated pauldrons providing strong defense against physical attacks while being relatively lightweight for agile movement."
+    },
+    {
+      "Pauldrons": "Titanium Weave Pauldrons",
+      "Durability": "Titanium Weave",
+      "Weight (lbs)": 9,
+      "Protection Level": "High",
+      "Description": "Lightweight pauldrons woven with titanium fibers, offering high durability and protection against impacts with minimal weight."
+    },
+    {
+      "Pauldrons": "Ceramic Plated Pauldrons",
+      "Durability": "Ceramic Plating",
+      "Weight (lbs)": 16,
+      "Protection Level": "Very High",
+      "Description": "Pauldrons embedded with ceramic plates, providing superior defense against energy and ballistic weapons."
+    },
+    {
+      "Pauldrons": "Plasteel Pauldrons",
+      "Durability": "Plasteel",
+      "Weight (lbs)": 12,
+      "Protection Level": "Very High",
+      "Description": "Advanced plasteel pauldrons, highly resistant to energy and kinetic attacks while being light enough to maintain mobility."
+    },
+    {
+      "Pauldrons": "Plasma-Treated Pauldrons",
+      "Durability": "Plasma-Treated Armor",
+      "Weight (lbs)": 14,
+      "Protection Level": "Very High",
+      "Description": "Pauldrons treated with plasma-hardening processes, offering exceptional resistance to energy and thermal attacks."
+    },
+    {
+      "Pauldrons": "Nano-Fiber Mesh Pauldrons",
+      "Durability": "Nano-Fiber Mesh",
+      "Weight (lbs)": 7,
+      "Protection Level": "Very High",
+      "Description": "Flexible pauldrons made from nano-fiber mesh, providing high protection against physical and energy threats."
+    },
+    {
+      "Pauldrons": "Energy-Diffusing Pauldrons",
+      "Durability": "Energy-Diffusing Armor",
+      "Weight (lbs)": 18,
+      "Protection Level": "Very High",
+      "Description": "Pauldrons embedded with energy-diffusing tech, reducing damage from energy-based attacks and deflecting projectiles."
+    },
+    {
+      "Pauldrons": "Quantum Fiber Pauldrons",
+      "Durability": "Quantum Fiber",
+      "Weight (lbs)": 6,
+      "Protection Level": "Extremely High",
+      "Description": "Ultra-light pauldrons made from quantum fibers, offering superior protection while allowing for maximum agility."
+    },
+    {
+      "Pauldrons": "Graviton-Plated Pauldrons",
+      "Durability": "Graviton-Plated",
+      "Weight (lbs)": 20,
+      "Protection Level": "Extremely High",
+      "Description": "Pauldrons enhanced with graviton technology, deflecting projectiles and dispersing impact force to reduce injury."
+    },
+    {
+      "Pauldrons": "Voidweave Pauldrons",
+      "Durability": "Voidweave",
+      "Weight (lbs)": 5,
+      "Protection Level": "Extremely High",
+      "Description": "Pauldrons interwoven with void energy, providing high resistance against physical, psionic, and energy attacks."
+    },
+    {
+      "Pauldrons": "Neutronium Pauldrons",
+      "Durability": "Neutronium Lattice",
+      "Weight (lbs)": 22,
+      "Protection Level": "Extremely High",
+      "Description": "Nearly indestructible pauldrons offering unmatched protection, though their weight requires considerable strength to use effectively."
+    },
+    {
+      "Pauldrons": "Temporal Pauldrons",
+      "Durability": "Temporal Armor",
+      "Weight (lbs)": 8,
+      "Protection Level": "Extremely High",
+      "Description": "Pauldrons that incorporate temporal distortions, allowing the wearer to phase through time to avoid damage."
+    },
+    {
+      "Pauldrons": "Dark Matter Pauldrons",
+      "Durability": "Dark Matter Composite",
+      "Weight (lbs)": 15,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Pauldrons infused with dark matter, capable of absorbing kinetic and energy attacks into an extradimensional space."
+    },
+    {
+      "Pauldrons": "Etherium Pauldrons",
+      "Durability": "Etherium Plating",
+      "Weight (lbs)": 18,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Pauldrons made from rare Etherium metal, providing high resistance to physical, energy, and psionic attacks."
+    },
+    {
+      "Pauldrons": "Psion-Weave Pauldrons",
+      "Durability": "Psion-Weave",
+      "Weight (lbs)": 7,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Psionically enhanced pauldrons that adapt to the wearer’s mental commands, offering dynamic protection and mobility."
+    },
+    {
+      "Pauldrons": "Hyper-Alloy Pauldrons",
+      "Durability": "Hyper-Alloy",
+      "Weight (lbs)": 14,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Pauldrons made from hyper-alloy, offering near-impenetrable defense without significantly hindering shoulder movement."
+    },
+    {
+      "Pauldrons": "Nanite-Infused Pauldrons",
+      "Durability": "Nanite-Infused",
+      "Weight (lbs)": 10,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "Pauldrons embedded with self-repairing nanites, ensuring continuous durability and protection in extended combat."
+    },
+    {
+      "Pauldrons": "Quantum Shield Pauldrons",
+      "Durability": "Quantum Shielding",
+      "Weight (lbs)": 8,
+      "Protection Level": "Invulnerable",
+      "Description": "Pauldrons with embedded quantum fields, creating a protective barrier that deflects a wide range of attacks."
+    },
+    {
+      "Pauldrons": "Hypersteel Pauldrons",
+      "Durability": "Hypersteel",
+      "Weight (lbs)": 25,
+      "Protection Level": "Invulnerable",
+      "Description": "The ultimate pauldrons forged from hypersteel, providing unmatched resistance to all forms of damage while surprisingly maintaining some flexibility for shoulder movement."
+    }
+  ]
+  

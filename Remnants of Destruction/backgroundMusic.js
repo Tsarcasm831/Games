@@ -213,44 +213,53 @@ class BackgroundMusicPlayer {
     initializeYouTubePlayers() {
         // Find YouTube track indexes
         this.youtubeTrackIndexes = this.tracks.reduce((indexes, track, index) => {
-            if (this.isYouTubeLink(track)) {
-                indexes.push(index);
-            }
+            if (track.includes('youtube.com')) indexes.push(index);
             return indexes;
         }, []);
 
-        // If there are YouTube tracks, create the YouTube player
+        // Only initialize if YouTube tracks exist
         if (this.youtubeTrackIndexes.length > 0) {
-            this.youtubePlayer = new YT.Player('youtubePlayerContainer', {
-                height: '0',
-                width: '0',
-                playerVars: {
-                    'autoplay': 0,
-                    'controls': 0,
-                    'disablekb': 1,
-                    'modestbranding': 1,
-                    'showinfo': 0
-                },
-                events: {
-                    'onReady': () => {
-                        // Player is ready, but not playing yet
-                    },
-                    'onStateChange': (event) => {
-                        if (event.data === YT.PlayerState.ENDED) {
-                            this.playNextTrack();
+            try {
+                this.youtubePlayerContainer = document.getElementById('youtubePlayerContainer');
+                
+                // Add error event listener for postMessage communication
+                window.addEventListener('message', (event) => {
+                    // Validate the origin to prevent security risks
+                    if (event.origin !== "https://www.youtube.com") {
+                        console.warn('Blocked postMessage from untrusted origin:', event.origin);
+                        return;
+                    }
+                    
+                    // Handle specific YouTube widget events
+                    if (event.data && event.data.info) {
+                        console.log('YouTube Widget Event:', event.data.info);
+                    }
+                }, false);
+
+                this.youtubePlayer = new YT.Player('youtubePlayerContainer', {
+                    height: '0',
+                    width: '0',
+                    videoId: this.extractYouTubeVideoId(this.tracks[this.youtubeTrackIndexes[0]]),
+                    events: {
+                        'onReady': (event) => {
+                            console.log('YouTube Player Ready');
+                            // Explicitly set target origin for postMessage
+                            event.target.origin = 'https://www.youtube.com';
+                        },
+                        'onError': (error) => {
+                            console.error('YouTube Player Error:', error);
                         }
                     }
-                }
-            });
+                });
+            } catch (error) {
+                console.error('Failed to initialize YouTube Player:', error);
+            }
         }
     }
 
-    isYouTubeLink(track) {
-        return track.includes('youtube.com/watch?v=') || track.includes('youtu.be/');
-    }
-
     extractYouTubeVideoId(url) {
-        const match = url.match(/[?&]v=([^&]+)/) || url.match(/youtu\.be\/([^?&]+)/);
+        // Extract video ID from YouTube URL
+        const match = url.match(/[?&]v=([^&]+)/);
         return match ? match[1] : null;
     }
 
@@ -368,10 +377,22 @@ class BackgroundMusicPlayer {
         }
     }
 
+    isYouTubeLink(track) {
+        return track.includes('youtube.com/watch?v=') || track.includes('youtu.be/');
+    }
+
     // Initialize the music player when the page loads
     static init() {
         new BackgroundMusicPlayer();
     }
 }
+
+// Add global XMLHttpRequest error handler
+window.addEventListener('error', function(event) {
+    if (event.target instanceof XMLHttpRequest) {
+        console.warn('XMLHttpRequest blocked:', event.target.responseURL);
+        event.preventDefault(); // Optionally prevent default error handling
+    }
+}, true);
 
 window.addEventListener('DOMContentLoaded', BackgroundMusicPlayer.init);

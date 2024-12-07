@@ -1,0 +1,209 @@
+{
+  "archetypes": [
+    {
+      "archetype": "WARRIOR",
+      "description": "The warrior class is the backbone of any adventuring party or group. The warrior is usually at the front of the group, leading his or her comrades into battle with a giant gleaming sword or a myriad of guns and grenades attached to every available space on his or her battle-scarred armor. The warrior class breaks down into three sub-categories; the Juggernaut, the Gun-Runner and the Paladin. Each archetype has merits and flaws and its own specialty and will add to an adventuring party in a variety of ways.",
+      "sub_archetypes": [
+        {
+          "name": "JUGGERNAUT",
+          "description": "The juggernaut is a heavily armed and armored warrior who prefers to attack toe-to-toe and up close and personal usually favoring swords, knives or large blunt weapons to deal damage and draw enemy attacks away from the other party members.",
+          "merits": {
+            "HP": "+20",
+            "attributes": {
+              "STRENGTH": "+10",
+              "VITALITY": "+10"
+            },
+            "skills": ["Hand-to-Hand", "Brawling", "Weapon parry", "Blades"],
+            "unique_trait": {
+              "name": "INSPIRE",
+              "description": "The JUGGERNAUT shows great courage in the face of the enemy, inspiring his teammates to fight harder. When enacted, all friendlies on the battlefield receive a bonus of +5 to ATTACK, and +5 AC."
+            }
+          },
+          "flaws": {
+            "attributes": {
+              "INTELLIGENCE": "-10",
+              "PERCEPTION": "-10"
+            },
+            "restrictions": ["Cannot use PSY abilities"]
+          }
+        },
+        {
+          "name": "GUN-RUNNER",
+          "description": "The GUN-RUNNER is a heavily armed warrior who prefers to attack with firearms and explosives at medium range using cover and tactics to devastate foes on the battlefield.",
+          "merits": {
+            "perks": ["KILLER (tier 2 weapons)"],
+            "attributes": {
+              "AGILITY": "+10",
+              "PERCEPTION": "+10"
+            },
+            "skills": ["Firearms", "Dodge melee", "Heavy Armor Usage"],
+            "starting_weapon": "Tier 2 weapon of GM choice",
+            "unique_trait": {
+              "name": "TERRIFY",
+              "description": "His/her blazing guns and blood-soaked armor frighten enemy combatants. When enacted, all enemy units on the battlefield receive a -10 to ATTACK."
+            }
+          },
+          "flaws": {
+            "attributes": {
+              "DEXTERITY": "-10",
+              "CHARISMA": "-10"
+            },
+            "restrictions": ["Cannot use PSY abilities"]
+          }
+        },
+        {
+          "name": "PALADIN",
+          "description": "The PALADIN is a hybrid class between a warrior and a healer, usually equally skilled in both. The PALADIN is held to a higher code of ethics and strives to be a shining example of all that is good and right left in the world. The Paladin must always come to the aid of those in need or of anyone who asks for help. The paladin also has little interest in riches or loot, choosing instead to give his/her money and looted gear to the poor, or homeless. The paladin must heal the sick whenever he/she can, and expect little for their services.",
+          "merits": {
+            "equipment": ["Medi-gauntlets (heal 20-60 HP per use, three times daily)", "Tier 1 weapon of GM choice"],
+            "attributes": {
+              "DEXTERITY": "+10",
+              "CHARISMA": "+10"
+            },
+            "abilities": ["Healing based psionics"]
+          },
+          "flaws": {
+            "attributes": {
+              "AGILITY": "-10",
+              "PERCEPTION": "-10"
+            },
+            "requirements": ["Must tithe 30% of loot or fortune to charity or the less fortunate"]
+          }
+        }
+      ]
+    },
+    {
+      "archetype": "ROGUE",
+      "description": "The rogue class is street-wise, stealthy and silent. They prefer to remain in the shadows and attack from behind or in many cases not attack at all, preferring instead to use the chaos of battle as a distraction while they acquire gear and money, or just eliminate enemies in a more civilized fashion. The ROGUE class breaks down into three primary ability groups consisting of the BURGLAR, the SURVIVOR, and the ASSASSIN.",
+      "sub_archetypes": [
+        {
+          "name": "BURGLAR",
+          "description": "The BURGLAR is a lightly armed and armored acrobatic thief who makes his/her fortune by stealing and fencing valuable items and information. The BURGLAR will most often avoid frontal combat if possible, preferring instead to sneak behind targets and back-stab or pick pocket enemy combatants. The BURGLAR is usually part of a network or society of like-minded fortune seekers.",
+          "merits": {
+            "skills": ["Stealth", "Back-stab", "Pick-pocket"],
+            "contacts": ["Appraiser/fence", "Broker for secrets and information"],
+            "attributes": {
+              "AGILITY": "+10",
+              "INTELLIGENCE": "+10"
+            }
+          },
+          "flaws": {
+            "attributes": {
+              "STRENGTH": "-10",
+              "VITALITY": "-10"
+            },
+            "misc_mod": "-20HP",
+            "fame": "-20 (INFAMY)",
+            "recognition": "Recognized by town guards or police"
+          }
+        },
+        {
+          "name": "SURVIVOR",
+          "description": "The SURVIVOR is someone who has trained and prepared for the end of times and has acquired many items and skills to help them survive during the collapse of civilization. The SURVIVOR has little need for money as he/she is an expert at living off the land and scrounging for all they need. The SURVIVOR usually travels light and prefers medium armors that offer some protection, but allow them to move quickly and freely or run when necessary. The SURVIVOR is equally at home in the wilderness or in a city and has little regard for laws or morality.",
+          "merits": {
+            "skills": ["Hunting", "Fire building", "Tracking"],
+            "attributes": {
+              "INTELLIGENCE": "+10",
+              "PERCEPTION": "+10"
+            },
+            "starting_equipment": ["Rifle (Tier 1)", "Pistol (Tier 1)"]
+          },
+          "flaws": {
+            "unique_trait": {
+              "name": "KLEPTOMANIAC",
+              "description": "Each time the SURVIVOR is in an area with gear/items needed by themselves or the party, they must save vs. distraction or attempt to steal the targeted item(s)."
+            },
+            "attributes": {
+              "CHARISMA": "-10",
+              "DEXTERITY": "-10"
+            }
+          }
+        },
+        {
+          "name": "ASSASSIN",
+          "description": "The ASSASSIN is a killer for hire specializing in silent and untraceable murders, usually for political and financial gain. The ASSASSIN has few qualms about eliminating targets, regardless of age, sex or affiliation. Most ASSASSINS prefer to operate independently, though some will operate in the employ of a government agency or large corporation. The ASSASSIN is both feared and respected in the shadowy world in which they live, and never fully trusted.",
+          "merits": {
+            "skills": ["Hand-to-Hand Martial Arts", "Stealth", "Blades"],
+            "attributes": {
+              "DEXTERITY": "+10",
+              "AGILITY": "+10"
+            },
+            "unique_trait": {
+              "name": "SILENT KILL",
+              "description": "If the character successfully sneaks up on an unsuspecting opponent, they may silently kill the target without a roll and without chance for failure."
+            }
+          },
+          "flaws": {
+            "fame": "-20",
+            "evil_points": "20",
+            "reputation": "Known by name if not by face, usually wanted in nearly every place of civilization",
+            "attributes": {
+              "CHARISMA": "-10",
+              "STRENGTH": "-10"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "archetype": "CASTER_PSION",
+      "description": "The CASTER/PSION is a mental/shamanic adept who uses mental abilities to attack and confound enemies on the battlefield. He/She may also use his/her abilities to heal allies or himself/herself. The scion is usually found at the back of the group or under cover preferring to use powers over weapons and brains over brawn to achieve victory. The CASTER/PSION class breaks down into three sub-categories; The MISUNDERSTOOD ADEPT, The RELUCTANT HERO, and THE WILD MAGE.",
+      "sub_archetypes": [
+        {
+          "name": "MISUNDERSTOOD ADEPT",
+          "description": "The MISUNDERSTOOD ADEPT is a caster who has tried (sometimes in vain) to use their powers and abilities for good, but somehow always seems to cause harm or destruction instead. In many cases the caster caused the death or near death of someone they love, and has been wandering alone ever since. The MISUNDERSTOOD ADEPT craves a chance to be part of a group making a difference and a chance to redeem himself/herself for perceived wrongdoings.",
+          "merits": {
+            "abilities": ["Cast/Use Psionics"],
+            "attributes": {
+              "INTELLIGENCE": "+10",
+              "PSY": "+10"
+            }
+          },
+          "flaws": {
+            "backstory": "Troubled past and guilt for some event that must be discussed with the Storyteller and declared at game start.",
+            "attributes": {
+              "CHARISMA": "-10",
+              "VITALITY": "-10",
+              "STRENGTH": "-10"
+            }
+          }
+        },
+        {
+          "name": "RELUCTANT HERO",
+          "description": "The RELUCTANT HERO has been placed into a situation that forced him or her to use their powers where they would much rather have ignored their emerging abilities or hide them from the world. This should be discussed with the storyteller and such an event should be decided upon at character creation.",
+          "merits": {
+            "abilities": ["Use Psionics"],
+            "attributes": {
+              "PSY": "+10",
+              "INTELLIGENCE": "+20"
+            },
+            "karma": "+10 (for using powers for good)"
+          },
+          "flaws": {
+            "attributes": {
+              "CHARISMA": "-10",
+              "VITALITY": "-10"
+            }
+          }
+        },
+        {
+          "name": "WILD MAGE",
+          "description": "The WILD MAGE is a chaotic and unpredictable magic user who often causes unintended consequences with their spells. The WILD MAGE embraces the chaos of magic and often finds themselves in precarious situations due to their lack of control over their powers.",
+          "merits": {
+            "abilities": ["Cast/Use Psionics"],
+            "attributes": {
+              "INTELLIGENCE": "+10",
+              "PSY": "+10"
+            }
+          },
+          "flaws": {
+            "attributes": {
+              "CHARISMA": "-10",
+              "VITALITY": "-10"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

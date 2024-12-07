@@ -1,0 +1,185 @@
+[
+    {
+      "Helmet": "Cloth Hood",
+      "Durability": "Cloth",
+      "Weight (lbs)": 1,
+      "Protection Level": "Low",
+      "Description": "A simple cloth hood providing minimal protection against the elements and minor impacts."
+    },
+    {
+      "Helmet": "Leather Cap",
+      "Durability": "Leather",
+      "Weight (lbs)": 2,
+      "Protection Level": "Low-Medium",
+      "Description": "A cap made from thick leather, offering basic defense against blunt force and light cuts."
+    },
+    {
+      "Helmet": "Reinforced Leather Helm",
+      "Durability": "Reinforced Leather",
+      "Weight (lbs)": 3,
+      "Protection Level": "Medium",
+      "Description": "A leather helmet reinforced with metal studs, enhancing its defensive qualities."
+    },
+    {
+      "Helmet": "Padded Helmet",
+      "Durability": "Padded Armor",
+      "Weight (lbs)": 4,
+      "Protection Level": "Medium",
+      "Description": "A helmet with internal padding, designed to absorb impact and provide comfort during prolonged use."
+    },
+    {
+      "Helmet": "Kevlar Helmet",
+      "Durability": "Kevlar",
+      "Weight (lbs)": 5,
+      "Protection Level": "Medium-High",
+      "Description": "A modern Kevlar helmet capable of deflecting small-caliber bullets and shrapnel."
+    },
+    {
+      "Helmet": "Kevlar Reinforced Helm",
+      "Durability": "Kevlar Reinforced",
+      "Weight (lbs)": 6,
+      "Protection Level": "High",
+      "Description": "An advanced Kevlar helmet with reinforced plating, offering superior protection against ballistic threats."
+    },
+    {
+      "Helmet": "Composite Helmet",
+      "Durability": "Composite Armor",
+      "Weight (lbs)": 8,
+      "Protection Level": "High",
+      "Description": "A helmet made of composite materials, providing balanced protection and flexibility."
+    },
+    {
+      "Helmet": "Titanium Alloy Helm",
+      "Durability": "Titanium Alloy",
+      "Weight (lbs)": 10,
+      "Protection Level": "High",
+      "Description": "A helmet forged from titanium alloy, offering strong resistance against physical attacks with minimal weight."
+    },
+    {
+      "Helmet": "Titanium Weave Hood",
+      "Durability": "Titanium Weave",
+      "Weight (lbs)": 6,
+      "Protection Level": "High",
+      "Description": "A lightweight hood woven with titanium fibers, providing high durability without sacrificing mobility."
+    },
+    {
+      "Helmet": "Ceramic Helm",
+      "Durability": "Ceramic Plating",
+      "Weight (lbs)": 12,
+      "Protection Level": "Very High",
+      "Description": "A helmet embedded with ceramic inserts, providing superior defense against energy and ballistic attacks."
+    },
+    {
+      "Helmet": "Plasteel Helmet",
+      "Durability": "Plasteel",
+      "Weight (lbs)": 10,
+      "Protection Level": "Very High",
+      "Description": "A helmet crafted from plasteel, lightweight and highly durable against a variety of threats."
+    },
+    {
+      "Helmet": "Plasma-Treated Visor",
+      "Durability": "Plasma-Treated Armor",
+      "Weight (lbs)": 12,
+      "Protection Level": "Very High",
+      "Description": "A helmet with a plasma-treated visor, offering enhanced resistance to energy weapons and thermal attacks."
+    },
+    {
+      "Helmet": "Nano-Fiber Mesh Helmet",
+      "Durability": "Nano-Fiber Mesh",
+      "Weight (lbs)": 5,
+      "Protection Level": "Very High",
+      "Description": "A helmet made from nano-fibers, providing superior flexibility and resistance to both physical and energy attacks."
+    },
+    {
+      "Helmet": "Energy-Diffusing Helm",
+      "Durability": "Energy-Diffusing Armor",
+      "Weight (lbs)": 15,
+      "Protection Level": "Very High",
+      "Description": "A helmet embedded with energy-diffusing technology to reduce damage from energy-based weapons."
+    },
+    {
+      "Helmet": "Quantum Fiber Helmet",
+      "Durability": "Quantum Fiber",
+      "Weight (lbs)": 4,
+      "Protection Level": "Extremely High",
+      "Description": "An ultra-light helmet made from quantum fibers, offering superior protection and agility."
+    },
+    {
+      "Helmet": "Graviton-Plated Helm",
+      "Durability": "Graviton-Plated",
+      "Weight (lbs)": 16,
+      "Protection Level": "Extremely High",
+      "Description": "A helmet enhanced with graviton technology to deflect projectiles and melee strikes."
+    },
+    {
+      "Helmet": "Voidweave Mask",
+      "Durability": "Voidweave",
+      "Weight (lbs)": 3,
+      "Protection Level": "Extremely High",
+      "Description": "A mask interlaced with void energy, providing high protection against both physical and psionic attacks."
+    },
+    {
+      "Helmet": "Neutronium Helm",
+      "Durability": "Neutronium Lattice",
+      "Weight (lbs)": 20,
+      "Protection Level": "Extremely High",
+      "Description": "A nearly indestructible helmet providing unmatched defense against all forms of damage."
+    },
+    {
+      "Helmet": "Temporal Helm",
+      "Durability": "Temporal Armor",
+      "Weight (lbs)": 8,
+      "Protection Level": "Extremely High",
+      "Description": "A helmet that incorporates temporal distortions, allowing the wearer to phase through time to avoid damage."
+    },
+    {
+      "Helmet": "Dark Matter Helm",
+      "Durability": "Dark Matter Composite",
+      "Weight (lbs)": 15,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "A helmet infused with dark matter, capable of absorbing both kinetic and energy attacks."
+    },
+    {
+      "Helmet": "Etherium Crown",
+      "Durability": "Etherium Plating",
+      "Weight (lbs)": 18,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "A crown-like helmet made from Etherium, offering high resistance to physical, energy, and psionic attacks."
+    },
+    {
+      "Helmet": "Psion-Weave Helm",
+      "Durability": "Psion-Weave",
+      "Weight (lbs)": 6,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "A helmet enhanced with psionic resonance, providing adaptive protection based on the wearer’s mental state."
+    },
+    {
+      "Helmet": "Hyper-Alloy Helmet",
+      "Durability": "Hyper-Alloy",
+      "Weight (lbs)": 15,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "A helmet made from hyper-alloy, offering near-impenetrable defense without excessive weight."
+    },
+    {
+      "Helmet": "Nanite-Infused Helm",
+      "Durability": "Nanite-Infused",
+      "Weight (lbs)": 10,
+      "Protection Level": "Near-Invulnerable",
+      "Description": "A helmet embedded with self-repairing nanites, ensuring continuous durability and high protection."
+    },
+    {
+      "Helmet": "Quantum Shield Helm",
+      "Durability": "Quantum Shielding",
+      "Weight (lbs)": 8,
+      "Protection Level": "Invulnerable",
+      "Description": "A helmet with embedded quantum fields that create a protective barrier, shielding against a wide range of attacks."
+    },
+    {
+      "Helmet": "Hypersteel Helm",
+      "Durability": "Hypersteel",
+      "Weight (lbs)": 25,
+      "Protection Level": "Invulnerable",
+      "Description": "The ultimate helmet forged from hypersteel, providing unmatched resistance to all forms of damage while remaining relatively lightweight."
+    }
+  ]
+  

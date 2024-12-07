@@ -1,0 +1,584 @@
+[
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Astral Projection",
+      "Description": "The caster may leave his/her body for a certain amount of time. Cannot fight while projecting.",
+      "Duration": "1 rd/10%",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Attraction",
+      "Description": "Causes the target to become preoccupied with whatever or whomever the caster decides.",
+      "Duration": "1 rd/10%",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Bolts",
+      "Description": "Creates energy bolts (1/10%) that do 4-12 dmg and pass through armors not protected by an energy shield.",
+      "Duration": "N/A",
+      "Mana Cost": "10 per bolt"
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Call to Mind",
+      "Description": "Recall a single event, action, or message in clear detail.",
+      "Duration": "10 seconds",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Cat-Like Reflexes",
+      "Description": "The caster will fall gracefully, landing on feet without damage.",
+      "Duration": "60 seconds",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Conceal Thoughts",
+      "Description": "Shields the mind against psionic entities or beings, making thoughts unreadable.",
+      "Duration": "1 rd/10%",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Control Fire",
+      "Description": "Manipulate existing flames, cannot generate fire until PSY 95+.",
+      "Duration": "1 rd/10%",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Control Light",
+      "Description": "Manipulate ambient light and shadows to hide or distract enemies.",
+      "Duration": "1 rd/10%",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Control Water",
+      "Description": "Manipulate existing water sources, including ambient moisture.",
+      "Duration": "1 rd/10%",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Create Sound",
+      "Description": "Creates desired sounds. Biological sounds are easy; mechanical sounds require a roll of +10.",
+      "Duration": "N/A",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Daze",
+      "Description": "Creates a wave of psychic energy that stuns the target, causing concussive damage.",
+      "Duration": "N/A",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Deceleration",
+      "Description": "Target's speed is reduced by half.",
+      "Duration": "1 rd/10%",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Deja Vu",
+      "Description": "Target repeats the last action until effect expires.",
+      "Duration": "1 Rd/10%",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Demoralize",
+      "Description": "Target becomes terrified and runs away.",
+      "Duration": "1 rd/10%",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Detect Psionics",
+      "Description": "Sense the presence of psionics in use.",
+      "Duration": "N/A",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Disable",
+      "Description": "Temporarily disable a mechanical object.",
+      "Duration": "1Rd/10%",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Distraction",
+      "Description": "Causes target to lose focus and forfeit actions for the round.",
+      "Duration": "N/A",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Empathy",
+      "Description": "Sense the surface emotions of the target.",
+      "Duration": "N/A",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Energy Blast",
+      "Description": "Emits a blast of psychic energy from the hand in a colored beam.",
+      "Duration": "N/A",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Float",
+      "Description": "Enhances the buoyancy of a target in water or other liquid.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Force Field",
+      "Description": "Creates a force field shield rated against standard damage with max HP of 60.",
+      "Duration": "3 rounds",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Grease",
+      "Description": "Makes a solid surface slippery.",
+      "Duration": "3 rds",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Hand Hammer",
+      "Description": "Charges a powerful melee attack that knocks the target down with no chance of save.",
+      "Duration": "N/A",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Know Direction",
+      "Description": "Know the direction the caster is facing.",
+      "Duration": "N/A",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Mind Thrust",
+      "Description": "Creates a blade of psychic energy that ignores armor protection and deals damage.",
+      "Duration": "3 rds",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Precognition",
+      "Description": "\"Sees\" the next sequence of events or actions.",
+      "Duration": "SPC",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Sense Link",
+      "Description": "Sense what the target is sensing.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Skate",
+      "Description": "Glides frictionless across any surface, doubling speed.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Telekinesis",
+      "Description": "Manipulate objects at range with only the mind.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Telepathy, Projective",
+      "Description": "Project thoughts into another's mind.",
+      "Duration": "N/A",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 1 (50-65 PSY Attribute)",
+      "Power": "Telepathy, Receptive",
+      "Description": "\"Hear\" the thoughts of the target.",
+      "Duration": "N/A",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Bestow Power",
+      "Description": "Bestows the target with 2 points of STRENGTH attribute per every 10pts of PSY attribute.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Body Equilibrium",
+      "Description": "Walk on non-solid surfaces.",
+      "Duration": "1Rd/10%",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Cloud Mind",
+      "Description": "Confuse the mind of multiple targets.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Detect Hostile Intent",
+      "Description": "Sense any hostile intent on the part of the target.",
+      "Duration": "N/A",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Elfsight",
+      "Description": "See in darkness as if it were low light.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Feat Leach",
+      "Description": "Mimic the abilities or skill of the target temporarily.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Levitate",
+      "Description": "Levitate off the ground for a limited time.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Lock",
+      "Description": "Secure one door or container with a mental barrier.",
+      "Duration": "N/A",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Share Pain",
+      "Description": "Transfer some of the damage sustained onto a willing target.",
+      "Duration": "N/A",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Suntanance",
+      "Description": "Go without food and water for 24 hours.",
+      "Duration": "24hrs",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": "Tier 2 (66-70 PSY Attribute)",
+      "Power": "Swarm",
+      "Description": "Gathers all insects in the area to attack a designated area or target.",
+      "Duration": "3rds",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Body Adjustment",
+      "Description": "Heal oneself psionically for 10-30 hp.",
+      "Duration": "N/A",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Body Purification",
+      "Description": "Heal all damage caused by poison and force it from the body.",
+      "Duration": "N/A",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Dispel Psionics",
+      "Description": "Dispel the lingering effects of psionics on a target or area.",
+      "Duration": "N/A",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Energy Retort",
+      "Description": "Covers oneself in a psychical shield that counter-attacks melee strikes.",
+      "Duration": "N/A",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Energy Wall",
+      "Description": "Erects a wall of pure energy covering an area equal to PSY attribute x 2' ft.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Psionic Blast",
+      "Description": "Emits a mental blast that stuns enemies in a 30' cone.",
+      "Duration": "1d4 rds",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Share Pain Forced",
+      "Description": "Transfers 10-20pts of damage received in an attack to an unwilling target.",
+      "Duration": "N/A",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Time Registry",
+      "Description": "\"See\" into the past or future for a time equal to 1 minute per PSY attribute score.",
+      "Duration": "N/A",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": "Tier 3 (71-76 PSY Attribute)",
+      "Power": "Ubiquitous Vision",
+      "Description": "See in all directions at once.",
+      "Duration": "3 rds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": "Tier 4 (77-80 PSY Attribute)",
+      "Power": "Aura Sight",
+      "Description": "See the aura of the target, gaining insight into their nature.",
+      "Duration": "N/A",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": "Tier 4 (77-80 PSY Attribute)",
+      "Power": "Correspond",
+      "Description": "Hold a conversation with another sentient being at any distance.",
+      "Duration": "IND",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": "Tier 4 (77-80 PSY Attribute)",
+      "Power": "Death Urge",
+      "Description": "Implant a notion in the target's mind that they should kill themselves.",
+      "Duration": "3 rds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": "Tier 4 (77-80 PSY Attribute)",
+      "Power": "Free Movement",
+      "Description": "Cannot be held or bound by non-psionic means.",
+      "Duration": "3 rds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": "Tier 4 (77-80 PSY Attribute)",
+      "Power": "Mind Wipe",
+      "Description": "Erase all memories from the target for a specific amount of time.",
+      "Duration": "N/A",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": "Tier 4 (77-80 PSY Attribute)",
+      "Power": "Trace Teleport",
+      "Description": "Know direction and distance of any being that recently teleported away.",
+      "Duration": "N/A",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": "Tier 4 (77-80 PSY Attribute)",
+      "Power": "Unseen Servant",
+      "Description": "Creates an invisible servant that will carry out one task.",
+      "Duration": "3 rds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": "Tier 5 (81-86 PSY Attribute)",
+      "Power": "Adapt Body",
+      "Description": "Body automatically adapts to hostile environments.",
+      "Duration": "3 rds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": "Tier 5 (81-86 PSY Attribute)",
+      "Power": "True Sight",
+      "Description": "See all things as they truly are.",
+      "Duration": "3 rds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": "Tier 6 (87-90 PSY Attribute)",
+      "Power": "Aura Alteration",
+      "Description": "Alter the aura of oneself and up to 4 others.",
+      "Duration": "1rd/10%",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": "Tier 6 (87-90 PSY Attribute)",
+      "Power": "Disintegrate",
+      "Description": "Turn one creature into dust with a touch.",
+      "Duration": "N/A",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": "Tier 6 (87-90 PSY Attribute)",
+      "Power": "Fuse Flesh",
+      "Description": "Cause the target's flesh to fuse to any surface or object.",
+      "Duration": "N/A",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": "Tier 6 (87-90 PSY Attribute)",
+      "Power": "Retrieve",
+      "Description": "Teleport any object the caster can see into their hand.",
+      "Duration": "INST",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": "Tier 6 (87-90 PSY Attribute)",
+      "Power": "Temporal Augmentation",
+      "Description": "Slow time for all around the caster.",
+      "Duration": "1d4 rds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": "Tier 7 (91-96 PSY Attribute)",
+      "Power": "Decerebrate",
+      "Description": "Cause the target's brain stem to sever.",
+      "Duration": "N/A",
+      "Mana Cost": 110
+    },
+    {
+      "Tier": "Tier 7 (91-96 PSY Attribute)",
+      "Power": "Divert Teleport",
+      "Description": "Alter the destination of another's teleport.",
+      "Duration": "INST",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": "Tier 7 (91-96 PSY Attribute)",
+      "Power": "Energy Redirection",
+      "Description": "Absorb, store, and release stored energy of most kinds.",
+      "Duration": "N/A",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": "Tier 7 (91-96 PSY Attribute)",
+      "Power": "Energy Wave",
+      "Description": "Forms a wave of energy that travels outwards causing knockdown and concussion damage.",
+      "Duration": "3 rds",
+      "Mana Cost": 120
+    },
+    {
+      "Tier": "Tier 7 (91-96 PSY Attribute)",
+      "Power": "Phase Door",
+      "Description": "Create a portal through a solid surface for oneself and party.",
+      "Duration": "INST",
+      "Mana Cost": 140
+    },
+    {
+      "Tier": "Tier 7 (91-96 PSY Attribute)",
+      "Power": "Ultrablast",
+      "Description": "Send a wave out causing damage in all directions.",
+      "Duration": "INST",
+      "Mana Cost": 150
+    },
+    {
+      "Tier": "Tier 8 (97-99 PSY Attribute)",
+      "Power": "Iron Body",
+      "Description": "Turns flesh into living iron, raising hit points to 300.",
+      "Duration": "1rd/20%",
+      "Mana Cost": 160
+    },
+    {
+      "Tier": "Tier 8 (97-99 PSY Attribute)",
+      "Power": "Matter Manipulation",
+      "Description": "Increase or decrease the hardness of any object temporarily.",
+      "Duration": "3 rds",
+      "Mana Cost": 160
+    },
+    {
+      "Tier": "Tier 8 (97-99 PSY Attribute)",
+      "Power": "Shadow Body",
+      "Description": "Become a living shadow for a limited time, taking no damage except radiation damage.",
+      "Duration": "1rd/20%",
+      "Mana Cost": 180
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Affinity Field",
+      "Description": "Imbues teammates with any ability the caster possesses at equal level for a limited time.",
+      "Duration": "3 rds",
+      "Mana Cost": 200
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Assimilate",
+      "Description": "Permanently affects the mind of one creature per 20% PSY attribute.",
+      "Duration": "PERM",
+      "Mana Cost": 200
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Atrophy",
+      "Description": "Causes the muscles and flesh of the target to wither and decay.",
+      "Duration": "3 rds",
+      "Mana Cost": 220
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Barrier of Earth",
+      "Description": "Raises a bulletproof wall of earth around the group or team.",
+      "Duration": "3 rds",
+      "Mana Cost": 200
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Blazing Speed",
+      "Description": "Run at 120mph for a limited time.",
+      "Duration": "3 rds",
+      "Mana Cost": 200
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Clairvoyance",
+      "Description": "Commune with spirits or otherworldly beings in the area.",
+      "Duration": "3 rds",
+      "Mana Cost": 200
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Condemn",
+      "Description": "Marks the victim to die where, when, and how the caster decides.",
+      "Duration": "TBD",
+      "Mana Cost": 250
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Crush Will",
+      "Description": "Affects the target's mind and controls thoughts, causing confusion and pseudo mind control.",
+      "Duration": "INST",
+      "Mana Cost": 200
+    },
+    {
+      "Tier": "Tier 9 (100 PSY Attribute)",
+      "Power": "Curse",
+      "Description": "Sends waves of unpleasant events into the life of the target up to and including death.",
+      "Duration": "TBD",
+      "Mana Cost": 250
+    }
+  ]
+  

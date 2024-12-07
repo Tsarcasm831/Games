@@ -34,6 +34,9 @@ function createSettlement(x, y, z) {
 }
 
 function createSettlementWalls() {
+    const settlementWallsGroup = new THREE.Group();
+    settlementWallsGroup.name = 'settlementWalls';
+
     const safeZoneSize = 1200;  // Match the exact size of the grey safe zone
     const wallHeight = 30;
     const wallThickness = 2;
@@ -50,7 +53,7 @@ function createSettlementWalls() {
         wallMaterial
     );
     northLeftWall.position.set(-safeZoneSize/4 - gateWidth/4, wallHeight/2, -safeZoneSize/2);
-    scene.add(northLeftWall);
+    settlementWallsGroup.add(northLeftWall);
     walls.push(northLeftWall);
 
     const northRightWall = new THREE.Mesh(
@@ -58,18 +61,18 @@ function createSettlementWalls() {
         wallMaterial
     );
     northRightWall.position.set(safeZoneSize/4 + gateWidth/4, wallHeight/2, -safeZoneSize/2);
-    scene.add(northRightWall);
+    settlementWallsGroup.add(northRightWall);
     walls.push(northRightWall);
 
     // South Walls
     const southLeftWall = northLeftWall.clone();
     southLeftWall.position.set(-safeZoneSize/4 - gateWidth/4, wallHeight/2, safeZoneSize/2);
-    scene.add(southLeftWall);
+    settlementWallsGroup.add(southLeftWall);
     walls.push(southLeftWall);
 
     const southRightWall = northRightWall.clone();
     southRightWall.position.set(safeZoneSize/4 + gateWidth/4, wallHeight/2, safeZoneSize/2);
-    scene.add(southRightWall);
+    settlementWallsGroup.add(southRightWall);
     walls.push(southRightWall);
 
     // Side Walls
@@ -78,7 +81,7 @@ function createSettlementWalls() {
         wallMaterial
     );
     eastWall.position.set(safeZoneSize/2, wallHeight/2, 0);
-    scene.add(eastWall);
+    settlementWallsGroup.add(eastWall);
     walls.push(eastWall);
 
     const westWall = new THREE.Mesh(
@@ -86,7 +89,7 @@ function createSettlementWalls() {
         wallMaterial
     );
     westWall.position.set(-safeZoneSize/2, wallHeight/2, 0);
-    scene.add(westWall);
+    settlementWallsGroup.add(westWall);
     walls.push(westWall);
 
     // Gates (enemy barriers only - transparent)
@@ -101,13 +104,15 @@ function createSettlementWalls() {
         gateMaterial
     );
     northGate.position.set(0, wallHeight/2, -safeZoneSize/2);
-    scene.add(northGate);
+    settlementWallsGroup.add(northGate);
     enemyWalls.push(northGate);  // Only add to enemyWalls
 
     const southGate = northGate.clone();
     southGate.position.set(0, wallHeight/2, safeZoneSize/2);
-    scene.add(southGate);
+    settlementWallsGroup.add(southGate);
     enemyWalls.push(southGate);  // Only add to enemyWalls
+
+    return settlementWallsGroup;
 }
 
 function createStructure() {

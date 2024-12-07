@@ -1,0 +1,38 @@
+[
+    {
+      "Tier": 16,
+      "Power": "Lava Maelstrom",
+      "Description": "Create a swirling maelstrom of molten lava and boiling water, trapping and incinerating everything within.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Molten Tide",
+      "Description": "Summon a wave of lava and boiling water that flows over the battlefield, solidifying into burning rock.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Scalding Quake",
+      "Description": "Cause an earthquake that cracks open the ground, releasing boiling water and molten lava to scald enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Infernal Mudslide",
+      "Description": "Summon a mudslide of molten rock and boiling water, burying and burning everything in its path.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Elemental Cataclysm",
+      "Description": "Unleash the fury of fire, water, and earth to create a cataclysm that annihilates the battlefield.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

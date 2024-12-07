@@ -1,0 +1,38 @@
+[
+    {
+      "Tier": 16,
+      "Power": "Plasma Surge",
+      "Description": "Create a surge of plasma, boiling water, and fire that electrocutes and burns everything in its wake.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Electrified Steam",
+      "Description": "Release a cloud of electrified steam and fire that shocks, burns, and pushes back all enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Thunderstorm Inferno",
+      "Description": "Summon a thunderstorm filled with boiling rain and fire, striking lightning at random targets.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Scalding Lightning Burst",
+      "Description": "Emit a burst of lightning, steam, and fire that incinerates and electrocutes all nearby foes.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Storm God's Wrath",
+      "Description": "Unleash the combined fury of fire, water, air, earth, and lightning, creating an elemental storm that obliterates everything.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

@@ -1,0 +1,283 @@
+[
+    {
+      "Tier": 1,
+      "Power": "Pebble Flick",
+      "Description": "Move small rocks or pebbles with a flick of the mind.",
+      "Duration": "Instant",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 1,
+      "Power": "Earth Sense",
+      "Description": "Sense the vibrations in the ground to detect movement.",
+      "Duration": "3 rounds",
+      "Mana Cost": 5
+    },
+    {
+      "Tier": 2,
+      "Power": "Stone Grip",
+      "Description": "Cause the ground to grasp at a target's feet.",
+      "Duration": "Instant",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 2,
+      "Power": "Rock Shield",
+      "Description": "Form a small shield made of stone.",
+      "Duration": "2 rounds",
+      "Mana Cost": 10
+    },
+    {
+      "Tier": 3,
+      "Power": "Earth Shove",
+      "Description": "Push an enemy with a burst of earthen force.",
+      "Duration": "Instant",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 3,
+      "Power": "Soil Manipulation",
+      "Description": "Control loose soil to create basic shapes or traps.",
+      "Duration": "2 rounds",
+      "Mana Cost": 15
+    },
+    {
+      "Tier": 4,
+      "Power": "Rock Throw",
+      "Description": "Lift and hurl a medium-sized rock at a target.",
+      "Duration": "Instant",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 4,
+      "Power": "Stone Armor",
+      "Description": "Cover parts of your body with hardened stone for defense.",
+      "Duration": "3 rounds",
+      "Mana Cost": 20
+    },
+    {
+      "Tier": 5,
+      "Power": "Earth Tremor",
+      "Description": "Cause a minor tremor to disrupt enemies' balance.",
+      "Duration": "Instant",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 5,
+      "Power": "Stone Fist",
+      "Description": "Form a fist of stone around your hand for melee combat.",
+      "Duration": "1 round",
+      "Mana Cost": 25
+    },
+    {
+      "Tier": 6,
+      "Power": "Mudslide",
+      "Description": "Create a small mudslide to sweep away foes.",
+      "Duration": "Instant",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 6,
+      "Power": "Rock Spire",
+      "Description": "Cause a spire of rock to shoot up from the ground.",
+      "Duration": "Instant",
+      "Mana Cost": 30
+    },
+    {
+      "Tier": 7,
+      "Power": "Earth Wall",
+      "Description": "Erect a wall of earth for cover or protection.",
+      "Duration": "3 rounds",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 7,
+      "Power": "Stone Skin",
+      "Description": "Turn your skin into a layer of tough stone.",
+      "Duration": "3 rounds",
+      "Mana Cost": 35
+    },
+    {
+      "Tier": 8,
+      "Power": "Earthquake Stomp",
+      "Description": "Stomp the ground to create a localized earthquake.",
+      "Duration": "Instant",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 8,
+      "Power": "Earthen Grasp",
+      "Description": "Summon hands of earth to restrain multiple targets.",
+      "Duration": "2 rounds",
+      "Mana Cost": 40
+    },
+    {
+      "Tier": 9,
+      "Power": "Stone Burst",
+      "Description": "Shatter a rock into sharp fragments to attack enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 9,
+      "Power": "Quicksand",
+      "Description": "Turn solid ground into quicksand to trap foes.",
+      "Duration": "3 rounds",
+      "Mana Cost": 45
+    },
+    {
+      "Tier": 10,
+      "Power": "Boulder Bash",
+      "Description": "Summon a large boulder and hurl it at your enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 10,
+      "Power": "Earth Slide",
+      "Description": "Slide across the ground on a wave of shifting earth.",
+      "Duration": "2 rounds",
+      "Mana Cost": 50
+    },
+    {
+      "Tier": 11,
+      "Power": "Stone Prison",
+      "Description": "Encase an enemy in a prison of solid rock.",
+      "Duration": "3 rounds",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Petrify",
+      "Description": "Gradually turn an object or creature to stone.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Earth Armor",
+      "Description": "Envelop yourself in a full suit of earthen armor.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Stone Lance",
+      "Description": "Form a large lance of rock for impaling attacks.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Tremor Wave",
+      "Description": "Send a shockwave through the ground to knock back enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Rock Avalanche",
+      "Description": "Call down an avalanche of rocks from a nearby cliff.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Sandstorm",
+      "Description": "Create a swirling storm of sand to obscure vision.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Stone Dragon",
+      "Description": "Summon a dragon made of earth and rock to attack foes.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Earthquake",
+      "Description": "Cause a powerful earthquake in a large area.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Seismic Sense",
+      "Description": "Gain heightened senses through the earth's vibrations.",
+      "Duration": "3 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Mountain's Might",
+      "Description": "Summon the strength of the mountains to increase power.",
+      "Duration": "5 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Crystal Spikes",
+      "Description": "Erupt crystals from the ground to impale enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Granite Fortress",
+      "Description": "Create a large, impenetrable fortress of stone.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Fissure",
+      "Description": "Split the ground open to create a deep chasm.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Molten Core",
+      "Description": "Summon molten rock from the earth's core to attack.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Landslide",
+      "Description": "Cause a massive landslide to bury an area.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Gaia's Embrace",
+      "Description": "Use the power of the earth to heal wounds.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "World Shaker",
+      "Description": "Cause a catastrophic earthquake that changes the terrain.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Earthen Wrath",
+      "Description": "Unleash the fury of the earth, causing widespread destruction.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Terra Form",
+      "Description": "Merge with the earth itself, becoming an indomitable force.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    }
+  ]
+  

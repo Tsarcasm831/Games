@@ -1,6 +1,4 @@
 // ground.js
-import * as THREE from 'three';
-
 function addSkyboxAboveGround() {
     const skyboxSize = 10000; // Large enough to encompass the scene
 
@@ -35,5 +33,3 @@ function addSkyboxAboveGround() {
     // Add the plane to the scene
     scene.add(skyPlane);
 }
-
-export { addSkyboxAboveGround };

@@ -123,16 +123,18 @@ const enemyTypes = {
 // Updated spawn distance in initEnemies
 function initEnemies() {
     const enemyTypesKeys = Object.keys(enemyTypes);
+    
+    // Spawn exactly one enemy of each type
     enemyTypesKeys.forEach(type => {
-        const enemyCount = 5; // Define the number of each type
-
-        for (let i = 0; i < enemyCount; i++) {
-            // Adjust spawn range here
-            let position = getRandomPositionOutsideTown(800, 2000); // Increase minimum distance from settlement
-            const enemy = createEnemy(position.x, 0, position.z, type);
-            enemies.push(enemy);
-            scene.add(enemy);
-        }
+        // Adjust spawn range to spread enemies out
+        let position = getRandomPositionOutsideTown(800, 2000);
+        const enemy = createEnemy(position.x, 0, position.z, type);
+        
+        // Add unique identifier to help with tracking
+        enemy.userData.uniqueType = type;
+        
+        enemies.push(enemy);
+        scene.add(enemy);
     });
 }
 
@@ -184,42 +186,52 @@ function spawnEntities() {
         return;
     }
 
-    for (let i = 0; i < quantity; i++) {
-        const offsetX = Math.random() * 50 - 25;
-        const offsetZ = Math.random() * 50 - 25;
-        const spawnPosition = {
-            x: player.position.x + offsetX,
-            y: player.position.y,
-            z: player.position.z + offsetZ
-        };
+    if (entityType === 'enemy') {
+        // Check if the enemy type already exists
+        const existingEnemyTypes = new Set(enemies.map(enemy => enemy.userData.uniqueType));
+        
+        for (let i = 0; i < quantity; i++) {
+            const availableTypes = Object.keys(enemyTypes).filter(
+                type => !existingEnemyTypes.has(type)
+            );
 
-        if (entityType === 'enemy') {
-            const enemy = createEnemy(spawnPosition.x, spawnPosition.y, spawnPosition.z);
+            if (availableTypes.length === 0) {
+                console.log('All enemy types already spawned');
+                break;
+            }
+
+            const randomType = availableTypes[Math.floor(Math.random() * availableTypes.length)];
+            const spawnPosition = getRandomPositionOutsideTown(800, 2000);
+            
+            const enemy = createEnemy(spawnPosition.x, 0, spawnPosition.z, randomType);
+            enemy.userData.uniqueType = randomType;
+            
             enemies.push(enemy);
             scene.add(enemy);
-        } else if (entityType === 'friendlyNPC') {
-            const npc = createFriendlyNPC();
-            npc.position.set(spawnPosition.x, spawnPosition.y, spawnPosition.z);
-            friendlies.push(npc);
-            scene.add(npc);
-        } else if (entityType === 'structure') {
-            const structure = createStructure();
-            structure.position.set(spawnPosition.x, spawnPosition.y, spawnPosition.z);
-            scene.add(structure);
-            walls.push(...structure.userData.walls);
-        } else if (entityType === 'treasureChest') {
-            createTreasureChest(spawnPosition.x, spawnPosition.y, spawnPosition.z);
-            console.log('Treasure Chest spawned.');
-        } else if (entityType === 'settlement') {
-            createSettlement(spawnPosition.x, spawnPosition.y, spawnPosition.z);
-            console.log('Settlement spawned.');
-        } else if (entityType === 'quadruped') {
-            const quadruped = createQuadruped();
-            quadruped.position.set(spawnPosition.x, spawnPosition.y, spawnPosition.z);
-            quadrupeds.push(quadruped);
-            scene.add(quadruped);
-            console.log('Quadruped spawned.');
+            existingEnemyTypes.add(randomType);
         }
+    } else if (entityType === 'friendlyNPC') {
+        const npc = createFriendlyNPC();
+        npc.position.set(player.position.x, player.position.y, player.position.z);
+        friendlies.push(npc);
+        scene.add(npc);
+    } else if (entityType === 'structure') {
+        const structure = createStructure();
+        structure.position.set(player.position.x, player.position.y, player.position.z);
+        scene.add(structure);
+        walls.push(...structure.userData.walls);
+    } else if (entityType === 'treasureChest') {
+        createTreasureChest(player.position.x, player.position.y, player.position.z);
+        console.log('Treasure Chest spawned.');
+    } else if (entityType === 'settlement') {
+        createSettlement(player.position.x, player.position.y, player.position.z);
+        console.log('Settlement spawned.');
+    } else if (entityType === 'quadruped') {
+        const quadruped = createQuadruped();
+        quadruped.position.set(player.position.x, player.position.y, player.position.z);
+        quadrupeds.push(quadruped);
+        scene.add(quadruped);
+        console.log('Quadruped spawned.');
     }
 }
 
@@ -278,16 +290,10 @@ function createEnemy(x, y, z, type) {
 }
 
 function maintainEnemyCount() {
-    const activeEnemies = enemies.filter(enemy => !enemy.userData.isDead).length;
-    const enemiesToSpawn = 100 - activeEnemies;
-    const enemyTypesKeys = Object.keys(enemyTypes);
-
-    for (let i = 0; i < enemiesToSpawn; i++) {
-        let position = getRandomPositionOutsideTown(800, 2000); // Increased minimum spawn distance
-        let type = enemyTypesKeys[Math.floor(Math.random() * enemyTypesKeys.length)];
-        let enemy = createEnemy(position.x, 0, position.z, type);
-        enemies.push(enemy);
-        scene.add(enemy);
+    // Do nothing or implement a minimal respawn logic if needed
+    // This prevents automatic enemy respawning
+    if (enemies.length === 0) {
+        initEnemies(); // Only respawn if all enemies are gone
     }
 }
 

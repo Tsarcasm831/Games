@@ -1,0 +1,143 @@
+[
+    {
+      "Tier": 11,
+      "Power": "Plasma Spark",
+      "Description": "Combine fire and electricity to create a spark of plasma.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Electrified Flame",
+      "Description": "Summon a flame charged with electricity, shocking on contact.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Thunderflame Strike",
+      "Description": "Unleash a strike of fire and lightning on a single target.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Plasma Bolt",
+      "Description": "Launch a bolt of plasma energy, burning and electrocuting targets.",
+      "Duration": "Instant",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Flame Surge",
+      "Description": "Release a surge of fire and electricity, arcing between enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Ignition Shock",
+      "Description": "Cause a shockwave of fire and electricity to explode outward.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Firestorm Charge",
+      "Description": "Create a storm of fire and lightning that strikes multiple targets.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Thunder Blaze",
+      "Description": "Call down a blazing thunderbolt, setting fire to the area it strikes.",
+      "Duration": "Instant",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Plasma Aura",
+      "Description": "Surround yourself with an aura of plasma, burning and electrocuting attackers.",
+      "Duration": "3 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Pyrostatic Burst",
+      "Description": "Emit a burst of static fire that ignites and shocks all nearby.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Voltaic Inferno",
+      "Description": "Create an inferno charged with lightning, increasing its destructive power.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Lightning Flame Wave",
+      "Description": "Send a wave of flame and lightning rolling across the battlefield.",
+      "Duration": "Instant",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Firebolt Storm",
+      "Description": "Summon a storm of firebolts charged with electricity.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Electric Ember Strike",
+      "Description": "Launch embers charged with electricity to ignite and shock targets.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Plasma Explosion",
+      "Description": "Cause an explosion of plasma fire that incinerates and shocks all within range.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Thunder Flame Wall",
+      "Description": "Create a wall of flames charged with electricity, burning and shocking anything that touches it.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Infernal Thunderstorm",
+      "Description": "Summon a massive storm of fire and lightning that rains destruction.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Plasma Flame Burst",
+      "Description": "Release a burst of plasma flames that devastate all in their path.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Lightning God's Inferno",
+      "Description": "Call upon divine flames and lightning to obliterate everything in a massive radius.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Fire God's Wrath",
+      "Description": "Unleash the ultimate combination of fire and lightning, destroying everything in an immense area.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    }
+  ]
+  

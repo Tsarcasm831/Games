@@ -1,0 +1,731 @@
+[
+    {
+      "Modification": "Reflex Scope",
+      "Description": "A small scope with low magnification.",
+      "Effect": "+5% att",
+      "Availability": "Common (C)",
+      "Cost": 50
+    },
+    {
+      "Modification": "ACOG Scope",
+      "Description": "A medium scope with medium magnification.",
+      "Effect": "+10% att",
+      "Availability": "Common (C)",
+      "Cost": 100
+    },
+    {
+      "Modification": "12x24 Scope",
+      "Description": "A scope for sniping at medium-long range.",
+      "Effect": "+20% att",
+      "Availability": "Common (C)",
+      "Cost": 250
+    },
+    {
+      "Modification": "18x36 Scope",
+      "Description": "A long-range scope, rated to 1500 yd.",
+      "Effect": "+30% att",
+      "Availability": "Rare (R)",
+      "Cost": 500
+    },
+    {
+      "Modification": "24x60 Scope",
+      "Description": "A long-range scope, rated to 2000 yd.",
+      "Effect": "+40% att",
+      "Availability": "Very Rare (VR)",
+      "Cost": 1000
+    },
+    {
+      "Modification": "Thermal Scope Mod",
+      "Description": "A thermal night sight added to the scope.",
+      "Effect": "Adds TIS",
+      "Availability": "Very Rare (VR)",
+      "Cost": 2500
+    },
+    {
+      "Modification": "12x60 LCD Scope",
+      "Description": "An LCD screen and heads-up display.",
+      "Effect": "+30% att",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 3500
+    },
+    {
+      "Modification": "Composite Parts",
+      "Description": "Replaces all metal parts with composite parts.",
+      "Effect": "Weight x1/2",
+      "Availability": "Variable (VAR)",
+      "Cost": 4000
+    },
+    {
+      "Modification": "UB Grenade Launcher",
+      "Description": "A 40mm grenade attachment.",
+      "Effect": "80-120 dmg",
+      "Availability": "Rare (R)",
+      "Cost": 1000
+    },
+    {
+      "Modification": "UB .12ga \"Masterkey\"",
+      "Description": "A .12 gauge shotgun attachment.",
+      "Effect": "35-55 dmg",
+      "Availability": "Very Rare (VR)",
+      "Cost": 1250
+    },
+    {
+      "Modification": "UB Plasma \"Masterkey\"",
+      "Description": "A plasma cartridge attachment.",
+      "Effect": "80-100 dmg",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 5000
+    },
+    {
+      "Modification": "\"Battlefield Assistant\"",
+      "Description": "An AI magazine attachment.",
+      "Effect": "******",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 10000
+    },
+    {
+      "Modification": "Laser Targeting Module",
+      "Description": "Projects a laser sight for improved accuracy.",
+      "Effect": "+5% att in low-light",
+      "Availability": "Common (C)",
+      "Cost": 200
+    },
+    {
+      "Modification": "Silencer",
+      "Description": "Suppresses gunfire noise.",
+      "Effect": "Stealth +10, No muzzle flash",
+      "Availability": "Common (C)",
+      "Cost": 300
+    },
+    {
+      "Modification": "Flash Suppressor",
+      "Description": "Reduces muzzle flash during firing.",
+      "Effect": "No muzzle flash",
+      "Availability": "Common (C)",
+      "Cost": 150
+    },
+    {
+      "Modification": "Extended Barrel",
+      "Description": "Lengthens the barrel for increased range.",
+      "Effect": "+20% range",
+      "Availability": "Common (C)",
+      "Cost": 250
+    },
+    {
+      "Modification": "Shortened Barrel",
+      "Description": "Shortens the barrel for increased mobility.",
+      "Effect": "+10% mobility, -10% range",
+      "Availability": "Common (C)",
+      "Cost": 100
+    },
+    {
+      "Modification": "High-Precision Barrel",
+      "Description": "Enhances bullet stability and accuracy.",
+      "Effect": "+15% att",
+      "Availability": "Rare (R)",
+      "Cost": 500
+    },
+    {
+      "Modification": "Cryo Rounds",
+      "Description": "Ammunition mod that freezes targets on impact.",
+      "Effect": "-5% speed to target",
+      "Availability": "Rare (R)",
+      "Cost": 600
+    },
+    {
+      "Modification": "Incendiary Rounds",
+      "Description": "Ammunition mod that ignites targets.",
+      "Effect": "+5% fire dmg per turn",
+      "Availability": "Common (C)",
+      "Cost": 400
+    },
+    {
+      "Modification": "Armor-Piercing Rounds",
+      "Description": "Rounds designed to penetrate armor.",
+      "Effect": "Ignores 50% armor",
+      "Availability": "Common (C)",
+      "Cost": 350
+    },
+    {
+      "Modification": "Hollow Point Rounds",
+      "Description": "Rounds that expand on impact for increased damage.",
+      "Effect": "+10% dmg, -5% armor pen",
+      "Availability": "Common (C)",
+      "Cost": 300
+    },
+    {
+      "Modification": "Ricochet Rounds",
+      "Description": "Ammunition that can bounce off surfaces.",
+      "Effect": "Hits 2nd target on miss",
+      "Availability": "Rare (R)",
+      "Cost": 800
+    },
+    {
+      "Modification": "EMP Rounds",
+      "Description": "Ammunition designed to disable electronics.",
+      "Effect": "Disables electronics on hit",
+      "Availability": "Very Rare (VR)",
+      "Cost": 1000
+    },
+    {
+      "Modification": "Explosive Rounds",
+      "Description": "Rounds that detonate on impact.",
+      "Effect": "+20% AoE dmg",
+      "Availability": "Rare (R)",
+      "Cost": 900
+    },
+    {
+      "Modification": "Magnetic Accelerator",
+      "Description": "Increases projectile speed using magnetic force.",
+      "Effect": "+15% range, +10% att",
+      "Availability": "Very Rare (VR)",
+      "Cost": 2000
+    },
+    {
+      "Modification": "Reflex Sight",
+      "Description": "Projects a reticle for rapid target acquisition.",
+      "Effect": "+10% att",
+      "Availability": "Common (C)",
+      "Cost": 150
+    },
+    {
+      "Modification": "Night Vision Scope",
+      "Description": "Allows for sight in darkness.",
+      "Effect": "+15% att in darkness",
+      "Availability": "Rare (R)",
+      "Cost": 800
+    },
+    {
+      "Modification": "Infrared Scope",
+      "Description": "Detects heat signatures of targets.",
+      "Effect": "+10% att through smoke",
+      "Availability": "Rare (R)",
+      "Cost": 1000
+    },
+    {
+      "Modification": "Holographic Sight",
+      "Description": "Projects a holographic reticle for aiming.",
+      "Effect": "+8% att",
+      "Availability": "Common (C)",
+      "Cost": 300
+    },
+    {
+      "Modification": "Tactical Flashlight",
+      "Description": "Illuminates targets in low-light conditions.",
+      "Effect": "-5% target stealth",
+      "Availability": "Common (C)",
+      "Cost": 100
+    },
+    {
+      "Modification": "Tri-Pod Mount",
+      "Description": "Stabilizes weapon for improved accuracy.",
+      "Effect": "+15% att when prone",
+      "Availability": "Common (C)",
+      "Cost": 200
+    },
+    {
+      "Modification": "Biometric Trigger",
+      "Description": "Locks the weapon to the owner's biometric data.",
+      "Effect": "Prevents unauthorized use",
+      "Availability": "Rare (R)",
+      "Cost": 500
+    },
+    {
+      "Modification": "Underbarrel Stun Gun",
+      "Description": "Adds a non-lethal shock to the weapon.",
+      "Effect": "Stuns target for 1 turn",
+      "Availability": "Common (C)",
+      "Cost": 400
+    },
+    {
+      "Modification": "Underbarrel Flamethrower",
+      "Description": "Adds a short-range flamethrower to the weapon.",
+      "Effect": "+30 fire dmg, close range",
+      "Availability": "Very Rare (VR)",
+      "Cost": 1500
+    },
+    {
+      "Modification": "Underbarrel Grenade Launcher",
+      "Description": "Fires grenades for explosive damage.",
+      "Effect": "60 AoE dmg",
+      "Availability": "Rare (R)",
+      "Cost": 1200
+    },
+    {
+      "Modification": "Underbarrel Plasma Ejector",
+      "Description": "Adds a plasma burst to the weapon.",
+      "Effect": "+40 plasma dmg",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 3000
+    },
+    {
+      "Modification": "Folding Stock",
+      "Description": "Allows for quick weapon storage and deployment.",
+      "Effect": "+5% mobility",
+      "Availability": "Common (C)",
+      "Cost": 100
+    },
+    {
+      "Modification": "Stabilizing Fins",
+      "Description": "Stabilizes the projectile mid-flight.",
+      "Effect": "+10% att at long range",
+      "Availability": "Common (C)",
+      "Cost": 250
+    },
+    {
+      "Modification": "Carbon Fiber Frame",
+      "Description": "Reduces the weapon's weight.",
+      "Effect": "Weight x0.75",
+      "Availability": "Rare (R)",
+      "Cost": 800
+    },
+    {
+      "Modification": "Counter-Balance Weight",
+      "Description": "Reduces recoil for rapid fire.",
+      "Effect": "+10% att in rapid fire",
+      "Availability": "Common (C)",
+      "Cost": 200
+    },
+    {
+      "Modification": "Heat Dissipation Module",
+      "Description": "Prevents overheating during sustained fire.",
+      "Effect": "No overheating",
+      "Availability": "Very Rare (VR)",
+      "Cost": 1500
+    },
+    {
+      "Modification": "Cryo-Cooling Chamber",
+      "Description": "Cools the weapon during use to prevent overheating.",
+      "Effect": "-10% cooldown time",
+      "Availability": "Rare (R)",
+      "Cost": 1000
+    },
+    {
+      "Modification": "Extended Magazine",
+      "Description": "Increases ammunition capacity.",
+      "Effect": "+50% ammo capacity",
+      "Availability": "Common (C)",
+      "Cost": 300
+    },
+    {
+      "Modification": "Drum Magazine",
+      "Description": "Greatly increases ammunition capacity.",
+      "Effect": "+100% ammo capacity",
+      "Availability": "Rare (R)",
+      "Cost": 600
+    },
+    {
+      "Modification": "Quick-Reload Mag",
+      "Description": "Reduces reload time significantly.",
+      "Effect": "-25% reload time",
+      "Availability": "Common (C)",
+      "Cost": 200
+    },
+    {
+      "Modification": "Smart Targeting System",
+      "Description": "Auto-adjusts aim for moving targets.",
+      "Effect": "+20% att on moving targets",
+      "Availability": "Very Rare (VR)",
+      "Cost": 2000
+    },
+    {
+      "Modification": "Railgun Coil Mod",
+      "Description": "Enhances the power of rail weapons.",
+      "Effect": "+30% dmg",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 5000
+    },
+    {
+      "Modification": "Plasma Injector",
+      "Description": "Enhances plasma weapon damage.",
+      "Effect": "+20 plasma dmg",
+      "Availability": "Very Rare (VR)",
+      "Cost": 3500
+    },
+    {
+      "Modification": "Enhanced Power Cell",
+      "Description": "Increases the power output of energy weapons.",
+      "Effect": "+15% energy dmg",
+      "Availability": "Rare (R)",
+      "Cost": 1200
+    },
+    {
+      "Modification": "Overcharge Circuit",
+      "Description": "Temporarily boosts weapon power.",
+      "Effect": "+50% dmg for 3 shots",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 5000
+    },
+    {
+      "Modification": "Magnetic Rail Stabilizer",
+      "Description": "Enhances accuracy of rail weapons.",
+      "Effect": "+25% att",
+      "Availability": "Very Rare (VR)",
+      "Cost": 3000
+    },
+    {
+      "Modification": "EMP Shielding",
+      "Description": "Protects weapon from EMP effects.",
+      "Effect": "Immune to EMP",
+      "Availability": "Rare (R)",
+      "Cost": 1500
+    },
+    {
+      "Modification": "Nano-Lubricant",
+      "Description": "Reduces weapon wear and tear.",
+      "Effect": "+25% durability",
+      "Availability": "Common (C)",
+      "Cost": 100
+    },
+    {
+      "Modification": "Auto-Targeting AI",
+      "Description": "Uses AI to auto-target enemies.",
+      "Effect": "+20% att",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 8000
+    },
+    {
+      "Modification": "Neural Link Scope",
+      "Description": "Connects weapon to user's neural interface.",
+      "Effect": "+30% att, faster targeting",
+      "Availability": "Very Rare (VR)",
+      "Cost": 4500
+    },
+    {
+      "Modification": "Force Field Emitter",
+      "Description": "Projects a small shield around the weapon.",
+      "Effect": "+10% defense when aimed",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 6000
+    },
+    {
+      "Modification": "Psi-Resonance Core",
+      "Description": "Enhances psionic weapons with extra damage.",
+      "Effect": "+25 psionic dmg",
+      "Availability": "Very Rare (VR)",
+      "Cost": 5000
+    },
+    {
+      "Modification": "Arcane Infuser",
+      "Description": "Allows the weapon to channel magical energy.",
+      "Effect": "+20% magic dmg",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 7000
+    },
+    {
+      "Modification": "Quick-Deploy Sling",
+      "Description": "Enables rapid weapon deployment.",
+      "Effect": "-50% draw time",
+      "Availability": "Common (C)",
+      "Cost": 100
+    },
+    {
+      "Modification": "Dual Wield Adapter",
+      "Description": "Allows for dual wielding of compatible weapons.",
+      "Effect": "+15% mobility, -10% att",
+      "Availability": "Rare (R)",
+      "Cost": 300
+    },
+    {
+      "Modification": "Smart Ammo Counter",
+      "Description": "Displays remaining ammo in the HUD.",
+      "Effect": "Increases reload awareness",
+      "Availability": "Common (C)",
+      "Cost": 150
+    },
+    {
+      "Modification": "Holographic Ammo Counter",
+      "Description": "Projects ammo count in real-time.",
+      "Effect": "+5% rapid reload",
+      "Availability": "Common (C)",
+      "Cost": 200
+    },
+    {
+      "Modification": "Adaptive Camouflage Skin",
+      "Description": "Blends the weapon into surroundings.",
+      "Effect": "+10% stealth",
+      "Availability": "Very Rare (VR)",
+      "Cost": 2500
+    },
+    {
+      "Modification": "Carbon Nano-Plating",
+      "Description": "Reinforces weapon frame with nanomaterials.",
+      "Effect": "+50% durability",
+      "Availability": "Rare (R)",
+      "Cost": 1000
+    },
+    {
+      "Modification": "Quantum Oscillator",
+      "Description": "Enhances energy weapons with quantum effects.",
+      "Effect": "+20% quantum dmg",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 8000
+    },
+    {
+      "Modification": "Molecular Stabilizer",
+      "Description": "Increases projectile stability for accuracy.",
+      "Effect": "+10% att at long range",
+      "Availability": "Very Rare (VR)",
+      "Cost": 2000
+    },
+    {
+      "Modification": "Temporal Accelerator",
+      "Description": "Temporarily increases rate of fire.",
+      "Effect": "+50% ROF for 5 seconds",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 10000
+    },
+    {
+      "Modification": "Weapon AI Assistant",
+      "Description": "Provides real-time tactical analysis.",
+      "Effect": "+10% att, +5% defense",
+      "Availability": "Very Rare (VR)",
+      "Cost": 3000
+    },
+    {
+      "Modification": "Nano-Fiber Reinforcement",
+      "Description": "Strengthens the weapon’s structural integrity.",
+      "Effect": "+30% durability",
+      "Availability": "Rare (R)",
+      "Cost": 1500
+    },
+    {
+      "Modification": "Regenerative Power Core",
+      "Description": "Slowly recharges energy weapons.",
+      "Effect": "+1 energy per turn",
+      "Availability": "Very Rare (VR)",
+      "Cost": 4000
+    },
+    {
+      "Modification": "Gravity Compensator",
+      "Description": "Reduces weapon recoil.",
+      "Effect": "-20% recoil",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 3000
+    },
+    {
+      "Modification": "Shock Absorption Stock",
+      "Description": "Dampens recoil impact on the user.",
+      "Effect": "-10% recoil",
+      "Availability": "Common (C)",
+      "Cost": 500
+    },
+    {
+      "Modification": "Omni-Tool Mount",
+      "Description": "Adds a multi-tool attachment to the weapon.",
+      "Effect": "Versatile use in the field",
+      "Availability": "Rare (R)",
+      "Cost": 700
+    },
+    {
+      "Modification": "Hydraulic Stabilizer",
+      "Description": "Adds mechanical stability for heavy weapons.",
+      "Effect": "+20% att, +5% defense",
+      "Availability": "Very Rare (VR)",
+      "Cost": 3500
+    },
+    {
+      "Modification": "Psionic Amplifier",
+      "Description": "Enhances psionic-based weapons.",
+      "Effect": "+15% psionic dmg",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 6000
+    },
+    {
+      "Modification": "Elemental Conversion Kit",
+      "Description": "Converts weapon damage type (fire, ice, etc.).",
+      "Effect": "+20% elemental dmg",
+      "Availability": "Rare (R)",
+      "Cost": 1500
+    },
+    {
+      "Modification": "Telemetry Uplink",
+      "Description": "Provides detailed weapon performance feedback.",
+      "Effect": "+5% att, +10% durability",
+      "Availability": "Common (C)",
+      "Cost": 200
+    },
+    {
+      "Modification": "Detachable Bayonet",
+      "Description": "Adds a melee blade to the weapon.",
+      "Effect": "+15 melee dmg",
+      "Availability": "Common (C)",
+      "Cost": 300
+    },
+    {
+      "Modification": "Kinetic Energy Converter",
+      "Description": "Converts kinetic energy into a power boost.",
+      "Effect": "+10% dmg per hit",
+      "Availability": "Rare (R)",
+      "Cost": 2000
+    },
+    {
+      "Modification": "Plasma Containment Unit",
+      "Description": "Stabilizes plasma for safer use.",
+      "Effect": "+5% plasma dmg, +10% safety",
+      "Availability": "Very Rare (VR)",
+      "Cost": 3500
+    },
+    {
+      "Modification": "Sonic Suppressor",
+      "Description": "Silences the weapon's discharge sound.",
+      "Effect": "+10% stealth",
+      "Availability": "Rare (R)",
+      "Cost": 1000
+    },
+    {
+      "Modification": "Arc Discharge Mod",
+      "Description": "Adds electrical charge to melee weapons.",
+      "Effect": "+20 shock dmg",
+      "Availability": "Common (C)",
+      "Cost": 500
+    },
+    {
+      "Modification": "Beam Intensifier",
+      "Description": "Increases the focus of energy beams.",
+      "Effect": "+15% energy dmg",
+      "Availability": "Very Rare (VR)",
+      "Cost": 3000
+    },
+    {
+      "Modification": "Thermal Gel Coating",
+      "Description": "Reduces weapon heating.",
+      "Effect": "-20% heat buildup",
+      "Availability": "Common (C)",
+      "Cost": 800
+    },
+    {
+      "Modification": "Crystalline Power Matrix",
+      "Description": "Enhances weapon power using crystals.",
+      "Effect": "+25% dmg, unique effects",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 10000
+    },
+    {
+      "Modification": "Superconductive Coil",
+      "Description": "Increases energy weapon efficiency.",
+      "Effect": "+10% energy efficiency",
+      "Availability": "Rare (R)",
+      "Cost": 2000
+    },
+    {
+      "Modification": "Laser Diffraction Optics",
+      "Description": "Splits laser beams for multi-target hits.",
+      "Effect": "+5% att on multiple targets",
+      "Availability": "Very Rare (VR)",
+      "Cost": 5000
+    },
+    {
+      "Modification": "Bio-Scanner",
+      "Description": "Scans targets for weaknesses.",
+      "Effect": "+10% att on scanned targets",
+      "Availability": "Rare (R)",
+      "Cost": 3000
+    },
+    {
+      "Modification": "Nano-Plating",
+      "Description": "Enhances the weapon with nanotech armor.",
+      "Effect": "+20% durability",
+      "Availability": "Very Rare (VR)",
+      "Cost": 2500
+    },
+    {
+      "Modification": "Molecular Disassembler",
+      "Description": "Adds molecular disruption to attacks.",
+      "Effect": "+25% dmg against armor",
+      "Availability": "Very Rare (VR)",
+      "Cost": 8000
+    },
+    {
+      "Modification": "Auto-Tuning Resonator",
+      "Description": "Auto-tunes the weapon for optimal performance.",
+      "Effect": "+10% att, +10% dmg",
+      "Availability": "Rare (R)",
+      "Cost": 3000
+    },
+    {
+      "Modification": "Phase Shift Emitter",
+      "Description": "Allows weapon to phase through solid objects.",
+      "Effect": "Ignores 50% cover",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 12000
+    },
+    {
+      "Modification": "Omni-Scope",
+      "Description": "Integrates multiple targeting modes into one scope.",
+      "Effect": "+20% att, all conditions",
+      "Availability": "Very Rare (VR)",
+      "Cost": 10000
+    },
+    {
+      "Modification": "Bio-Feedback Loop",
+      "Description": "Enhances weapon with bio-feedback data.",
+      "Effect": "+10% att, +5% durability",
+      "Availability": "Rare (R)",
+      "Cost": 4000
+    },
+    {
+      "Modification": "Plasma Wave Modulator",
+      "Description": "Enhances plasma weapons with wave-form energy.",
+      "Effect": "+20% plasma dmg",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 8000
+    },
+    {
+      "Modification": "Multi-Phase Module",
+      "Description": "Allows weapon to operate in multiple phases.",
+      "Effect": "+25% versatility",
+      "Availability": "Very Rare (VR)",
+      "Cost": 7000
+    },
+    {
+      "Modification": "Nano-Shield Projector",
+      "Description": "Projects a nano-shield around the user.",
+      "Effect": "+15% defense",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 15000
+    },
+    {
+      "Modification": "Chrono-Stabilizer",
+      "Description": "Stabilizes weapon within the flow of time.",
+      "Effect": "+10% att, +5% ROF",
+      "Availability": "Very Rare (VR)",
+      "Cost": 9000
+    },
+    {
+      "Modification": "Void Pulse Generator",
+      "Description": "Generates pulses that disrupt enemy energy fields.",
+      "Effect": "+20% dmg against shields",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 18000
+    },
+    {
+      "Modification": "Omni-Crafter Module",
+      "Description": "Allows weapon to be reconfigured for various uses.",
+      "Effect": "+10% att, +5% versatility",
+      "Availability": "Very Rare (VR)",
+      "Cost": 7000
+    },
+    {
+      "Modification": "Gravity Lens",
+      "Description": "Focuses gravity waves to enhance projectile impact.",
+      "Effect": "+20% impact dmg",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 13000
+    },
+    {
+      "Modification": "Quantum Wave Disruptor",
+      "Description": "Disrupts enemy quantum states for strategic advantage.",
+      "Effect": "-15% enemy att, -5% evasion",
+      "Availability": "Very Rare (VR)",
+      "Cost": 9000
+    },
+    {
+      "Modification": "Nano-Enhancement Module",
+      "Description": "Adds nanotech enhancements to weapon performance.",
+      "Effect": "+15% att, +10% durability",
+      "Availability": "Extremely Rare (XR)",
+      "Cost": 12000
+    }
+  ]
+  

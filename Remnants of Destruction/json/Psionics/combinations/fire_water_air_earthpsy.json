@@ -1,0 +1,38 @@
+[
+    {
+      "Tier": 17,
+      "Power": "Magma Tornado",
+      "Description": "Create a tornado filled with flames and molten rocks, swirling violently and incinerating all caught within.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 18,
+      "Power": "Scorched Sandstorm",
+      "Description": "Summon a sandstorm infused with fire, scorching winds, and sharp stones that tear through everything in its path.",
+      "Duration": "3 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 19,
+      "Power": "Volcanic Tempest",
+      "Description": "Call forth a tempest of volcanic ash, fire, and wind that engulfs the battlefield, creating havoc.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Infernal Quake",
+      "Description": "Cause an earthquake that cracks open the ground, releasing blasts of fire and sending out windborne rocks.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "World Breaker",
+      "Description": "Unleash a force that breaks the very world, combining the power of fire, air, earth, and lightning in an unstoppable surge.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  

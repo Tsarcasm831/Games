@@ -1,0 +1,143 @@
+[
+    {
+      "Tier": 11,
+      "Power": "Steam Burst",
+      "Description": "Combine fire and water to create a burst of scalding steam.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 11,
+      "Power": "Boiling Wave",
+      "Description": "Send a wave of boiling water towards your enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 55
+    },
+    {
+      "Tier": 12,
+      "Power": "Steam Shield",
+      "Description": "Create a shield of hot steam that burns and obscures vision.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 12,
+      "Power": "Scalding Rain",
+      "Description": "Summon a rain of boiling water over an area.",
+      "Duration": "3 rounds",
+      "Mana Cost": 60
+    },
+    {
+      "Tier": 13,
+      "Power": "Flame Geyser",
+      "Description": "Summon a geyser of water and fire, burning everything it touches.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 13,
+      "Power": "Pyrosteam Jet",
+      "Description": "Release a jet of steam and fire, pushing back and burning targets.",
+      "Duration": "Instant",
+      "Mana Cost": 65
+    },
+    {
+      "Tier": 14,
+      "Power": "Boiling Mist",
+      "Description": "Surround the area with a thick mist of boiling water and steam.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 14,
+      "Power": "Scalding Pool",
+      "Description": "Create a pool of boiling water that scalds anything within.",
+      "Duration": "3 rounds",
+      "Mana Cost": 70
+    },
+    {
+      "Tier": 15,
+      "Power": "Steam Dragon",
+      "Description": "Summon a dragon made of steam and fire to attack your enemies.",
+      "Duration": "3 rounds",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 15,
+      "Power": "Flame Tide",
+      "Description": "Call forth a wave of water mixed with fire, causing widespread burns.",
+      "Duration": "Instant",
+      "Mana Cost": 75
+    },
+    {
+      "Tier": 16,
+      "Power": "Boiling Sea",
+      "Description": "Turn a body of water into a boiling sea, damaging all within.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 16,
+      "Power": "Steam Armor",
+      "Description": "Envelop yourself in a layer of steam and fire, scalding attackers.",
+      "Duration": "3 rounds",
+      "Mana Cost": 80
+    },
+    {
+      "Tier": 17,
+      "Power": "Scalding Torrent",
+      "Description": "Release a torrent of boiling water and steam, burning all it touches.",
+      "Duration": "Instant",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 17,
+      "Power": "Flame Steam Prison",
+      "Description": "Trap an enemy in a prison of steam and fire, causing constant damage.",
+      "Duration": "2 rounds",
+      "Mana Cost": 85
+    },
+    {
+      "Tier": 18,
+      "Power": "Steam Explosion",
+      "Description": "Cause an explosion of steam and fire, burning and disorienting enemies.",
+      "Duration": "Instant",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 18,
+      "Power": "Inferno Rain",
+      "Description": "Call down a rain of fire and steam to scorch the battlefield.",
+      "Duration": "3 rounds",
+      "Mana Cost": 90
+    },
+    {
+      "Tier": 19,
+      "Power": "Boiling Maelstrom",
+      "Description": "Create a maelstrom of boiling water and fire, trapping and incinerating everything within.",
+      "Duration": "3 rounds",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 19,
+      "Power": "Pyrothermal Surge",
+      "Description": "Summon a surge of boiling steam that incinerates and electrocutes all in its path.",
+      "Duration": "Instant",
+      "Mana Cost": 95
+    },
+    {
+      "Tier": 20,
+      "Power": "Sea of Flames",
+      "Description": "Turn an entire body of water into a sea of fire and boiling water.",
+      "Duration": "5 rounds",
+      "Mana Cost": 100
+    },
+    {
+      "Tier": 20,
+      "Power": "Steam God's Wrath",
+      "Description": "Unleash the wrath of steam and fire, causing devastation in a wide radius.",
+      "Duration": "Instant",
+      "Mana Cost": 100
+    }
+  ]
+  
