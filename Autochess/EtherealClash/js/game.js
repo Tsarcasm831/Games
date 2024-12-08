@@ -20,20 +20,50 @@ class MainScene extends Phaser.Scene {
             hexGrid = new HexGrid(this);
             shop = new Shop();
             
+            // Enable drag and drop functionality
+            this.input.on('dragstart', function (pointer, gameObject) {
+                // Store original position in case we need to return
+                gameObject.originalX = gameObject.x;
+                gameObject.originalY = gameObject.y;
+                gameObject.setDepth(1); // Bring dragged unit to front
+            });
+
             this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
                 gameObject.x = dragX;
                 gameObject.y = dragY;
             });
             
             this.input.on('dragend', function (pointer, gameObject) {
+                gameObject.setDepth(0); // Reset depth after drag
                 const hex = hexGrid.getHexAtPosition(gameObject.x, gameObject.y);
                 if (hex) {
-                    const success = hexGrid.placeUnit(gameObject, hex);
-                    if (!success) {
-                        gameObject.destroy();
+                    const result = hexGrid.placeUnit(gameObject, hex);
+                    if (!result.success) {
+                        // Return to original position
+                        gameObject.x = gameObject.originalX;
+                        gameObject.y = gameObject.originalY;
+                        
+                        // Show error message
+                        const text = mainScene.add.text(gameObject.x, gameObject.y - 40, result.reason, {
+                            fontSize: '16px',
+                            fill: '#ff0000',
+                            backgroundColor: '#ffffff',
+                            padding: { x: 5, y: 2 }
+                        });
+                        text.setOrigin(0.5);
+                        
+                        // Fade out and destroy the text after 2 seconds
+                        mainScene.tweens.add({
+                            targets: text,
+                            alpha: 0,
+                            duration: 2000,
+                            onComplete: () => text.destroy()
+                        });
                     }
                 } else {
-                    gameObject.destroy();
+                    // Return to original position if dropped outside grid
+                    gameObject.x = gameObject.originalX;
+                    gameObject.y = gameObject.originalY;
                 }
             });
             console.log('Game initialization completed');

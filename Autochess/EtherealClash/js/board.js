@@ -36,9 +36,27 @@ class HexGrid {
     createHex(x, y) {
         const hex = this.scene.add.graphics();
         
-        // Use a more visible color scheme
-        hex.fillStyle(0x4a90e2, 0.4);  // Lighter fill
-        hex.lineStyle(2, 0x2980b9, 0.8);  // More visible border
+        // Get the row number from y coordinate
+        const row = Math.floor((y - gameConfig.boardOffsetY) / (gameConfig.hexSize * 1.5));
+        
+        // Set color based on territory
+        let fillColor = 0x4a90e2;  // Default blue for neutral territory
+        let fillAlpha = 0.4;
+        let borderColor = 0x2980b9;
+        let borderAlpha = 0.8;
+
+        if (row <= 2) {  // Enemy territory (top 3 rows)
+            fillColor = 0xff0000;  // Red
+            fillAlpha = 0.3;
+            borderColor = 0xcc0000;
+        } else if (row >= 5) {  // Friendly territory (bottom 3 rows)
+            fillColor = 0x00ff00;  // Green
+            fillAlpha = 0.3;
+            borderColor = 0x00cc00;
+        }
+        
+        hex.fillStyle(fillColor, fillAlpha);
+        hex.lineStyle(2, borderColor, borderAlpha);
         
         const size = gameConfig.hexSize;
         const points = [];
@@ -73,12 +91,12 @@ class HexGrid {
         for (let row = 0; row < this.hexes.length; row++) {
             for (let col = 0; col < this.hexes[row].length; col++) {
                 const hex = this.hexes[row][col];
+                const hexSprite = hex.sprite;
                 const distance = Phaser.Math.Distance.Between(
-                    x,
-                    y,
-                    hex.sprite.x,
-                    hex.sprite.y
+                    x, y,
+                    hexSprite.x, hexSprite.y
                 );
+                
                 if (distance < gameConfig.hexSize) {
                     return hex;
                 }
@@ -88,13 +106,26 @@ class HexGrid {
     }
 
     placeUnit(unit, hex) {
-        if (hex.unit) {
-            return false;
+        // Check if hex is already occupied
+        if (hex.unit !== null) {
+            return { success: false, reason: 'This hex is already occupied' };
         }
-        
+
+        // Check if hex is in friendly territory (bottom 3 rows)
+        if (hex.coords.row < 5) {  // Only allow placement in rows 5 and above (friendly territory)
+            return { success: false, reason: 'Champions can only be placed in friendly territory' };
+        }
+
+        // Update unit position to hex center
         unit.x = hex.sprite.x;
         unit.y = hex.sprite.y;
+        
+        // Make unit not draggable while on board
+        unit.input.draggable = false;
+        
+        // Store unit reference in hex
         hex.unit = unit;
-        return true;
+        
+        return { success: true };
     }
 }
