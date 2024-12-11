@@ -112,4 +112,10 @@ function setupTradeSlotEventListeners(playerGrid, playerItems, npcItems, npcGrid
 }
 
 // Open trade interface when clicking the "Trade" button in NPC popup
-document.getElementById('tradeButton').addEventListener('click', () => openTradeInterface(npcInventory));
+document.getElementById('tradeButton').addEventListener('click', () => {
+    if (currentTradeNPC) {
+        openTradeInterface(currentTradeNPC.userData.inventory);
+    } else {
+        console.error('No NPC selected for trading.');
+    }
+});

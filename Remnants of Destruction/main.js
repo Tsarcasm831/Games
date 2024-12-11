@@ -96,8 +96,9 @@ function onDocumentKeyDown(event) {
     }
 
     if (event.key.toLowerCase() === 'c') {
-        statsOpen = !statsOpen;
-        document.getElementById('stats').style.display = statsOpen ? 'block' : 'none';
+        statsOpen = true; 
+        document.getElementById('stats').style.display = 'block';
+        console.log('C key pressed. Stats opened.'); 
         return;
     }
 
@@ -176,6 +177,8 @@ document.getElementById('closeHelp').addEventListener('click', function() {
 
 // Add keyup event listener
 document.addEventListener('keyup', onDocumentKeyUp, false);
+
+document.addEventListener('keydown', onDocumentKeyDown);
 
 function onDocumentMouseDown(event) {
     // Set destination if clicking on ground
@@ -913,7 +916,3 @@ function onWindowResize() {
 initMap();
 init();
 animate();
-
-
-
-

@@ -230,6 +230,7 @@ function createFriendlyNPC(color = 0x00ff00, name = 'Friendly NPC', dialogue = '
     npc.userData.type = 'friendly';
     npc.userData.name = name;
     npc.userData.dialogue = dialogue;
+    console.log(`Created NPC: ${name}, Dialogue: ${dialogue}`); // Debugging statement
     return npc;
 }
 

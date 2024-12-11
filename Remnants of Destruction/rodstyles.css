@@ -20,6 +20,27 @@ body, html {
     color: #e0e0e0; /* Light text for readability */
 }
 
+#stats {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(30, 30, 30, 0.9); /* Dark background */
+    color: #e0e0e0; /* Light text */
+    padding: 20px;
+    border: 2px solid #444; /* Border for definition */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: none; /* Hidden by default */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+    animation: fadeIn 0.3s forwards; /* Fade-in animation */
+}
+
+/* Animation for showing the stats */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 #inventory {
     position: fixed; /* Changed from absolute for better modal behavior */

@@ -1,0 +1,17 @@
+{
+  "name": "remnants-of-destruction",
+  "version": "1.0.0",
+  "description": "A game project for Remnants of Destruction",
+  "main": "index.html",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}

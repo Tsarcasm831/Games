@@ -27,8 +27,10 @@ function updateInventoryDisplay() {
 
         // Filter items based on selected type
         let filteredItems;
-        if (selectedType === 'all') {
-            filteredItems = [...playerInventory];
+        if (selectedType === 'picked_up') {
+            filteredItems = playerInventory.filter(item => item.isPickedUp);
+        } else if (selectedType === 'purchased') {
+            filteredItems = playerInventory.filter(item => item.isPurchased);
         } else {
             filteredItems = playerInventory.filter(item => item.type.toLowerCase() === selectedType);
         }
@@ -44,13 +46,12 @@ function updateInventoryDisplay() {
 // Helper function to map tabId to item type
 function getTypeByTabId(tabId) {
     const mapping = {
-        'tab1': 'all',          // Assuming 'tab1' is "All"
+        'tab1': 'picked_up',  // Changed from 'all' to 'picked_up'
         'tab2': 'equipment',
         'tab3': 'material',
         'tab4': 'consumable',
         'tab5': 'quest',
-        'tab6': 'misc',
-        'tab7': 'special'       // If you have a seventh tab
+        'tab6': 'purchased',    // Added a new tab for purchased items
     };
     return mapping[tabId] || 'misc';
 }
@@ -209,20 +210,20 @@ function loadInventory() {
         return;
     }
 
-    fetch('inventory.html')
-        .then(response => response.text())
-        .then(html => {
-            const inventoryPlaceholder = document.getElementById('inventoryPlaceholder');
-            if (!inventoryPlaceholder) {
-                console.error('inventoryPlaceholder element not found.');
-                return;
-            }
-            inventoryPlaceholder.innerHTML = html;
-            inventoryLoaded = true;
-            initializeInventory();
-            toggleInventoryDisplay();
-        })
-        .catch(error => console.error('Error loading inventory:', error));
+    const inventoryElement = document.getElementById('inventory');
+    if (!inventoryElement) {
+        console.error('Inventory element not found in the DOM');
+        return;
+    }
+
+    try {
+        inventoryLoaded = true;
+        initializeInventory();
+        toggleInventoryDisplay();
+    } catch (error) {
+        console.error('Error initializing inventory:', error);
+        inventoryLoaded = false;
+    }
 }
 
 // Function to initialize inventory after loading HTML
@@ -241,11 +242,10 @@ function toggleInventoryDisplay() {
 
 // Function to close inventory (if you have a close button)
 function closeInventory() {
-    inventoryLoaded = false;
-    const inventory = document.getElementById("inventory");
-    if (inventory) {
-        inventory.style.display = "none";
-    }
+    document.getElementById('inventory').style.display = 'none';
+    inventoryOpen = false; // Update the state to reflect that inventory is closed
+    // Optionally refresh the inventory display
+    populateInventoryGrid(document.getElementById('inventoryGridTab1'), playerInventory);
 }
 
 // Event listener to load inventory when 'I' key is pressed
@@ -258,13 +258,12 @@ document.addEventListener('keydown', (event) => {
 // Function to map tabId to types, in case needed
 function getTypeByTabId(tabId) {
     const mapping = {
-        'tab1': 'all',          // Assuming 'tab1' is "All"
+        'tab1': 'picked_up',  // Changed from 'all' to 'picked_up'
         'tab2': 'equipment',
         'tab3': 'material',
         'tab4': 'consumable',
         'tab5': 'quest',
-        'tab6': 'misc',
-        'tab7': 'special'       // If you have a seventh tab
+        'tab6': 'purchased',    // Added a new tab for purchased items
     };
     return mapping[tabId] || 'misc';
 }
@@ -287,3 +286,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('generateRandomItems function is not available. Ensure randomitems.js is loaded.');
     }
 });
+
+const closeButton = document.querySelector('.close-button');
+if (closeButton) {
+    closeButton.addEventListener('click', closeInventory);
+} else {
+    console.error('Close button not found in the DOM.');
+}

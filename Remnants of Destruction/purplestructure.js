@@ -53,7 +53,7 @@ function createPurpleStructure() {
 	const floorMaterial = new THREE.MeshLambertMaterial({ color: 0x000000 });
 	const floor = new THREE.Mesh(floorGeometry, floorMaterial);
 	floor.rotation.x = -Math.PI / 2;
-	floor.position.y = 0.1; // Slightly above ground to avoid z-fighting
+	floor.position.y = 0.9; // Slightly above ground to avoid z-fighting
 	building.add(floor);
 
 	return building;
