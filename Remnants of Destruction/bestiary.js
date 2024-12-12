@@ -46,7 +46,10 @@ function initializeBestiary() {
                 PER: 55,
                 CHA: 70,
                 PSY: 30
-            }
+            },
+            rarity: 'common',
+            species: 'human',
+            cost: '1'
         },
         tal_ehn: {
             highResImage: {
@@ -71,7 +74,10 @@ function initializeBestiary() {
                 PER: 80,
                 CHA: 70,
                 PSY: 200
-            }
+            },
+            rarity: 'rare',
+            species: 'alien',
+            cost: '5'
         },
         anthromorph: {
             highResImage: {
@@ -96,7 +102,10 @@ function initializeBestiary() {
                 PER: 100,
                 CHA: 40,
                 PSY: 20
-            }
+            },
+            rarity: 'uncommon',
+            species: 'anthromorph',
+            cost: '3'
         },
         avianos: {
             highResImage: {
@@ -121,7 +130,10 @@ function initializeBestiary() {
                 PER: 120,
                 CHA: 50,
                 PSY: 40
-            }
+            },
+            rarity: 'common',
+            species: 'avian',
+            cost: '2'
         },
         behemoth: {
             highResImage: {
@@ -146,7 +158,10 @@ function initializeBestiary() {
                 PER: 40,
                 CHA: 10,
                 PSY: 20
-            }
+            },
+            rarity: 'legendary',
+            species: 'behemoth',
+            cost: '10'
         },
         chiropteran: {
             highResImage: {
@@ -171,7 +186,10 @@ function initializeBestiary() {
                 PER: 110,
                 CHA: 30,
                 PSY: 50
-            }
+            },
+            rarity: 'uncommon',
+            species: 'chiropteran',
+            cost: '4'
         },
         dengar_charger: {
             highResImage: {
@@ -196,7 +214,10 @@ function initializeBestiary() {
                 PER: 50,
                 CHA: 20,
                 PSY: 30
-            }
+            },
+            rarity: 'rare',
+            species: 'dengar',
+            cost: '6'
         },
         kilrathi: {
             highResImage: {
@@ -221,7 +242,10 @@ function initializeBestiary() {
                 PER: 100,
                 CHA: 50,
                 PSY: 30
-            }
+            },
+            rarity: 'rare',
+            species: 'kilrathi',
+            cost: '7'
         },
         prometheus_ai: {
             highResImage: {
@@ -246,7 +270,10 @@ function initializeBestiary() {
                 PER: 120,
                 CHA: 0,
                 PSY: 100
-            }
+            },
+            rarity: 'epic',
+            species: 'ai',
+            cost: '8'
         },
         talorian: {
             highResImage: {
@@ -271,7 +298,10 @@ function initializeBestiary() {
                 PER: 60,
                 CHA: 120,
                 PSY: 40
-            }
+            },
+            rarity: 'rare',
+            species: 'talorian',
+            cost: '9'
         },
         tana_rhe: {
             highResImage: {
@@ -296,7 +326,10 @@ function initializeBestiary() {
                 PER: 100,
                 CHA: 70,
                 PSY: 150
-            }
+            },
+            rarity: 'legendary',
+            species: 'tana_rhe',
+            cost: '10'
         },
         vyraxus: {
             highResImage: {
@@ -321,7 +354,10 @@ function initializeBestiary() {
                 PER: 50,
                 CHA: 10,
                 PSY: 30
-            }
+            },
+            rarity: 'uncommon',
+            species: 'vyraxus',
+            cost: '5'
         },
         xithrian: {
             highResImage: {
@@ -346,7 +382,10 @@ function initializeBestiary() {
                 PER: 90,
                 CHA: 70,
                 PSY: 60
-            }
+            },
+            rarity: 'epic',
+            species: 'xithrian',
+            cost: '8'
         }
     };
     
@@ -404,6 +443,11 @@ function renderBestiary() {
             const creature = window.bestiary[key];
             const creatureCard = document.createElement('div');
             creatureCard.classList.add('creature-card');
+            
+            // Add data attributes for rarity, species, and cost
+            creatureCard.setAttribute('data-rarity', creature.rarity || 'common');
+            creatureCard.setAttribute('data-species', creature.species || 'Unknown');
+            creatureCard.setAttribute('data-cost', creature.cost || '1');
 
             creatureCard.innerHTML = `
                 <img src="${creature.highResImage.src}" alt="${creature.name}" class="creature-image" loading="lazy">
@@ -413,7 +457,6 @@ function renderBestiary() {
                     <button class="view-details-button" data-creature="${key}">View Details</button>
                 </div>
             `;
-
 
             bestiaryDiv.appendChild(creatureCard);
         }
@@ -438,45 +481,90 @@ function displayRaceDetails(creatureKey) {
     if (!creature) return;
 
     const detailsModal = document.getElementById('creatureDetailsModal');
-    const detailsContent = document.getElementById('creatureDetailsContent');
+    const modalContent = detailsModal.querySelector('.modal-content');
+    
+    // Truncate long descriptions
+    const truncate = (text, maxLength = 150) => {
+        return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+    };
 
-    detailsContent.innerHTML = `
-        <div class="creature-detail-header">
-            <img src="${creature.highResImage.src}" alt="${creature.name}" class="creature-detail-image" loading="lazy">
-            <div class="stats-container">
-                ${generateStatsHTML(creature.stats)}
+    // Generate stats bar HTML
+    const generateStatsBar = (statValue) => {
+        const percentage = Math.min(100, Math.max(0, statValue));
+        return `
+            <div class="stats-bar">
+                <div class="stats-progress" style="width: ${percentage}%"></div>
             </div>
-        </div>
-        <h2>${creature.name}</h2>
-        <p>${creature.extendedDescription}</p>
-        <h3>History</h3>
-        <p>${creature.history}</p>
-        <h3>Abilities</h3>
-        <p>${creature.abilities}</p>
-        <h3>Culture</h3>
-        <p>${creature.culture}</p>
-        <div id="model-container-${creatureKey}" class="model-container"></div>
-    `;
+        `;
+    };
 
+    // Clear previous content and populate with sections
+    modalContent.innerHTML = '';
 
-    detailsModal.classList.add('show');
-    detailsModal.setAttribute('aria-hidden', 'false');
-
-    // Close Race Details Modal
-    const closeDetailsButton = detailsModal.querySelector('.close-details');
-    closeDetailsButton.addEventListener('click', () => {
-        closeCreatureDetails(creatureKey);
-    });
-
-    // Close when clicking outside the modal content
-    detailsModal.addEventListener('click', (event) => {
-        if (event.target === detailsModal) {
-            closeCreatureDetails(creatureKey);
+    // Create sections for different types of information
+    const sections = [
+        {
+            title: 'Description',
+            content: truncate(creature.description + ' ' + creature.extendedDescription)
+        },
+        {
+            title: 'History',
+            content: truncate(creature.history)
+        },
+        {
+            title: 'Abilities',
+            content: truncate(creature.abilities)
+        },
+        {
+            title: 'Culture',
+            content: truncate(creature.culture)
+        },
+        {
+            title: 'Stats',
+            content: Object.entries(creature.stats).map(([statName, statValue]) => `
+                <div class="creature-details-section">
+                    <strong>${statName}:</strong> ${statValue}
+                    ${generateStatsBar(statValue)}
+                </div>
+            `).join('')
         }
+    ];
+
+    // Create a card for each section
+    sections.forEach(section => {
+        const sectionCard = document.createElement('div');
+        sectionCard.className = 'creature-details-card';
+        
+        // First card will have the image
+        if (section.title === 'Description') {
+            sectionCard.innerHTML = `
+                <img src="${creature.highResImage.src}" alt="${creature.name}" class="creature-details-image">
+                <div class="creature-details-info">
+                    <h3>${creature.name}</h3>
+                </div>
+            `;
+        }
+
+        // Add section content
+        sectionCard.innerHTML += `
+            <div class="creature-details-info">
+                <h3>${section.title}</h3>
+                <p>${section.content}</p>
+            </div>
+        `;
+
+        modalContent.appendChild(sectionCard);
     });
 
-    // Load 3D model
-    loadCreatureModel(creature.modelName, `model-container-${creatureKey}`);
+    // Add close button
+    const closeButton = document.createElement('button');
+    closeButton.className = 'close-details-btn';
+    closeButton.textContent = 'Close';
+    closeButton.onclick = () => closeCreatureDetails(creatureKey);
+    modalContent.appendChild(closeButton);
+
+    // Show the modal
+    detailsModal.classList.add('show');
 }
 
 /**
@@ -596,7 +684,33 @@ function closeBestiary() {
  * Populates the bestiary modal with all races.
  */
 function populateBestiaryModal() {
-    renderBestiary();
+    const bestiaryContent = document.querySelector('.bestiary-content');
+    bestiaryContent.innerHTML = ''; // Clear existing content
+
+    // Sort creature keys alphabetically
+    const sortedCreatures = Object.keys(window.bestiary).sort();
+
+    sortedCreatures.forEach(creatureKey => {
+        const creature = window.bestiary[creatureKey];
+        
+        // Truncate description for card
+        const truncateDescription = (text, maxLength = 50) => {
+            return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+        };
+
+        const creatureCard = document.createElement('div');
+        creatureCard.className = 'creature-card';
+        creatureCard.innerHTML = `
+            <img src="${creature.highResImage.src}" alt="${creature.name}" class="creature-image" loading="lazy">
+            <div class="creature-info">
+                <h3>${creature.name}</h3>
+                <p>${truncateDescription(creature.description)}</p>
+                <button class="view-details-button" onclick="displayRaceDetails('${creatureKey}')">View Details</button>
+            </div>
+        `;
+
+        bestiaryContent.appendChild(creatureCard);
+    });
 }
 
 /**

@@ -211,54 +211,38 @@ class BackgroundMusicPlayer {
     }
 
     initializeYouTubePlayers() {
-        // Find YouTube track indexes
-        this.youtubeTrackIndexes = this.tracks.reduce((indexes, track, index) => {
-            if (track.includes('youtube.com')) indexes.push(index);
-            return indexes;
-        }, []);
-
-        // Only initialize if YouTube tracks exist
-        if (this.youtubeTrackIndexes.length > 0) {
-            try {
-                this.youtubePlayerContainer = document.getElementById('youtubePlayerContainer');
-                
-                // Add error event listener for postMessage communication
-                window.addEventListener('message', (event) => {
-                    // Validate the origin to prevent security risks
-                    if (event.origin !== "https://www.youtube.com") {
-                        console.warn('Blocked postMessage from untrusted origin:', event.origin);
-                        return;
-                    }
-                    
-                    // Handle specific YouTube widget events
-                    if (event.data && event.data.info) {
-                        console.log('YouTube Widget Event:', event.data.info);
-                    }
-                }, false);
-
-                this.youtubePlayer = new YT.Player('youtubePlayerContainer', {
+        const youtubeLinks = this.tracks.filter(track => track.includes('youtube.com'));
+        
+        if (youtubeLinks.length > 0) {
+            this.youtubePlayerContainer = document.getElementById('youtubePlayerContainer');
+            
+            // Ensure the container exists before creating the player
+            if (this.youtubePlayerContainer) {
+                this.youtubePlayer = new YT.Player(this.youtubePlayerContainer, {
                     height: '0',
                     width: '0',
-                    videoId: this.extractYouTubeVideoId(this.tracks[this.youtubeTrackIndexes[0]]),
+                    videoId: this.extractYouTubeVideoId(youtubeLinks[0]),
+                    playerVars: {
+                        'autoplay': 0,
+                        'controls': 0,
+                        'disablekb': 1,
+                        'modestbranding': 1,
+                        'showinfo': 0
+                    },
                     events: {
                         'onReady': (event) => {
                             console.log('YouTube Player Ready');
-                            // Explicitly set target origin for postMessage
-                            event.target.origin = 'https://www.youtube.com';
                         },
-                        'onError': (error) => {
-                            console.error('YouTube Player Error:', error);
+                        'onError': (event) => {
+                            console.error('YouTube Player Error:', event);
                         }
                     }
                 });
-            } catch (error) {
-                console.error('Failed to initialize YouTube Player:', error);
             }
         }
     }
 
     extractYouTubeVideoId(url) {
-        // Extract video ID from YouTube URL
         const match = url.match(/[?&]v=([^&]+)/);
         return match ? match[1] : null;
     }

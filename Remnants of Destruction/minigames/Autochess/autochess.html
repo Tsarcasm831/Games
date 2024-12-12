@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereal Clash - Autochess Game</title>
+    <link rel="icon" href="https://file.garden/Zy7B0LkdIVpGyzA1/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/champion-popup.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <div class="game-ui">
+            <div class="player-stats">
+                <span class="health-icon">❤️</span>
+                <span id="player-health">100</span>
+                <span class="gold-icon">💰</span>
+                <span id="gold-amount">10</span>
+            </div>
+            <div class="timer" id="phase-timer">30</div>
+            <button id="start-game" class="start-button" disabled>Start Game</button>
+        </div>
+    </div>
+    
+    <div id="shop-container">
+        <div class="shop-section">
+            <h2>Shop</h2>
+            <div id="units-shop"></div>
+            <button id="refresh-shop">Refresh Shop (2 💰)</button>
+        </div>
+        
+        <div id="synergy-container">
+            <h2>Active Synergies</h2>
+            <!-- Synergies will be added here dynamically -->
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/Units/unitTypes.js"></script>
+    <script src="js/synergy.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/unit.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

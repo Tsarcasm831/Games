@@ -2,6 +2,7 @@
     <head>
         <title>Remnants of Destruction v0.4.0</title>
         <link rel="stylesheet" type="text/css" href="rodstyles.css">
+        <link rel="stylesheet" type="text/css" href="rodstyles2.css">
         <link rel="stylesheet" type="text/css" href="styles/admin.css">
         <link rel="stylesheet" type="text/css" href="styles/bestiary.css">
         <link rel="stylesheet" type="text/css" href="styles/gameCanvas.css">
@@ -28,7 +29,8 @@
                 scrolling="no"
                 title="Audio Control Widget" 
                 loading="lazy"
-                sandbox="allow-scripts allow-same-origin allow-forms">
+                sandbox="allow-scripts allow-same-origin allow-forms allow-top-navigation"
+                referrerpolicy="no-referrer">
             </iframe>
             <!-- Minimize/Maximize Button -->
             <button id="toggleAudioWidget" class="toggle-button">_</button>
@@ -270,14 +272,101 @@
             <button onclick="closeNpcPopup()">Close</button>
         </div>
 
-        <div id="tradeWindow" class="modal">
-            <div id="npcInventoryGrid" class="inventory-tab-content"></div>
-            <p id="npcGoldAmount"></p>
-            <div id="playerInventoryGrid" class="inventory-tab-content"></div>
-            <button onclick="closeTradeInterface()">Close Trade</button>
+        <div id="tradeWindow" class="modal" aria-hidden="true">
+            <div class="modal-content trade-modal-content">
+                <button id="closeTradeWindow" class="close-button" aria-label="Close Trade Window">&times;</button>
+                <div class="trade-container">
+                    <div class="trade-section npc-trade-section">
+                        <h3>NPC Inventory</h3>
+                        <div id="npcInventoryGrid" class="inventory-grid"></div>
+                        <div class="npc-gold">Gold: 0</div>
+                    </div>
+                    <div class="trade-section trade-slots">
+                        <div class="trade-grid">
+                            <div id="sellSlot" class="trade-slot sell-slot">Sell Items</div>
+                            <div id="buySlot" class="trade-slot buy-slot">Buy Items</div>
+                        </div>
+                        <button id="confirmTradeButton">Confirm Trade</button>
+                    </div>
+                    <div class="trade-section player-trade-section">
+                        <h3>Your Inventory</h3>
+                        <div id="playerInventoryGrid" class="inventory-grid"></div>
+                        <div class="player-gold">Your Gold: 0</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        
+
+        <div id="lootBarContainer">
+            <div id="lootBar"></div>
+        </div>
+        <!-- Trait Selection Modal -->
+        <div id="traitSelectionModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="traitSelectionTitle">
+            <div class="modal-content">
+                <button class="close-trait-selection close-button" aria-label="Close Trait Selection">&times;</button>
+                <h2 id="traitSelectionTitle">Select Your Traits</h2>
+                <div id="traitOptions">
+                    <!-- Trait options will be dynamically added here -->
+                </div>
+                <button onclick="confirmTraitSelection()">Confirm Traits</button>
+            </div>
+        </div>
+
+        <div id="lootPopup">
+            <h2>Loot</h2>
+            <div id="lootItems"></div>
+            <button onclick="lootAllItems()">Loot All</button>
+        </div>
+
+        <div id="npcAdminPopup" style="display: none;">
+            <h2>NPC Admin</h2>
+            <p>Name: <input type="text" id="npcNameInput"></p>
+            <p>Health: <input type="number" id="npcHealthInput" step="1"></p>
+            <p>Dialogue:</p>
+		
+		    <!-- Add color inputs for body parts -->
+		    <p>Head Color: <input type="color" id="npcHeadColorInput"></p>
+		    <p>Body Color: <input type="color" id="npcBodyColorInput"></p>
+		    <p>Arm Color: <input type="color" id="npcArmColorInput"></p>
+		    <p>Leg Color: <input type="color" id="npcLegColorInput"></p>
+
+            <textarea id="npcDialogueInput" rows="4" cols="50"></textarea>
+            <br>
+            <button onclick="saveNpcChanges()">Save Changes</button>
+            <button onclick="closeNpcAdminPopup()">Close</button>
+        </div>
+
+        <div id="chestPopup" style="display: none;">
+            <h2>Chest Interaction</h2>
+            <div id="chestInventoryContainer">
+                <div>
+                    <h3>Chest Inventory</h3>
+                    <div id="chestInventoryGrid" class="inventoryGrid"></div>
+                </div>
+                <div>
+                    <h3>Your Inventory</h3>
+                    <div id="playerInventoryInChestGrid" class="inventoryGrid"></div>
+                </div>
+            </div>
+            <button onclick="closeChestPopup()">Close</button>
+        </div>
+
+        <!-- Quest Log Popup -->
+        <div id="questLog" style="display: none;">
+            <h2>Quest Log</h2>
+            <ul id="questList">
+                <!-- Quests will be dynamically added here -->
+            </ul>
+            <button onclick="closeQuestLog()">Close Quest Log</button>
+        </div>
+
+	    <div id="structureAdminPopup" style="display: none;">
+		    <h2>Structure Admin</h2>
+		    <p>Scale: <input type="number" id="structureScaleInput" value="1" step="0.1"></p>
+		    <p>Color: <input type="color" id="structureColorInput"></p>
+		    <button onclick="saveStructureChanges()">Save Changes</button>
+		    <button onclick="closeStructureAdminPopup()">Close</button>
+	    </div>
 
         <!-- Health Orb -->
         <div id="lifeOrb" class="orb">
@@ -481,6 +570,138 @@
 		    <button onclick="saveStructureChanges()">Save Changes</button>
 		    <button onclick="closeStructureAdminPopup()">Close</button>
 	    </div>
+
+        <!-- Health Orb -->
+        <div id="lifeOrb" class="orb">
+            <div id="lifeFill" class="orb-fill">
+                <div class="bubbles">
+                    <!-- Multiple bubble elements for animation -->
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                </div>
+            </div>
+            <div id="lifeValue" class="orb-value">100%</div>
+        </div>
+
+        <!-- Energy Orb -->
+        <div id="energyOrb" class="orb">
+            <div id="energyFill" class="orb-fill">
+                <div class="liquid"></div>
+            </div>
+            <div id="energyValue" class="orb-value">100%</div>
+        </div>
+
+        <div id="teleportationBarContainer">
+            <div id="teleportationBar"></div>
+        </div>
+        <!-- Add Loading Indicator HTML -->
+        <div id="adminLoading" class="loading-overlay" style="display: none;">
+            <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Admin Console Modal -->
+        <div id="adminConsole" class="modal" aria-hidden="true" role="dialog" aria-labelledby="adminConsoleTitle">
+            <div class="modal-content">
+                <button class="close-button" onclick="closeAdminConsole()" aria-label="Close Admin Console">&times;</button>
+                <h2 id="adminConsoleTitle">Admin Console</h2>
+                
+                <div class="theme-toggle-container">
+                    <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="admin-tabs">
+                    <button class="tab-button active" data-tab="adminLogin">Login</button>
+                    <button class="tab-button" data-tab="playerManagement">Player Management</button>
+                    <button class="tab-button" data-tab="gameSettings">Game Settings</button>
+                    <button class="tab-button" data-tab="spawnOptions">Spawn Options</button>
+                    <button class="tab-button" data-tab="teleportPlayer">Teleport Player</button>
+                    <button class="tab-button" data-tab="npcAdmin">NPC Admin</button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="admin-tab-content active" id="adminLogin">
+                    <h3>Admin Login</h3>
+                    <p>Please enter the admin password:</p>
+                    <input type="password" id="adminPassword" placeholder="Enter Password">
+                    <button onclick="checkAdminPassword()">Submit</button>
+                </div>
+                
+                <div class="admin-tab-content" id="playerManagement">
+                    <h3>Player Management</h3>
+                    <section>
+                        <h4>Player Stats</h4>
+                        <p>Health: <input type="number" id="playerHealthInput" value="100" step="1" min="0"></p>
+                        <p>Gold: <input type="number" id="playerGoldInput" value="0" step="1" min="0"></p>
+                        <p>Experience: <input type="number" id="playerExperienceInput" value="0" step="1" min="0"></p>
+                        <button onclick="updatePlayerStats()">Update Player Stats</button>
+                    </section>
+                    <section>
+                        <h4>Player Options</h4>
+                        <p>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="invulnerabilityCheckbox"> Invulnerable
+                            </label>
+                        </p>
+                        <button onclick="updatePlayerOptions()">Update Player Options</button>
+                    </section>
+                </div>
+                
+                <div class="admin-tab-content" id="gameSettings">
+                    <h3>Game Settings</h3>
+                    <section>
+                        <h4>Enemy Speed</h4>
+                        <p>Enemy Speed: <input type="number" id="enemySpeedInput" value="0.7" step="0.1" min="0"></p>
+                        <button onclick="updateGameSettings()">Update Game Settings</button>
+                    </section>
+                </div>
+                
+                <div class="admin-tab-content" id="spawnOptions">
+                    <h3>Spawn Options</h3>
+                    <section>
+                        <h4>Spawn Entities</h4>
+                        <p>Entity Type:
+                            <select id="entityTypeSelect">
+                                <option value="enemy">Enemy</option>
+                                <option value="friendlyNPC">Friendly NPC</option>
+                                <option value="structure">Structure</option>
+                                <option value="treasureChest">Treasure Chest</option>
+                                <option value="settlement">Settlement</option>
+                                <option value="quadruped">Quadruped</option>
+                            </select>
+                        </p>
+                        <p>Quantity: <input type="number" id="entityQuantityInput" value="1" step="1" min="1"></p>
+                        <button onclick="spawnEntities()">Spawn Entities</button>
+                    </section>
+                </div>
+                
+                <div class="admin-tab-content" id="teleportPlayer">
+                    <h3>Teleport Player</h3>
+                    <section>
+                        <h4>Set Player Coordinates</h4>
+                        <p>X: <input type="number" id="teleportXInput" value="0" step="1"></p>
+                        <p>Z: <input type="number" id="teleportZInput" value="0" step="1"></p>
+                        <button onclick="teleportPlayer()">Teleport Player</button>
+                    </section>
+                </div>
+                
+                <div class="admin-tab-content" id="npcAdmin">
+                    <h3>NPC Admin</h3>
+                    <section>
+                        <h4>Manage NPC Admin Mode</h4>
+                        <p>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="npcAdminCheckbox"> Enable NPC Admin Mode
+                            </label>
+                        </p>
+                    </section>
+                </div>
+                
+            </div>
+        </div>
 
         <!-- SCRIPTS -->
         <script>
@@ -895,6 +1116,7 @@
         <script src="clothing.js"></script>
         <script src="backgroundMusic.js"></script>
         <script src="combatMode.js"></script>
+        <script src="texture_generator.js"></script>
         
         <script>
             // Audio Widget Toggle Script
