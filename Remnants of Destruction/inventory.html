@@ -1,31 +1,36 @@
-<![CDATA[<div id="inventory" class="inventory-container" style="display: none;">
+<div id="inventory" class="inventory-container">
     <div class="inventory-header">
         <h2>Inventory</h2>
         <button class="close-button" onclick="closeInventory()">×</button>
     </div>
-    <div class="inventory-tabs">
-        <button id="tab1" class="tab-button active">All</button>
-        <button id="tab2" class="tab-button">Weapons</button>
-        <button id="tab3" class="tab-button">Armor</button>
-        <button id="tab4" class="tab-button">Consumables</button>
-        <button id="tab5" class="tab-button">Materials</button>
+
+    <!-- Equipment Section -->
+    <div class="equipment-section">
+        <div class="equipment-slot" id="weapon-slot" data-slot-type="weapon"></div>
+        <div class="equipment-slot" id="helmet-slot" data-slot-type="helmet"></div>
+        <div class="equipment-slot" id="trophy-slot" data-slot-type="trophy"></div>
+        <div class="equipment-slot" id="gloves-slot" data-slot-type="gloves"></div>
+        <div class="equipment-slot" id="armor-slot" data-slot-type="armor"></div>
+        <div class="equipment-slot" id="accessory-slot" data-slot-type="accessory"></div>
+        <div class="equipment-slot" id="boots-slot" data-slot-type="boots"></div>
+        <div class="equipment-slot" id="ring-slot" data-slot-type="ring"></div>
+        <div class="equipment-slot" id="amulet-slot" data-slot-type="amulet"></div>
     </div>
-    <div class="tab-contents">
-        <div id="tab1-content" class="tab-content active">
-            <div class="inventory-grid"></div>
-        </div>
-        <div id="tab2-content" class="tab-content">
-            <div class="inventory-grid"></div>
-        </div>
-        <div id="tab3-content" class="tab-content">
-            <div class="inventory-grid"></div>
-        </div>
-        <div id="tab4-content" class="tab-content">
-            <div class="inventory-grid"></div>
-        </div>
-        <div id="tab5-content" class="tab-content">
-            <div class="inventory-grid"></div>
-        </div>
+
+    <!-- Consumables Row -->
+    <div class="consumables-row">
+        <div class="potion-slot" id="potion-1" data-slot-type="potion"></div>
+        <div class="potion-slot" id="potion-2" data-slot-type="potion"></div>
+        <div class="potion-slot" id="potion-3" data-slot-type="potion"></div>
+        <div class="potion-slot" id="potion-4" data-slot-type="potion"></div>
+        <div class="potion-slot" id="potion-5" data-slot-type="potion"></div>
     </div>
-    <div id="tooltip" class="tooltip" style="display: none;"></div>
-</div>]]>
+
+    <!-- Main Inventory Grid -->
+    <div class="inventory-grid">
+        <!-- These slots will be dynamically populated -->
+    </div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="inventory.css">
+<script src="inventory.js"></script>

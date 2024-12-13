@@ -85,10 +85,21 @@ function openTradeInterface(npcInventory, npcGold) {
     tradeWindow.style.display = 'block';
     tradeWindow.style.visibility = 'visible'; // Ensure full visibility
     tradeWindow.style.opacity = '1'; // Make fully opaque
+    tradeWindow.style.maxWidth = '90%';
+    tradeWindow.style.margin = '0 auto';
+    tradeWindow.style.overflow = 'auto';
+
+    // Create a close button for the trade window
+    const closeButton = document.createElement('button');
+    closeButton.innerText = 'Close';
+    closeButton.onclick = handleCloseButton; // Wire up the close button
+    tradeWindow.appendChild(closeButton);
 
     // Create trade grid sections with more detailed layout
     const tradeContainer = document.createElement('div');
     tradeContainer.className = 'trade-container';
+    tradeContainer.style.maxWidth = '100%';
+    tradeContainer.style.boxSizing = 'border-box';
     tradeContainer.innerHTML = `
         <div class="trade-section npc-trade-section">
             <h3>NPC Inventory</h3>
@@ -116,6 +127,7 @@ function openTradeInterface(npcInventory, npcGold) {
 
     // Clear existing content and add new trade container
     tradeWindow.innerHTML = '';
+    tradeWindow.appendChild(closeButton);
     tradeWindow.appendChild(tradeContainer);
 
     // Populate inventories
@@ -275,6 +287,12 @@ function closeTradeInterface() {
     const tradeWindow = document.getElementById('tradeWindow');
     tradeWindow.style.display = 'none';
     tradeWindow.innerHTML = ''; // Clear trade window contents
+}
+
+// Function to handle close button functionality
+function handleCloseButton() {
+    closeAllMenus(); // Call to close all menus
+    closeTradeInterface(); // Close the trade window if it's open
 }
 
 // Setup trade event listeners for slots

@@ -51,26 +51,9 @@ function moveHostileQuadrupeds(delta) {
             const oldPosition = hostileQuadruped.position.clone();
             hostileQuadruped.position.add(directionToPlayer.multiplyScalar(enemySpeed));
 
-            let collided = false;
-            for (let wall of walls) {
-                const hostileQuadrupedBox = new THREE.Box3().setFromObject(hostileQuadruped);
-                const wallBox = new THREE.Box3().setFromObject(wall);
-                if (hostileQuadrupedBox.intersectsBox(wallBox)) {
-                    collided = true;
-                    break;
-                }
-            }
-
-            for (let wall of enemyWalls) {
-                const hostileQuadrupedBox = new THREE.Box3().setFromObject(hostileQuadruped);
-                const wallBox = new THREE.Box3().setFromObject(wall);
-                if (hostileQuadrupedBox.intersectsBox(wallBox)) {
-                    collided = true;
-                    break;
-                }
-            }
-
-            if (collided) {
+            const intersects = raycaster.intersectObjects([walls, enemyWalls]);
+            if (intersects.length > 0) {
+                // Handle collision with walls and enemy barriers
                 hostileQuadruped.position.copy(oldPosition);
                 hostileQuadruped.isMoving = false;
             } else {
@@ -89,17 +72,9 @@ function moveHostileQuadrupeds(delta) {
             hostileQuadruped.position.x = Math.max(-5000, Math.min(5000, hostileQuadruped.position.x));
             hostileQuadruped.position.z = Math.max(-5000, Math.min(5000, hostileQuadruped.position.z));
 
-            let collided = false;
-            for (let wall of walls) {
-                const hostileQuadrupedBox = new THREE.Box3().setFromObject(hostileQuadruped);
-                const wallBox = new THREE.Box3().setFromObject(wall);
-                if (hostileQuadrupedBox.intersectsBox(wallBox)) {
-                    collided = true;
-                    break;
-                }
-            }
-
-            if (collided) {
+            const intersects = raycaster.intersectObjects([walls, enemyWalls]);
+            if (intersects.length > 0) {
+                // Handle collision with walls and enemy barriers
                 hostileQuadruped.position.copy(oldPosition);
                 hostileQuadruped.userData.direction = new THREE.Vector3(Math.random() - 0.5, 0, Math.random() - 0.5).normalize();
                 hostileQuadruped.isMoving = false;

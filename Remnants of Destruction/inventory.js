@@ -1,295 +1,203 @@
-// inventory.js
+// Inventory State
+let inventoryLoaded = false;
+let playerInventory = [];
 
-// Function to add a single item to the player's inventory
-function addItemToInventory(item) {
-    playerInventory.push(item);
+// Initialize Inventory
+function initializeInventory() {
+    setupInventory();
+    setupEventListeners();
     updateInventoryDisplay();
+    renderComponents();
 }
 
-// Function to add multiple items to the player's inventory
-function addItemsToInventory(items) {
-    playerInventory.push(...items);
-    updateInventoryDisplay();
-}
-
-// Function to update the inventory display based on selected tab
-function updateInventoryDisplay() {
-    const tabs = document.querySelectorAll('.inventory-tab');
-    tabs.forEach((tab, index) => {
-        const grid = document.getElementById(`inventoryGridTab${index + 1}`);
-        if (!grid) return; // Skip if grid element doesn't exist
-
-        // Get the tab identifier
-        const tabId = tab.dataset.tab;
-
-        // Map tabId to item type
-        const selectedType = getTypeByTabId(tabId);
-
-        // Filter items based on selected type
-        let filteredItems;
-        if (selectedType === 'picked_up') {
-            filteredItems = playerInventory.filter(item => item.isPickedUp);
-        } else if (selectedType === 'purchased') {
-            filteredItems = playerInventory.filter(item => item.isPurchased);
-        } else {
-            filteredItems = playerInventory.filter(item => item.type.toLowerCase() === selectedType);
-        }
-
-        // Sort items alphabetically by name
-        filteredItems.sort((a, b) => a.name.localeCompare(b.name));
-
-        // Populate the grid with filtered items and empty slots
-        populateInventoryGrid(grid, filteredItems);
-    });
-}
-
-// Helper function to map tabId to item type
-function getTypeByTabId(tabId) {
-    const mapping = {
-        'tab1': 'picked_up',  // Changed from 'all' to 'picked_up'
-        'tab2': 'equipment',
-        'tab3': 'material',
-        'tab4': 'consumable',
-        'tab5': 'quest',
-        'tab6': 'purchased',    // Added a new tab for purchased items
-    };
-    return mapping[tabId] || 'misc';
-}
-
-// Function to populate a specific inventory grid with items and empty slots
+// Function to dynamically populate inventory slots
 function populateInventoryGrid(gridElement, items) {
-    gridElement.innerHTML = ''; // Clear previous content
+    gridElement.innerHTML = ''; // Clear previous slots
 
-    const totalSlots = 56; // Number of slots per grid
+    const totalSlots = 50; // Define a fixed grid size
+    items.forEach((item, index) => {
+        if (index >= totalSlots) return; // Prevent overflow
 
-    // Filter out items that haven't been picked up
-    const pickedUpItems = items.filter(item => item.pickedUp);
-
-    for (let i = 0; i < totalSlots; i++) {
         const slot = document.createElement('div');
         slot.classList.add('inventory-slot');
 
-        if (pickedUpItems[i]) {
-            const item = pickedUpItems[i];
-            slot.innerText = item.name;
-            slot.setAttribute('data-name', item.name);
-            slot.setAttribute('data-description', item.description || 'No description');
-            slot.setAttribute('data-type', item.type || 'misc');
-            slot.setAttribute('data-rarity', item.rarity || 'Common');
+        // Add item attributes
+        slot.setAttribute('data-name', item.name || 'Unknown Item');
+        slot.setAttribute('data-description', item.description || 'No description available.');
+        slot.setAttribute('data-rarity', item.rarity || 'Common');
 
-            // Add data attributes for tooltip
-            if (item.stats) {
-                const statsText = Object.entries(item.stats)
-                    .map(([key, value]) => `${formatStatKey(key)}: ${value}`)
-                    .join('\n');
-                slot.setAttribute('data-stats', statsText);
-            }
-
-            // Add event listeners for tooltip
-            slot.addEventListener('mouseenter', onInventoryItemHover);
-            slot.addEventListener('mousemove', onInventoryItemHover);
-            slot.addEventListener('mouseleave', () => {
-                entityTooltip.style.display = 'none';
-            });
-        } else {
-            // Mark the slot as empty for styling purposes
-            slot.classList.add('empty-slot');
+        // Add item icon
+        if (item.icon) {
+            const icon = document.createElement('img');
+            icon.src = item.icon;
+            icon.alt = item.name || 'Item';
+            icon.style.width = '100%';
+            icon.style.height = '100%';
+            icon.style.objectFit = 'contain';
+            slot.appendChild(icon);
         }
 
+        // Add hover effect for tooltip
+        slot.addEventListener('mouseenter', onSlotHover);
+        slot.addEventListener('mouseleave', hideTooltip);
+
         gridElement.appendChild(slot);
+    });
+
+    // Fill remaining slots with empty placeholders
+    for (let i = items.length; i < totalSlots; i++) {
+        const emptySlot = document.createElement('div');
+        emptySlot.classList.add('inventory-slot', 'empty-slot');
+        gridElement.appendChild(emptySlot);
     }
 }
 
-// Helper function to format stat keys (e.g., camelCase to Capitalized Words)
-function formatStatKey(key) {
-    return key.replace(/([A-Z])/g, ' $1')
-              .replace(/^./, str => str.toUpperCase());
+// Function to update inventory display
+function updateInventoryDisplay() {
+    const gridElement = document.querySelector('.inventory-grid');
+    populateInventoryGrid(gridElement, playerInventory);
 }
 
-// Function to handle item hover for tooltip display
-function onInventoryItemHover(event) {
-    const itemSlot = event.target;
-    const itemName = itemSlot.getAttribute('data-name');
-    if (!itemName) return;
+// Tooltip handling
+function onSlotHover(event) {
+    const slot = event.target;
+    const tooltip = document.getElementById('tooltip') || createTooltip();
 
-    const itemDescription = itemSlot.getAttribute('data-description');
-    const itemStats = itemSlot.getAttribute('data-stats');
-    const itemRarity = itemSlot.getAttribute('data-rarity');
+    const name = slot.getAttribute('data-name');
+    const description = slot.getAttribute('data-description');
+    const rarity = slot.getAttribute('data-rarity');
 
-    // Create tooltip content with styling
-    entityTooltip.innerHTML = `
-        <div style="font-size: 14px; padding: 8px; background: rgba(0,0,0,0.8); color: #fff; border-radius: 4px;">
-            <div style="color: ${getRarityColor(itemRarity)}; font-weight: bold; margin-bottom: 4px;">
-                ${itemName}
-            </div>
-            <div style="color: #aaa; font-style: italic; margin-bottom: 4px;">
-                ${itemRarity}
-            </div>
-            <div style="margin-bottom: 4px;">
-                ${itemDescription}
-            </div>
-            ${itemStats ? `<div style="color: #88ff88; white-space: pre-wrap;">${itemStats.replace(/\n/g, '<br>')}</div>` : ''}
-        </div>
+    tooltip.innerHTML = `
+        <div style="color: ${getRarityColor(rarity)}; font-weight: bold;">${name}</div>
+        <div style="color: #aaa; font-size: 12px; margin-bottom: 5px;">${rarity}</div>
+        <div>${description}</div>
     `;
 
-    // Position tooltip near the cursor
-    positionTooltip(event);
-    entityTooltip.style.display = 'block';
+    positionTooltip(event, tooltip);
+    tooltip.style.display = 'block';
 }
 
-// Helper function to position the tooltip
-function positionTooltip(event) {
-    const tooltipWidth = entityTooltip.offsetWidth;
-    const tooltipHeight = entityTooltip.offsetHeight;
+function hideTooltip() {
+    const tooltip = document.getElementById('tooltip');
+    if (tooltip) tooltip.style.display = 'none';
+}
+
+// Helper function to create a tooltip if it doesn't exist
+function createTooltip() {
+    const tooltip = document.createElement('div');
+    tooltip.id = 'tooltip';
+    tooltip.classList.add('tooltip');
+    document.body.appendChild(tooltip);
+    return tooltip;
+}
+
+// Position tooltip near cursor
+function positionTooltip(event, tooltip) {
+    const tooltipWidth = tooltip.offsetWidth;
+    const tooltipHeight = tooltip.offsetHeight;
     const pageWidth = window.innerWidth;
     const pageHeight = window.innerHeight;
 
-    let tooltipX = event.pageX + 15; // 15px to the right of cursor
-    let tooltipY = event.pageY + 15; // 15px below the cursor
+    let x = event.pageX + 15;
+    let y = event.pageY + 15;
 
-    // Adjust tooltip position if it goes beyond the viewport
-    if (tooltipX + tooltipWidth > pageWidth) {
-        tooltipX = event.pageX - tooltipWidth - 15;
-    }
+    if (x + tooltipWidth > pageWidth) x = event.pageX - tooltipWidth - 15;
+    if (y + tooltipHeight > pageHeight) y = event.pageY - tooltipHeight - 15;
 
-    if (tooltipY + tooltipHeight > pageHeight) {
-        tooltipY = event.pageY - tooltipHeight - 15;
-    }
-
-    entityTooltip.style.left = `${tooltipX}px`;
-    entityTooltip.style.top = `${tooltipY}px`;
+    tooltip.style.left = `${x}px`;
+    tooltip.style.top = `${y}px`;
 }
 
-// Helper function to get rarity color
+// Helper to get rarity color
 function getRarityColor(rarity) {
-    const rarityColors = {
+    const colors = {
         'Common': '#ffffff',
         'Uncommon': '#1eff00',
         'Rare': '#0070dd',
         'Epic': '#a335ee',
         'Legendary': '#ff8000',
-        'Mythic': '#e6cc80' // Added if needed
     };
-    return rarityColors[rarity] || rarityColors['Common'];
+    return colors[rarity] || '#ffffff';
 }
 
-// Function to initialize inventory tabs and event listeners
-function setupInventoryTabs() {
-    const tabs = document.querySelectorAll('.inventory-tab');
-    const tabContents = document.querySelectorAll('.inventory-tab-content');
-
-    tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-            // Remove 'active' class from all tabs and contents
-            tabs.forEach(t => t.classList.remove('active'));
-            tabContents.forEach(tc => tc.classList.remove('active'));
-
-            // Add 'active' class to the selected tab and corresponding content
-            tab.classList.add('active');
-            const activeTabContent = document.getElementById(tab.dataset.tab);
-            activeTabContent.classList.add('active');
-
-            // Update the inventory display based on the selected tab
-            updateInventoryDisplay();
-        });
-    });
-
-    // Set the first tab as active by default
-    if (tabs.length > 0) {
-        tabs[0].classList.add('active');
-    }
-    if (tabContents.length > 0) {
-        tabContents[0].classList.add('active');
-    }
-}
-
-// Function to load the inventory UI
-function loadInventory() {
-    if (inventoryLoaded) {
-        toggleInventoryDisplay();
-        return;
-    }
-
+// Setup inventory grid and tabs
+function setupInventory() {
     const inventoryElement = document.getElementById('inventory');
     if (!inventoryElement) {
-        console.error('Inventory element not found in the DOM');
+        console.error('Inventory element not found.');
         return;
     }
 
-    try {
-        inventoryLoaded = true;
-        initializeInventory();
-        toggleInventoryDisplay();
-    } catch (error) {
-        console.error('Error initializing inventory:', error);
-        inventoryLoaded = false;
-    }
+    // Initialize empty slots
+    const gridElement = document.querySelector('.inventory-grid');
+    if (gridElement) populateInventoryGrid(gridElement, []);
 }
 
-// Function to initialize inventory after loading HTML
-function initializeInventory() {
-    setupInventoryTabs();
-    updateInventoryDisplay(); // Initialize display with all items
+// Add global event listeners
+function setupEventListeners() {
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'i' || event.key === 'I') toggleInventoryDisplay();
+    });
+
+    const closeButton = document.querySelector('.close-button');
+    if (closeButton) closeButton.addEventListener('click', closeInventory);
 }
 
-// Function to toggle inventory display visibility
+// Add items to inventory
+function addItemToInventory(item) {
+    playerInventory.push(item);
+    updateInventoryDisplay();
+}
+
+function addItemsToInventory(items) {
+    playerInventory.push(...items);
+    updateInventoryDisplay();
+}
+
+// Open/Close Inventory
 function toggleInventoryDisplay() {
-    const inventory = document.getElementById('inventory');
-    if (inventory) {
-        inventory.style.display = inventory.style.display === 'none' || inventory.style.display === '' ? 'block' : 'none';
-    }
-}
-
-// Function to close inventory (if you have a close button)
-function closeInventory() {
-    document.getElementById('inventory').style.display = 'none';
-    inventoryOpen = false; // Update the state to reflect that inventory is closed
-    // Optionally refresh the inventory display
-    populateInventoryGrid(document.getElementById('inventoryGridTab1'), playerInventory);
-}
-
-// Event listener to load inventory when 'I' key is pressed
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'I' || event.key === 'i') {
-        loadInventory();
-    }
-});
-
-// Function to map tabId to types, in case needed
-function getTypeByTabId(tabId) {
-    const mapping = {
-        'tab1': 'picked_up',  // Changed from 'all' to 'picked_up'
-        'tab2': 'equipment',
-        'tab3': 'material',
-        'tab4': 'consumable',
-        'tab5': 'quest',
-        'tab6': 'purchased',    // Added a new tab for purchased items
-    };
-    return mapping[tabId] || 'misc';
-}
-
-// Tooltip handling is already managed in the onInventoryItemHover function
-
-// Initialize inventory when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Optionally, generate some items for testing
-    // generateAndAddRandomItems(10);
-});
-
-// Example of generating and adding random items to the inventory
-// Ensure this runs after randomitems.js is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    if (typeof generateRandomItems === 'function') {
-        const randomItems = generateRandomItems(50); // Generate 50 random items
-        addItemsToInventory(randomItems);
+    const inventoryElement = document.getElementById('inventory');
+    if (inventoryElement.style.display === 'none' || !inventoryElement.style.display) {
+        inventoryElement.style.display = 'block';
     } else {
-        console.error('generateRandomItems function is not available. Ensure randomitems.js is loaded.');
+        inventoryElement.style.display = 'none';
     }
-});
-
-const closeButton = document.querySelector('.close-button');
-if (closeButton) {
-    closeButton.addEventListener('click', closeInventory);
-} else {
-    console.error('Close button not found in the DOM.');
 }
+
+function closeInventory() {
+    const inventoryElement = document.getElementById('inventory');
+    inventoryElement.style.display = 'none';
+}
+
+import EquipmentSlots from './components/EquipmentSlots';
+import PotionRow from './components/PotionRow';
+import ItemGrid from './components/ItemGrid';
+
+// Render components within the inventory
+function renderComponents() {
+    const inventoryContainer = document.getElementById('inventory-container');
+    if (inventoryContainer) {
+        inventoryContainer.innerHTML = `
+            <div class="inventory-header">
+                <h2>Inventory</h2>
+            </div>
+            <div class="inventory-content">
+                ${EquipmentSlots()}
+                ${PotionRow()}
+                ${ItemGrid()}
+            </div>
+        `;
+    }
+}
+
+// Initialize inventory on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', initializeInventory);
+
+// Example: Adding test items
+document.addEventListener('DOMContentLoaded', () => {
+    addItemsToInventory([
+        { name: 'Sword of Valor', description: 'A legendary sword.', rarity: 'Legendary', icon: 'path/to/sword-icon.png' },
+        { name: 'Helmet of Wisdom', description: 'A rare helmet.', rarity: 'Rare', icon: 'path/to/helmet-icon.png' },
+        { name: 'Healing Potion', description: 'Restores health.', rarity: 'Common', icon: 'path/to/potion-icon.png' },
+    ]);
+});

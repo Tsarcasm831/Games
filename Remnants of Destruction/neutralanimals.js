@@ -20,12 +20,12 @@ function animateQuadruped(quadruped, delta) {
         const angle = Math.sin(quadruped.animationTime) * (Math.PI / 6);
 
         // Front Left & Back Right Legs
-        quadruped.legs[0].rotation.x = angle;
-        quadruped.legs[3].rotation.x = angle;
+        quadruped.legs[0].rotation.x = angle; // Adjusting for front left leg
+        quadruped.legs[3].rotation.x = angle; // Adjusting for back right leg
 
         // Front Right & Back Left Legs
-        quadruped.legs[1].rotation.x = -angle;
-        quadruped.legs[2].rotation.x = -angle;
+        quadruped.legs[1].rotation.x = -angle; // Adjusting for front right leg
+        quadruped.legs[2].rotation.x = -angle; // Adjusting for back left leg
     } else {
         // Reset leg rotations
         quadruped.legs.forEach(leg => leg.rotation.x = 0);
