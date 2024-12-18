@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 const potions = [
   { color: 'red', src: '/placeholder.svg' },
@@ -6,7 +6,7 @@ const potions = [
   { color: 'yellow', src: '/placeholder.svg' },
   { color: 'blue', src: '/placeholder.svg' },
   { color: 'purple', src: '/placeholder.svg' },
-]
+];
 
 export default function PotionRow() {
   return (
@@ -23,6 +23,5 @@ export default function PotionRow() {
         </div>
       ))}
     </div>
-  )
+  );
 }
-

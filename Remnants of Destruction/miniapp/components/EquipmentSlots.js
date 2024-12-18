@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 const slots = [
   { name: 'Weapon', src: '/placeholder.svg' },
@@ -6,7 +6,7 @@ const slots = [
   { name: 'Armor', src: '/placeholder.svg' },
   { name: 'Gloves', src: '/placeholder.svg' },
   { name: 'Shield', src: '/placeholder.svg' },
-]
+];
 
 export default function EquipmentSlots() {
   return (
@@ -23,6 +23,5 @@ export default function EquipmentSlots() {
         </div>
       ))}
     </div>
-  )
+  );
 }
-

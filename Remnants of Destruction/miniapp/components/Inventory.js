@@ -1,6 +1,6 @@
-import EquipmentSlots from './EquipmentSlots'
-import PotionRow from './PotionRow'
-import ItemGrid from './ItemGrid'
+import EquipmentSlots from './EquipmentSlots';
+import PotionRow from './PotionRow';
+import ItemGrid from './ItemGrid';
 
 export default function Inventory() {
   return (
@@ -14,6 +14,5 @@ export default function Inventory() {
         <ItemGrid />
       </div>
     </div>
-  )
+  );
 }
-
