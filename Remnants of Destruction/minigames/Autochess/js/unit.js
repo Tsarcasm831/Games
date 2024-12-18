@@ -24,17 +24,11 @@ class Unit extends Phaser.GameObjects.Container {
         const circle = this.scene.add.circle(0, 0, gameConfig.hexSize * 0.4, this.getUnitColor());
         this.add(circle);
         
-        // Add class icon
-        const classIcon = this.scene.add.text(0, -10, this.getClassEmoji(), {
-            fontSize: '24px'
+        // Add species icon
+        const speciesIcon = this.scene.add.text(0, 0, this.getSpeciesEmoji(), {
+            fontSize: '32px'
         }).setOrigin(0.5);
-        this.add(classIcon);
-        
-        // Add origin icon
-        const originIcon = this.scene.add.text(0, 10, this.getOriginEmoji(), {
-            fontSize: '24px'
-        }).setOrigin(0.5);
-        this.add(originIcon);
+        this.add(speciesIcon);
     }
 
     createHealthBar() {
@@ -77,20 +71,16 @@ class Unit extends Phaser.GameObjects.Container {
         }
     }
 
-    getClassEmoji() {
-        switch(this.type.class) {
-            case 'warrior': return '⚔️';
-            case 'mage': return '🔮';
-            case 'assassin': return '🗡️';
-            default: return '❓';
-        }
-    }
-
-    getOriginEmoji() {
-        switch(this.type.origin) {
-            case 'frostborn': return '❄️';
-            case 'infernal': return '🔥';
-            case 'celestial': return '✨';
+    getSpeciesEmoji() {
+        switch(this.type.species) {
+            case 'Anthromorph': return '🧑';
+            case 'Avianos': return '🦅';
+            case 'Chiropteran': return '🦇';
+            case 'Dengar Charger': return '🐎';
+            case 'Prometheus AI': return '🤖';
+            case 'Talorian': return '🌐';
+            case 'T\'ana\'Rhe': return '🌈';
+            case 'Xithrian': return '👥';
             default: return '❓';
         }
     }
