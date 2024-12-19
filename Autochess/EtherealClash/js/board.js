@@ -151,26 +151,26 @@ class HexGrid {
     spawnEnemyMinions() {
         const enemyMinions = ['champion13', 'champion16', 'champion19', 'champion14']; // Selecting low-cost common/rare units
         const enemyTerritory = this.hexes.slice(0, 3); // Top 3 rows are enemy territory
-        
+        console.log('Attempting to spawn enemy minions...');
         for (let i = 0; i < 4; i++) {
             // Randomly select a minion type
             const minionType = enemyMinions[Math.floor(Math.random() * enemyMinions.length)];
-            
             // Find available hexes in enemy territory
             const availableHexes = enemyTerritory.flatMap(row => 
                 row.filter(hex => hex.unit === null)
             );
-            
             if (availableHexes.length > 0) {
                 // Randomly select an available hex
                 const selectedHex = availableHexes[Math.floor(Math.random() * availableHexes.length)];
-                
                 // Create the unit
                 const unit = new Unit(this.scene, minionType);
-                
                 // Place the unit on the selected hex
                 this.placeUnit(unit, selectedHex);
+                console.log('Spawned enemy minion:', minionType, 'at hex:', selectedHex.coords);
+            } else {
+                console.log('No available hexes for spawning enemy minions.');
             }
         }
+        console.log('Enemy minion spawning completed.');
     }
 }

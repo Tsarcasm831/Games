@@ -2,34 +2,37 @@
 
 A strategic single-player autochess game where players assemble teams of mystical units to battle against increasingly challenging AI opponents.
 
+## Game Overview
+
+Ethereal Clash is a strategic single-player autochess game where players assemble teams of mystical units to battle against increasingly challenging AI opponents on an 8x8 hexagonal grid.
+
 ## Game Features
 
 ### Core Mechanics
-- 8x8 hexagonal grid battle arena
-- Turn-based combat with preparation and battle phases
-- Dynamic unit synergies based on Classes and Origins
-- Strategic unit positioning and team composition
-- Progressive AI difficulty scaling
+- Turn-based combat with preparation and battle phases.
+- Dynamic unit synergies based on Classes and Origins.
+- Strategic positioning and team composition.
+- Progressive AI difficulty scaling.
 
 ### Units and Synergies
-- Multiple unit classes (Warrior, Mage, Assassin)
-- Unique origins (Frostborn, Infernal, Celestial)
-- Powerful synergy effects when combining similar units
-- Special abilities and automatic combat
+- Multiple unit classes (Warrior, Mage, Assassin).
+- Unique origins (Frostborn, Infernal, Celestial).
+- Powerful synergy effects when combining similar units.
+- Special abilities and automatic combat.
 
 ### Game Phases
-1. Preparation Phase (30 seconds)
-   - Draft units from the shop
-   - Position units strategically
-   - Manage economy and synergies
-2. Combat Phase
-   - Automatic unit combat
-   - Special ability activation
-   - Synergy effects
-3. Victory/Defeat Resolution
-   - Rewards for winning
-   - Health point management
-   - Progressive difficulty
+1. Preparation Phase (30 seconds) where players can strategize.
+
+## Units and Enemies
+
+### Unit Types
+Each unit has attributes such as name, class, origin, rarity, cost, stats (health, armor, attack damage, etc.), and abilities. Examples include:
+- **Arvid the Glacier Blade** (Warrior, Frostborn)
+- **Freya the Ice Scholar** (Mage, Frostborn)
+
+### Enemies
+- **Goblin Raider** (Enemy, common)
+- **Orc Brute** (Enemy, rare)
 
 ## Getting Started
 1. Open `index.html` in your browser
