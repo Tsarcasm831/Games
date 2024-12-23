@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Viewport meta tag for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta 
+    name="description" 
+    content="Manage banned individuals with a card-based interface, complete with photos, sorting, searching, and emergency status."
+  />
+  <title>Security Company - Banned Individuals Management</title>
+  
+  <!-- Link to local CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header>
+    <h1>Banned Individuals Management</h1>
+  </header>
+
+  <main>
+    <!-- Search bar, add button, and sort dropdown -->
+    <section class="search-bar" role="search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by name or reason..."
+        aria-label="Search by name or reason"
+      />
+      <button 
+        id="addButton" 
+        aria-label="Add new entry" 
+        onclick="openAddModal()"
+      >
+        <i class="fa fa-user-plus"></i> Add New
+      </button>
+
+      <select id="sortSelect" aria-label="Sort by" onchange="applySort()">
+        <option value="">Sort By</option>
+        <option value="name">Name (A–Z)</option>
+        <option value="date">Date (oldest first)</option>
+      </select>
+    </section>
+
+    <!-- Cards listing banned individuals -->
+    <section id="cardsContainer" class="cards-container">
+      <!-- Cards will be dynamically inserted here by JS -->
+    </section>
+
+    <!-- Add Modal -->
+    <div 
+      id="addModal" 
+      class="modal" 
+      aria-hidden="true" 
+      aria-labelledby="addModalTitle"
+      role="dialog"
+    >
+      <div class="modal-content">
+        <button
+          type="button"
+          class="close"
+          aria-label="Close add modal"
+          onclick="closeAddModal()"
+        >
+          &times;
+        </button>
+        <h2 id="addModalTitle">Add New Banned Individual</h2>
+        <form id="addForm">
+          <label for="nameInput">Full Name:</label>
+          <input type="text" id="nameInput" />
+
+          <label for="reasonInput">Reason for Ban:</label>
+          <input type="text" id="reasonInput" />
+
+          <label for="notesInput">Additional Notes:</label>
+          <textarea id="notesInput"></textarea>
+
+          <label for="dateInput">Date Banned:</label>
+          <input type="date" id="dateInput" />
+
+          <label for="photoInput">Photo (URL):</label>
+          <input type="text" id="photoInput" placeholder="http://example.com/image.jpg" />
+
+          <label for="apartmentsInput">Apartments Accessed:</label>
+          <textarea 
+            id="apartmentsInput" 
+            placeholder="e.g., #101, #202, #307"
+          ></textarea>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="emergencyCheckbox" />
+            <label for="emergencyCheckbox" class="checkbox-label">
+              CALL PD IMMEDIATELY IF SEEN
+            </label>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="addBannedIndividual()"
+            aria-label="Add new banned individual"
+          >
+            Add
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div 
+      id="editModal" 
+      class="modal"
+      aria-hidden="true" 
+      aria-labelledby="editModalTitle"
+      role="dialog"
+    >
+      <div class="modal-content">
+        <button
+          type="button"
+          class="close"
+          aria-label="Close edit modal"
+          onclick="closeEditModal()"
+        >
+          &times;
+        </button>
+        <h2 id="editModalTitle">Edit Entry</h2>
+        <form id="editForm">
+          <input type="hidden" id="editId" />
+
+          <label for="editName">Full Name:</label>
+          <input type="text" id="editName" />
+
+          <label for="editReason">Reason for Ban:</label>
+          <input type="text" id="editReason" />
+
+          <label for="editNotes">Additional Notes:</label>
+          <textarea id="editNotes"></textarea>
+
+          <label for="editDate">Date Banned:</label>
+          <input type="date" id="editDate" />
+
+          <label for="editPhoto">Photo (URL):</label>
+          <input type="text" id="editPhoto" placeholder="http://example.com/image.jpg" />
+
+          <label for="editApartments">Apartments Accessed:</label>
+          <textarea 
+            id="editApartments" 
+            placeholder="e.g., #101, #202, #307"
+          ></textarea>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="editEmergency" />
+            <label for="editEmergency" class="checkbox-label">
+              CALL PD IMMEDIATELY IF SEEN
+            </label>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="saveEdit()" 
+            aria-label="Save changes for banned individual"
+          >
+            Save Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Link to local JS -->
+  <script src="banned.js"></script>
+</body>
+</html>
