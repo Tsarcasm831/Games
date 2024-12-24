@@ -1,0 +1,1 @@
+import{g as r}from"./entry.6BK1hbzo.js";import{N as t}from"./Game.DRaXfNuJ.js";const s=new BroadcastChannel("account_events");s.onmessage=o=>{try{const{type:a,data:e}=JSON.parse(o.data);switch(a){case"auth":e.pageUUID===t.getPageUUID()&&r("/play");break;case"auth_error":e.pageUUID,t.getPageUUID();break}}catch(a){console.error(a)}};export{s as a};

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stony World</title>
+    <link rel="stylesheet" href="/assets/0.BfmLveL3.css">
+    <link rel="stylesheet" href="/assets/5.DvLTiWbk.css">
+    <link rel="stylesheet" href="/assets/Credits.CcTOsnJ4.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        window.__sveltekit_j9jtbb = {
+            base: "",
+            env: {},
+            assets: "",
+            version: "1",
+            hydrate: {
+                status: 200,
+                error: null,
+                node_ids: [0, 2],
+                params: {},
+                route: {
+                    id: "/"
+                }
+            },
+            nodes: [
+                () => import("/nodes/0.B2opg81K.js"),
+                () => import("/nodes/1.DOfQkP14.js"),
+                () => import("/nodes/2.CIL0kTUq.js")
+            ],
+            routes: {
+                "/": {
+                    id: "/",
+                    pattern: /^\/$/,
+                    params: [],
+                    page: { layouts: [0], errors: [1], leaf: 2 },
+                    endpoint: null
+                }
+            },
+            matchers: {}
+        };
+    </script>
+    <script type="module">
+        import { start } from '/entry/start.BHwqQrqN.js';
+        
+        async function init() {
+            const nodes = await Promise.all([
+                import('/nodes/0.B2opg81K.js').then(m => m.default || m),
+                import('/nodes/1.DOfQkP14.js').then(m => m.default || m),
+                import('/nodes/2.CIL0kTUq.js').then(m => m.default || m)
+            ]);
+            
+            start({
+                target: document.getElementById('app'),
+                nodes,
+                status: 200,
+                error: null,
+                hydrate: true
+            });
+        }
+        
+        init().catch(console.error);
+    </script>
+</body>
+</html>
