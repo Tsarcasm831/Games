@@ -1,0 +1,25 @@
+---
+// src/layouts/Layout.astro
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remnants of Destruction v0.4.0</title>
+    <!-- Link to Global CSS -->
+    <link rel="stylesheet" href="/styles/global.css" />
+
+    <!-- Include Three.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js" defer></script>
+    <!-- Include GLTFLoader via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.130.1/examples/js/loaders/GLTFLoader.js" defer></script>
+</head>
+<body>
+    <slot />
+
+    <!-- Include Global JavaScript -->
+    <script src="/scripts/global.js" defer></script>
+</body>
+</html>

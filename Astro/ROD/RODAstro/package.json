@@ -1,0 +1,31 @@
+{
+  "name": "rodastro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/alpinejs": "^0.4.1",
+    "@astrojs/cloudflare": "^12.1.0",
+    "@astrojs/markdoc": "^0.12.4",
+    "@astrojs/netlify": "^6.0.1",
+    "@astrojs/node": "^9.0.0",
+    "@astrojs/preact": "^4.0.1",
+    "@astrojs/react": "^4.1.2",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.4",
+    "@types/alpinejs": "^3.13.11",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "alpinejs": "^3.14.8",
+    "astro": "^5.1.1",
+    "preact": "^10.25.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.17"
+  }
+}
